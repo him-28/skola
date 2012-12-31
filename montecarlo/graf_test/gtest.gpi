@@ -1,0 +1,56 @@
+set sample 10000
+
+set size ratio 1 1,1
+set key Left reverse top left
+
+set format x ""
+set format y "%.2f"
+set ylabel "Y"
+set xlabel "X"
+set ytics 0.1
+
+set title "Mersenne Twister, Seed = default, Perioda = 1"
+plot [0:1][0:1]  "< GSL_RNG_TYPE=mt19937 ./gtest" linecolor rgb "red" t ""
+
+pause 4
+clear
+
+set title "Mersenne Twister, Seed = default, Perioda = 2^16"
+plot [0:1][0:1]   "< GSL_RNG_TYPE=mt19937 ./gtest -n 65536" linecolor rgb "red" t ""
+
+pause 4
+clear
+
+set title "Tausův generátor, Seed = default , Perioda = 1"
+plot [0:1][0:1]   "< GSL_RNG_TYPE=taus ./gtest" linecolor rgb "red" t ""
+
+pause 4
+clear
+
+set title "Tausův generátor, Seed = 2, Perioda = 1"
+plot [0:1][0:1]  "< GSL_RNG_TYPE=taus GSL_RNG_SEED=2 ./gtest" linecolor rgb "red" t ""
+
+pause 4
+clear
+
+set title "mrg (fifth-order multiple recursive generator), Seed = default, Perioda = 1"
+plot [0:1][0:1]  "< GSL_RNG_TYPE=taus GSL_RNG_SEED=2 ./gtest" linecolor rgb "red" t ""
+
+pause 4
+clear
+
+set title "mrg (fifth-order multiple recursive generator), Seed = 2, Perioda = 1"
+plot [0:1][0:1]  "< GSL_RNG_TYPE=taus GSL_RNG_SEED=2 ./gtest" linecolor rgb "red" t ""
+
+pause 4
+clear
+
+
+set title "mrg (fifth-order multiple recursive generator), Seed = 2, Perioda = 2^16"
+plot [0:1][0:1]  "< GSL_RNG_TYPE=taus GSL_RNG_SEED=2 ./gtest -n 65536" linecolor rgb "red" t ""
+
+pause 4
+clear
+
+
+
