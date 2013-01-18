@@ -1,3 +1,36 @@
-\chapter{Parametrizace dielektrické funkce}
+\chapter{Model dielektrické odezvy DLC vrstev}
+
+FIXME - úvod + všechno co potřebujeme 
+
+KKintegrál, time-reversal symetry a zobecněné f-sum pravidlo.
+
+\section{ Parametrizace funkce dielektrické  odezvy}
+Dielektrická funkce je seskládána z jednotlivých částí, které reprezentují jednotlivé typy přechodů $t$. Celková dielektrická funkce je suma přes dielektrické funkce jednotlivých částí a vakua. \cite{sumrule1}
+\begin{equation}
+\epsilon(E) = 1 + \sum_t \epsilon_t(E)
+\end{equation}
+
+Dále je výhodné zavést takzvanou normalizovanou dielektrickou funkci $\epsilon_t^0$ pro jednotlivé příspěvky. Platí 
+\begin{equation}
+\epsilon_t(E) = N_t \epsilon_t^0  \, \mathrm{,}
+\end{equation}
+kde $N_t$ je síla přechodu  
+
+\section{Mezipásové přechody mezi valenčním a vodivostním pásem}
+V amorfním materiálu s jedním valenčním a vodivostním pásem je příspěvek k dielektrické funkci nenulový v intervalu energií od $E_\mathrm{g}$ do $E_\mathrm{h}$, kde $E_\mathrm{g}$ je šířka zakázaného pásu a $E_\mathrm{h}$ je rozdíl energií mezi minimem valenčního a maximem vodivostního pásu (maximální energie přechodu mezi valenčním a vodivostním pásem). Následující parametrizace se ukázala jak vhodná. FIXME!
+
+\begin{equation}
+\epsilon_\mathrm{i,vc}^0 = \mathrm{sgn}(E) \frac{(|E|- E_\mathrm{g})^2(E_\mathrm{h} - |E|)^2}{ C E^2 [(|E| - E_\mathrm{c})^2 + B_\mathrm{c}^2]} \Pi_{E_\mathrm{g},E_\mathrm{h}}(|E|) \, \mathrm{,}
+\end{equation}
+kde $E_\mathrm{c}$ a $B_\mathrm{c}$ jsou parametry zahrnující rozšíření pásové struktury a její nesymetrii vzhledem k Fermiho energii?????
+
+Funkce $\Pi_{E_\mathrm{min},E_\mathrm{max}}(|E|)$ je definována následovně:
+\begin{equation}
+\Pi_{E_\mathrm{min},E_\mathrm{max}}(|E|) = 1 : E_\mathrm{min} < E < E_\mathrm{max}
+ FIXME!!!!! 0 : \mathrm{jinak.}
+\end{equation}
+
+
+
 
 \cleardoublepage
