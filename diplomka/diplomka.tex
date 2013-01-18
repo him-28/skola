@@ -7,55 +7,19 @@
 % Verze: 1.7 (2. rijna 2012)                                                                      %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \documentclass[11pt,a4paper,oneside,final]{book} %% PRO JEDNOSTRANNY TISK
-% \documentclass[11pt,a4paper,twoside,final]{book} %% PRO OBOUSTRANNY TISK
 \documentclass[12pt,a4paper,oneside,final]{book} %% PRO JEDNOSTRANNY TISK
 % \documentclass[12pt,a4paper,twoside,final]{book} %% PRO OBOUSTRANNY TISK
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ZAKLADNI NASTAVENI %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%
-%% Zvolte kodovani dokumentu
-%%%%%%%%%%%%
-
 \usepackage[utf8]{inputenc} 
-% \usepackage[cp1250]{inputenc} %% NASTAVENI PRO WINDOWS
-% \usepackage[T1]{fontenc} %% puvodni evropske fonty->spatne umistene hacky nad c, d s hackem ma za sebou mezeru
 \usepackage[IL2]{fontenc} %fonty vyladene pro cestinu/slovenstinu
 
-%%%%%%%%%%%%
-%% Nastavte si jazyk dokumentu 
-%% lze pouzit volbu babel (pro pdflatex a latex) nebo bez babelu (pro pdfcslatex a cslatex
-%%
-%% pri volbe bez babelu bude zlobit v ukazkovych souborech prikaz ``\shorthandoff{-}'' a ``\shorthandoff{-}''
-%% ty staci vymazat a je to bez problemu
-%%
-%% pri volbe ``\usepackage[english]{babel}'' nefunguji ceske uvozovky pomoci \uv{..} - staci nahradit ``..''
-%%%%%%%%%%%%
-
 \usepackage[czech]{babel}
-% \usepackage[slovak]{babel}
-% \usepackage[english]{babel}
 % \usepackage{czech}
-% \usepackage{slovak}
 
-%%%%%%%%%%%%
-%% Muzete si zkusit zmenit font dokumentu - pak ale musite v souboru zemnit nektera nastaveni (nebot je nastaveno
-%% \overfullrule10pt je preteceni textu ihned vyznaceno cernym obdelnikem)
-%% Veskere nastaveni je testovano pro pouzitou volbu
-%%%%%%%%%%%%
-
-% \usepackage{bookman}
-% \usepackage{charter}
-% \usepackage{fourier}
-% \usepackage{mathpazo}
-% \usepackage{newcent}
-% \usepackage{palatino}
-% \usepackage{utopia}
 \usepackage{mathptmx}  %% volne dostupny font Adobe Times Roman
-%  \usepackage[mtbold,mtplusscr,mtpluscal]{mathtime} % komercni matematicky font, dostupne pouze na UMS
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BALIKY POTREBNE PRO SABLONU %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -133,10 +97,6 @@ zdrojů, které jsou v práci citovány.}
 
 \makeindex
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%% ZAPNUTI OPAKOVANI MATEMATICKYCH SYMBOLU %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \input{opakuj.sty}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ZACATEK DOKUMETU %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
