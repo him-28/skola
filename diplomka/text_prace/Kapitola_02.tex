@@ -1,20 +1,63 @@
 \chapter{Model dielektrické odezvy DLC vrstev}
+Greek test
+$\alpha \beta \gamma \delta \chi \epsilon \kappa \lambda \mu \nu \omega \pi \rho \psi \zeta$
 
+$\alpha \beta \Gamma \Delta \chi \epsilon \kappa \Lambda \mu \nu \Omega \Pi \rho \Psi \zeta$
 FIXME - úvod + všechno co potřebujeme 
 
 KKintegrál, time-reversal symetry a zobecněné f-sum pravidlo.
 
-\section{ Parametrizace funkce dielektrické  odezvy}
-Dielektrická funkce je seskládána z jednotlivých částí, které reprezentují jednotlivé typy přechodů $t$. Celková dielektrická funkce je suma přes dielektrické funkce jednotlivých částí a vakua. \cite{sumrule1}
+První podmínka, kterou musí vhodný model lineární dielektrické odezvy splňovat, je Kramers--Kronigův integrál (citovat KK původní články??? nebo nějakou učebnici???), který spojuje reálnou a imaginární část dielektrické funkce  
 \begin{equation}
-\epsilon(E) = 1 + \sum_t \epsilon_t(E)
+\epsilon_\mathrm{r}(\omega) = 1 + \frac{1}{\pi} \int (přeškrtnutý) \frac{\epsilon_\mathrm{i}(\zeta)}{\zeta - \omega} \mathrm{d}\zeta \mathrm{,}
+\label{KKint}
+\end{equation}
+kde $\omega$ je úhlová frekvence a $\epsilon_\mathrm{r}, \epsilon_\mathrm{i}$ jsou reálná a imeginární část dielektrické funkce.  
+
+\begin{equation}
+\epsilon(\omega) =\epsilon^* (-\omega) \mathrm{,}
+\label{casovasymetrie}
 \end{equation}
 
-Dále je výhodné zavést takzvanou normalizovanou dielektrickou funkci $\epsilon_t^0$ pro jednotlivé příspěvky. Platí 
+Třetí podmínka, pro model dielektrické odezvy, je takzvané f-sumační pravidlo
+\begin{equation}
+\int_0^\infty \epsilon_\mathrm{i} (\omega) \omega \mathrm{d} \omega = \frac{\pi}{2} \omega_\mathrm{p}^2 = \frac{\pi}{2} \frac{e^2 n_\mathrm{e}}{ \epsilon_0 m_\mathrm{e}} \mathrm{,}
+\end{equation}
+kde $\omega_\mathrm{p}$ je plazmová frekvence, $n_\mathrm{e}$ je koncentrace elektronů, $e$ je elementární náboj a $m_\mathrm{e}$ je hmotnost elektronu. F-sumační pravidlo je důsledek kombinace Kramers-Kronigova integrálu s Newtonovými zákony pro nerelativistickou (klasickou???) nabitou částici a spojuje hustotu náboje s dielektrickou funkcí. Klasické f-sumační pravidlo můžeme chápat jako integrální formu Thomas--Reiche--Kuhnova sumačního pravidlo z kvantové mechaniky, pokud ho aplikujeme na intrakci světla s pevnou látkou.  
+ 
+
+\section{ Parametrizace funkce dielektrické  odezvy}
+Dielektrická funkce je seskládána z jednotlivých částí, které reprezentují jednotlivé typy přechodů $t$. Celková dielektrická funkce je suma přes dielektrické funkce jednotlivých částí a vakua \cite{sumrule1}. 
+\begin{equation}
+\epsilon(E) = 1 + \sum_t \epsilon_t(E)
+\label{suma1}
+\end{equation}
+
+Dále zavedem takzvanou "funkci síly přechodu (transition strength function)"? $F(E)$ která se skládá z funkci síly přechodu pro jednotlivé říspěvky t.
+\begin{equation}
+F(E) = \sum_t F_t(E)
+\end{equation}
+Je praktické jednotlivé příspěvky $F_t$ normalizovat na $F_t^0$ aby platilo
+\begin{equation}
+\int_0^\infty F_t^0(E)\mathrm{d}E = 1
+\end{equation}
+
+Integrováním přes $F_t(E)$ získáme 
+\begin{equation}
+\sum_t \int_0^\infty F_t(E)\mathrm{d}E = \sum_t N_t = N \mathrm{.}
+\end{equation}
+$N_t$ jsou integrální síly přechodů pro jednotlivé příspěvky a $N$ je celková integrální síla přechodu, nebo jen jednoduše celková síla přechodu.  
+
+Podobně můžeme zavést takzvanou normalizovanou dielektrickou funkci $\epsilon_t^0$ pro jednotlivé příspěvky. Platí 
 \begin{equation}
 \epsilon_t(E) = N_t \epsilon_t^0  \, \mathrm{,}
 \end{equation}
-kde $N_t$ je síla přechodu  
+kde $N_t$ je takzvaná integrální síla přechodu pro jednotlivé příspěvky.
+
+Pak můžeme přepsat rovnici (\ref{suma1}) jako:
+\begin{equation}
+\epsilon (E) = 1 + \sum_t N_t \epsilon_t^0(E) \mathrm{.}
+\end{equation}
 
 \section{Mezipásové přechody mezi valenčním a vodivostním pásem}
 V amorfním materiálu s jedním valenčním a vodivostním pásem je příspěvek k dielektrické funkci nenulový v intervalu energií od $E_\mathrm{g}$ do $E_\mathrm{h}$, kde $E_\mathrm{g}$ je šířka zakázaného pásu a $E_\mathrm{h}$ je rozdíl energií mezi minimem valenčního a maximem vodivostního pásu (maximální energie přechodu mezi valenčním a vodivostním pásem). Následující parametrizace se ukázala jak vhodná. FIXME!
