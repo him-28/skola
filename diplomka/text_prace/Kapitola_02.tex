@@ -9,22 +9,40 @@ KKintegrál, time-reversal symetry a zobecněné f-sum pravidlo.
 
 První podmínka, kterou musí vhodný model lineární dielektrické odezvy splňovat, je Kramers--Kronigův integrál (citovat KK původní články??? nebo nějakou učebnici???), který spojuje reálnou a imaginární část dielektrické funkce  
 \begin{equation}
-\epsilon_\mathrm{r}(\omega) = 1 + \frac{1}{\pi} \int (přeškrtnutý) \frac{\epsilon_\mathrm{i}(\zeta)}{\zeta - \omega} \mathrm{d}\zeta \mathrm{,}
+\epsilon_\mathrm{r}(\omega) = 1 + \frac{1}{\pi} \int (preskrtnuty) \frac{\epsilon_\mathrm{i}(\zeta)}{\zeta - \omega} \mathrm{d}\zeta \mathrm{,}
 \label{KKint}
 \end{equation}
 kde $\omega$ je úhlová frekvence a $\epsilon_\mathrm{r}, \epsilon_\mathrm{i}$ jsou reálná a imeginární část dielektrické funkce.  
 
+Druhá podmínka, kterou musí lineární dielektrické odezvy splňovat, je časová symetrie??? (time-reversal symetry)
 \begin{equation}
 \epsilon(\omega) =\epsilon^* (-\omega) \mathrm{,}
 \label{casovasymetrie}
 \end{equation}
+symbol $^*$ značí komplexní sdružení.
 
-Třetí podmínka, pro model dielektrické odezvy, je takzvané f-sumační pravidlo
+Třetí podmínka, pro model dielektrické odezvy, je takzvané f-sumační pravidlo:
 \begin{equation}
 \int_0^\infty \epsilon_\mathrm{i} (\omega) \omega \mathrm{d} \omega = \frac{\pi}{2} \omega_\mathrm{p}^2 = \frac{\pi}{2} \frac{e^2 n_\mathrm{e}}{ \epsilon_0 m_\mathrm{e}} \mathrm{,}
 \end{equation}
-kde $\omega_\mathrm{p}$ je plazmová frekvence, $n_\mathrm{e}$ je koncentrace elektronů, $e$ je elementární náboj a $m_\mathrm{e}$ je hmotnost elektronu. F-sumační pravidlo je důsledek kombinace Kramers-Kronigova integrálu s Newtonovými zákony pro nerelativistickou (klasickou???) nabitou částici a spojuje hustotu náboje s dielektrickou funkcí. Klasické f-sumační pravidlo můžeme chápat jako integrální formu Thomas--Reiche--Kuhnova sumačního pravidlo z kvantové mechaniky, pokud ho aplikujeme na intrakci světla s pevnou látkou.  
- 
+kde $\omega_\mathrm{p}$ je plazmová frekvence, $n_\mathrm{e}$ je koncentrace elektronů, $e$ je elementární náboj a $m_\mathrm{e}$ je hmotnost elektronu. F-sumační pravidlo je důsledek kombinace Kramers-Kronigova integrálu s Newtonovými zákony pro nerelativistickou (klasickou???) nabitou částici a spojuje hustotu náboje s dielektrickou funkcí. Klasické f-sumační pravidlo můžeme chápat jako integrální formu Thomas--Reiche--Kuhnova (TRK) sumačního pravidlo z kvantové mechaniky, pokud ho aplikujeme na intrakci světla s pevnou látkou.  
+
+Klasické sumační pravidlo bylo dále v \cite{sumrule} zobecněno pomocí TKR sumačního pravidla, aby zahrnovalo jak elektrony, tak atomová jádra do následujícího tvaru
+\begin{equation}
+\int_0^\infty "F" \mathrm{d}E = n_e + \sum_n \frac{Z_n^2 m_\mathrm{e}} {m_\mathrm{n}} n_\mathrm{n} = U n_\mathrm{e} \mathrm{.} %FIXME
+\end{equation}
+Sumace je prováděna přes všechny typy jader v materiálu. Symboly $Z_\mathrm{n}, m_\mathrm{n}, n_\mathrm{n}$ značí pořadě protonové číslo, hmotnost jádra a koncentraci jader. Faktoru $U$ je pro většinu materiálů velmi podobný: $U = 1.00027$ \ref{sumrule???}.
+
+Funkci $"F"(E)$ nazýváme funkce síly přechodu. Pro parametrizaci dielektrické funkce je praktické zavést funkci
+\begin{equation}
+F(E) = \epsilon_\mathrm{i}(E) E = \frac{"F(E)"}{M}\mathrm{,}
+\end{equation}  
+kde $M$ je konstanta:
+\begin{equation} 
+M = \frac{8 \pi \epsilon_0 m_\mathrm{e}}{(e h)^2} = 4,61706\times10^{26} \mathrm{eV}^{-2}\mathrm{m}^3 \mathrm{.}
+\end{equation}
+
+Funkci $F(E)$ můžeme také nazývat funkce síly přechodu a slouží jako výchozí bod při parametrizaci optických konstant v pevných látkých.
 
 \section{ Parametrizace funkce dielektrické  odezvy}
 Dielektrická funkce je seskládána z jednotlivých částí, které reprezentují jednotlivé typy přechodů $t$. Celková dielektrická funkce je suma přes dielektrické funkce jednotlivých částí a vakua \cite{sumrule1}. 
@@ -59,21 +77,115 @@ Pak můžeme přepsat rovnici (\ref{suma1}) jako:
 \epsilon (E) = 1 + \sum_t N_t \epsilon_t^0(E) \mathrm{.}
 \end{equation}
 
-\section{Mezipásové přechody mezi valenčním a vodivostním pásem}
+
+\section{Jednotlivé přespěvky k dielektrické funkci}
+Jelikož se v této práci zabýváme zkoumáním DLC vstev deponovaných na krystalickém křemíku, 
+
+\subsection{Mezipásové přechody mezi valenčním a vodivostním pásem}
 V amorfním materiálu s jedním valenčním a vodivostním pásem je příspěvek k dielektrické funkci nenulový v intervalu energií od $E_\mathrm{g}$ do $E_\mathrm{h}$, kde $E_\mathrm{g}$ je šířka zakázaného pásu a $E_\mathrm{h}$ je rozdíl energií mezi minimem valenčního a maximem vodivostního pásu (maximální energie přechodu mezi valenčním a vodivostním pásem). Následující parametrizace se ukázala jak vhodná. FIXME!
 
 \begin{equation}
+\label{valencvod}
 \epsilon_\mathrm{i,vc}^0 = \mathrm{sgn}(E) \frac{(|E|- E_\mathrm{g})^2(E_\mathrm{h} - |E|)^2}{ C E^2 [(|E| - E_\mathrm{c})^2 + B_\mathrm{c}^2]} \Pi_{E_\mathrm{g},E_\mathrm{h}}(|E|) \, \mathrm{,}
 \end{equation}
 kde $E_\mathrm{c}$ a $B_\mathrm{c}$ jsou parametry zahrnující rozšíření pásové struktury a její nesymetrii vzhledem k Fermiho energii?????
 
 Funkce $\Pi_{E_\mathrm{min},E_\mathrm{max}}(|E|)$ je definována následovně:
 \begin{equation}
-\Pi_{E_\mathrm{min},E_\mathrm{max}}(|E|) = 1 : E_\mathrm{min} < E < E_\mathrm{max}
- FIXME!!!!! 0 : \mathrm{jinak.}
+\Pi_{E_\mathrm{min},E_\mathrm{max}}(|E|) = 
+	\left\{\begin{array}{l l} 
+	1 : E_\mathrm{min} < E < E_\mathrm{max} \\
+	0 : \text{jinak.} \end{array} \right.
+\end{equation}
+
+\subsection{Excitace elektronů do vyšších vodivostních pásů}
+\begin{equation}
+a
 \end{equation}
 
 
+\subsection{Absorpce na vibračních stavech}
+V infračervené oblasti se v DLC vrstvách výskytuje velké množství absorpčních píků, způsobených absorpcí na vibračních stavech C a C--H skupin. Jednotlivé píky je možno modelovat jako Gausovské píky v imaginární části dielektrické funkce \cite{franta2007}:
 
+\begin{equation}
+\epsilon^0_{\mathrm{i},p} = \frac{1}{\sqrt{2 \pi} B_p E_p} \left[ \exp\left(-\frac{(E-E_p)^2}{2B_p^2}\right) - \exp\left(-\frac{(E+E_p)^2}{2B_p^2}\right) \right] \text{.}
+\end{equation}
+V reálné části tomu odpovídá tvar:
+\begin{equation}
+\epsilon^0_{\mathrm{r},p} = \frac{-\sqrt{2}}{\pi B_p E_p} \left[ \mathrm{D}\left(\frac{E-E_p}{\sqrt{2}B_p}\right) - \mathrm{D}\left(\frac{E+E_p}{\sqrt{2}B_p}\right) \right] \text{,}
+\end{equation}
+kde $\mathrm{D}(x)$ značí Dawsonův integrál, definovaný jako:
+\begin{equation}
+\mathrm{D}(x) = \exp(-x^2)\int_0^x \exp(t^2) \mathrm{d}t
+\end{equation}
+
+\subsection{Excitace jaderných elektronů}
+
+
+
+\section{Aplikace na DLC vrstvy (model PJDOS-DLC)}
+V této práci byly DLC vzorky modelovány jako multivrstva: systém vrstva -- přechodová vrstva -- substrát -- zadní vrstva (obrázek \ref{}). Pro modelování dielektrické funkce vrstvy byl použit model PJDOS-DLC, pro modelování přechodové vrstvy byl použit model PJDOS, 
+
+\subsection{Vrstva}
+Pro modelování dielektrické funkce DLC vrstvy byl použit model PJDOS-DLC \cite{franta2007}. Ten zahrnuje jednak mezipásové přechody (\ref{valencvod}) pro $\sigma$ a $\pi$ elektrony, pak také excitace do stavů nad vodivostním pásem \ref{}, absorpci na vibračních stavech v infračervené oblasti \ref{gaus} a excitaci jaderných elekronů \ref{jaderneel}. 
+
+DLC vrstvu uvažujeme jako systém tří komponent: vodíkových jader, uhlíkových jader a elektronů. Celkovou sílu přechodu $N$ můžeme proto rozepsat jako
+\begin{equation}
+N = \int_0^\infty \epsilon_\mathrm{i}(E) E \mathrm{d}E = N_\mathrm{e} + N_\mathrm{C} + N_\mathrm{H} \text{,}
+\end{equation} 
+kde $N_\mathrm{e}$, $N_\mathrm{C}$ a $N_\mathrm{H}$ jsou částečné síly přechodu pro elektrony, uhlíková jádra a vodíková jádra. Pro uhlíky můžeme navíc rozlišit sílu přechodu pro sp2 a spc3 vázaný uhlík $N_\mathrm{C_{sp3}}$, $N_\mathrm{C_{sp2}}$
+\begin{equation}
+N_\mathrm{C} = N_\mathrm{C_{sp3}} + N_\mathrm{C_{sp2}} \text{.}
+\end{equation} 
+
+Jednotlivé síly přechodů závisí pouze na složení a hustotě systému
+\begin{equation}
+N_\mathrm{e} = [Z_\mathrm{C}(f_\mathrm{C}) + Z_\mathrm{H} f_\mathrm{H}] N_\mathrm{a} = (6f_\mathrm{C} + f_\mathrm{H})N_\mathrm{a}
+\end{equation}
+\begin{equation}
+N_\mathrm{C_{sp3}} = Z^2_\mathrm{C} f_\mathrm{C_{sp3}} \frac{m_\mathrm{e}}{m_\mathrm{C}} N_\mathrm{a} = const f_\mathrm{C_{sp3}} N_\mathrm{a} \text{,}
+\end{equation}
+\begin{equation}
+N_\mathrm{C_{sp2}} = Z^2_\mathrm{C} f_\mathrm{C_{sp2}} \frac{m_\mathrm{e}}{m_\mathrm{C}} N_\mathrm{a} = const f_\mathrm{C_{sp2}} N_\mathrm{a} \text{,}
+\end{equation}
+\begin{equation}
+N_\mathrm{H} = Z^2_\mathrm{H} f_\mathrm{H} \frac{m_\mathrm{e}}{m_\mathrm{H}} N_\mathrm{a} = 0,000545 f_\mathrm{H} N_\mathrm{a} \text{,}
+\end{equation}
+kde $N_\mathrm{a}$ značí atomovou koncentraci a $f_\mathrm{H}$, $f_\mathrm{C_{sp3}}$ a $f_\mathrm{C_{sp2}}$ jsou koncentrace vodíku, sp3 uhlíku a sp2 uhlíku ($f_\mathrm{H} + f_\mathrm{C_{sp3}} + f_\mathrm{C_{sp2}} =1 $). $Z_\mathrm{C}$ a $Z_\mathrm{H}$ značí atomové čísla uhlíku a vodíku. $m_\mathrm{e}$, $m_\mathrm{C}$ a $m_\mathrm{H}$ jsou hmotnost elektronu, hmotnost jádra uhlíku a hmotnost jádra vodíku. 
+
+
+
+Přehledně všechny parametry shrnuje tabulka \ref{}.
+
+\begin{table}
+\centering
+\begin{tabular}{l l}
+\hline
+$N_\mathrm{a}$ & atomová koncentrace \\
+$f_\mathrm{C_{sp3}}$ & relativní koncentrace sp3 uhlíku \\
+$f_\mathrm{H}$ & relativní koncentrace vodíku \\
+
+$E_\mathrm{g\{\pi,\sigma\}}$ & Šířka zakázaného pásu \{$\pi$, $\sigma$\} elektronů\\
+$E_\mathrm{h\{\pi,\sigma\}}$ & Maximální energie přechodu \{$\pi$, $\sigma$\} elektronů\\
+
+
+
+
+\hline
+
+\end{tabular}
+
+\caption{Parametry modelu PJDOS-DLC}
+\end{table}
+
+\subsection{Přechodová vrstva}
+Mezi DLC vrstvou a krystalickým křemíkem se nachází mezivrstva, vzniklá implantací vysokoenergetických iontů uhlíku do krystalického křemíku. Její optické konstanty jsou proto někde mezi. Pro  
+
+\subsection{Substrát}
+Jako substrát byl u všech vzorků použit krystalický křemík (1-1-1??) o tloušťce přibližně 0,36\,mm. Při modelování substrátu byly postupně vyzkoušeny tři metody. První verze použitých modelů využívaly tabelované hodnoty dielektrických funkcí krystalického křemíku. Tento postup byl dostatečný pro viditelnou a ultrafialovou oblast, kde je křemík neprůhledný a kde na jeho optické vlastnosti nemají vliv případné příměsi. V infračervené oblasti se nicméně ukázaly jako problém příměsi kyslíku, které vzorek od vzorku mírně kolísaly a způsobovaly odlišnou sbasorpci hlavně v oblasti pod 1100\,cm$^{-1}$. Druhým vyzkoušeným řešením bylo proto naměřit absorpci křemíkového substrátu před depozicí, nafitovat optické konstanty substrátu samostatně a použít je následně při fitování vrstvy. Tato metoda se nicméně také neosvědčila, hlavně kvůli velké časové náročnosti a také kvůli tomu, že koncentrace kyslíkových příměsí se mírně liší i v rámci jednoho vzorku.
+Nakonec byl tedy substrát fitován zároveň s vrstvou. Bylo k tomu použit model PJDOS-cSi \cite{}(nějaké citace???), ale jako volný parametr byla zvolena pouze koncentrace kyslíkových příměsi $f_O$ a tloušťka křemíkového waferu $d_\mathrm{s}$ (která také mírně kolísala).  
+
+\subsection{Zadní vrstva}
+Píky 1075$^{-1}$ a 460$^{-1}$ 800cm$^{-1}$
 
 \cleardoublepage
