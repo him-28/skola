@@ -62,6 +62,7 @@ Je praktické jednotlivé příspěvky $F_t$ normalizovat na $F_t^0$ aby platilo
 
 Integrováním přes $F_t(E)$ získáme 
 \begin{equation}
+\label{definiceceelkovesily}
 \sum_t \int_0^\infty F_t(E)\mathrm{d}E = \sum_t N_t = N \mathrm{.}
 \end{equation}
 $N_t$ jsou integrální síly přechodů pro jednotlivé příspěvky a $N$ je celková integrální síla přechodu, nebo jen jednoduše celková síla přechodu.  
@@ -104,7 +105,7 @@ a
 \end{equation}
 
 
-\subsection{Absorpce na vibračních stavech}
+\subsection{Fononová absorpce}
 V infračervené oblasti se v DLC vrstvách výskytuje velké množství absorpčních píků, způsobených absorpcí na vibračních stavech C a C--H skupin. Jednotlivé píky je možno modelovat jako Gausovské píky v imaginární části dielektrické funkce \cite{franta2007}:
 
 \begin{equation}
@@ -127,7 +128,7 @@ kde $\mathrm{D}(x)$ značí Dawsonův integrál, definovaný jako:
 V této práci byly DLC vzorky modelovány jako multivrstva: systém vrstva -- přechodová vrstva -- substrát -- zadní vrstva (obrázek \ref{}). Pro modelování dielektrické funkce vrstvy byl použit model PJDOS-DLC, pro modelování přechodové vrstvy byl použit model PJDOS, 
 
 \subsection{Vrstva}
-Pro modelování dielektrické funkce DLC vrstvy byl použit model PJDOS-DLC \cite{franta2007}. Ten zahrnuje jednak mezipásové přechody (\ref{valencvod}) pro $\sigma$ a $\pi$ elektrony, pak také excitace do stavů nad vodivostním pásem \ref{}, absorpci na vibračních stavech v infračervené oblasti \ref{gaus} a excitaci jaderných elekronů \ref{jaderneel}. 
+Pro modelování dielektrické funkce DLC vrstvy byl použit model PJDOS-DLC \cite{franta2007}. Ten zahrnuje jednak přechody mezi valenčním a vodivostním pásem (\ref{valencvod}) pro $\sigma$ a $\pi$ elektrony, pak také excitace do vyšších excitovaných stavů nad vodivostním pásem \ref{}, absorpci na vibračních stavech v infračervené oblasti \ref{gaus} a excitaci jaderných elektronů \ref{jaderneel}. 
 
 DLC vrstvu uvažujeme jako systém tří komponent: vodíkových jader, uhlíkových jader a elektronů. Celkovou sílu přechodu $N$ můžeme proto rozepsat jako
 \begin{equation}
@@ -143,19 +144,54 @@ Jednotlivé síly přechodů závisí pouze na složení a hustotě systému
 N_\mathrm{e} = [Z_\mathrm{C}(f_\mathrm{C}) + Z_\mathrm{H} f_\mathrm{H}] N_\mathrm{a} = (6f_\mathrm{C} + f_\mathrm{H})N_\mathrm{a}
 \end{equation}
 \begin{equation}
-N_\mathrm{C_{sp3}} = Z^2_\mathrm{C} f_\mathrm{C_{sp3}} \frac{m_\mathrm{e}}{m_\mathrm{C}} N_\mathrm{a} = const f_\mathrm{C_{sp3}} N_\mathrm{a} \text{,}
-\end{equation}
-\begin{equation}
-N_\mathrm{C_{sp2}} = Z^2_\mathrm{C} f_\mathrm{C_{sp2}} \frac{m_\mathrm{e}}{m_\mathrm{C}} N_\mathrm{a} = const f_\mathrm{C_{sp2}} N_\mathrm{a} \text{,}
+N_\mathrm{C} = Z^2_\mathrm{C} f_\mathrm{C} \frac{m_\mathrm{e}}{m_\mathrm{C}} N_\mathrm{a} = const f_\mathrm{C} N_\mathrm{a} \text{,}
 \end{equation}
 \begin{equation}
 N_\mathrm{H} = Z^2_\mathrm{H} f_\mathrm{H} \frac{m_\mathrm{e}}{m_\mathrm{H}} N_\mathrm{a} = 0,000545 f_\mathrm{H} N_\mathrm{a} \text{,}
 \end{equation}
-kde $N_\mathrm{a}$ značí atomovou koncentraci a $f_\mathrm{H}$, $f_\mathrm{C_{sp3}}$ a $f_\mathrm{C_{sp2}}$ jsou koncentrace vodíku, sp3 uhlíku a sp2 uhlíku ($f_\mathrm{H} + f_\mathrm{C_{sp3}} + f_\mathrm{C_{sp2}} =1 $). $Z_\mathrm{C}$ a $Z_\mathrm{H}$ značí atomové čísla uhlíku a vodíku. $m_\mathrm{e}$, $m_\mathrm{C}$ a $m_\mathrm{H}$ jsou hmotnost elektronu, hmotnost jádra uhlíku a hmotnost jádra vodíku. 
+kde $N_\mathrm{a}$ značí atomovou koncentraci a $f_\mathrm{H}$, $f_\mathrm{C}$ jsou koncentrace vodíku a uhlíku ($f_\mathrm{H} + f_\mathrm{C} = 1 $). $Z_\mathrm{C}$ a $Z_\mathrm{H}$ značí atomové čísla uhlíku a vodíku. $m_\mathrm{e}$, $m_\mathrm{C}$ a $m_\mathrm{H}$ jsou hmotnost elektronu, hmotnost jádra uhlíku a hmotnost jádra vodíku. 
 
+Celkovou sílu přechodu $N$ také můžeme vyjádřit podle (\ref{definiceceelkovesily}) jako součet jednotlivých příspěvků $t$
 
+\begin{equation}
+N = N_\mathrm{v} + N_\mathrm{K} + N_\mathrm{f} \text{.}
+\end{equation}
 
-Přehledně všechny parametry shrnuje tabulka \ref{}.
+$N_\mathrm{v}$ zde značí sílu kombinovanou sílu přechodu pro valenční elektrony jednak do vodivostního pásu a jednak do excitovaných stavů nad vodivostním pásem. $N_\mathrm{v}$ můžeme rozložit na části pro $\sigma$ a $\pi$ elektrony $N_\sigma$, $N_\pi$ podle jejich poměru (na jeden sp2 atom uhlíku připadá jeden $\pi$ elektron a tři $\sigma$ elektrony, na sp3 vázaný uhlík čtyři $\sigma$ elektrony a na vodík pouze jeden $\sigma$  elektron)
+\begin{equation}
+N_\sigma = N_\mathrm{v} \frac{f_\mathrm{C_{sp2}}}{4f_\mathrm{C} + f_\mathrm{H}}  \text{,}
+\end{equation}
+\begin{equation}
+N_\pi = N_\mathrm{v} \frac{4f_\mathrm{C_{sp3}} + 3f_\mathrm{C_{sp2}} + f_\mathrm{H}}{4f_\mathrm{C} + f_\mathrm{H}}  \text{.}
+\end{equation}
+
+$N_\sigma$ a $N_\pi$ můžeme opět rozložit na části určující sílu přechodů mezi valenčním a vodivostním pásem a mezi valenčním pásem a vyššími excitovanými stavy
+\begin{equation}
+\begin{array}{lr}
+N_{\sigma \rightarrow \xi} = N_\mathrm{\sigma} \alpha_{\sigma\xi} \text{,} &
+N_{\sigma \rightarrow \sigma^*} = N_{\sigma \rightarrow \xi} - N_{\sigma \rightarrow \xi} \text{,} \\
+\end{array}
+\end{equation}
+\begin{equation}
+\begin{array}{lr}
+N_{\pi \rightarrow \xi} = N_\mathrm{\pi} \alpha_{\pi\xi} \text{,} &
+N_{\pi \rightarrow \pi^*} = N_{\pi \rightarrow \xi} - N_{\pi \rightarrow \xi} \text{.} \\
+\end{array}
+\end{equation}
+
+Dále je potřeba rozdělit sílu přechodu pro fonovové absorpce $N_\mathrm{f}$ na síly přechodu jednotlivých píků
+\begin{equation}
+N_\mathrm{p} = \sum_j N_j \text{,}
+\end{equation}
+kde $j$ reprezentuje všechny možné vibrační stavy ve vrstvě. Navíc platí, že síly přechodu pro jednotlivé vibrační stavy jsou přímo úměrné částečným silám přechodu pro vodíková, případně uhlíková jádra.
+
+\begin{equation}
+\text{FIXME!!! v modelu jsou všechny síly napojeny na fH (i ty co s vodíkem nemají nic společného)}
+\end{equation}
+
+Celkově tedy v modelu PJDOS-DLC vystupuje 16 + 3$i$ parametrů. Tři parametry související se složením materiálu $N_\mathrm{a}$, $f_\mathrm{C_{sp3}}$ a $f_\mathrm{H}$. Dva parametry pro modelování jaderných elekronů $\alpha_\mathrm{K}$ a $E_\mathrm{K}$. Osm parametrů pro modelování přechodů mezi valenčním a vodivostním pásem $\sigma$ a $\pi$ elektronů $E_\mathrm{g\{\pi,\sigma\}}$, $E_\mathrm{h\{\pi,\sigma\}}$, $E_\mathrm{c\{\pi,\sigma\}}$ a $B_\mathrm{c\{\pi,\sigma\}}$. Tři parametry pro přechody do vyšších energetických stavů $E_\mathrm{x}$, $\alpha_{\{\sigma,\pi\}\xi}$ a tři parametry pro každý přítomný vibrační stav $\alpha_i$, $\nu_i$ a $\beta_i$.
+
+Přehledně všechny parametry shrnuje tabulka \ref{DLCparametry}.
 
 \begin{table}
 \centering
@@ -165,8 +201,20 @@ $N_\mathrm{a}$ & atomová koncentrace \\
 $f_\mathrm{C_{sp3}}$ & relativní koncentrace sp3 uhlíku \\
 $f_\mathrm{H}$ & relativní koncentrace vodíku \\
 
+$\alpha_\mathrm{K}$ & \\
+$E_\mathrm{K}$ & \\
+
 $E_\mathrm{g\{\pi,\sigma\}}$ & Šířka zakázaného pásu \{$\pi$, $\sigma$\} elektronů\\
 $E_\mathrm{h\{\pi,\sigma\}}$ & Maximální energie přechodu \{$\pi$, $\sigma$\} elektronů\\
+$E_\mathrm{c\{\pi,\sigma\}}$ &  \{$\pi$, $\sigma$\} elektronů\\
+$B_\mathrm{c\{\pi,\sigma\}}$ &  \{$\pi$, $\sigma$\} elektronů\\
+
+$E_\mathrm{x}$ & vzdálenost hrany pásu vyšších excitací od Fermiho energie\\
+$\alpha_{\{\sigma,\pi\}\xi}$ & \\
+
+$\alpha_i$ & relativní ??? síla přechodu $i$-tého vibračního módu \\
+$\nu_i$ & poloha $i$-tého vibračního módu\\
+$\beta_i$ & pološířka $i$-tého vibračního módu\\
 
 
 
@@ -174,7 +222,7 @@ $E_\mathrm{h\{\pi,\sigma\}}$ & Maximální energie přechodu \{$\pi$, $\sigma$\}
 \hline
 
 \end{tabular}
-
+\label{DLCparametry}
 \caption{Parametry modelu PJDOS-DLC}
 \end{table}
 
