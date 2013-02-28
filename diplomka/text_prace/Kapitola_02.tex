@@ -1,15 +1,11 @@
 \chapter{Model dielektrické odezvy DLC vrstev}
-Greek test
-$\alpha \beta \gamma \delta \chi \epsilon \kappa \lambda \mu \nu \omega \pi \rho \psi \zeta$
 
-$\alpha \beta \Gamma \Delta \chi \epsilon \kappa \Lambda \mu \nu \Omega \Pi \rho \Psi \zeta$
-FIXME - úvod + všechno co potřebujeme 
 
 KKintegrál, time-reversal symetry a zobecněné f-sum pravidlo.
 
 První podmínka, kterou musí vhodný model lineární dielektrické odezvy splňovat, je Kramers--Kronigův integrál (citovat KK původní články??? nebo nějakou učebnici???), který spojuje reálnou a imaginární část dielektrické funkce  
 \begin{equation}
-\epsilon_\mathrm{r}(\omega) = 1 + \frac{1}{\pi} \int (preskrtnuty) \frac{\epsilon_\mathrm{i}(\zeta)}{\zeta - \omega} \mathrm{d}\zeta \mathrm{,}
+\epsilon_\mathrm{r}(\omega) = 1 + \frac{1}{\pi} \int (preskrtnuty) \frac{\epsilon_\mathrm{i}(\xi)}{\xi - \omega} \mathrm{d}\xi \mathrm{,}
 \label{KKint}
 \end{equation}
 kde $\omega$ je úhlová frekvence a $\epsilon_\mathrm{r}, \epsilon_\mathrm{i}$ jsou reálná a imeginární část dielektrické funkce.  
@@ -44,7 +40,7 @@ M = \frac{8 \pi \epsilon_0 m_\mathrm{e}}{(e h)^2} = 4,61706\times10^{26} \mathrm
 
 Funkci $F(E)$ můžeme také nazývat funkce síly přechodu a slouží jako výchozí bod při parametrizaci optických konstant v pevných látkých.
 
-\section{ Parametrizace funkce dielektrické  odezvy}
+\section{Parametrizace funkce dielektrické odezvy}
 Dielektrická funkce je seskládána z jednotlivých částí, které reprezentují jednotlivé typy přechodů $t$. Celková dielektrická funkce je suma přes dielektrické funkce jednotlivých částí a vakua \cite{sumrule1}. 
 \begin{equation}
 \epsilon(E) = 1 + \sum_t \epsilon_t(E)
@@ -79,17 +75,57 @@ Pak můžeme přepsat rovnici (\ref{suma1}) jako:
 \end{equation}
 
 
+
+
 \section{Jednotlivé přespěvky k dielektrické funkci}
 Jelikož se v této práci zabýváme zkoumáním DLC vstev deponovaných na krystalickém křemíku, 
 
+
+
+
 \subsection{Mezipásové přechody mezi valenčním a vodivostním pásem}
-V amorfním materiálu s jedním valenčním a vodivostním pásem je příspěvek k dielektrické funkci nenulový v intervalu energií od $E_\mathrm{g}$ do $E_\mathrm{h}$, kde $E_\mathrm{g}$ je šířka zakázaného pásu a $E_\mathrm{h}$ je rozdíl energií mezi minimem valenčního a maximem vodivostního pásu (maximální energie přechodu mezi valenčním a vodivostním pásem). Následující parametrizace se ukázala jak vhodná. FIXME!
+%FIXME: použijeme tohle vůbec??? V amorfním materiálu s jedním valenčním a vodivostním pásem je příspěvek k dielektrické funkci nenulový v intervalu energií od $E_\mathrm{g}$ do $E_\mathrm{h}$, kde $E_\mathrm{g}$ je šířka zakázaného pásu a $E_\mathrm{h}$ je rozdíl energií mezi minimem valenčního a maximem vodivostního pásu (maximální energie přechodu mezi valenčním a vodivostním pásem). Následující parametrizace se ukázala jak vhodná. FIXME!
+
+Absorpce světla v amorfních nebo krystalických materiálech je způsobena přechodem elektronu z výchzího stavu $j$ s energií $S$ do konečného stavu $k$ s energií $S + E$. Imaginární část dielektrické funkce je spočítána jako suma příspěvků všech možných přechodů:
+
+\begin{equation}
+\label{basicDOS}
+\epsilon_\mathrm{i} (E) = 
+\left(\frac{eh}{m_\mathrm{e}E} \right)^2 \frac{1}{4 \pi \epsilon_0 \mathrm{B}_0} \sum_{j,k} | p_{j \rightarrow k} |^2
+\int_{-\infty}^\infty f_\mathrm{e}(S) \mathcal{N}_j(S) f_\mathrm{h}(S+E) \mathcal{N}_k(S + E)\mathrm{d}S \text{,}
+\end{equation}
+kde $E$, $h$, $\epsilon_0$ a $\mathrm{B}_0$ jsou energie fotonu, Planckova konstanta, permitivita vakua a příslušná část Brillouinovy zóny odpovídajícího krystalického materiálu. Funkce $\mathcal{N}_j(S)$ a $\mathcal{N}_k(S)$ značí rozdělení energií hustoty stavů (DOS) v $j$ a $k$ pásu. Koncentrace $j$ elektronů, tj. počet $j$ elektronů na jednotku objemu je definován takto:
+\begin{equation}
+\mathrm{N}_j = \int_{-\infty}^\infty \mathcal{N}_j(S)\mathrm{d}S \text{.}
+\end{equation}
+Výše uvedené přechody jsou možné pouze, pokud je jsou $j$ stavy zaplněné and $k$ stavy nejsou. Toto můžeme zahrnout přidáním Fermi-Diracova rozdělení pro elektrony, $f_\mathrm{e}$, a díry, $f_\mathrm{h}$, do integrálu. Pravděpodobnost přechodu je dána čtvercem prvku matice hybnosti (squared momentum-matrix element???) $|p_{j \rightarrow k}|^2$. Je vytknuta před integrál, protože předpokládáme, že je konstantní pro všechny přechody mezi konkrétním $j$ a $k$ pásem. Rovnice (\ref{basicDOS}) může zahrnovat jednak mezipásové přechody i přechody v do vyšších stavů v rámci pásu (intraband transitions????). DOS funkce ${N}_j(S)$ a $\mathcal{N}_k(S)$ můžou také zahrnovat jedna rozšířené a jednak lokalizované stavy. Pokud je nicméně valenční pás plně zaplněn a vodivostní pás je zcela prázdný, můžeme Fermi-Diracovo rozdělení vynechat a inergál v rovnici (\ref{basicDOS}) poté definuje tzv. funkci sdružené hustoty stavů (JDOS) $\mathcal{J}_{j \rightarrow k}(E)$ odpovídající $j \rightarrow k$ přechodům
+\begin{equation}
+\mathcal{J}_{j \rightarrow k}(E) = \int_{-\infty}^\infty \mathcal{N}_j(S) \mathcal{N}_k(S + E)\mathrm{d}S \text{.}
+\end{equation}
+Rovnice (\ref{basicDOS}) nicméně definuje pouze imaginární část dielektrické funkce a pouze pro kladné $E$. Celkovou komplexní dielektrickou funkci můžeme získat pomocí antisymetrie imaginární části (\ref{casovasymetrie}) a Kramers-Kronigových relací (\ref{KKint}):
+\begin{equation}
+\epsilon_i (E) = 
+\left(\frac{eh}{m_\mathrm{e}E} \right)^2 \frac{\mathrm{sgn}{E}}{4 \pi \epsilon_0 \mathrm{B}_0} \sum_{j,k} | p_{j \rightarrow k} |^2
+\int_{-\infty}^\infty f_\mathrm{e}(S) \mathcal{N}_j(S) f_\mathrm{h}(S+E) \mathcal{N}_k(S + E)\mathrm{d}S \text{,}
+\end{equation}
+
+\begin{equation}
+\epsilon_\mathrm{r}(E) = 
+1 + \frac{1}{\pi} \mathcal{P} \int_{-\infty}^\infty \frac{\xi \epsilon_\mathrm{i}(\xi)}{\xi^2 - E^2} \mathrm{d}\xi = 
+1 + \frac{2}{\pi} \mathcal{P} \int_0^\infty \frac{\xi \epsilon_\mathrm{i}(\xi)}{\xi^2 - E^2} \mathrm{d}\xi 
+\text{.}
+\end{equation}
+
+
+Vhodný model proto můžeme sestrojit buď parametrizací DOS funkcí, příklad takového modelu publikoval Dan Franta \ref{franta20007}. Nevýhodou paramatrizace     
+
+V \ref{} je model PJDOS rozšířen dále o parametry $E_\mathrm{c}$ a $B_\mathrm{c}$ zahrnující rozšíření pásové struktury a její nesymetrii vzhledem k Fermiho energii?????
 
 \begin{equation}
 \label{valencvod}
 \epsilon_\mathrm{i,vc}^0 = \mathrm{sgn}(E) \frac{(|E|- E_\mathrm{g})^2(E_\mathrm{h} - |E|)^2}{ C E^2 [(|E| - E_\mathrm{c})^2 + B_\mathrm{c}^2]} \Pi_{E_\mathrm{g},E_\mathrm{h}}(|E|) \, \mathrm{,}
 \end{equation}
-kde $E_\mathrm{c}$ a $B_\mathrm{c}$ jsou parametry zahrnující rozšíření pásové struktury a její nesymetrii vzhledem k Fermiho energii?????
+kde 
 
 Funkce $\Pi_{E_\mathrm{min},E_\mathrm{max}}(|E|)$ je definována následovně:
 \begin{equation}
@@ -119,6 +155,15 @@ kde $\mathrm{D}(x)$ značí Dawsonův integrál, definovaný jako:
 \begin{equation}
 \mathrm{D}(x) = \exp(-x^2)\int_0^x \exp(t^2) \mathrm{d}t
 \end{equation}
+V infračervené spektroskopii je nicméně zvykem používat k popisování píků vlnočty místo energií. Z toho důvodu jsou parametry $E_p$ a $B_p$ nahrazeny parametry $\nu_p$ a $\beta_p$:
+\begin{equation}
+E_p = h c \nu_p \text{,}
+\end{equation}
+\begin{equation}
+B_p = \frac{h c \beta_p}{2 \sqrt{2 \ln 2}} \text{,}
+\end{equation}
+kde $h$ je Planckova konstanta a $c$ je rychlost světla. 
+
 
 \subsection{Excitace jaderných elektronů}
 
@@ -137,7 +182,7 @@ Pro modelování dielektrické funkce DLC vrstvy byl použit model PJDOS-DLC \ci
 \label{DLCDOS}
 \end{figure} 
 
-DLC vrstvu uvažujeme jako systém tří komponent: vodíkových jader, uhlíkových jader a elektronů. Celkovou sílu přechodu $N$ můžeme proto rozepsat jako
+DLC vrstvu uvažujeme jako systém tří komponent: vodíkových jader, uhlíkových jader a elektronů. Celkovou sílu přechodu $N$ můžeme proto rozepsat jako:
 \begin{equation}
 N = \int_0^\infty \epsilon_\mathrm{i}(E) E \mathrm{d}E = N_\mathrm{e} + N_\mathrm{C} + N_\mathrm{H} \text{,}
 \end{equation} 
@@ -145,10 +190,9 @@ kde $N_\mathrm{e}$, $N_\mathrm{C}$ a $N_\mathrm{H}$ jsou částečné síly pře
 \begin{equation}
 N_\mathrm{C} = N_\mathrm{C_{sp3}} + N_\mathrm{C_{sp2}} \text{.}
 \end{equation} 
-
-Jednotlivé síly přechodů závisí pouze na složení a hustotě systému
+Jednotlivé síly přechodů závisí pouze na složení a hustotě systému:
 \begin{equation}
-N_\mathrm{e} = [Z_\mathrm{C}(f_\mathrm{C}) + Z_\mathrm{H} f_\mathrm{H}] N_\mathrm{a} = (6f_\mathrm{C} + f_\mathrm{H})N_\mathrm{a}
+N_\mathrm{e} = [Z_\mathrm{C}(f_\mathrm{C}) + Z_\mathrm{H} f_\mathrm{H}] N_\mathrm{a} = (6f_\mathrm{C} + f_\mathrm{H})N_\mathrm{a} \text{,}
 \end{equation}
 \begin{equation}
 N_\mathrm{C} = Z^2_\mathrm{C} f_\mathrm{C} \frac{m_\mathrm{e}}{m_\mathrm{C}} N_\mathrm{a} = const f_\mathrm{C} N_\mathrm{a} \text{,}
@@ -190,13 +234,15 @@ Dále je potřeba rozdělit sílu přechodu pro fonovové absorpce $N_\mathrm{f}
 \begin{equation}
 N_\mathrm{p} = \sum_j N_j \text{,}
 \end{equation}
-kde $j$ reprezentuje všechny možné vibrační stavy ve vrstvě. Navíc platí, že síly přechodu pro jednotlivé vibrační stavy jsou přímo úměrné částečným silám přechodu pro vodíková, případně uhlíková jádra.
-
+kde $j$ reprezentuje všechny možné vibrační stavy ve vrstvě. Navíc platí, že síly přechodu pro jednotlivé vibrační stavy jsou přímo úměrné částečným silám přechodu pro vodíková, případně uhlíková jádra:
 \begin{equation}
-\text{FIXME!!! v modelu jsou všechny síly napojeny na fH (i ty co s vodíkem nemají nic společného)}
+N_j = 
+	\left\{\begin{array}{l l} 
+	\alpha_j f_\mathrm{H} : \text{pro j vibrační mód vodíkových skupin} \\
+	\alpha_j f_\mathrm{C} : \text{pro j vibrační mód uhlíkových skupin.}\end{array} \right.
 \end{equation}
 
-Celkově tedy v modelu PJDOS-DLC vystupuje 16 + 3$i$ parametrů. Tři parametry související se složením materiálu $N_\mathrm{a}$, $f_\mathrm{C_{sp3}}$ a $f_\mathrm{H}$. Dva parametry pro modelování jaderných elekronů $\alpha_\mathrm{K}$ a $E_\mathrm{K}$. Osm parametrů pro modelování přechodů mezi valenčním a vodivostním pásem $\sigma$ a $\pi$ elektronů $E_\mathrm{g\{\pi,\sigma\}}$, $E_\mathrm{h\{\pi,\sigma\}}$, $E_\mathrm{c\{\pi,\sigma\}}$ a $B_\mathrm{c\{\pi,\sigma\}}$. Tři parametry pro přechody do vyšších energetických stavů $E_\mathrm{x}$, $\alpha_{\{\sigma,\pi\}\xi}$ a tři parametry pro každý přítomný vibrační stav $\alpha_i$, $\nu_i$ a $\beta_i$.
+Celkově tedy v modelu PJDOS-DLC vystupuje 16 + 3$j$ parametrů. Tři parametry související se složením materiálu $N_\mathrm{a}$, $f_\mathrm{C_{sp3}}$ a $f_\mathrm{H}$. Dva parametry pro modelování jaderných elekronů $\alpha_\mathrm{K}$ a $E_\mathrm{K}$. Osm parametrů pro modelování přechodů mezi valenčním a vodivostním pásem $\sigma$ a $\pi$ elektronů $E_\mathrm{g\{\pi,\sigma\}}$, $E_\mathrm{h\{\pi,\sigma\}}$, $E_\mathrm{c\{\pi,\sigma\}}$ a $B_\mathrm{c\{\pi,\sigma\}}$. Tři parametry pro přechody do vyšších energetických stavů $E_\mathrm{x}$, $\alpha_{\{\sigma,\pi\}\xi}$ a tři parametry pro každý přítomný vibrační stav $\alpha_j$, $\nu_j$ a $\beta_j$.
 
 Přehledně všechny parametry shrnuje tabulka \ref{DLCparametry}.
 
