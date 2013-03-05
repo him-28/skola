@@ -254,9 +254,17 @@ b(E) = \frac{(E_\xi + E)^2}{E^3} \text{.}\\
 
 
 \subsection{Excitace jaderných elektronů}
+U atomů, které mají kromě valenční elektronů i vnitřní slupky s ''jadernými elektrony'' musíme zahrnout i vliv jejich excitací. Stejně jako u excitací valenčních elektronů do vyšších excitovaných stavů se toto projeví na dielektrické funkci v měřené oblasti pouze minimálně, nicméně opět tento příspěvek nemůžeme vynechat kvůli sumačnímu pravidlu. Normalizovaná dielektrická funkce pro excitace jaderných elektronů je modelována jednoduchým jedno-parametrickým vzorcem \cite{sumrule2}
+\begin{equation}
+\epsilon_{\mathrm{i},\zeta}(E) = \frac{E_\zeta}{E^3} \Pi_{E_\zeta,\infty}(|E|) \text{,}
+\end{equation}
+\begin{equation}
+\epsilon_{\mathrm{r},\zeta}(E) = \frac{1}{\pi E^3}\left[ E_\zeta \ln\left| \frac{E_\zeta + E}{E_\zeta - E} - 2E\right| \right] \text{,}
+\end{equation}
+kde $E_\zeta = E_i + E_\mathrm{g}/2$, $i$ indexuje všechny typy jaderných elektronů v atomu (K, L, ...). 
 
 \subsection{Fononová absorpce}
-V infračervené oblasti se v DLC vrstvách výskytuje velké množství absorpčních píků, způsobených absorpcí na vibračních stavech C a C--H skupin. Jednotlivé píky je možno modelovat jako Gausovské píky v imaginární části dielektrické funkce \cite{franta2007}:
+V infračervené oblasti se v DLC vrstvách vyskytuje velké množství absorpčních píků, způsobených absorpcí na vibračních stavech C a C--H skupin. Jednotlivé píky je možno modelovat jako Gausovské funkce v imaginární části dielektrické funkce \cite{franta2007}:
 
 \begin{equation}
 \epsilon^0_{\mathrm{i},p} = \frac{1}{\sqrt{2 \pi} B_p E_p} \left[ \exp\left(-\frac{(E-E_p)^2}{2B_p^2}\right) - \exp\left(-\frac{(E+E_p)^2}{2B_p^2}\right) \right] \text{.}
@@ -276,7 +284,7 @@ E_p = h c \nu_p \text{,}
 \begin{equation}
 B_p = \frac{h c \beta_p}{2 \sqrt{2 \ln 2}} \text{,}
 \end{equation}
-kde $h$ je Planckova konstanta a $c$ je rychlost světla. 
+kde $c$ je rychlost světla. 
 
 
 
@@ -366,28 +374,25 @@ Přehledně všechny parametry shrnuje tabulka \ref{DLCparametry}.
 \centering
 \begin{tabular}{l l}
 \hline
+
 $N_\mathrm{a}$ & atomová koncentrace \\
 $f_\mathrm{C_{sp3}}$ & relativní koncentrace sp3 uhlíku \\
 $f_\mathrm{H}$ & relativní koncentrace vodíku \\
 
-$\alpha_\mathrm{K}$ & \\
-$E_\mathrm{K}$ & \\
+$\alpha_\mathrm{K}$ & relativní síla přechodu pro K jaderné elekrony\\
+$E_\mathrm{K}$ & vzdálenost středu pásu K elektronů od Fermiho energie\\
 
-$E_\mathrm{g\{\pi,\sigma\}}$ & Šířka zakázaného pásu \{$\pi$, $\sigma$\} elektronů\\
-$E_\mathrm{h\{\pi,\sigma\}}$ & Maximální energie přechodu \{$\pi$, $\sigma$\} elektronů\\
-$E_\mathrm{c\{\pi,\sigma\}}$ &  \{$\pi$, $\sigma$\} elektronů\\
-$B_\mathrm{c\{\pi,\sigma\}}$ &  \{$\pi$, $\sigma$\} elektronů\\
+$E_\mathrm{g\{\pi,\sigma\}}$ & šířka zakázaného pásu \{$\pi$, $\sigma$\} elektronů\\
+$E_\mathrm{h\{\pi,\sigma\}}$ & maximální energie přechodu \{$\pi$, $\sigma$\} elektronů\\
+$E_\mathrm{c\{\pi,\sigma\}}$ & FIXME \{$\pi$, $\sigma$\} elektronů\\
+$B_\mathrm{c\{\pi,\sigma\}}$ & FIXME \{$\pi$, $\sigma$\} elektronů\\
 
 $E_\mathrm{x}$ & vzdálenost hrany pásu vyšších excitací od Fermiho energie\\
-$\alpha_{\{\sigma,\pi\}\xi}$ & \\
+$\alpha_{\{\sigma,\pi\}\xi}$ & relativní síly přechodu \{$\sigma$,$\pi$\} elektronů do vyšších excitovaných stavů \\
 
-$\alpha_i$ & relativní ??? síla přechodu $i$-tého vibračního módu \\
-$\nu_i$ & poloha $i$-tého vibračního módu\\
-$\beta_i$ & pološířka $i$-tého vibračního módu\\
-
-
-
-
+$\alpha_j$ & relativní síla přechodu $j$-tého vibračního módu \\
+$\nu_j$ & poloha $i$-tého vibračního módu\\
+$\beta_j$ & pološířka $i$-tého vibračního módu\\
 \hline
 
 \end{tabular}
@@ -400,7 +405,7 @@ Mezi DLC vrstvou a krystalickým křemíkem se nachází mezivrstva, vzniklá im
 
 \subsection{Substrát}
 Jako substrát byl u všech vzorků použit krystalický křemík (1-1-1??) o tloušťce přibližně 0,36\,mm. Při modelování substrátu byly postupně vyzkoušeny tři metody. První verze použitých modelů využívaly tabelované hodnoty dielektrických funkcí krystalického křemíku. Tento postup byl dostatečný pro viditelnou a ultrafialovou oblast, kde je křemík neprůhledný a kde na jeho optické vlastnosti nemají vliv případné příměsi. V infračervené oblasti se nicméně ukázaly jako problém příměsi kyslíku, které vzorek od vzorku mírně kolísaly a způsobovaly odlišnou sbasorpci hlavně v oblasti pod 1100\,cm$^{-1}$. Druhým vyzkoušeným řešením bylo proto naměřit absorpci křemíkového substrátu před depozicí, nafitovat optické konstanty substrátu samostatně a použít je následně při fitování vrstvy. Tato metoda se nicméně také neosvědčila, hlavně kvůli velké časové náročnosti a také kvůli tomu, že koncentrace kyslíkových příměsí se mírně liší i v rámci jednoho vzorku.
-Nakonec byl tedy substrát fitován zároveň s vrstvou. Bylo k tomu použit model PJDOS-cSi \cite{}(nějaké citace???), ale jako volný parametr byla zvolena pouze koncentrace kyslíkových příměsi $f_O$ a tloušťka křemíkového waferu $d_\mathrm{s}$ (která také mírně kolísala).  
+Nakonec byl tedy substrát fitován zároveň s vrstvou. Bylo k tomu použit model PJDOS-cSi \cite{}(nějaké citace???), ale jako volný parametr byla zvolena pouze koncentrace kyslíkových příměsi $f_\mathrm{O}$ a tloušťka křemíkového waferu $d_\mathrm{s}$ (která také mírně kolísala).  
 
 \subsection{Zadní vrstva}
 Píky 1075$^{-1}$ a 460$^{-1}$ 800cm$^{-1}$
