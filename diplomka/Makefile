@@ -17,4 +17,4 @@ pdfdraft: grafika
 	pdflatex diplomka.tex
 
 clean:
-	rm grafika/DLCDOS.pdf grafika/layerscheme.pdf diplomka.aux diplomka.bbl diplomka.log diplomka.out diplomka.idx diplomka.blg diplomka.toc
+	rm grafika/DLCDOS.pdf grafika/layerscheme.pdf diplomka.aux diplomka.bbl diplomka.log diplomka.out diplomka.idx diplomka.blg diplomka.toc diplomka.pdf
