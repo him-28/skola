@@ -1,16 +1,20 @@
-all: DLCDOS.pdf pdffinal
+all: pdffinal
 
-pdffinal: DLCDOS.pdf bibtex
+pdffinal: bibtex
 	pdflatex diplomka.tex
 
-DLCDOS.pdf:
+grafika: grafika/DLCDOS.pdf grafika/layerscheme.pdf
+
+grafika/DLCDOS.pdf:
 	inkscape --without-gui --export-pdf=grafika/DLCDOS.pdf grafika/DLCDOS.svg
+grafika/layerscheme.pdf:
+	inkscape --without-gui --export-pdf=grafika/layerscheme.pdf grafika/layerscheme.svg
 
 bibtex: pdfdraft
 	bibtex diplomka
 
-pdfdraft: DLCDOS.pdf
+pdfdraft: grafika
 	pdflatex diplomka.tex
 
 clean:
-	rm grafika/DLCDOS.pdf diplomka.aux diplomka.bbl diplomka.log diplomka.out diplomka.idx diplomka.blg diplomka.toc
+	rm grafika/DLCDOS.pdf grafika/layerscheme.pdf diplomka.aux diplomka.bbl diplomka.log diplomka.out diplomka.idx diplomka.blg diplomka.toc

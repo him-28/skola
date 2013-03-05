@@ -290,7 +290,14 @@ kde $c$ je rychlost světla.
 
 
 \section{Aplikace na DLC vrstvy (model PJDOS-DLC)}
-V této práci byly DLC vzorky modelovány jako multivrstva: systém vrstva -- přechodová vrstva -- substrát -- zadní vrstva (obrázek \ref{}). Pro modelování dielektrické funkce vrstvy byl použit model PJDOS-DLC, pro modelování přechodové vrstvy byl použit model PJDOS, 
+V této práci byly DLC vzorky modelovány jako multivrstva: systém vrstva -- přechodová vrstva -- substrát -- zadní vrstva (obrázek \ref{}). Pro modelování dielektrické funkce vrstvy byl použit model PJDOS-DLC, pro modelování přechodové vrstvy byl použit model PJDOS, pro křemíkový substrát byl použit model PJDOS c-Si a pro modelování zadní vrstvy byly využity tabulkové hodnoty SiO$_2$.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=12cm]{grafika/layerscheme.pdf}
+\caption{layerscheme}
+\label{Schéma multivrstevnatého systému, s použitými modely pro jednotlivé části}
+\end{figure} 
 
 \subsection{Vrstva}
 Pro modelování dielektrické funkce DLC vrstvy byl použit model PJDOS-DLC \cite{franta2007}. Ten zahrnuje jednak přechody mezi valenčním a vodivostním pásem (\ref{valencvod}) pro $\sigma$ a $\pi$ elektrony, pak také excitace do vyšších excitovaných stavů nad vodivostním pásem \ref{}, absorpci na vibračních stavech v infračervené oblasti \ref{gaus} a excitaci jaderných elektronů \ref{jaderneel}. Zjednodušené schéma elektronové struktury DLC vrstvy je na obrázku \ref{DLCDOS}.
