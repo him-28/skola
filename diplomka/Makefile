@@ -1,6 +1,9 @@
 all: pdffinal
 
-pdffinal: bibtex
+pdffinal: pdfdraft2
+	pdflatex diplomka.tex
+
+pdfdraft2: bibtex
 	pdflatex diplomka.tex
 
 grafika: grafika/DLCDOS.pdf grafika/layerscheme.pdf
