@@ -1,32 +1,32 @@
 \chapter{Modely dielektrické odezvy amorfních materiálů}
 
-Výběr vhodného disperzního modelu, je pro správné vyhodnocení experimentálních dat klíčový. Hlavní požadavek, který klademe na zvolený model dielektrické odezvy je ten, že musí dobře popisovat optické charakteristiky sytému, jako odrazivost, propustnost a~elipsometrii. Toho je možné dosáhnout tím, že parametrizujeme přímo komplexní index lomu případně komplexní dielektrickou funkci. Příklad takového jednoduchého modelu je například Cauchyho formule. Přestože takové modely mnohdy dosahují velmi dobrých výsledků, při fitování experimentálních dat, neposkytují žádné informace o vnitřní struktuře měřené látky. Tato práce se proto bude zabývat modely, které poskytují informace i o~vnitřním uspořádáni materiálu, hlavně o parametrech elektronové struktury.
+Výběr vhodného disperzního modelu je pro správné vyhodnocení experimentálních dat klíčový. Hlavní požadavek, který klademe na zvolený model dielektrické odezvy, je ten, že musí dobře popisovat optické charakteristiky sytému, jako odrazivost, propustnost a~elipsometrické veličiny. Toho je možné dosáhnout tím, že parametrizujeme přímo komplexní index lomu případně komplexní dielektrickou funkci. Příklad takového jednoduchého modelu je například Cauchyho formule. Přestože takové modely mnohdy dosahují velmi dobrých výsledků při fitování experimentálních dat, neposkytují žádné informace o vnitřní struktuře měřené látky. Tato práce se proto bude zabývat modely, které poskytují informace i o~vnitřním uspořádáni materiálu, hlavně o parametrech elektronové struktury.
 
-Z fyziky pevných látek vyplývá několik podmínek, které musí každý vhodný model splňovat. První podmínka je Kramers--Kronigův integrál, který spojuje reálnou a~ima\-gi\-nární část dielektrické funkce  
+Z teorie dielektrické odezvy vyplývá několik podmínek, které musí každý vhodný model splňovat. První podmínkou jsou Kramers--Kronigovi relace, které spojují reálnou a~ima\-gi\-nární část dielektrické funkce  
 \begin{equation}
 \epsilon_\mathrm{r}(\omega) = 1 + \frac{1}{\pi} \mathcal{P} \int \frac{\epsilon_\mathrm{i}(\xi)}{\xi - \omega} \mathrm{d}\xi \mathrm{,}
 \label{KKint}
 \end{equation}
 kde $\omega$ je úhlová frekvence a~$\epsilon_\mathrm{r}, \epsilon_\mathrm{i}$ jsou reálná a~imaginární část dielektrické funkce a~$\mathcal{P}$ značí Cauchyho hlavní hodnotu. 
 
-Druhá podmínka, kterou musí lineární dielektrické odezvy splňovat, je časová symetrie??? (time-reversal symetry)
+Druhá podmínka, kterou musí lineární dielektrické odezvy splňovat, je časová symetrie
 \begin{equation}
 \epsilon(\omega) =\epsilon^* (-\omega) \mathrm{,}
 \label{casovasymetrie}
 \end{equation}
 symbol $^*$ značí komplexní sdružení.
 
-Třetí podmínka, pro model dielektrické odezvy, je takzvané f-sumační pravidlo
+Třetí podmínka pro model dielektrické odezvy je takzvané f-sumační pravidlo
 \begin{equation}
 \int_0^\infty \epsilon_\mathrm{i} (\omega) \omega \mathrm{d} \omega = \frac{\pi}{2} \omega_\mathrm{p}^2 = \frac{\pi}{2} \frac{e^2 n_\mathrm{e}}{ \epsilon_0 m_\mathrm{e}} \mathrm{,}
 \end{equation}
-kde $\omega_\mathrm{p}$ je plazmová frekvence, $n_\mathrm{e}$ je koncentrace elektronů, $e$ je elementární náboj, $m_\mathrm{e}$ je hmotnost elektronu a~$\epsilon_0$ je permitivita vakua. F-sumační pravidlo je důsledek kombinace Kramers-Kronigova integrálu s Newtonovými zákony pro klasickou nabitou částici a~spojuje hustotu náboje s~dielektrickou funkcí. Klasické f-sumační pravidlo můžeme chápat jako integrální formu Thomas--Reiche--Kuhnova (TRK) sumačního pravidlo z kvantové mechaniky, pokud ho aplikujeme na interakci světla s pevnou látkou.  
+kde $\omega_\mathrm{p}$ je plazmová frekvence, $n_\mathrm{e}$ je koncentrace elektronů, $e$ je elementární náboj, $m_\mathrm{e}$ je hmotnost elektronu a~$\epsilon_0$ je permitivita vakua. F-sumační pravidlo je důsledek kombinace Kramers-Kronigova integrálu s předpokladem pro chování dielektrické odezvy pro $\omega \rightarrow \infty$ jako pro klasický tlumený oscilátor a~spojuje hustotu náboje s~dielektrickou funkcí. Klasické f-sumační pravidlo můžeme chápat jako integrální formu Thomas--Reiche--Kuhnova (TRK) sumačního pravidlo z kvantové mechaniky, pokud ho aplikujeme na interakci světla s pevnou látkou.  
 
 Klasické sumační pravidlo bylo dále v \cite{sumrule} zobecněno pomocí TKR sumačního pravidla, aby zahrnovalo jak elektrony, tak atomová jádra do následujícího tvaru
 \begin{equation}
-\int_0^\infty \mathcal{F} \mathrm{d}E = n_e + \sum_n \frac{Z_n^2 m_\mathrm{e}} {m_\mathrm{n}} n_\mathrm{n} = U n_\mathrm{e} \mathrm{.} %FIXME
+\int_0^\infty \mathcal{F} \mathrm{d}E = n_e + \sum_n \frac{Z_n^2 m_\mathrm{e}} {m_n} n_n = U n_\mathrm{e} \mathrm{.} %FIXME
 \end{equation}
-Sumace je prováděna přes všechny typy jader v materiálu. Symboly $Z_\mathrm{n}, m_\mathrm{n}, n_\mathrm{n}$ značí po řadě protonové číslo, hmotnost jádra a~koncentraci jader. Faktoru $U$ je pro většinu materiálů velmi podobný: $U \approx 1.00027$ \cite{sumrule}.
+Sumace je prováděna přes všechny typy jader v materiálu. Symboly $Z_n, m_n, n_n$ značí po řadě protonové číslo, hmotnost jádra a~koncentraci jader. $E$ je energie fotonu. Faktor $U$ je pro většinu materiálů velmi podobný: $U \approx 1.00027$ \cite{sumrule}.
 
 Pro parametrizaci dielektrické funkce je praktické zavést funkci $F(E)$
 \begin{equation}
@@ -37,10 +37,10 @@ kde $M$ je konstanta
 M = \frac{8 \pi \epsilon_0 m_\mathrm{e}}{(e h)^2} = 4,61706\times10^{26} \mathrm{eV}^{-2}\mathrm{m}^3 \mathrm{.}
 \end{equation}
 
-Funkci $F(E)$ nazýváme funkce síly přechodu a~slouží jako výchozí bod při parametrizaci optických konstant v pevných látkách.
+Funkci $F(E)$ nazýváme funkce síly přechodu a~slouží jako výchozí bod při parametrizaci optických konstant v pevných látkách. Jedná se o spojitou analogii síly oscilátoru.
 
 \section{Parametrizace funkce dielektrické odezvy}
-Dielektrická funkce může být rozdělena na více částí, které reprezentují jednotlivé typy přechodů $t$. Celková dielektrická funkce je suma přes dielektrické funkce jednotlivých částí a~vakua \cite{sumrule}
+Dielektrická funkce může být rozdělena na více příspěvků, které reprezentují jednotlivé typy přechodů $t$. Celková dielektrická funkce je suma přes dielektrické funkce jednotlivých částí a~vakua \cite{sumrule}
 \begin{equation}
 \epsilon(E) = 1 + \sum_t \epsilon_t(E) \text{.}
 \label{suma1}
@@ -66,7 +66,7 @@ Dále můžeme zavést takzvanou normalizovanou dielektrickou funkci $\epsilon_t
 \epsilon_t(E) = N_t \epsilon_t^0  \text{.}
 \end{equation}
 
-Pak můžeme přepsat rovnici (\ref{suma1}) jako
+Pak můžeme přepsat vztah (\ref{suma1}) jako
 \begin{equation}
 \epsilon (E) = 1 + \sum_t N_t \epsilon_t^0(E) \text{.}
 \end{equation}
@@ -78,7 +78,7 @@ Pak můžeme přepsat rovnici (\ref{suma1}) jako
 Jelikož se v této práci zabýváme zkoumáním DLC vrstev, omezíme se pouze na příspěvky, z nichž se skládá dielektrická funkce právě v DLC vrstvách. Jedná se o přechody valenčních elektronů do vodivostních pásů a~vyšších excitovaných stavů, o excitaci jaderných elektronů a~o fononovou absorpci. 
 
 \subsection{Mezipásové přechody mezi valenčním a~vodivostním pásem}
-Absorpce světla v amorfních nebo krystalických materiálech je způsobena přechodem elektronu z výchozího stavu $j$ s energií $S$ do konečného stavu $k$ s energií $S + E$. Imaginární část dielektrické funkce je spočítána jako suma příspěvků všech možných přechodů
+Absorpce světla v amorfních materiálech je způsobena přechodem elektronu z výchozího stavu $j$ s energií $S$ do konečného stavu $k$ s energií $S + E$. Imaginární část dielektrické funkce je spočítána jako suma příspěvků všech možných přechodů
 
 \begin{equation}
 \label{basicDOS}
@@ -86,15 +86,15 @@ Absorpce světla v amorfních nebo krystalických materiálech je způsobena př
 \left(\frac{eh}{m_\mathrm{e}E} \right)^2 \frac{1}{4 \pi \epsilon_0 \mathrm{B}_0} \sum_{j,k} | p_{j \rightarrow k} |^2
 \int_{-\infty}^\infty f_\mathrm{e}(S) \mathcal{N}_j(S) f_\mathrm{h}(S+E) \mathcal{N}_k(S + E)\mathrm{d}S \text{,}
 \end{equation}
-kde $E$, $h$ a~$\mathrm{B}_0$ jsou energie fotonu, Planckova konstanta a~příslušná část Brillouinovy zóny odpovídajícího krystalického materiálu. Funkce $\mathcal{N}_j(S)$ a~$\mathcal{N}_k(S)$ značí rozdělení energií hustoty stavů (DOS) v $j$ a~$k$ pásu. Koncentrace $j$ elektronů, tj. počet $j$ elektronů na~jednotku objemu je definován jako
+kde $E$, $h$ a~$\mathrm{B}_0$ jsou energie fotonu, Planckova konstanta a~určitá část Brillouinovy zóny odpovídajícího krystalického materiálu. Funkce $\mathcal{N}_j(S)$ a~$\mathcal{N}_k(S)$ značí rozdělení energií hustoty stavů (DOS) v $j$ a~$k$ pásu. Koncentrace $j$ elektronů, tj. počet $j$ elektronů na~jednotku objemu je definován jako
 \begin{equation}
 \mathrm{N}_j = \int_{-\infty}^\infty \mathcal{N}_j(S)\mathrm{d}S \text{.}
 \end{equation}
-Výše uvedené přechody jsou možné jen tehdy, pokud jsou $j$ stavy zaplněné a~$k$ stavy nejsou. Toto můžeme zahrnout přidáním Fermi-Diracova rozdělení pro elektrony, $f_\mathrm{e}$, a~díry, $f_\mathrm{h}$, do integrálu. Pravděpodobnost přechodu je dána čtvercem prvku matice hybnosti (squared momentum-matrix element???) $|p_{j \rightarrow k}|^2$. Je vytknuta před integrál, protože předpokládáme, že je konstantní pro všechny přechody mezi konkrétním $j$ a~$k$ pásem. Rovnice (\ref{basicDOS}) může zahrnovat jednak mezipásové přechody i přechody uvnitř pásu. DOS funkce $\mathcal{N}_j(S)$ a~$\mathcal{N}_k(S)$ můžou také zahrnovat i rozšířené a~lokalizované stavy. Pokud je nicméně valenční pás plně zaplněn a~vodivostní pás je zcela prázdný, můžeme Fermi-Diracovo rozdělení vynechat a~integrál v rovnici (\ref{basicDOS}) poté definuje takzvanou funkci sdružené hustoty stavů (JDOS) $\mathcal{J}_{j \rightarrow k}(E)$ odpovídající $j \rightarrow k$ přechodům
+Výše uvedené přechody jsou možné jen tehdy, pokud jsou $j$ stavy zaplněné a~$k$ stavy nejsou. To je v integrálu zahrnuto pomocí Fermi-Diracova rozdělení pro elektrony, $f_\mathrm{e}$, a~díry, $f_\mathrm{h}$. Pravděpodobnost přechodu je dána čtvercem velikosti maticového elementu operátoru hybnosti $|p_{j \rightarrow k}|^2$. Je vytknuta před integrál, protože předpokládáme, že je v amorfním materiálu konstantní pro všechny přechody mezi konkrétním $j$ a~$k$ pásem. Rovnice (\ref{basicDOS}) může zahrnovat jednak mezipásové přechody i přechody uvnitř pásu. DOS funkce $\mathcal{N}_j(S)$ a~$\mathcal{N}_k(S)$ mohou zahrnovat rozšířené i~lokalizované stavy. Pokud je valenční pás plně zaplněn a~vodivostní pás je zcela prázdný, můžeme Fermi-Diracovo rozdělení vynechat a~integrál ve vztahu (\ref{basicDOS}) poté definuje takzvanou funkci sdružené hustoty stavů (JDOS) $\mathcal{J}_{j \rightarrow k}(E)$ odpovídající $j \rightarrow k$ přechodům
 \begin{equation}
 \mathcal{J}_{j \rightarrow k}(E) = \int_{-\infty}^\infty \mathcal{N}_j(S) \mathcal{N}_k(S + E)\mathrm{d}S \text{.}
 \end{equation}
-Rovnice (\ref{basicDOS}) nicméně definuje pouze imaginární část dielektrické funkce a~pouze pro kladné $E$. Celkovou komplexní dielektrickou funkci můžeme získat pomocí antisymetrie imaginární části (\ref{casovasymetrie}) a~Kramers-Kronigových relací (\ref{KKint})
+Vztah (\ref{basicDOS}) nicméně definuje pouze imaginární část dielektrické funkce a~pouze pro kladné $E$. Celkovou komplexní dielektrickou funkci můžeme získat pomocí antisymetrie imaginární části (\ref{casovasymetrie}) a~Kramers-Kronigových relací (\ref{KKint})
 \begin{equation}
 \label{basicDLC2}
 \epsilon_i (E) = 
@@ -110,7 +110,7 @@ Rovnice (\ref{basicDOS}) nicméně definuje pouze imaginární část dielektric
 \end{equation}
 
 
-Vhodný model nyní můžeme sestrojit parametrizací DOS funkcí, příkladem takového modelu je PDOS model \cite{franta2007}. Model zjednodušuje rovnici (\ref{basicDLC2}) zavedením schodové Fermi-Diracovy funkce (což je splněno, pokud pásy leží v dostatečné vzdálenosti od Fermiho energie) a~zavedením proměnné $\mathfrak{N}$, která v sobě zahrnuje konstanty před integrálem 
+Vhodný model nyní můžeme sestrojit parametrizací DOS funkcí, příkladem takového modelu je PDOS model \cite{franta2007}. Model zjednodušuje rovnici (\ref{basicDLC2}) zavedením schodové Fermi-Diracovy funkce (což je splněno, pokud pásy leží v dostatečné vzdálenosti od Fermiho energie) a~zavedením funkce $\mathfrak{N}$, která v sobě zahrnuje konstanty před integrálem 
 \begin{equation}
 \label{epsilonDOS}
 \epsilon_\mathrm{i}(E) = \frac{\mathrm{sgn}(E)}{E^2} \sum_{j} \int_{-\infty}^{E_\mathrm{F} = 0} \mathfrak{N}_j(S) \mathfrak{N}_{j^*}(S + |E|)\mathrm{d}S \text{,}
@@ -120,15 +120,15 @@ kde
 \label{unormN}
 \mathfrak{N}_j(S) = \frac{eh | p_{j \rightarrow j^*} |}{2 m_\mathrm{e} \sqrt{\pi \epsilon_0 \mathrm{B}_0}} \mathcal{N}_j(S) \text{.}
 \end{equation}
-Index $j$, zde jde přes všechny typy elektronů (v DLC vrstvách se například jedná o $\sigma$ a~$\pi$ elektrony), $j$ značí valenční elektrony $j^*$ vodivostní. $\mathfrak{N}_j(S)$ není nicméně, na rozdíl od $\mathcal{N}_j$, normován na koncentraci $j$ elektronů $\mathrm{N}_j$. Je proto výhodné zavést normovací parametr $Q_j$
+Index $j$, zde jde přes všechny typy elektronových stavů (v DLC vrstvách se například jedná o $\sigma$ a~$\pi$ elektrony), $j$ značí valenční elektrony $j^*$ vodivostní. $\mathfrak{N}_j(S)$ není nicméně, na rozdíl od $\mathcal{N}_j$, normován na koncentraci $j$ elektronů $\mathrm{N}_j$. Je proto výhodné zavést normovací parametr $Q_j$
 \begin{equation}
 \int_{-\infty}^\infty \mathfrak{N}_j(S) \mathrm{d}S = 
 \mathrm{N}_j \frac{eh | p_{j \rightarrow j^*} |}{2 m_\mathrm{e} \sqrt{\pi \epsilon_0 \mathrm{B}_0}} \equiv
 Q_j \text{,}
 \end{equation}
-kde parametr $Q_j$ je přímo úměrný koncentraci $j$ elektronů a~je jeden z parametrů PDOS modelu. Další dva parametry potřebné pro popis $j \rightarrow j^*$ přechodů jsou minimální energie, neboli šířka zakázaného pásu, $E_\mathrm{g}$ a~maximální energie $E_\mathrm{h}$. 
+kde parametr $Q_j$ je přímo úměrný koncentraci $j$ elektronů a~je jeden z parametrů PDOS modelu. Další dva parametry potřebné pro popis $j \rightarrow j^*$ přechodů jsou minimální energie, neboli šířka zakázaného pásu, $E_\mathrm{g}$ a~maximální energie přechodů $E_\mathrm{h}$. 
 
-FIXME: Díky podobnosti s distribucí hustoty stavů v krystalech v blízkosti extrému pásové energie???  (From similarity with the DOS distribution in crystals in the vicinity of band energy extrema), můžeme modelovat $\mathfrak{N}_j(S)$ a~$\mathfrak{N}_{j^*}$ pomocí odmocnin
+Díky podobnosti s distribucí hustoty stavů v krystalech v blízkosti extrému energie v pásu můžeme modelovat $\mathfrak{N}_j(S)$ a~$\mathfrak{N}_{j^*}$ pomocí odmocnin
 
 \begin{equation}
 \label{N1}
@@ -173,7 +173,7 @@ kde funkce $\Pi_{E_\mathrm{min},E_\mathrm{max}}(|E|)$ je definována následovn�
 	1 & : & E_\mathrm{min} < E < E_\mathrm{max} \\
 	0 & : & \text{jinak.} \end{array} \right.
 \end{equation}
-Integrační limity eliptického integrálu jsou 
+Integrační meze eliptického integrálu jsou 
 \begin{equation}
 \begin{array}{l c r}
 S_\mathrm{min} = \max\left(-\frac{E_\mathrm{h}}{2}, \frac{E_\mathrm{g}}{2} -E\right) &
@@ -251,7 +251,7 @@ b(E) = \frac{(E_\xi + E)^2}{E^3} \text{.}\\
 
 
 \subsection{Excitace jaderných elektronů}
-U atomů, které mají kromě valenční elektronů i vnitřní slupky s ,,jadernými elektrony'' musíme zahrnout i vliv jejich excitací. Stejně jako u excitací valenčních elektronů do vyšších excitovaných stavů se toto projeví na dielektrické funkci v měřené oblasti pouze minimálně, nicméně opět tento příspěvek nemůžeme vynechat kvůli sumačnímu pravidlu. Normalizovaná dielektrická funkce pro excitace jaderných elektronů je modelována jednoduchým jedno-parametrickým vzorcem \cite{sumrule2}
+U atomů, které mají kromě valenční elektronů i vnitřní slupky s ,,jadernými elektrony'' musíme zahrnout i vliv jejich excitací. Stejně jako u excitací valenčních elektronů do vyšších excitovaných stavů se projeví na dielektrické funkci v měřené oblasti pouze minimálně, nicméně opět tento příspěvek nemůžeme vynechat kvůli sumačnímu pravidlu. Normalizovaná dielektrická funkce pro excitace jaderných elektronů je modelována jednoduchým jednoparametrickým vzorcem \cite{sumrule2}
 \begin{equation}
 \label{jaderneel}
 \epsilon_{\mathrm{i},\zeta}(E) = \frac{E_\zeta}{E^3} \Pi_{E_\zeta,\infty}(|E|) \text{,}
@@ -262,7 +262,7 @@ U atomů, které mají kromě valenční elektronů i vnitřní slupky s ,,jader
 kde $E_\zeta = E_i + E_\mathrm{g}/2$, $i$ indexuje všechny typy jaderných elektronů v atomu (K, L, ...). 
 
 \subsection{Fononová absorpce}
-V infračervené oblasti se v DLC vrstvách vyskytuje velké množství absorpčních píků, způsobených absorpcí na vibračních stavech C a~C--H skupin. Jednotlivé píky je možno modelovat jako Gausovské funkce v imaginární části dielektrické funkce \cite{franta2007}:
+V infračervené oblasti se ve spektrech DLC vrstev vyskytuje velké množství absorpčních píků, způsobených absorpcí na vibračních stavech C a~C--H skupin. Jednotlivé píky je možno modelovat jako Gausovské funkce v imaginární části dielektrické funkce \cite{franta2007}:
 
 \begin{equation}
 \label{gaus}
@@ -270,15 +270,15 @@ V infračervené oblasti se v DLC vrstvách vyskytuje velké množství absorpč
 \end{equation}
 V reálné části tomu odpovídá tvar:
 \begin{equation}
-\epsilon^0_{\mathrm{r},p} = \frac{-\sqrt{2}}{\pi B_p E_p} \left[ \mathrm{D}\left(\frac{E-E_p}{\sqrt{2}B_p}\right) - \mathrm{D}\left(\frac{E+E_p}{\sqrt{2}B_p}\right) \right] \text{,}
+\epsilon^0_{\mathrm{r},p} = \frac{\sqrt{2}}{\pi B_p E_p} \left[ \mathrm{D}\left(\frac{E+E_p}{\sqrt{2}B_p}\right) -\mathrm{D}\left(\frac{E-E_p}{\sqrt{2}B_p}\right) \right] \text{,}
 \end{equation}
 kde $\mathrm{D}(x)$ značí Dawsonův integrál, definovaný jako:
 \begin{equation}
 \mathrm{D}(x) = \exp(-x^2)\int_0^x \exp(t^2) \mathrm{d}t
 \end{equation}
-V infračervené spektroskopii je nicméně zvykem používat k popisování píků vlnočty místo energií. Z toho důvodu jsou parametry $E_p$ a~$B_p$ nahrazeny parametry $\nu_p$ a~$\beta_p$:
+V infračervené spektroskopii je nicméně zvykem používat k popisování píků vlnočty místo energií. Z toho důvodu jsou parametry $E_p$ a~$B_p$ nahrazeny parametry $\tilde{\nu}_p$ a~$\beta_p$:
 \begin{equation}
-E_p = h c \nu_p \text{,}
+E_p = h c \tidle{\nu}_p \text{,}
 \end{equation}
 \begin{equation}
 B_p = \frac{h c \beta_p}{2 \sqrt{2 \ln 2}} \text{,}
@@ -289,12 +289,12 @@ kde $c$ je rychlost světla.
 
 
 \section{Aplikace na DLC vrstvy (model PJDOS-DLC)}
-V této práci byly DLC vzorky modelovány jako multivrstva: systém vrstva -- přechodová vrstva -- substrát -- zadní vrstva (obrázek \ref{layerscheme}). Pro modelování dielektrické funkce vrstvy byl použit model PJDOS-DLC, pro modelování přechodové vrstvy byl použit model PJDOS, pro křemíkový substrát byl použit model PJDOS c-Si a~pro modelování zadní vrstvy byly využity tabulkové hodnoty SiO$_2$.
+V této práci byly DLC vzorky modelovány jako multivrstvy: systém vrstva -- přechodová vrstva -- substrát -- zadní vrstva (obrázek \ref{layerscheme}). Pro modelování dielektrické funkce vrstvy byl použit model PJDOS-DLC, pro modelování přechodové vrstvy byl použit model PJDOS, pro křemíkový substrát byl použit model PJDOS c-Si a~pro modelování zadní vrstvy byly využity tabulkové hodnoty SiO$_2$.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=12cm]{grafika/layerscheme.pdf}
-\caption{Schéma multivrstevnatého systému, s použitými modely pro jednotlivé části}
+\caption{Schéma multivrstevnatého systému s použitými modely pro jednotlivé části, $d_i$ jsou tloušťky jednotlivých vrstev}
 \label{layerscheme}
 \end{figure} 
 
@@ -312,7 +312,7 @@ DLC vrstvu uvažujeme jako systém tří komponent: vodíkových jader, uhlíkov
 \begin{equation}
 N = \int_0^\infty \epsilon_\mathrm{i}(E) E \mathrm{d}E = N_\mathrm{e} + N_\mathrm{C} + N_\mathrm{H} \text{,}
 \end{equation} 
-kde $N_\mathrm{e}$, $N_\mathrm{C}$ a~$N_\mathrm{H}$ jsou částečné síly přechodu pro elektrony, uhlíková jádra a~vodíková jádra. Pro uhlíky můžeme navíc rozlišit sílu přechodu pro sp2 a~spc3 vázaný uhlík $N_\mathrm{C_{sp3}}$, $N_\mathrm{C_{sp2}}$
+kde $N_\mathrm{e}$, $N_\mathrm{C}$ a~$N_\mathrm{H}$ jsou částečné síly přechodu pro elektrony, uhlíková jádra a~vodíková jádra. Pro atomy uhlíku můžeme navíc rozlišit sílu přechodu pro sp2 a~sp3 vázaný uhlík $N_\mathrm{C_{sp3}}$, $N_\mathrm{C_{sp2}}$
 \begin{equation}
 N_\mathrm{C} = N_\mathrm{C_{sp3}} + N_\mathrm{C_{sp2}} \text{.}
 \end{equation} 
@@ -334,7 +334,7 @@ Celkovou sílu přechodu $N$ také můžeme vyjádřit podle (\ref{definiceceelk
 N = N_\mathrm{v} + N_\mathrm{K} + \sum_i N_{\mathrm{p},j} \text{.}
 \end{equation}
 
-$N_\mathrm{v}$ zde značí sílu kombinovanou sílu přechodu pro valenční elektrony jednak do vodivostního pásu a~jednak do excitovaných stavů nad vodivostním pásem, $N_\mathrm{K}$ značí sílu přechodu pro K jaderné elektrony a $\sum_i N_{\mathrm{p},j}$ značí kombinovanou sílu přechodu pro všechny vibrační stavy $j$. $N_\mathrm{v}$ můžeme rozložit na části pro $\sigma$ a~$\pi$ elektrony $N_\sigma$, $N_\pi$ podle jejich poměru (na jeden sp2 atom uhlíku připadá jeden $\pi$ elektron a~tři $\sigma$ elektrony, na sp3 vázaný uhlík čtyři $\sigma$ elektrony a~na vodík pouze jeden $\sigma$  elektron)
+$N_\mathrm{v}$ zde značí sílu kombinovanou sílu přechodu pro valenční elektrony jednak do vodivostního pásu a~jednak do excitovaných stavů nad vodivostním pásem, $N_\mathrm{K}$ značí sílu přechodu pro K jaderné elektrony a $\sum_i N_{\mathrm{p},j}$ značí kombinovanou sílu přechodu pro všechny vibrační stavy mřížky $j$. Sílu přechodu $N_\mathrm{v}$ můžeme rozložit na části pro $\sigma$ a~$\pi$ elektrony $N_\sigma$, $N_\pi$ podle jejich poměru (na jeden sp2 atom uhlíku připadá jeden $\pi$ elektron a~tři $\sigma$ elektrony, na sp3 vázaný uhlík čtyři $\sigma$ elektrony a~na vodík pouze jeden $\sigma$  elektron)
 \begin{equation}
 N_\pi = N_\mathrm{v} \frac{f_\mathrm{C_{sp2}}}{4f_\mathrm{C} + f_\mathrm{H}}  \text{,}
 \end{equation}
