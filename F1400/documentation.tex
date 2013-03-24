@@ -1,0 +1,252 @@
+\documentclass[12pt]{article}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[plainpages=false,pdfpagelabels,unicode]{hyperref}
+\usepackage[pdftex]{graphicx}
+\usepackage[margin=3cm, includefoot]{geometry}
+
+\begin{document}
+
+\title{Dokumentace k~zápočtovému programu \\[2cm]
+	Úloha 2.\\ Zpracování obrazu: analýza objektů}
+\author{Pavel Ondračka}
+
+\maketitle
+\clearpage
+
+\tableofcontents
+\clearpage
+
+
+
+\section{Zadání}
+
+\subsection{Původní zadání}
+Vytvořte soubor, který bude obsahovat matici nul a jedniček. Shluky jedniček budou reprezentovat nějaké objekty, například kolečka či obdélníčky. Tento soubor vygenerujte Octavem, ručně nebo jinak. Napište program v~Céčku, který tento obrázek přečte, separuje ho na~jednotlivé objekty, u~každého z~nich spočítá obsah, obvod a tyto vypíše do~tabulky. Vyzkoušejte pro~různé vstupní soubory (obrázky).
+
+\subsection{Změny v~zadání}
+Na příkladu mi přišly nejzajímavější rozpoznávací algoritmy, výsledný program proto umí rozpoznávat tři typy obrazců: čtverce, obdélníky (jejichž strany jsou vodorovné a svislé) a čtverce otočené o~$\pi/4$ a to jak samostatné, tak v~ideálním případě i pokud se~částečně překrývají. Program na~výstup vypíše pozice a velikosti těchto objektů. Dále byl pokaždé vypočítán obsah nalezeného obrazce.
+
+\section{Generace vstupního souboru}
+\subsection{Program generate.c}
+Program generate vypíše na~výstup pole znaků o~velikosti $n$ řádků a sloupců ($n$ je definováno konstantou PICTURE\_SIZE v~souboru util.c), tento výstup obsahuje libovolný počet čtverců, otočených čtverců a obdélníků (definováno v~záhlaví souboru generate.c). Tyto se~vypíšou pomocí funkcí draw\_rectangle() a draw\_rotated\_square() (budou popsány níže). Dále lze měnit znaky kterým jsou vypsány objekty a znaky pozadí a to pomocí konstant PSYMBOL a PBACKGROUND. Program každý obrazec vykreslí na~náhodné umístění tak, aby obrazec nepřečníval z~obrázku a mezi~krajem a obrazcem byl alespoň jeden prázdný pixel.
+
+\section{Průběh rozpoznávání}
+\subsection{Samostatné objekty}
+Program read.c nejprve načte vstupní soubor do~pole cpicture jako sekvenci nul a jedniček, následně jej pro~kontrolu vypíše na~obrazovku. Poté začne postupně po~řádcích testovat cpicture a v~momentě kdy najde první neprázdný znak, zavolá po~řadě rozpoznávací funkce check\_rotated\_square(), check\_square() a check\_rectangle(). Pokud tyto funkce naleznou příslušný obrazec (pouze samostatný), vypíšou toto na~obrazovku a obrazec z~cpicture vymažou. Mažeme proto abychom již dále netestovali body které máme už přiřazené. Po~rozpoznání všech samostatných obrazců přichází na~řadu rozpoznávání sloučených objektů.
+
+\subsection{Překrývající se~objekty}
+Máme 3 stejná pole ve kterých jsou zbývající obrazce: cpicture, cpicture a cpicture2. Picture je nyní konstantní a slouží nám jako reference, v~cpicture a pictuje2 budeme testovat obrazce. pixelcount je aktuální počet pixelů, které ještě nemáme přiřazené žádnému obrazci. Najdeme tedy v~cpicture první nenulový pixel. do~cpicture2 uložíme cpicture aby byly oba dva stejné. Nyní do~cpicture postupně generujeme obrazce s~postupně rostoucími rozměry, tyto testujeme proti cpicture. Pokud přečnívají, zkoušíme dál, pokud ne, sečteme aktuální počet nepřiřazených pixelů v~cpicture a pokud je menší než pixelcount, obrazec uložíme pomocí funkce save\_object() do~pole objects. Funkce save\_objects() ukládá jen jeden nejlepší obrazec pro~každý testovaný pixel, t.j. po~otestování všech obrazců zůstane ten, který do~daného bodu sedí nejlépe a tento obrazec pak z~cpicture vymažeme.
+
+\section{Popis jednotlivých funkcí}
+\subsection{check\_rotated\_square()}
+Na vstupu je pole znaků, a bod [i, j] \footnote{vzhledem k~tomu že čteme vstupní soubor zleva-doprava a shora-dolů, je $i$ číslo řádku s~hora a $j$ je číslo sloupce z~leva (obě začínají nulou)} kde začínáme testovat. Máme dva cykly, s~proměnnými $k$ a $l$. $k$ udává který řádek testujeme, $l$ je pro~sloupce. $k$ jde od nuly do~maximální velikosti obrázku, případně pokud jsme už určili $r$ tak do~$r$. $l$ jde buď do~maximální velikosti obrázku nebo $2r - k$. pro~$r$ platí, že $2r + 1$ je velikost úhlopříčky. pro~každý řádek $i+k$ tedy musí být zaplněny pole $j-k, j-k+1, ...., j+k-1, j+k$ (toto platí pouze dokud ještě neznáme úhlopříčku čtverce a on se~postupně zvětšuje). Také musí platit, že $j-k-1$ a $j+k+1$ musí být nula (obrazec je samostatný). Pokud nalezneme řádek kde pole $j-k$ a $j+k$ jsou prázdné, pole $j-k+1$ a $j+k-1$ také, ale všechna pole mezi~jsou plná, znamená to, že jsme našli bod kde se~čtverec začíná zmenšovat, uložíme $r$ a dokreslíme obrazec. Nakonec nalezený obrazec z~cpicture vymažeme, údaje o~něm vypíšeme na~obrazovku a vrátíme 1. Pokud se~nic nenašlo, funkce vrací 0.
+
+\subsection{check\_\{rectangle, square\}() }
+Funkce jsou podobné check\_rotated\_square(), hlavní cyklus vypadá podobně, opět dokud neznáme velikosti stran tak testujeme v~rozmezí velikosti obrázku, v~případě úspěchu vypíšeme na~obrazovku údaje o~objektu a vrátíme 0 pro~neúspěch nebo jedničku pro~úspěch. Opět jsou také testovány okolní pixely, jestli je obrazec osamocený.
+
+\subsection{draw\_\{rectangle,rotated\_square\}()}
+Tyto funkce vykreslí zadaný objekt do~obrázku. na~vstupu je pole s~obrázkem, poloha objektu, jeho geometrické vlastnosti a číslo, kterým chceme objekt v~obrázku reprezentovat. Kromě kreslení objektů je funkce draw\_rectangle také několikrát použita k~inicializace polí. 
+
+\subsection{Ostatní funkce}
+Ostatní funkce použité v~programu nejsou z~hlediska samotného výpočtu důležité a slouží hlavně pro~zmenšení počtu řádků. Patří mezi~ně funkce random\_number(a,b), která generuje náhodné celé číslo v~mezích [$a,b$], funkce compare porovnává dva obrázky na~rozdíly, save\_object() ukládá nalezené překrývající se~objekty, count\_pixels($a$) sečte hodnoty všech buněk v~poli $a$, sync\_pictures($a,b$) zkopíruje obsah pole $b$ do~pole $a$. Draw\_last\_object($objects$) vykreslí poslední obrazec v~poli $objects$. Funkce display\_objects() vypíše na~výstup parametry všech nalezených překrývajících se objektů.
+
+
+\section{Příklady použití}
+\subsection{Kompilace}
+
+\begin{verbatim}
+$ gcc generate.c -o generate
+$ gcc read.c -o read
+\end{verbatim}
+
+\subsection{Návod k~použití}
+Vygenerujeme náhodný obrázek a uložíme ho do~souboru test.txt
+\begin{verbatim}
+$ ./generate > test.txt
+\end{verbatim}
+
+Následně obrázek otestujeme programem read.
+
+\begin{verbatim}
+$ ./read < test.txt
+\end{verbatim}
+
+Zkontrolujeme výstup.
+
+\subsection{Příklady}
+Všechny tyto příklady byly vygenerovány programem generate. Některé byly pro~ušetření místa na~krajích ručně ořezány. 
+
+\subsubsection{Příklad 1 -- jednoduchý obdélník}
+
+\paragraph{Vstup}
+\begin{verbatim}
+----------
+-xxxxxxxx-
+-xxxxxxxx-
+-xxxxxxxx-
+-xxxxxxxx-
+-xxxxxxxx-
+----------
+\end{verbatim}
+\paragraph{Výstup}
+\begin{verbatim}
+Nalezen obdélník: řádek:1, sloupec:1, šířka:8, výška:5, obsah:40 
+
+VÝSLEDKY
+Samostatné obrazce:
+Nalezeno otočených čtverců:0, čtverců:0, obdélníků:1
+Překrývající se obrazce:
+Nalezeno otočených čtverců:0, čtverců:0, obdélníků:0
+\end{verbatim}
+
+\subsubsection{Příklad 2 -- samostatný čtverec}
+
+\paragraph{Vstup}
+\begin{verbatim}
+-------
+-xxxxx-
+-xxxxx-
+-xxxxx-
+-xxxxx-
+-xxxxx-
+-------
+\end{verbatim}
+\paragraph{Výstup}
+\begin{verbatim}
+Nalezen čtverec: řádek:1 sloupec:1, velikost:5, obsah:25 
+
+VÝSLEDKY
+Samostatné obrazce:
+Nalezeno otočených čtverců:0, čtverců:1, obdélníků:0
+Překrývající se obrazce:
+Nalezeno otočených čtverců:0, čtverců:0, obdélníků:0
+\end{verbatim}
+
+\subsubsection{Příklad 3 -- samostatný otočený čtverec}
+\paragraph{Vstup}
+\begin{verbatim}
+-------
+---x---
+--xxx--
+-xxxxx-
+--xxx--
+---x---
+-------
+\end{verbatim}
+\paragraph{Výstup}
+\begin{verbatim}
+Nalezen otočený čtverec: řádek:1, sloupec:3, úhlopříčka:5, obsah:13
+
+VÝSLEDKY
+Samostatné obrazce:
+Nalezeno otočených čtverců:1, čtverců:0, obdélníků:0
+Překrývající se obrazce:
+Nalezeno otočených čtverců:0, čtverců:0, obdélníků:0
+\end{verbatim}
+
+\subsubsection{Příklad 4 -- překrývající~se otočené čtverce}
+\paragraph{Vstup}
+\begin{verbatim}
+-------------
+--------x----
+-------xxx---
+----x-xxxxx--
+---xxxxxxxxx-
+--xxxxxxxxx--
+-xxxxxxxxx---
+--xxxxx-x----
+---xxx-------
+----x--------
+-------------
+\end{verbatim}
+\paragraph{Výstup}
+\begin{verbatim}
+Nalezen otočený čtverec: řádek:1, sloupec:8, úhlopříčka:7, objem:25
+Nalezen otočený čtverec: řádek:3, sloupec:4, úhlopříčka:7, objem:25
+
+VÝSLEDKY
+Samostatné obrazce:
+Nalezeno otočených čtverců:0, čtverců:0, obdélníků:0
+Překrývající se obrazce:
+Nalezeno otočených čtverců:2, čtverců:0, obdélníků:0
+\end{verbatim}
+
+\subsubsection{Příklad 5 -- překrývající se~obdélníky}
+\paragraph{Vstup}
+\begin{verbatim}
+----------
+--xxxxxx--
+-xxxxxxxx-
+-xxxxxxxx-
+-xxxxxxxx-
+--xxxxxx--
+----------
+\end{verbatim}
+\paragraph{Výstup}
+\begin{verbatim}
+Nalezen obdélník: řádek:1, sloupec:2, výška:5, šířka:6, objem:30 
+Nalezen obdélník: řádek:2, sloupec:1, výška:3, šířka:8, objem:24 
+
+VÝSLEDKY
+Samostatné obrazce:
+Nalezeno otočených čtverců:0, čtverců:0, obdélníků:0
+Překrývající se obrazce:
+Nalezeno otočených čtverců:0, čtverců:0, obdélníků:2
+\end{verbatim}
+
+\subsubsection{Příklad 6 -- překrývající se~obdélníky 2}
+\paragraph{Vstup}
+\begin{verbatim}
+----------
+-xxxxxxxx-
+-xxxxxxxx-
+-xxxxxxxx-
+-xxxxxxxx-
+--xxxxxx--
+----------
+\end{verbatim}
+\paragraph{Výstup}
+\begin{verbatim}
+Nalezen obdélník: řádek:1, sloupec:1, šířka:8, výška:4, obsah:32 
+
+VÝSLEDKY
+Samostatné obrazce:
+Nalezeno otočených čtverců:0, čtverců:0, obdélníků:1
+Překrývající se obrazce:
+Nalezeno otočených čtverců:0, čtverců:0, obdélníků:0
+\end{verbatim}
+
+\subsubsection{Příklad 7 -- překrývající se~čtverce}
+\paragraph{Vstup}
+\begin{verbatim}
+--------
+-xxxx---
+-xxxxxx-
+-xxxxxx-
+-xxxxxx-
+--xxxxx-
+--xxxxx-
+--------
+\end{verbatim}
+\paragraph{Výstup}
+\begin{verbatim}
+Nalezen čtverec: řádek:1, sloupec:1, velikost:4, objem:16 
+Nalezen obdélník: řádek:2, sloupec:5, výška:5, šířka:2, objem:10 
+Nalezen obdélník: řádek:5, sloupec:2, výška:2, šířka:3, objem:6 
+
+VÝSLEDKY
+Samostatné obrazce:
+Nalezeno otočených čtverců:0, čtverců:0, obdélníků:0
+Překrývající se obrazce:
+Nalezeno otočených čtverců:0, čtverců:1, obdélníků:2
+\end{verbatim}
+
+\section{Shrnutí výsledků a závěr}
+Jak je vidět z~testů, program je 100\,\% úspěšný při~rozpoznávání samostatných obrazců. Úspěšnost při~rozpoznávání překrývajících se~objektů je ale o~něco horší. To je způsobeno použitým nedokonalým algoritmem. Hlavní problém je ten, že program nalezené objekty vymaže z~testovacího obrázku (cpicture). Výhodou tohoto postupu je nesrovnatelně větší rychlost\footnote{pro malé obrázky z~testů je to zanedbatelné, ale už při~obrázku $100 \times 100$ se~jedná řádově o~vteřiny}, nevýhodou je to, že se~obrázky generují z~levého horního rohu (respektive z~vrchu u~otočených čtverců). Tedy pokud vymažeme tento startovní bod nebude obrazec dobře rozpoznán. Možné řešení tohoto problému by bylo generovat testovací obrazce do~všech možných směrů. Další nevýhodou algoritmu je to, že někdy může dávat odlišné výsledky než jaké čekáme. Dobrou ukázkou je příklad 7, kde program najde čtverec a dva obdélníky tam kde většina uživatelů uvidí dva čtverce\footnote{respektive viděla by kdyby obrázky byly v~poměru, t.j. šířka a výška znaku by byla stejná}. Další možnost řešení tohoto problému by bylo ukládat všechny možné obrazce a nástedně je testovat mezi~sebou na~podmonožiny. Toto by ale bylo ještě o~mnoho řádů výpočetně náročnější.
+
+Co se~týče možných optimalizací. Kromě možného výše zmíněného zlepšení je v~programu jistě mnoho dalších možností na~zlepšení. Pravděpodobně by se~dala optimalizovat práce s~poli, také by bylo možné požívat menší typy pro~proměnné, a určitě by šlo více sdílet kód mezi~jednotlivými funkcemi (příkladem duplicitního kódu jsou například funkce check\_square() a check\_rectangle() ). Nicméně si myslím, že program jako takový splňuje požadavky a dobře ilustruje možnosti strojového rozpoznávání obrazců. 
+
+
+
+\end{document}
