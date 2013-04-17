@@ -1,8 +1,8 @@
 \chapter{Experimentální uspořádání}
 
-\subsection{Optické měřící přístroje}
+\section{Optické měřící přístroje}
 
-\subsubsection{Bruker VERTEX 80v}
+\subsection{Bruker VERTEX 80v}
 Jedná se o je vakuový FTIR spektrofotometr, který obsahuje Michelsonův interferometr, se zrcadlem kmitajícím na vzduchovém polštáři. Během všech měření byl používán speciální nástavec, díky němuž bylo možné provádět správné absolutní měření propustnosti. V průběhu měření jsou vzorky umístěny svisle na držáku v měřící komoře, ve které je po dobu měření udržováno vakuum 2,51\,hPa, což slouží k minimalizace vlivu okolního prostředí a vlhkosti na průběh měření. Výrobcem udávaní spektrání rozlišení spektrometru je minimálně 0,2\,cm$^{-1}$ při běžných laboratorních podmínkách. Spektrální rozsah spektrofotometru je 1333 -- 27000\,cm$^{-1}$, ale při požití vhodných rozšíření je možné měřit i do FIR a UV/VIS oblastí \cite{vertex}.
 
 FIXME: Vyfotit obrázek.
@@ -14,7 +14,7 @@ FIXME: Vyfotit obrázek.
 %  \label{verteximg}
 %\end{figure}
 
-\subsubsection{LAMBDA 1050 UV/Vis/NIR}
+\subsection{LAMBDA 1050 UV/Vis/NIR}
 LAMBDA 1050 UV/Vis/NIR od firmy PerkinElmer je dvoukanálový spektrofotometr. Jako zdroj slouží halogen-rtuťová a deuteriová lampa.  Přístroj obsahuje dva monochromátory (holografické difrakční mřížky s 1440 proužky,vrypy? na milimetr pro UV/Vis oblast a s 360 proužky na milimetr pro IR oblast)  (FIXME: holographic grating monochromator with 1440 lines/mm UV/Vis blazed at 240 nm and 360 lines/mm NIR blazed at 1100 nm,). Pro dělení svazku na dva kanály je použit chopper. Udávaný spektrální rozsah je 175--3300\,nm, nicméně pro měření pod 185\,nm je potřeba chlazení dusíkem. Použitý detektor pro viditelnou a UV oblast je fotonásobič R6872. Pro oblast 860--1800\,nm je použit InGaAs detektor, chlazený peltierovým článkem a pro oblast 1800--2500\,nm PbS detektor, taktéž chlazený peltierovým článkem. Spektrální rozlišení výrobce udává jako minimálně 0,05\,nm. Přístroj obsahuje optickou kompenzaci pro různé tloušťky vzorků \cite{lambda}.
 
 FIXME: Vyfotit obrázek.
@@ -26,7 +26,7 @@ FIXME: Vyfotit obrázek.
 %  \label{lambdaimg}
 %\end{figure}
 
-\subsubsection{Jobin-Yvon UVISEL}
+\subsection{Jobin-Yvon UVISEL}
 Schéma elipsometru Jobin-Yvon UVISEL je znázorněno na schématu \ref{fig:elipsometrimg} (FIXME: udělat schéma v inkscapu). Udávaný spektrální rozsah tohoto přístroje je od 190\,nm do 2000\,nm. Hlavy elipsometru jsou umístěny na goniometru, z toho důvodu může být měření prováděno pod různými úhly. Běžně se měří úhly dopadu 55$^\circ$, 60$^\circ$, 65$^\circ$, 70$^\circ$ a 75$^\circ$. Jedná se o fázově modulovaný elipsometr. Měření probíhá tak, že z lampy L vychází chromatické nepolarizované světlo, které poté prochází přes polarizátor P. Tam dojde k jeho lineární polarizaci, odráží se od vzorku a přes kompenzátor C, analyzátor A a monochromátor dopadá na detektor D.
 
 FIXME: Taky možná fotku?
@@ -38,7 +38,7 @@ FIXME: Taky možná fotku?
 %  \label{fig:elipsometrimg}
 %\end{figure}
 
-\subsection{Depoziční aparatura}
+\section{Depoziční aparatura}
 FIXME:tohle je v podstatě opsáno z bakalářky... zkontrolovat jestli to všechni stále sedí!
 
 Všechny vrstvy byly deponovány na Ústavu fyzikální elektroniky Masarykovy University v reaktoru R2. 
@@ -47,9 +47,9 @@ Reaktor R2 je válcový ocelový reaktor a má planární elektrody. Jeho vnitř
 
 Tlak v aparatuře je měřen kapacitronem Leybold. Průtoky plynů do reaktoru jsou regulovány průtokoměry Hastlings. 
 
-\subsection{Depoziční podmínky}
+\section{Depoziční podmínky}
 
-Nezávislé depožiční podmínky pro všechny depozice je tlak $p$, výkon $P$, čas depozice $t$ a průtoky jednotlivých plynů $Q_{\mathrm{CH_4}}$, $Q_{\mathrm{H_2}}$, $Q_{\mathrm{Ar}}$, všechny depoziční podmínky jsoun shrnuty v tabulce. Předpětí $U_b$ pak není nezávislý parametr, ale závisí na výkonu přibližně jako $U_b \sim \sqrt{P}$, nicméně je také zahrnuto v tabulce protože se jedná o velmi důležitý parametr pro růst vrstvy.
+Nezávislé depožiční podmínky pro všechny depozice je tlak $p$, výkon $P$, čas depozice $t$ a průtoky jednotlivých plynů $Q_{\mathrm{CH_4}}$, $Q_{\mathrm{H_2}}$, $Q_{\mathrm{Ar}}$, všechny depoziční podmínky jsoun shrnuty v tabulce \ref{deppodminky}. Předpětí $U_b$ pak není nezávislý parametr, ale závisí na výkonu přibližně jako $U_b \sim \sqrt{P}$, nicméně je také zahrnuto v tabulce protože se jedná o velmi důležitý parametr pro růst vrstvy. Klíčový parametr, jak již bylo zmíněno v Kapitole jedna je především energie dopadajícího iontu v přepočtu na jeden atom. Předpětí $U_b$ tedy říká, jakou energii by měl ion po průletu stěnovou vrstvou, kdyby nedocházelo ke srážce. Bohužel ve skutečnosti se ukazuje, že závislost $U_b$ na ostatních depozičních podmínkách není moc dobře reprodukovatelná, což je z tabulky \ref{deppodminky} jasně patrné. Nejstarší vrstvy jsou totiž z roku 2008 a nejnovější z konce roku 2012, v průběhu let potom mohlo dojít na aparatuře například ke stárnutí zdroje a také třeba ke změnám v reaktrou (deponování vrstvy na stěnách a elektrodách atd.). 
 
 \begin{table}[htbp]
  \centering
@@ -68,8 +68,50 @@ Nezávislé depožiční podmínky pro všechny depozice je tlak $p$, výkon $P$
 	\hline
  \end{tabular}
  \caption{Depoziční podmínky, Q$_\mathrm{{HMDSO}}$ je průtok HMDSO, Q$_\mathrm{O2}$ je průtok kyslíku, $P$ je výkon, $U_b$ je samopředpětí, $p$ je tlak a $t$ je délka depozice}
+\label{deppodminky}
 \end{table}
 
 Všechny vrstvy byly také před depozicí plazmově čištěny v ???? plazmě. Délku a druh plazmkového čištění shrnuje tabulka.....
+
+\section{Postup měření dat}
+
+\section{Vyhodnocování dat}
+Všechna experimentální data byla vyhodnocována v programu newAD, kde probíhalo fitování metodou nejmenších čtverců. Celková suma čtverců se získá jako
+%
+\begin{equation} S = \sum_m S^m f^m \text{,}\end{equation}
+%
+kde $S^m$ je parciální suma čtverců pro jednotlivá měření (v tomto případě elipsometrie, odrazivost a propustnost) a $f^m$ jsou faktory kompenzující rozdílný počet měřených bodů $N^m$ pro jednotlivá měření. Parciální sumy čtverců se spočítají jako
+%
+\begin{equation} S^m = \sum_{i=1}^{N^m} (X_i^\mathrm{exp} - X_i^\mathrm{th})^2 w_i^m \text{,} \end{equation}
+%
+kde $X_i^\mathrm{exp}$ a $X^\mathrm{th}$ jsou měřené a teoretické hodnoty a $w_i^m$ je inverzní hodnota čtverce odhadované chyby měřených veličin. Pro $\chi$ potom platí \cite{Franta2011}
+%
+\begin{equation} \chi = \sqrt \frac{S}{\sum_m f^m N^m} \mathrm{.}\end{equation}
+
+
+\subsection{Kalibrace pro určování vodíku}
+Pro správné vyhodnocení celkové vodíkové koncentrace bylo potřeba určit relativní sílu přechodu $\alpha_j$ (viz (odkaz)) pro jednotlivé vibrační módy uhlovodíkových skupin. Původní idea bylo použít teoreticky vypočítané hodnoty z odborné literatury. Žádnou odpovídající teorii se ale bohužel nepodařilo nalézt. Hodně publikací nicméně obsahuje experimentálně určené efektivní dynamické náboje $e_j^*$ pro uhlovodíkové skupiny kterém se dají přepočítat na relativní síly přechodu jako \cite{sumrule2}
+\begin{equation}
+\frac{e_j^*}{e} = Z_j \sqrt{\alpha_j} \text{.}
+\end{equation}
+
+Přehled více takových hodnot lze nalézt například v \cite{heitz1998}. Bohužel se tyto studie omezují na jednoduché uhlovodíky a polymerní a-C:H vrstvy. Jejich hodnoty proto nadávaly dobré výsledky při mých pokusech o jejich aplikaci na fitování DLC vrstev. 
+
+Kalibrace metody probíhala nakonec probíhala fitováním xFIXME vrstev zároveň. Přičemž klíčové parametry sil přechodu byly pro všechny vrstvy spjaty na stejné hodnoty. Další parametry, které byly pro všechny vrstvy stejné jsou polohy píkůuhlovodíkových skupin, ty byly zafixovány na hodnoty získané z literatury \cite{Robertson2002, Dischler1983, Ristein1998, Zajickova2011}. Ostatní paramatry byly pro jednotlivé vrstvy různé.
+Kromě zafixování poloh absorpčních píků a sepnutí sil přechodu pro všechny vrstvy dohromady bylo při fitování předpokládáno, že 
+1) asymetrický pík CHx skupiny je vždy silnější než ten symetrický
+2) asymetrický a symetrický pík stejné skupiny mají stejnou pološířku
+3) pološířka žádného CHx píku není větší než 100 cm$^-1$
+
+Kalibrovány byly píky sp2CHx a sp3CHx v oblasti 2800-3100cm$^{-1}$ a bendiwn vibration??? sp3CH3 na 1375\,cm$^{-1}$. Ve spektru jsou další vodíkové píky na příklad valenční sp1CH na cca 3000$cm^-1$, který nebyl zahrnut do vyhodnocování vydíkové absorpce proto, že je velmi nezřetelný a poměrně široký a bending 1450..., kde se poměrně malý absorpční pík skládá z cca 4-5 píků, ale analýza je komplikovaná tím, že v této oblasti je křemík absorbující a jeden absorpční pík je zrovna na cca 1445\,$cm^-1$. Podrobný rozbor vlivu substrátu bude proveden později.
+
+\subsection{Vyhodnocování vodíkové koncentrace}
+Zbytek vrstev byl nsledně nafitován již samostatně načež 
+
+
+
+
+
+
 
 \cleardoublepage
