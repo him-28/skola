@@ -6,7 +6,7 @@ pdffinal: pdfdraft2
 pdfdraft2: bibtex
 	pdflatex diplomka.tex
 
-grafika: grafika/DLCDOS.pdf grafika/layerscheme.pdf grafika/reaktor.pdf
+grafika: grafika/DLCDOS.pdf grafika/layerscheme.pdf grafika/reaktor.pdf grafika/dlcgrowth.pdf
 
 grafika/DLCDOS.pdf:
 	inkscape --without-gui --export-pdf=grafika/DLCDOS.pdf grafika/DLCDOS.svg
@@ -14,6 +14,8 @@ grafika/layerscheme.pdf:
 	inkscape --without-gui --export-pdf=grafika/layerscheme.pdf grafika/layerscheme.svg
 grafika/reaktor.pdf:
 	inkscape --without-gui --export-pdf=grafika/reaktor.pdf grafika/reaktor.svg
+grafika/dlcgrowth.pdf:
+	inkscape --without-gui --export-pdf=grafika/dlcgrowth.pdf grafika/dlcgrowth.svg
 
 bibtex: pdfdraft
 	bibtex diplomka
