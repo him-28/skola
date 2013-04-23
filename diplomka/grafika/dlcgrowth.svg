@@ -68,14 +68,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1366"
-     inkscape:window-height="768"
+     inkscape:window-height="709"
      id="namedview2986"
      showgrid="false"
-     inkscape:zoom="0.22039758"
-     inkscape:cx="435.81487"
-     inkscape:cy="507.36293"
+     inkscape:zoom="0.31168925"
+     inkscape:cx="690.39751"
+     inkscape:cy="616.10413"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2984"
      fit-margin-top="0"
@@ -103,7 +103,7 @@
      xml:space="preserve"
      id="flowRoot3004"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-     transform="translate(16.875,-173.68361)"><flowRegion
+     transform="translate(408.29049,-71.017251)"><flowRegion
        id="flowRegion3006"><rect
          id="rect3008"
          width="340.29413"
@@ -130,7 +130,7 @@
      xml:space="preserve"
      id="flowRoot3022"
      style="font-size:64px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-     transform="translate(57.14028,28.365894)"><flowRegion
+     transform="translate(69.973575,18.740923)"><flowRegion
        id="flowRegion3024"><rect
          id="rect3026"
          width="882.49609"
@@ -185,7 +185,7 @@
          height="93.013725"
          x="245.01176"
          y="735.03528" /></flowRegion><flowPara
-       id="flowPara3826">dosah</flowPara></flowRoot>  <flowRoot
+       id="flowPara3826" /></flowRoot>  <flowRoot
      xml:space="preserve"
      id="flowRoot3828"
      style="font-size:64px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -257,10 +257,5 @@
      style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Lend)"
      d="m 477.40662,421.88474 0,-89.90468"
      id="path4899"
-     inkscape:connector-curvature="0" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Lend)"
-     d="m 472.86912,622.60462 0,281.30984"
-     id="path5639"
      inkscape:connector-curvature="0" />
 </svg>
