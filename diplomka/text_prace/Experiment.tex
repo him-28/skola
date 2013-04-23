@@ -27,7 +27,7 @@ FIXME: Vyfotit obrázek.
 %\end{figure}
 
 \subsection{Jobin-Yvon UVISEL}
-Schéma elipsometru Jobin-Yvon UVISEL je znázorněno na schématu \ref{fig:elipsometrimg} (FIXME: udělat schéma v inkscapu). Udávaný spektrální rozsah tohoto přístroje je od 190\,nm do 2000\,nm. Hlavy elipsometru jsou umístěny na goniometru, z toho důvodu může být měření prováděno pod různými úhly. Běžně se měří úhly dopadu 55$^\circ$, 60$^\circ$, 65$^\circ$, 70$^\circ$ a 75$^\circ$. Jedná se o fázově modulovaný elipsometr. Měření probíhá tak, že z lampy L vychází chromatické nepolarizované světlo, které poté prochází přes polarizátor P. Tam dojde k jeho lineární polarizaci, odráží se od vzorku a přes kompenzátor C, analyzátor A a monochromátor dopadá na detektor D.
+Schéma elipsometru Jobin-Yvon UVISEL je znázorněno na schématu \ref{fig:elipsometrimg} (FIXME: udělat schéma v inkscapu). Udávaný spektrální rozsah tohoto přístroje je od 190\,nm do 2000\,nm. Hlavy elipsometru jsou umístěny na goniometru, z toho důvodu může být měření prováděno pod různými úhly. Běžně se měří úhly dopadu 55$^\circ$, 60$^\circ$, 65$^\circ$, 70$^\circ$ a 75$^\circ$. Jedná se o fázově modulovaný elipsometr. Měření probíhá tak, že z lampy vychází nepolarizované polychromatické světlo, které poté prochází přes polarizátor. Tam dojde k jeho lineární polarizaci, odráží se od vzorku a přes kompenzátor, analyzátor a monochromátor dopadá na detektor.
 
 FIXME: Taky možná fotku?
 
@@ -49,7 +49,7 @@ Tlak v aparatuře je měřen kapacitronem Leybold. Průtoky plynů do reaktoru j
 
 \section{Depoziční podmínky}
 
-Nezávislé depožiční podmínky pro všechny depozice je tlak $p$, výkon $P$, čas depozice $t$ a průtoky jednotlivých plynů $Q_{\mathrm{CH_4}}$, $Q_{\mathrm{H_2}}$, $Q_{\mathrm{Ar}}$, všechny depoziční podmínky jsoun shrnuty v tabulce \ref{deppodminky}. Předpětí $U_b$ pak není nezávislý parametr, ale závisí na výkonu přibližně jako $U_b \sim \sqrt{P}$, nicméně je také zahrnuto v tabulce protože se jedná o velmi důležitý parametr pro růst vrstvy. Klíčový parametr, jak již bylo zmíněno v Kapitole jedna je především energie dopadajícího iontu v přepočtu na jeden atom. Předpětí $U_b$ tedy říká, jakou energii by měl ion po průletu stěnovou vrstvou, kdyby nedocházelo ke srážce. Bohužel ve skutečnosti se ukazuje, že závislost $U_b$ na ostatních depozičních podmínkách není moc dobře reprodukovatelná, což je z tabulky \ref{deppodminky} jasně patrné. Nejstarší vrstvy jsou totiž z roku 2008 a nejnovější z konce roku 2012, v průběhu let potom mohlo dojít na aparatuře například ke stárnutí zdroje a také třeba ke změnám v reaktrou (deponování vrstvy na stěnách a elektrodách atd.). 
+Nezávislé depožiční podmínky pro všechny depozice jsou tlak $p$, výkon $P$, čas depozice $t$ a průtoky jednotlivých plynů $Q_{\mathrm{CH_4}}$, $Q_{\mathrm{H_2}}$, $Q_{\mathrm{Ar}}$, všechny depoziční podmínky jsoun shrnuty v tabulce \ref{deppodminky}. Předpětí $U_b$ pak není nezávislý parametr, ale závisí na výkonu přibližně jako $U_b \sim \sqrt{P}$, nicméně je také zahrnuto v tabulce protože se jedná o velmi důležitý parametr pro růst vrstvy. Klíčový parametr, jak již bylo zmíněno v Kapitole jedna je především energie dopadajícího iontu v přepočtu na jeden atom. Předpětí $U_b$ tedy říká, jakou energii by měl ion po průletu stěnovou vrstvou, kdyby nedocházelo ke srážce. Bohužel ve skutečnosti se ukazuje, že závislost $U_b$ na ostatních depozičních podmínkách není moc dobře reprodukovatelná, což je z tabulky \ref{deppodminky} jasně patrné. Nejstarší vrstvy jsou totiž z roku 2008 a nejnovější z konce roku 2012, v průběhu let potom mohlo dojít na aparatuře například ke stárnutí zdroje a také třeba ke změnám v reaktrou (deponování vrstvy na stěnách a elektrodách atd.). 
 
 \begin{table}[htbp]
  \centering
@@ -73,7 +73,8 @@ Nezávislé depožiční podmínky pro všechny depozice je tlak $p$, výkon $P$
 
 Všechny vrstvy byly také před depozicí plazmově čištěny v ???? plazmě. Délku a druh plazmkového čištění shrnuje tabulka.....
 
-\section{Postup měření dat}
+\section{Postup měření dat}lik skenů atd. Možná něco o metodě 4x4?
+FIXME: Jak se coměřilo, kolikrát, ko
 
 \section{Vyhodnocování dat}
 Všechna experimentální data byla vyhodnocována v programu newAD, kde probíhalo fitování metodou nejmenších čtverců. Celková suma čtverců se získá jako
@@ -84,10 +85,10 @@ kde $S^m$ je parciální suma čtverců pro jednotlivá měření (v tomto pří
 %
 \begin{equation} S^m = \sum_{i=1}^{N^m} (X_i^\mathrm{exp} - X_i^\mathrm{th})^2 w_i^m \text{,} \end{equation}
 %
-kde $X_i^\mathrm{exp}$ a $X^\mathrm{th}$ jsou měřené a teoretické hodnoty a $w_i^m$ je inverzní hodnota čtverce odhadované chyby měřených veličin. Pro $\chi$ potom platí \cite{Franta2011}
+kde $X_i^\mathrm{exp}$ a $X^\mathrm{th}$ jsou měřené a teoretické hodnoty a $w_i^m$ je inverzní hodnota čtverce odhadované chyby měřených veličin. Potom platí \cite{Franta2011}
 %
-\begin{equation} \chi = \sqrt \frac{S}{\sum_m f^m N^m} \mathrm{.}\end{equation}
-
+\begin{equation} \chi = \sqrt \frac{S}{\sum_m f^m N^m} \mathrm{,}\end{equation}
+kde $\chi$ je parametr určující celkovou shodu fitu s experimentálními daty, jedná se vlastně o normovanou sumu čtverců.
 
 \subsection{Kalibrace pro určování vodíku}
 Pro správné vyhodnocení celkové vodíkové koncentrace bylo potřeba určit relativní sílu přechodu $\alpha_j$ (viz (odkaz)) pro jednotlivé vibrační módy uhlovodíkových skupin. Původní idea bylo použít teoreticky vypočítané hodnoty z odborné literatury. Žádnou odpovídající teorii se ale bohužel nepodařilo nalézt. Hodně publikací nicméně obsahuje experimentálně určené efektivní dynamické náboje $e_j^*$ pro uhlovodíkové skupiny kterém se dají přepočítat na relativní síly přechodu jako \cite{sumrule2}
@@ -103,15 +104,8 @@ Kromě zafixování poloh absorpčních píků a sepnutí sil přechodu pro vše
 2) asymetrický a symetrický pík stejné skupiny mají stejnou pološířku
 3) pološířka žádného CHx píku není větší než 100 cm$^-1$
 
-Kalibrovány byly píky sp2CHx a sp3CHx v oblasti 2800-3100cm$^{-1}$ a bendiwn vibration??? sp3CH3 na 1375\,cm$^{-1}$. Ve spektru jsou další vodíkové píky na příklad valenční sp1CH na cca 3000$cm^-1$, který nebyl zahrnut do vyhodnocování vydíkové absorpce proto, že je velmi nezřetelný a poměrně široký a bending 1450..., kde se poměrně malý absorpční pík skládá z cca 4-5 píků, ale analýza je komplikovaná tím, že v této oblasti je křemík absorbující a jeden absorpční pík je zrovna na cca 1445\,$cm^-1$. Podrobný rozbor vlivu substrátu bude proveden později.
+Kalibrovány byly píky valenčních vibrací sp2CH$_{1,2}$ a sp3CH$_{1,2,3}$ v oblasti 2800--3100\,cm$^{-1}$ a kolébavé vibrace sp3CH$_3$ na 1375\,cm$^{-1}$. Ve spektru jsou další vodíkové píky například valenční sp1CH na cca 3000$cm^{-1}$, který nebyl zahrnut do vyhodnocování vydíkové absorpce proto, že je velmi nezřetelný a poměrně široký a další píky kolébavých vibrací kolem 1450\,cm$^{-1}$, kde se poměrně malý absorpční pík skládá z cca 4--5 píků, ale analýza je komplikovaná tím, že v této oblasti je křemík absorbující a jeden absorpční pík je zrovna na cca 1445\,$cm^-1$. Podrobný rozbor vlivu substrátu bude proveden později.
 
 \subsection{Vyhodnocování vodíkové koncentrace}
-Zbytek vrstev byl nsledně nafitován již samostatně načež 
-
-
-
-
-
-
 
 \cleardoublepage
