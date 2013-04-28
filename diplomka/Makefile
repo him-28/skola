@@ -25,13 +25,13 @@ programy/deconvolute:
 grafy: programy/deconvolute grafy/CH30Adeconv.pdf grafy/CH88Adeconv.pdf grafy/CH90Adeconv.pdf grafy/CH83Adeconv.pdf grafy/R-multifit.pdf grafy/T-multifit.pdf grafy/T-detail-multifit.pdf
 
 grafy/CH30Adeconv.pdf:
-	programy/deconvolute /home/Paulie/Dokumenty/škola/fityDLC/kalibrace-fixedNa/out48 1 | gnuplot > grafy/CH30Adeconv.pdf
+	programy/deconvolute vysledky/out-multifit 1 | gnuplot > grafy/CH30Adeconv.pdf
 grafy/CH88Adeconv.pdf:
-	programy/deconvolute /home/Paulie/Dokumenty/škola/fityDLC/kalibrace-fixedNa/out48 2 | gnuplot > grafy/CH88Adeconv.pdf
+	programy/deconvolute vysledky/out-multifit 2 | gnuplot > grafy/CH88Adeconv.pdf
 grafy/CH90Adeconv.pdf:
-	programy/deconvolute /home/Paulie/Dokumenty/škola/fityDLC/kalibrace-fixedNa/out48 3 | gnuplot > grafy/CH90Adeconv.pdf
+	programy/deconvolute vysledky/out-multifit 3 | gnuplot > grafy/CH90Adeconv.pdf
 grafy/CH83Adeconv.pdf:
-	programy/deconvolute /home/Paulie/Dokumenty/škola/fityDLC/kalibrace-fixedNa/out48 4 | gnuplot > grafy/CH83Adeconv.pdf
+	programy/deconvolute vysledky/out-multifit 4 | gnuplot > grafy/CH83Adeconv.pdf
 grafy/R-multifit.pdf:
 	gnuplot grafy/R-multifit.gpi > grafy/R-multifit.pdf
 grafy/T-multifit.pdf:
