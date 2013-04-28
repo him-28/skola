@@ -1,0 +1,39 @@
+set terminal pdf enhanced font "Helvetica,14" linewidth 3 size 14cm,20cm
+set locale "cs_CZ.UTF-8"
+set encoding utf8
+set ylabel "Odrazivost, R"
+
+set tmargin 0.7
+set bmargin 0.8
+
+set multiplot layout 4, 1
+
+set key autotitle column nobox samplen 1 noenhanced
+
+set format x ""
+
+plot [180:860]\
+     "< awk '/^20001$*/ {print $2,$4}' /home/Paulie/Dokumenty/škola/fityDLC/kalibrace-fixedNa/out48" t "CH30A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
+	"< awk '/^20001$*/ {print $2,$7}' /home/Paulie/Dokumenty/škola/fityDLC/kalibrace-fixedNa/out48" t "CH30A fit" w l lt 2 linecolor rgb "black" lw 2
+
+set tmargin 0
+set key left
+
+plot [180:860]\
+     "< awk '/^20004$*/ {print $2,$4}' /home/Paulie/Dokumenty/škola/fityDLC/kalibrace-fixedNa/out48" every ::1::660 t "CH83A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
+	"< awk '/^20004$*/ {print $2,$7}' /home/Paulie/Dokumenty/škola/fityDLC/kalibrace-fixedNa/out48" every ::1::660 t "CH83A fit" w l lt 2 linecolor rgb "black" lw 2
+
+plot [180:860]\
+     "< awk '/^20002$*/ {print $2,$4}' /home/Paulie/Dokumenty/škola/fityDLC/kalibrace-fixedNa/out48" t " CH88A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
+	"< awk '/^20002$*/ {print $2,$7}' /home/Paulie/Dokumenty/škola/fityDLC/kalibrace-fixedNa/out48" t "CH88A fit" w l lt 2 linecolor rgb "black" lw 2
+
+set xlabel "Vlnová délka, {/Symbol l} [nm]"
+set format x "%g"
+set bmargin 3
+set key right
+
+plot [180:860]\
+     "< awk '/^20003$*/ {print $2,$4}' /home/Paulie/Dokumenty/škola/fityDLC/kalibrace-fixedNa/out48" t "CH90A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
+	"< awk '/^20003$*/ {print $2,$7}' /home/Paulie/Dokumenty/škola/fityDLC/kalibrace-fixedNa/out48" t "CH90A fit" w l lt 2 linecolor rgb "black" lw 2
+
+unset multiplot
