@@ -28,15 +28,16 @@ int main(int argc, char *argv[]){
 	struct {
 		char *name;
 		int type;
+		char *opt;
 	} peak_names[] = {
-		{"sp3CH3a", sp3CH3}, 
-		{"sp3CH3s", sp3CH3},
-		{"sp3CH2a", sp3CH2},
-		{"sp3CH2s", sp3CH2},
-		{"sp3CH", sp3CH},
-		{"sp2CH2a", sp2CH2},
-		{"sp2CH2s", sp2CH2},
-		{"sp2CH", sp2CH}
+		{"sp3CH3a", sp3CH3, "lt 1 lc rgb \"red\""}, 
+		{"sp3CH3s", sp3CH3, "lt 2 lc rgb \"red\""},
+		{"sp3CH2a", sp3CH2, "lt 1 lc rgb \"blue\""},
+		{"sp3CH2s", sp3CH2, "lt 2 lc rgb \"blue\""},
+		{"sp3CH", sp3CH, "lt 1 lc rgb \"green\""},
+		{"sp2CH2a", sp2CH2, "lt 1 lc rgb \"orange\""},
+		{"sp2CH2s", sp2CH2, "lt 2 lc rgb \"orange\""},
+		{"sp2CH", sp2CH, "lt 1 lc rgb \"yellow\""}
 	};
 
 	struct {
@@ -147,23 +148,11 @@ int main(int argc, char *argv[]){
 		}
 	}
 
-	printf("set terminal pdf enhanced font \"Helvetica,14\" linewidth 3 size 9cm,9cm\n");
-	printf("set locale \"cs_CZ.UTF-8\"\n");
-	printf("set encoding utf8\n");
-	printf("set ylabel \"{/Symbol e}_i\"\n");
-	printf("set xlabel \"Vlnočet, {/Symbol n} [cm^{-1}]\"\n");
-	printf("set xtics 100\n");
-	printf("set rmargin 0.1\n");
-	printf("E(nu) = 6.626e-34*3e8*nu*1e2/1.602e-19\n");
-	printf("B(beta) = (6.626e-34*3e8*beta*1e2/1.602e-19)/(2*sqrt(2*log(2)))\n"); 
-	printf("G(x,e,b) = (1/(sqrt(2*3.14)*B(b)*E(e)))*(exp(-((E(x)-E(e))**2)/(2*B(b)**2))-exp(-((E(x)+E(e))**2)/(2*B(b)**2)))\n");
-	//printf("set ratio 1,1\n");
-
 	printf("plot[2750:3150]\\\n");//[2800:2100]
 	for(int i = 0; i < sizeof(peak_names)/sizeof(peak_names[0]); i++){
-		printf("G(x,%e,%e)*%e*0.000545*%e*%e t \"%s\",",
+		printf("G(x,%e,%e)*%e*0.000545*%e*%e t \"%s\" %s,",
 				data[i].nu, data[i].beta, Na, data[i].alpha,
-				fHx[peak_names[i].type], peak_names[i].name);
+				fHx[peak_names[i].type], peak_names[i].name, peak_names[i].opt);
 	}
 
 	for(int i = 0; i < sizeof(peak_names)/sizeof(peak_names[0]); i++){
@@ -172,7 +161,7 @@ int main(int argc, char *argv[]){
 		if(i != sizeof(peak_names)/sizeof(peak_names[0]) - 1)
 			printf("+\\\n");
 	}
-	printf(" t \"celkem\"");
+	printf(" t \"celkem\" lt 1 lc rgb \"black\"");
 
 	return 0;
 }
