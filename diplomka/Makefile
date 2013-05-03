@@ -22,7 +22,7 @@ grafika/dlcgrowthH.pdf:
 programy/deconvolute:
 	gcc programy/deconvolute.c -o programy/deconvolute -std=c99
 
-grafy: programy/deconvolute grafy/R-multifit.pdf grafy/T-multifit.pdf grafy/T-detail-multifit.pdf grafy/deconv-multifit.pdf
+grafy: programy/deconvolute grafy/R-multifit.pdf grafy/T-multifit.pdf grafy/T-detail-multifit.pdf grafy/deconv-multifit.pdf grafy/ell-multifit.pdf
 
 grafy/CH30Adeconv.gpi:
 	programy/deconvolute vysledky/out-multifit 1 > grafy/CH30Adeconv.gpi
@@ -40,6 +40,8 @@ grafy/T-detail-multifit.pdf:
 	gnuplot grafy/T-detail-multifit.gpi > grafy/T-detail-multifit.pdf
 grafy/deconv-multifit.pdf: grafy/CH30Adeconv.gpi grafy/CH88Adeconv.gpi grafy/CH90Adeconv.gpi grafy/CH83Adeconv.gpi
 	gnuplot grafy/deconv-multifit.gpi > grafy/deconv-multifit.pdf
+grafy/ell-multifit.pdf:
+	gnuplot grafy/ell-multifit.gpi > grafy/ell-multifit.pdf
 
 tabulky: tabulky/H-table.tex
 
@@ -53,4 +55,4 @@ pdfdraft: grafika grafy tabulky
 	pdflatex diplomka.tex
 
 clean:
-	rm grafika/DLCDOS.pdf grafika/layerscheme.pdf grafika/reaktor.pdf grafika/dlcgrowth.pdf grafika/dlcgrowthH.pdf diplomka.aux diplomka.bbl diplomka.log diplomka.out diplomka.idx diplomka.blg diplomka.toc diplomka.pdf programy/deconvolute grafy/CH30Adeconv.gpi grafy/CH88Adeconv.gpi grafy/CH90Adeconv.gpi grafy/CH83Adeconv.gpi grafy/T-multifit.pdf grafy/R-multifit.pdf grafy/T-detail-multifit.pdf tabulky/H-table.tex
+	rm grafika/DLCDOS.pdf grafika/layerscheme.pdf grafika/reaktor.pdf grafika/dlcgrowth.pdf grafika/dlcgrowthH.pdf diplomka.aux diplomka.bbl diplomka.log diplomka.out diplomka.idx diplomka.blg diplomka.toc diplomka.pdf programy/deconvolute grafy/CH30Adeconv.gpi grafy/CH88Adeconv.gpi grafy/CH90Adeconv.gpi grafy/CH83Adeconv.gpi grafy/T-multifit.pdf grafy/R-multifit.pdf grafy/T-detail-multifit.pdf tabulky/H-table.tex grafy/ell-multifit.pdf
