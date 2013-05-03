@@ -16,9 +16,12 @@ set rmargin 0.1
 set format x ""
 set format y "%.2f"
 
+set label 1 "CH30A" at graph 0.05, graph 0.95
+
 load "grafy/CH30Adeconv.gpi"
 
 set ylabel ""
+set label 1 "CH83A" at graph 0.05, graph 0.95
 
 load "grafy/CH83Adeconv.gpi"
 
@@ -26,10 +29,12 @@ set bmargin 3.1
 set ylabel "{/Symbol e}_i"
 set xlabel "Vlnočet, {/Symbol n} [cm^{-1}]"
 set format x "%g"
+set label 1 "CH88A" at graph 0.05, graph 0.95
 
 load "grafy/CH88Adeconv.gpi"
 
 set ylabel ""
+set label 1 "CH90A" at graph 0.05, graph 0.95
 
 load "grafy/CH90Adeconv.gpi"
 
