@@ -19,10 +19,9 @@ int main(int argc, char *argv[]){
 		return 1; 
 	}
 
-	int sample = atoi(argv[2]);
-	if (sample == 0){
-		free(argv[2]);
-		argv[2] = "";
+	char *sample = argv[2];
+	if (strcmp(sample, "0") == 0){
+		sample = "";
 	}
 
 	struct {
@@ -52,7 +51,7 @@ int main(int argc, char *argv[]){
 	
 	char test[200] = "# Naf";
 	char buf[200];
-	strcat(test, argv[2]);
+	strcat(test, sample);
 	strcat(test, " = %lf +- %lf");
 
 	while(fgets(buf, 199, input_file) != NULL) {
@@ -62,7 +61,7 @@ int main(int argc, char *argv[]){
 
 	rewind(input_file);
 	strcpy(test, "# fHsp3CH3f");
-	strcat(test, argv[2]);
+	strcat(test, sample);
 	strcat(test, " = %lf +- %lf");
 
 	while(fgets(buf, 199, input_file) != NULL) {
@@ -72,7 +71,7 @@ int main(int argc, char *argv[]){
 
 	rewind(input_file);
 	strcpy(test, "# fHsp3CH2f");
-	strcat(test, argv[2]);
+	strcat(test, sample);
 	strcat(test, " = %lf +- %lf");
 
 	while(fgets(buf, 199, input_file) != NULL) {
@@ -82,7 +81,7 @@ int main(int argc, char *argv[]){
 
 	rewind(input_file);
 	strcpy(test, "# fHsp3CHf");
-	strcat(test, argv[2]);
+	strcat(test, sample);
 	strcat(test, " = %lf +- %lf");
 
 	while(fgets(buf, 199, input_file) != NULL) {
@@ -92,7 +91,7 @@ int main(int argc, char *argv[]){
 
 	rewind(input_file);
 	strcpy(test, "# fHsp2CHf");
-	strcat(test, argv[2]);
+	strcat(test, sample);
 	strcat(test, " = %lf +- %lf");
 
 	while(fgets(buf, 199, input_file) != NULL) {
@@ -102,7 +101,7 @@ int main(int argc, char *argv[]){
 
 	rewind(input_file);
 	strcpy(test, "# fHf");
-	strcat(test, argv[2]);
+	strcat(test, sample);
 	strcat(test, " = %lf +- %lf");
 
 	while(fgets(buf, 199, input_file) != NULL) {
@@ -140,7 +139,7 @@ int main(int argc, char *argv[]){
 		strcpy(test, "# beta");
 		strcat(test, peak_names[i].name);
 		strcat(test,"f");
-		strcat(test, argv[2]);
+		strcat(test, sample);
 		strcat(test, " = %lf +- %lf");
 		while(fgets(buf, 199, input_file) != NULL) {
 			if (sscanf(buf, test, &data[i].beta, dummy) >= 1)
