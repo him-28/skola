@@ -1,0 +1,20 @@
+set terminal pdf enhanced font "Helvetica,14" linewidth 3 size 14cm,9cm
+set locale "cs_CZ.UTF-8"
+set encoding utf8
+
+set xlabel "Energie, E [eV]"
+set ylabel "Index lomu, n"
+set format y "%.2f"
+
+set key at graph 0.45, graph 0.48
+
+plot [1:7]\
+    "< awk '/^.2?0001$*/ {print 6.626e-34*3e8/($2*1e-9)/1.602e-19,$13}' vysledky/out-multifit | LANG=en_US.utf8 sort -g" t "CH30A" w l lw 1.4,\
+	"< awk '/^.2?0001$*/ {print 6.626e-34*3e8/($2*1e-9)/1.602e-19,$13}' vysledky/out-CH30C | LANG=en_US.utf8 sort -g" t "CH30C" w l lw 1.4,\
+	"< awk '/^.2?0001$*/ {print 6.626e-34*3e8/($2*1e-9)/1.602e-19,$13}' vysledky/out-CH30D | LANG=en_US.utf8 sort -g" t "CH30D" w l lw 1.4,\
+	"< awk '/^.2?0004$*/ {print 6.626e-34*3e8/($2*1e-9)/1.602e-19,$13}' vysledky/out-multifit | LANG=en_US.utf8 sort -g" t "CH83A" w l lw 1.4,\
+	"< awk '/^.2?0001$*/ {print 6.626e-34*3e8/($2*1e-9)/1.602e-19,$13}' vysledky/out-CH87A | LANG=en_US.utf8 sort -g" t "CH87A" w l lw 1.4,\
+    "< awk '/^.2?0002$*/ {print 6.626e-34*3e8/($2*1e-9)/1.602e-19,$13}' vysledky/out-multifit | LANG=en_US.utf8 sort -g" t "CH88A" w l lw 1.4,\
+	"< awk '/^.2?0003$*/ {print 6.626e-34*3e8/($2*1e-9)/1.602e-19,$13}' vysledky/out-multifit | LANG=en_US.utf8 sort -g" t "CH90A" w l lw 1.4,\
+	"< awk '/^.2?0001$*/ {print 6.626e-34*3e8/($2*1e-9)/1.602e-19,$13}' vysledky/out-CH89A | LANG=en_US.utf8 sort -g" t "CH89A" w l lw 1.4
+

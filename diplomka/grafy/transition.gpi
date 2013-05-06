@@ -1,0 +1,14 @@
+set terminal pdf enhanced font "Helvetica,14" linewidth 3 size 14cm,9cm
+set locale "cs_CZ.UTF-8"
+set encoding utf8
+
+set xlabel "Energie, E [eV]"
+set ylabel "Index lomu, n"
+set format y "%.0f"
+
+
+plot\
+    "< awk '/^.2?0001$*/ {print 6.626e-34*3e8/($2*1e-9)/1.602e-19,$15}' vysledky/out-multifit | LANG=en_US.utf8 sort -g" t "přechodová vrstva" w l linecolor rgb "black" lw 1.4,\
+    "< awk '/^.2?0001$*/ {print 6.626e-34*3e8/($2*1e-9)/1.602e-19,$13}' vysledky/out-multifit | LANG=en_US.utf8 sort -g" t "CH30A" w l linecolor rgb "red" lw 1.4,\
+	"< awk '/^.2?0001$*/ {print 6.626e-34*3e8/($2*1e-9)/1.602e-19,$17}' vysledky/out-multifit | LANG=en_US.utf8 sort -g" t "substrát c-Si" w l linecolor rgb "blue" lw 1.4
+

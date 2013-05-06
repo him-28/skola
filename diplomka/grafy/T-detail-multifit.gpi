@@ -5,20 +5,20 @@ set encoding utf8
 set multiplot layout 2, 2
 
 set xtics 100
-set ylabel "Propustnost, T"
+set ylabel "Propustnost, {/Helvetica-Oblique T}"
 set tmargin 0.7
 set bmargin 0.8
 set rmargin 0.1
 set format x ""
 set format y "%.3f"
-set key left top
+set key left
 
 plot [2750:3150]\
      "< awk '/^320001$*/ {print 1/($2*1e-7),$4}' vysledky/out-multifit" t "CH30A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^320001$*/ {print 1/($2*1e-7),$7}' vysledky/out-multifit" t "CH30A fit" w l lt 2 linecolor rgb "black" lw 2
 
 set ylabel ""
-set key left right
+set key right
 
 plot [2750:3150]\
      "< awk '/^320004$*/ {print 1/($2*1e-7),$4}' vysledky/out-multifit" t "CH83A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
@@ -34,7 +34,7 @@ plot [2750:3150]\
 	"< awk '/^320002$*/ {print 1/($2*1e-7),$7}' vysledky/out-multifit" t "CH88A fit" w l lt 2 linecolor rgb "black" lw 2
 
 set ylabel ""
-set key left top
+set key left
 
 plot [2750:3150]\
      "< awk '/^320003$*/ {print 1/($2*1e-7),$4}' vysledky/out-multifit" t "CH90A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\

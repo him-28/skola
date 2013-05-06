@@ -1,0 +1,16 @@
+set terminal pdf enhanced font "Helvetica,14" linewidth 3 size 14cm,9cm
+set locale "cs_CZ.UTF-8"
+set encoding utf8
+
+set ytics nomirror
+set y2tics
+set xlabel "Vlnočet, {/Symbol n} [cm^{-1}]"
+set ylabel "Propustnost, {/Helvetica-Oblique T}"
+set format y "%.3f"
+set format y2 "%.1f"
+set y2label "{/Symbol e}_i [10^{-4}]"
+set key right center
+
+plot [1200:1700]\
+     "< awk '/^320001$*/ {print 1/($2*1e-7),$4}' vysledky/out-multifit" t "CH30A experiment" lt 1 linecolor rgb "red" lw 0.2 pointsize 0.5,\
+	"< awk '/^320001$*/ {print 1/($2*1e-7),2*$17*$18*1e4}' vysledky/out-multifit" t "{/Symbol e}_i c-Si" w l lt 2 linecolor rgb "black" lw 2 axes x1y2

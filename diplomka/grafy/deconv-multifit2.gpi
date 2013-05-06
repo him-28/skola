@@ -1,4 +1,4 @@
-set terminal pdf enhanced font "Helvetica,11" linewidth 3 size 14cm,14cm
+set terminal pdf enhanced font "Helvetica,14" linewidth 3 size 14cm,14cm
 set termoption dash
 set locale "cs_CZ.UTF-8"
 set encoding utf8
@@ -9,6 +9,7 @@ B(beta) = (6.626e-34*3e8*beta*1e2/1.602e-19)/(2*sqrt(2*log(2)))
 G(x,e,b) = (1/(sqrt(2*3.14)*B(b)*E(e)))*(exp(-((E(x)-E(e))**2)/(2*B(b)**2))-exp(-((E(x)+E(e))**2)/(2*B(b)**2)))
 
 set multiplot layout 2, 2
+set key font "Helvetica,11"
 
 set tmargin 0.7
 set bmargin 0.8

@@ -1,0 +1,43 @@
+set terminal pdf enhanced font "Helvetica,14" linewidth 3 size 14cm,14cm
+set locale "cs_CZ.UTF-8"
+set encoding utf8
+
+set multiplot layout 2, 2
+
+set xtics 100
+set ylabel "Propustnost, {/Helvetica-Oblique T}"
+set tmargin 0.7
+set bmargin 0.8
+set rmargin 0.1
+set format x ""
+set format y "%.3f"
+set key left
+
+plot [2750:3150]\
+     "< awk '/^320001$*/ {print 1/($2*1e-7),$4}' vysledky/out-CH30C" t "CH30C experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
+	"< awk '/^320001$*/ {print 1/($2*1e-7),$7}' vysledky/out-CH30C" t "CH30C fit" w l lt 2 linecolor rgb "black" lw 2
+
+set ylabel ""
+set key left
+
+plot [2750:3150]\
+     "< awk '/^320001$*/ {print 1/($2*1e-7),$4}' vysledky/out-CH30D" t "CH30D experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
+	"< awk '/^320001$*/ {print 1/($2*1e-7),$7}' vysledky/out-CH30D"  t "CH30D fit" w l lt 2 linecolor rgb "black" lw 2
+
+set bmargin 3.1
+set ylabel "Propustnost, T"
+set xlabel "Vlnočet, {/Symbol n} [cm^{-1}]"
+set format x "%g"
+
+plot [2750:3150]\
+     "< awk '/^320001$*/ {print 1/($2*1e-7),$4}' vysledky/out-CH87A" t "CH87A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
+	"< awk '/^320001$*/ {print 1/($2*1e-7),$7}' vysledky/out-CH87A" t "CH87A fit" w l lt 2 linecolor rgb "black" lw 2
+
+set ylabel ""
+set key left
+
+plot [2750:3150]\
+     "< awk '/^320001$*/ {print 1/($2*1e-7),$4}' vysledky/out-CH89A" t "CH89A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
+	"< awk '/^320001$*/ {print 1/($2*1e-7),$7}' vysledky/out-CH89A" t "CH89A fit" w l lt 2 linecolor rgb "black" lw 2
+
+unset multiplot

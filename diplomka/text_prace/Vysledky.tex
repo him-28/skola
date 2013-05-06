@@ -1,40 +1,191 @@
 \chapter{Diskuse výsledků}
+V rámci této práce bylo celkem naměřeno a nafitováno osm vrstev. Podařilo se dosáhnout velmi dobré shody mezi naměřenými daty a fitovanými funkcemi pro měření odrazivosti (obrázky \ref{R-multifit} a \ref{R-multifit2}) a přidružené elipsometrické parametry (obrázky \ref{ell-multifit} a \ref{ell-multifit2}) ve viditelné a blízké ultrafialové oblasti a také pro pro propustnost v inračervené oblasti (obrázky \ref{T-multifit} a \ref{T-multifit2}). Parametry elektronové struktury, parametry vodíkové koncentrace včetně rozložení vodíku mezi jednotlivé CH skupiny a další makroskopické parametry multivrstevnatého systému jsou shrnuty v tabulce \ref{H-peaks}. 
+V tabulce \ref{H-peaks} jsou určené relativní síly přechodu, polohy a pološířky pro gausovské píky reprezentující jednotlivé CH skupiny. V tabulce \ref{H-peaks2} jsou pak síly přehodu, polohy a pološířky pro gausovské píky reprezentující vibrace ostatních skupin v IR oblasti.
+Obrázky \ref{T-detail} a \ref{T-detail2} pak ukazují detail měřené a fitované propustnosti v oblasti valenčních vibrací CH skupin. Rozklad dielektrické funkce na příspěvky jednotlivých vibračních módů ve stejné oblasti je pak na obrázcích \ref{deconvolute} a \ref{deconvolute2}. Diskuse jednotlivých parametrů dále pokračuje v následujících podkapitolách.
 
-\begin{figure}[ht]
-	\includegraphics[width=\linewidth]{grafy/deconv-multifit.pdf}
-	\caption{Jednotlivé příspěvky dielektrické funkce v oblasti valenčních vibrací CH skupin}
+\begin{table}[tbhp]
+ \centering
+	\renewcommand{\tabcolsep}{4pt}
+ \input{tabulky/params.tex}
+ \caption{Parametry fitů}
+\label{fitparams}
+\end{table}
+
+\section{Parametry elektronové struktury, poměr sp2 a sp3 uhlíků a hustota}
+Parametry elektronové struktury u DLC vrstev ovlivňují hlavně odrazivost, propustnost a elipsometrické veličiny ve viditelné a ultrafialové oblasti a na IR oblast nemají přímý vliv. 
+Proto se většina prací, které zkoumají koncentrací vodíku v DLC vrstvách pomocí optických měření, zabývá pouze infračervenou oblastí. Tato práce se nicméně věnuje i viditelné a blízké ultrafialové oblasti, protože ty poskytují zajímavé údaje o struktuře látky, které nám dále mohou pomoci při úvahách o vodíkové koncentraci a hlavně na nich velmi závisí atomární hustota $N_\mathrm{a}$, kterou musíme dobře určit, protože relativní koncentrace vodíku je na ní přímo závislá.  
+
+Začneme se šířkou zakázaného pásu pi elektronů, $E_\mathrm{g\pi}$ je pro všechny vrstvy v očekávaném rozmezí 1--1,5\,eV, to odpovídá hodnotám pro středně tvrdé až tvrdé DLC vrstvy \cite{Robertson2002}. 
+Zajímavý je posun šířky zakázaného pásu sigma elektronů pro některé vrstvy na velmi malé hodnoty okolo 2\,eV. Toto nastává hlavně pro tlusté vrstvy CH83A, CH87A, CH89A, mírně pro CH88A. Možné vysvětlení je nehomogenita vrstev. Nehomogenní jsou všechny vrstvy a je to přímý důsledek principu depozice energetickým bombardováním. 
+Z toho důvodu bychom očekávali na povrchu vrstvy nižší hustotu než při substrátu, kde by naopak hustota měla být nejvyšší. Podobně poměr $f_\mathrm{Csp3}/f_\mathrm{Csp2}$ by měl být také na povrchu vrstvy nejnižší a vyšší dole. Použitý model bohužel vůbec nehomogenitu nezahrnuje a tak pro tlustší vrstvy, kde se nehomogenita projevuje nejvíc, nedostáváme úplně korektní výsledky právě pro poměr $f_\mathrm{Csp3}/f_\mathrm{Csp2}$ a z toho plynoucí odchylky v očekávané elektronové struktuře, které se snaží nehomogenitu kompenzovat. Dobře je to vidět na vrstvě CH88A, která byla deponována ne najednou, ale s přestávkami aby došlo k chladnutí vrstvy a omezení nehomogenity. U této vrstvy sice také mjžeme vidět odchylky od tenčích vrstev, ale nejedná se o takový rozdíl jako u ostatních tlustých vrstev. 
+
+Co se týče celkového indexu lomu, ten je pro všechny vrstvy znázorněn  na obrázku \ref{index}. Běžně používaný vztah mezi indexem lomu a hustotou vrstvy říká, že čtverec indexu lomu na 633\,nm je přímo úměrný hustotě vrstvy \cite{Donnet2008}. Toto se ukázalo jako problém, protože podle ERDA mají největší hustotu vrstvy CH30A, CH30C a CH30D, které ale mají ze všech vrstev index lomu nejnižší!
+
+\begin{figure}[tbhp]
+	\includegraphics[width=\linewidth]{grafy/N.pdf}
+	\caption{Spektrální závislost indexu lomu pro všechny vrstvy} 
+	\label{index}
 \end{figure}
 
-\begin{figure}[ht]
-	\includegraphics[width=\linewidth]{grafy/deconv-multifit2.pdf}
-	\caption{Jednotlivé příspěvky dielektrické funkce v oblasti valenčních vibrací CH skupin}
+Tyto problémy přisuzuji kromě nehomogenity také tomu, že použitý model rozlišoval pouze dva typy elektronových stavů a předpokládal, že všechny elektrony v $\sigma$ stavech, tedy ty od sp2 uhlíků, sp3 uhlíků a vodíku mají stejné vlastnosti. Zafixování většiny hodnot $\sigma$ elektronů se pravděpodobně na kvalitě výsledků také projevilo špatně.
+
+Kvůli výše zmíněným pochybnostem o hodnotách hustoty určených z RBS a ERDA, vzhledem k tomu že nebyly k dispozici optická data pro vyšší energie než 6\,eV což znemožnilo přesné určení z optických měření  a také proto, že podle hodnot z ERDA vychází atomární hustatota $N_a$ pro všechny vrstvy přibližně stejně, byla kvůli minimalizaci chyby $N_a$ fitována pouze při kalibračním fitu a byla společná pro všechny vrstvy. Při dalších fitech už pak byla používána fixní hodnota.  
+
+
+\section{Přechodová vrstva, substrát a vrstva ze zadní strany}
+Ve všech fitech byla mezi substrátem a DLC vrstvou uvažována i mezivrstva. Ta vzniká jednak díky implantaci energetických iontů uhlíku a vodíku do krystalického křemíku při růstu vrstvy. 
+Při jejím modelování byl použit jednoduchý trojparametrický PJDOS model s jedním gausovským píkem ve viditelné oblasti, který reprezentuje na defektních stavech. 
+Parametry této přechodové vrstvy byly pro všechny vrstvy stejné a byly určeny při kalibračním fitu. Jediný parametr, který se mezi jednotlivými vzorky lišil byla tloušťka přechodové vrstvy $d_\mathrm{t}$. 
+Parametry elektronové struktury přechodové vrstvy jsou v tabulce \ref{fitparams}. Index lomu přechodové vrstvy spolu s indexem lomu substrátu a indexem lomu jedné DLC vrstvy je na obrázku \ref{transition}. 
+Je vidět, že index lomu je pro nízké energie někde mezi indexem lomu DLC vrstvy a indexem lomu krystalického křemíku, což je přesně očekávaná hodnota. Pro vyšší energie jde potom index lomu k nule, což je pravděpodobně způsobeno přílišným zjednodušením modelu vrstvy.
+
+Tloušťka přechodové vrstvy se mezi jednotlivými vzorky velmi liší, od přibližně 3\,nm pro vzotky CH30A, CH30C, CH30D a CH90A až po 40\,nm pro vzorky CH83A a CH87A. Přestože bychom očekávali hlavně závislost na depozičních podmínkách, případně na parametrech plazmového čištění před depozicí, zdá se, že tloušťka přechodové vrstvy závisí hlavně na tloušťce DLC vrstvy. Toto je pravděpodobně artefakt vzniklý během fitování.
+
+Co se týče modelování substrátu z krystalického křemíku, plánem bylo pro všechny vzorky použít model PJDOS c-Si, hlavně kvůli fitování kyslíkových příměsí. Nevýhodou modelu je ale jeho velká výpočetní náročnost a proto při kalibračním fitu, kde bylo potřeba určit přes sto parametrů pro čtyři vrstvy najednou, trvala jedna iterace při použití PJDOS c-Si modelu (při souběžném počítání na 32 CPU) téměř patnáct minut (konkrétně pro kalibrační multifit byly potřeba stovky iterací a ruční ladění parametrů, než došlo k dobré shodě s experimentem). Proto byly pro kalibrační multifit použity tabulkové hodnoty, ale pro další fity, kde bylo volných parametrů mnohem méně, už byl model 
+PJDOS c-Si normálně používán. V tabulce \ref{fitparams} jsou jednak koncentrace intersticiálního kyslíku a také tloušťka substrátu. Je vidět, že hlavně s tabulkovými hodnotami vycházejí tloušťky poněkud méně, než je výrobcem udávaná hodnota (360\,$\mu$m).
+
+Co se týče SiO$_2$ vrstvy ze zadní strany, všechny tloušťky jsou v rozmezí 1--4\,nm, což odpovídá očekáváním.
+
+\begin{figure}[tbhp]
+	\includegraphics[width=\linewidth]{grafy/transition.pdf}
+	\caption{Porovnání indexu lomu DLC vrstvy (CH30A), přechodové vrstvy a krystalického křemíku} 
+	\label{transition}
 \end{figure}
 
 \begin{figure}[ht]
 	\includegraphics[width=\linewidth]{grafy/R-multifit.pdf}
 	\caption{UV/VIS odrazivost vrstev CH30A, CH83A, CH88A a CH90A}
+	\label{R-multifit}
 \end{figure}
 
 \begin{figure}[ht]
-	\includegraphics[width=\linewidth]{grafy/T-multifit.pdf}
-	\caption{IR propustnost vrstev CH30A, CH83A, CH88A a CH90A}
+	\includegraphics[width=\linewidth]{grafy/R-multifit2.pdf}
+	\caption{UV/VIS odrazivost vrstev CH30C, CH30D, CH87A a CH89A}
+	\label{R-multifit2}
 \end{figure}
 
 \begin{figure}[ht]
 	\includegraphics[width=\linewidth]{grafy/ell-multifit.pdf}
-	\caption{Přidružený elipsometrický parametr Ic$_{\mathrm{II}}$ vrstev CH30A, CH83A, CH88A a CH90A}
+	\caption{Přidružený elipsometrický parametr Ic$_{\mathrm{II}}$ vrstev CH30A, CH83A, CH88A a CH90A pro úhel dopadu 70$^\circ$}
+	\label{ell-multifit}
+\end{figure}
+
+\begin{figure}[ht]
+	\includegraphics[width=\linewidth]{grafy/ell-multifit2.pdf}
+	\caption{Přidružený elipsometrický parametr Ic$_{\mathrm{II}}$ vrstev CH30A, CH83A, CH88A a CH90A pro úhel dopadu 70$^\circ$}
+	\label{ell-multifit}
+\end{figure}
+
+\section{Popis vibračních stavů v IR oblasti}
+Hlavním cílem této práce je určení celkové koncentrace vodíku v DLC vrstvách. Pro to je klíčová správná identifikace jednotlivých absorpčních píků a správné určení jejich relativní síly přechodu.
+
+Pro píky sp3CH$_{\{1,2,3\}}$ skupin je jejich identifikace poměrně jednoduchá. Valenční vibrace sp3CH jsou v literatuře udávány buď na 2915\,cm$^{-1}$ \cite{Zajickova2011, Dischler1983} případně 2920\,cm$^{-1}$ \cite{Robertson2002, Ristein1998}. Skupina sp3CH$_2$ má udávaný antisymetrický pík na 2920\,cm$^{-1}$ \cite{Dischler1983, Robertson2002, Ristein1998} nebo na 2925\,cm$^{-1}$ \cite{Zajickova2011}, symetrický pak na 2855\,cm$^{-1}$ \cite{Robertson2002, Ristein1998, Zajickova2011} nebo 2850\,cm$^{-1}$ \cite{Dischler1983}. Podobná shoda panuje i u antisymetrických vibrací skupiny sp3CH$_3$ 2960\,cm$^{-1}$ \cite{Zajickova2011, Dischler1983} případně 2955\,cm$^{-1}$ \cite{Robertson2002, Ristein1998}. U symetrických vibrací skupiny sp3CH$_3$ se literatura začíná poněkud rozcházet a udává buď 2885\,cm$^{-1}$ \cite{Robertson2002, Ristein1998} nebo 2870\,cm$^{-1}$ \cite{Zajickova2011, Dischler1983}. 
+
+Horší situace panuje při identifikace vibračních píků skupin sp2CH$_x$. Literatura udává olefinickou sp2CH skupinu buď na 2990\,cm$^{-1}$ \cite{Ristein1998}, 2990--3000\,cm$^{-1}$ \cite{Robertson2002}, 3030\,cm$^{-1}$ \cite{Zajickova2011}, nebo 3045\,cm$^{-1}$ \cite{Dischler1983}. Nejhorší situace je potom při identifikaci vibračních píků skupiny sp2CH$_2$. Antisymetrické vibrace této skupiny jsou udávány na 3000\,cm$^{-1}$ \cite{Zajickova2011}, 3020\,cm$^{-1}$ \cite{Dischler1983}, 3085\,cm$^{-1}$ \cite{Robertson2002}, nebo 3082\,cm$^{-1}$ \cite{Ristein1998}. Symetrické vibrace stejné skupiny pak literatura udává na 2950\,cm$^{-1}$ \cite{Dischler1983}, 2975\,cm$^{-1}$ \cite{Robertson2002, Ristein1998}, nebo 3080\,cm$^{-1}$ \cite{Zajickova2011},.
+
+Vzhledem k velkému překryvu píků a jejich značné šířce není možné zvolit polohy píků jako volný parametr, proto bylo potřeba polohy píků zafixovat. Přitom byl brán ohled na výše uvedený průzkum literatury a také na shodu fitu pro danou polohu absorpčního píku s měřenými daty. 
+Konečné polohy píků používané při fitování byly nakonec 2915\,cm$^{-1}$ pro valenční vibrace skupiny sp3CH, 2850\,cm$^{-1}$ pro symetrické a 2920\,cm$^{-1}$ pro antisymetrické valenční vibrace skupiny sp3CH$_2$, 2870\,cm$^{-1}$ pro symetrické a 2955\,cm$^{-1}$ pro antisymetrické valenční vibrace skupiny sp3CH$_3$. 3000\,cm$^{-1}$ pro valenční vibrace skupiny sp2CH a nakonec 2975\,cm$^{-1}$ pro symetrické vibrace a 3080\,cm$^{-1}$ pro antisymetrické vibrace skupiny sp2CH$_2$. Přehled hodnot je v tabulce \ref{H-peaks}.
+
+\begin{table}[tb]
+ \centering
+	\renewcommand{\tabcolsep}{2pt}
+ \input{tabulky/H-peaks.tex}
+ \caption{Parametry gausovských píků reprezentujících vibrační módy CH skupin, které byly zahrnuty do určování celkové koncentrace vodíku}
+\label{H-peaks}
+\end{table}
+
+Kromě valečních vibrací v oblasti 2800--3100\,cm$^{-1}$ mají CH skupiny s značné množství deformačních vibrací v oblasti 1375--1480\,cm$^{-1}$. Teoreticky by tedy bylo možné pro určování celkové koncentrace vodíku kromě valenčních vibrací používat i deformační. Valenční vibrace mají nicméně tu výhodu, že v oblasti 2800--3100\,cm$^{-1}$ použitý substrát neabsorbuje a veškerá absorpce tedy přísluší pouze CH skupinám. 
+V oblasti deformačních vibraci to bohužel není pravda, krystalický křemík zde již absorbuje a je velmi těžké odlišit absorpci substrátu od absorpce vrstvy. Toto ilustruje obrázek \ref{Si-detail}, na kterém nejsou víceméně jiné píky než ty způsobené křemíkovou absorpcí vůbec okem rozeznatelné. Z tohoto důvodu byl do určování celkové koncentrace vodíku zahrnut pouze pík symetrických deformačních vibrací skupiny sp3CH$_3$ na 1375\,cm$^{-1}$ \cite{Robertson2002}. Ten má oproti ostatním píkům v této oblasti alespoň tu výhodu, že jako jediný je samostatný a nepřekrývá se s ostatními vibračními módy.
+
+\begin{figure}[tb]
+	\includegraphics[width=\linewidth]{grafy/Si-detail.pdf}
+	\caption{Detail propustnosti vrstvy CH30A v oblasti 1200--1700\,cm$^{-1}$ spolu s ima\-gi\-nární části dielektrické funkce krystalického křemíku ve stejné oblasti}
+	\label{Si-detail}
+\end{figure}
+
+Kromě výše zmíněných se v IR spektru vyskytují i další píky, které buď nejsou pro určování vodíkové koncentrace důležité, nebo jsme se je, kvůli výše uvedeným důvodům, rozhodli do určování vodíkové koncentrace nezahrnout. Přesto jsou stále důležité pro celkovou dobrou shodu fitu s měřenými daty a z toho plynoucí dobrou shodu v oblasti valenčních vibrací, které nás zajímá nejvíce. Síly přechodu těchto píků jíž nejsou, na rozdíl od předchozích, vázány na koncentraci příslušejících skupin a jsou volný parametr. 
+Nemá proto cenu vyjadřovat je jako relativní parciální síly přechodu $\alpha_p$, ale místo toho jako integrální parciální síly přechodu pro jednotlivé píky $N_p$. Jedná se hlavně o vibrace dvojných vazeb C--C sp2 uhlíku na 1300\,cm$^{-1}$, 1600\,cm$^{-1}$ a 1680\,cm$^{-1}$ \cite{Robertson2002, Theye2001, Zajickova2011} (v tabulce \ref{H-peaks2} jsou značeny jako sp2C$_{\{A,B,C\}}$) a další pík okolo 1450\,cm$^{-1}$ (značený jako sp3CHxy), který reprezentuje zbývající vibrace CH skupin v této oblasti.
+
+\begin{table}[tbp]
+ \centering
+	\renewcommand{\tabcolsep}{1pt}
+ \input{tabulky/H-peaks2.tex}
+ \caption{Parametry gausovských píků reprezentujících vibrační módy, které nebyly zahrnuty do určování celkové koncentrace vodíku}
+\label{H-peaks2}
+\end{table}
+
+Důležitým výsledkem této práce jsou relativní relativní parciální síly přechodu $\alpha_p$, kde $p$ značí jednotlivé sp$x$CH$_y$ skupiny. Ty jsou také shrnuty v tabulce \ref{H-peaks}. Jak již bylo uvedeno dříve, nejsem si vědom žádné práce, která by systematicky zkoumala síly přechodu, síly oscilátoru, případně efektivní náboje uhlovodíkových skupin v DLC vrstvách, nelze tedy jednoduše porovnat získané výsledky s literaturou. 
+Získané výsledky se nicméně alespoň pokusím porovnat s efektivními náboji polymerních uhlovodíkových vrstev, jejichž přehled je v \cite{Heitz1998}. Pro přepočet mezi relativními silami přechodu a efektivními náboji lze použít vzorec \ref{} a dále je nutné uvážit, že zatímco efektivní náboj se vztahuje k danému vibračnímu módu sp$x$CH$_y$ skupiny, relativní síla přechodu se vztahuje ke koncentraci vodíku v dané konfiguraci a danému vibračnímu módu. 
+Tedy například stejné hodnoty $f_\mathrm{sp3CH}$ a $f_\mathrm{sp3CH2}$ znamenají, že vodík je rozložený mezi oběmi skupinami rovnoměrně, jelikož ale sp3CH$_2$ skupina obsahuje dva vodíky a sp3CH skupina jen jeden, bude počet sp3CH$_2$ skupin dvakrát menší. Při přepočtu je tedy potřeba vydělit efektivní náboje sp$x$CH$_2$ skupin dvěma a sp$x$CH$_3$ skupin třemi. 
+
+Z určených relativních sil přechodu je nejsilnější $\alpha_\mathrm{sp3CH}$, to se shoduje s \cite{Francis1950, Wexler1967}, ale neodpovídá výsledkům z polypropylenu \cite{Heitz1998}, kde vycházejí relativních síly přechodu velmi podobné pro všechny sp3CH$y$ skupiny. Výsledkům z polypropylenu naopak odpovídá poměr mezi symetrickými a antisymetrickými vibracemi, ty jsou jen přibližně o 20\,\% silnější což odpovídá zjištěným poměrům určeným v této práci. Francis \cite{Francis1950} a Wexler \cite{Wexler1967} pak udávají antisymetrické vibrace přibližně o polovinu silnější než symetrické. Jediné uvažované symetrické deformační vibrace skupiny sp3CH$_3$ jsou udávány asi třikrát slabší, že valenční  
+Pro vodík vázaný na sp2 uhlících je situace ještě poněkud složitější, protože kromě stavu primárního uhlíku, zde závisí významně i na sekundárních uhlících \cite{Heitz1998}. Literatura nicméně udává, že valenční vibrace sp2CH skupiny jsou podobně silné jako u sp3CH a naopak sp2CH$_2$ skupina je udávána jako velmi slabá, což opět souhlasí s výsledky z tabulky \ref{H-peaks}. Je ale opět potřeba zdůraznit, že výše citované práce se zabývají polymerními uhlovodíkovými vrstvami a ne tvrdými amorfními DLC.   
+
+Komplikovaná je i analýza šířky píků. Dischler \cite{Dischler1983} udává šířky píků valenčních sp$x$CH$_y$ vibrací přibližně od 70\,cm$^{-1}$ do 90\,cm$^{-1}$, jinde jsou píky udávány užší (44\,cm$^{-1}$ pro sp2CH$_{\{1,2\}}$ a 60\,cm$^{-1}$ pro sp3CH$_{\{1,2,3\}}$ skupiny \cite{Zajickova2011}). Šířka píků je nicméně velmi závislá na struktuře materiálu, především na homogenitě. 
+To vede k rozšiřování čar u tvrdších vrstev \cite{Ristein1998}. Pološířky určené z fitů jsou někdy poněkud větší, ale většinou odpovídají výše uvedeným hodnotám. Pološířka píku reprezentujícího valenční vibrace sp3CH$_3$ skupiny je podobná pro většinu vrstv okolo 50--60\,cm$^{-1}$, což se dobře shoduje s výše uvedenými výsledky. 
+Podobná shoda je i pro pološířku deformačních vibrací stejné skupiny. Poněkud horší je situace u vibrací skupin sp3CH$_2$ a sp3CH, kde se pološířka velmi mění od vrstvy k vrstvě. Pro sp2CH skupiny je pak pološířka pro všechny vrstvy velmi podobná, přibližně 100\,cm$^{-1}$. Pro sp2CH$_x$ vibrace se pološířky mění velmi divoce, nicméně je potřeba si všimnout, že podle tabulky \ref{fitparams} obsahují nezanedbatelné množství CH$_2$ skupin jen tři vrstvy a to CH83A, CH87A, a CH89A. Pro ostatní vrstvy tedy pološířky prakticky nemají význam.
+
+\section{Celková koncentrace vodíku}
+Přejděme nyní konečně k hlavnímu bodu této práce a to k analýze celkového množství vodíku ve vrstvách. Celkové koncentrace vodíku a koncentrace vodíku v jednotlivých skupinách jsou uvedeny nahoře v tabulce \ref{fitparams}. 
+Jsou tam také uvedeny hodnoty z ERDA. Pro první čtyři vrstvy jsou tyto hodnoty stejné, na těchto vrstvách byla provedena kalibrace relativních sil přechodu pro jednotlivé vibrační módy odpovídajících skupin. 
+Pro zbylé čtyři vrstvy byly použity získané hodnoty a celková vodíková koncentrace byla volným parametrem při fitování. Rozklad celkové dielektrické funkce na jednotlivé příspěvky v dané oblasti je pro čtyři vrstvy použité při kalibraci na obrázku \ref{deconvolute} a na obrázku \ref{deconvolute2} pro ostatní vrstvy. 
+Shody fitu s naměřenými daty jsou pro celé IR spektrum na obrázcích \ref{T-detail} a \ref{T-detail2}. Na obrázcích \ref{T-detail} a \ref{T-detail2} pak můžeme vidět detail v oblasti valenčních vibrací CH skupin. Je vidět, že fity ve zkoumané oblasti velmi dobře sedí, což je základní podmínka pro kvalitní výsledky. Především pro tenké vrstvy, kde máme málo signálu, už ale v grafech začíná být patrný šum.  
+Porovnání hodnot z ERDA s nafitovanými hodnotami se ukazuje, že pro celkovou vodíkovou koncentraci se podařilo dosáhnout velmi dobré shody.
+
+Nejlepší shoda je pro vrstvu CH30C, kde se hodnota 30,6\,\% z EDRA liší od 31,5\,\% z optického měření jen minimálně. Podobná dobrá shoda je u vrstvy CH30D, 30,3\,\% z EDRA oproti 31,5\,\% z optiky. Horší situace je pak u tlustších vrstev. Tam je rozdíl mezi 48\,\% z ERDA a 44,5\,\% z opriky u CH87A a 35,0\,\% z ERDA a 39,9\,\% určených z optického měření již poněkud větší.
+
+Z tabulky je jasně patrné, že pro malé celkové vodíkové koncentrace převažuje vodík v sp3CH skupině. Vrstvy CH30A, CH30C a CH30D, které mají všechny koncentraci vodíku okolo 30\,\% mají v z toho postupně 13,4\,\%, 17,0\,\% a 17,6\,\% právě v sp3CH. Tyto vrstvy byly deponovány při největším výkonu z čehož plyne vyšší hustota a tvrdost vrstvy a tím pádem je tento výsledek očekávaný. 
+Můžeme tedy říci, že pro tvrdé vrstvy převažuje právě vodík sp3CH. Poněkud jiná je situace u vrstvy CH90A. Ta má sice 31\,\% celkového vodíku, ale v sp3CH skupině pouze 6\,\%. To je možno vysvětlit tak, že vrstva je byla deponována při nižším výkonu a očekávali bychom nižší hustotu a tvrdost a také větší množství vodíku v koncových sp3CH$_3$ skupinách, které zmenšují celkovou provázanost uhlíkové sítě a tím samozřejmě i tvrdost. 
+
+Tento trend je je patrný u všech vrstev, s přechodem k celkové větší koncentraci vodíku obecně dochází ke shlukování vodíku, tedy k růstu množství vodíku v sp3CH$_2$, sp3CH$_3$ a sp2CH$_2$ skupinách. Vodík v sp2CH$_2$ skupinách můžeme pozorovat pouze u vrstev s větším celkovým množstvím vodíku, hlavně u CH83A a CH87A. Tyto vrstvy také mají největší množství vodíku v sp3CH$_3$ skupinách, 12,3\,\% a 11,3\,\%. Nejméně vodíku v sp3CH$_3$ skupinách mají vrstvy CH30A -- 3,6\,\%, CH30C -- 3,5\,\% a CH30D 5,1\,\%. Koncentrace vodíku v sp2CH skupinách je pak na celkové koncentraci vodíku ve vrstvě víceméně nezávislá. Přehledně to ukazuje obrázek \ref{Hdif}.
+
+Není zcela jasné, proč mají vrstvy CH83A a CH87A o tolik větší celkovou koncentraci vodíku než vrstvy CH88A, CH89A a CH90A, depoziční podmínky jsou pro všechny tyto vrstvy téměř identické (s vyjímkou vyššího tlaku a přimícháním argonu místo vodíku do metanu pro depozici vrstvy CH83A). 
+Možné vysvětlení je právě nespolehlivost reaktoru, která se projevuje měnícím se předpětím a byla již diskutována v experimentální kapitole, nicméně pro určení závislosti parametrů na depozičních podmínkách bychom potřebovali více vzorků a není to náplní této práce
+
+\begin{figure}[tbhp]
+	\includegraphics[width=\linewidth]{grafy/Hdif.pdf}
+	\caption{Rozdělení vodíku mezi jednotlivé skupiny v závislosti na celkové koncentraci vodíku}
+	\label{Hdif}
+\end{figure}
+
+Co se týče srovnání s jinými pracemi, nepodařilo se nalézt žádnou práci, které by určovala procentuální rozložení vodíku mezi jednotlivé skupiny z optických měření. Donnet et al. \cite{Donnet1999} nicméně zkoumal DLC vrstvy pomocí nukleární magnetické resonance a ukázal, že většina vodíku je navázána v sp3CH a sp3CH$_2$ skupinách. 
+Toto se dobře shoduje s výše uvedenými výsledky. Na rozdíl od této práce, nukleární magnetická resonance nenaměřila žádné sp3CH$_3$ skupiny. Zkoumané vrstvy byly ale deponovány při výrazně vyšších předpětích (500\,V a 800\,V) a byly použity jiné depoziční plyny (acetylen a cyklohexan). Absence sp3CH$_3$ skupin se pak dá vysvětlit očekávávanou vyšší tvrdostí pro použité předpětí. Zajímavá situace nicméně nastává u sp2CH$_x$ skupin, protože NMR sice nedetekovala žádné sp2CH skupiny, ale detekovala nezanedbatelné množství sp2CH$_2$ skupin. 
+Tento fakt se jednak neshoduje se zjištěními z této práce a také to neodpovídá modelu růstu vrstvy, podle něhož dochází při dopadu molekulárního iontu na rostoucí vrstvu k jeho rozpadu na jednotlivé atomy, z nichž každý se pak deponuje zvlášť. Při tomto postupu bychom totiž očekávali, že sp2CH$_2$ skupiny budou důsledkem navázání vodíku na již existující sp2CH skupinu. Druhou možností nicméně je, že sp2CH$_2$ skupiny vznikají nějakým jiným procesem.
+
+\begin{figure}[ht]
+	\includegraphics[width=\linewidth]{grafy/T-multifit.pdf}
+	\caption{IR propustnost vrstev CH30A, CH83A, CH88A a CH90A}
+	\label{T-multifit}
+\end{figure}
+
+\begin{figure}[ht]
+	\includegraphics[width=\linewidth]{grafy/T-multifit2.pdf}
+	\caption{IR propustnost vrstev CH30C, CH30D, CH87A a CH89A}
+	\label{T-multifit2}
 \end{figure}
 
 \begin{figure}[ht]
 	\includegraphics[width=\linewidth]{grafy/T-detail-multifit.pdf}
 	\caption{Detail IR propustnosti vrstev CH30A, CH83A, CH88A a CH90A v oblasti valenčních vibrací CH skupin}
+	\label{T-detail}
 \end{figure}
 
-\begin{table}[htbp]
- \centering
- \input{tabulky/H-table.tex}
- \caption{Vodíková koncentrace v měřených vrstvách, f$_\mathrm{H}$ je celková relativní koncentrace a f$_\mathrm{H_{sp\{2,3\}CH\{1,2,3\}}}$ udávají relativní koncentrace vodíku v jednotlivých skupinách.}
-\label{deppodminky}
-\end{table}
+\begin{figure}[ht]
+	\includegraphics[width=\linewidth]{grafy/T-detail-multifit2.pdf}
+	\caption{Detail IR propustnosti vrstev CH30C, CH30D, CH87A a CH89A v oblasti valenčních vibrací CH skupin}
+	\label{T-detail2}
+\end{figure}
+
+\begin{figure}[ht]
+	\includegraphics[width=\linewidth]{grafy/deconv-multifit.pdf}
+	\caption{Jednotlivé příspěvky dielektrické funkce v oblasti valenčních vibrací CH skupin pro vrstvy CH30A, CH83A, CH88A a CH90A}
+	\label{deconvolute}
+\end{figure}
+
+\begin{figure}[ht]
+	\includegraphics[width=\linewidth]{grafy/deconv-multifit2.pdf}
+	\caption{Jednotlivé příspěvky dielektrické funkce v oblasti valenčních vibrací CH skupin pro vrstvy CH30C, CH30D, CH87A a CH89A}
+	\label{deconvolute2}
+\end{figure}
 
 \cleardoublepage
