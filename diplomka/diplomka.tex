@@ -132,12 +132,7 @@ zdrojů, které jsou v práci citovány.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TEXT PRACE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \HlavickaUvod
-% \pdfbookmark{Úvod}{Uvod}
 \vloz{text_prace/Uvod}
-
-%\HlavickaZnaceni
-% \pdfbookmark{Přehled použitého značení}{Prehled pouziteho znaceni}
-%\vloz{text_prace/02_Znaceni}
 
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter. #1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection. #1}{}}
@@ -151,27 +146,12 @@ zdrojů, které jsou v práci citovány.}
 \vloz{text_prace/Vysledky}
 
 \HlavickaZaver
-% \pdfbookmark{Závěr}{Zaver}
+
 \vloz{text_prace/05_Zaver}
 
-
-\renewcommand{\bibname}{Seznam použité literatury FIXME}
 \HlavickaLiteratura
-%\vloz{text_prace/07_Literatura}
 \bibliographystyle{unsrt}
 \bibliography{bib-db}
-
-\renewcommand{\indexname}{Rejstřík}
-\HlavickaRejstrik
-\VytvorRejstrik  
-%%
-%% pro vytvoreni rejstriku se spravny ceskym razenim pouzijte 
-%% csindex -d -h -k -z il2 nazev_souboru.idx
-%%
-%% nebo 
-%% texindy -I latex -L czech -M lang/czech/utf8 nazev_souboru.idx
-%%
-%% na Ustavu matematiky a statistiky zadejte
-%% /opt/texlive/2010/bin/i386-linux/texindy -I latex -L czech -M lang/czech/utf8 nazev_souboru.idx
+\addcontentsline{toc}{chapter}{Literatura}
 
 \end{document}
