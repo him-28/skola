@@ -22,21 +22,21 @@ set label 1 "CH30C" at graph 0.05, graph 0.95
 load "grafy/CH30Cdeconv.gpi"
 
 set ylabel ""
-set label 1 "CH87A" at graph 0.05, graph 0.95
+set label 1 "CH30D" at graph 0.05, graph 0.95
 
-load "grafy/CH87Adeconv.gpi"
+load "grafy/CH30Ddeconv.gpi"
 
 set bmargin 3.1
 set ylabel "{/Symbol e}_i"
 set xlabel "Vlnočet, {/Symbol n} [cm^{-1}]"
 set format x "%g"
+set label 1 "CH87A" at graph 0.05, graph 0.95
+
+load "grafy/CH87Adeconv.gpi"
+
+set ylabel ""
 set label 1 "CH89A" at graph 0.05, graph 0.95
 
 load "grafy/CH89Adeconv.gpi"
-
-set ylabel ""
-set label 1 "CH30C" at graph 0.05, graph 0.95
-
-load "grafy/CH30Cdeconv.gpi"
 
 unset multiplot

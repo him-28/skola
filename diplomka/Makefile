@@ -31,6 +31,8 @@ grafy/CH30Adeconv.gpi:
 	programy/deconvolute vysledky/out-multifit 1 > grafy/CH30Adeconv.gpi
 grafy/CH30Cdeconv.gpi:
 	programy/deconvolute vysledky/out-CH30C 0 > grafy/CH30Cdeconv.gpi
+grafy/CH30Ddeconv.gpi:
+	programy/deconvolute vysledky/out-CH30D 0 > grafy/CH30Ddeconv.gpi
 grafy/CH87Adeconv.gpi:
 	programy/deconvolute vysledky/out-CH87A 0 > grafy/CH87Adeconv.gpi
 grafy/CH89Adeconv.gpi:
@@ -55,7 +57,7 @@ grafy/T-detail-multifit2.pdf:
 	gnuplot grafy/T-detail-multifit2.gpi > grafy/T-detail-multifit2.pdf
 grafy/deconv-multifit.pdf: grafy/CH30Adeconv.gpi grafy/CH88Adeconv.gpi grafy/CH90Adeconv.gpi grafy/CH83Adeconv.gpi
 	gnuplot grafy/deconv-multifit.gpi > grafy/deconv-multifit.pdf
-grafy/deconv-multifit2.pdf: grafy/CH30Cdeconv.gpi grafy/CH87Adeconv.gpi grafy/CH89Adeconv.gpi
+grafy/deconv-multifit2.pdf: grafy/CH30Cdeconv.gpi grafy/CH30Ddeconv.gpi grafy/CH87Adeconv.gpi grafy/CH89Adeconv.gpi
 	gnuplot grafy/deconv-multifit2.gpi > grafy/deconv-multifit2.pdf
 grafy/ell-multifit.pdf:
 	gnuplot grafy/ell-multifit.gpi > grafy/ell-multifit.pdf
@@ -82,4 +84,4 @@ pdfdraft: grafika grafy tabulky
 	pdflatex diplomka.tex
 
 clean:
-	rm grafika/DLCDOS.pdf grafika/layerscheme.pdf grafika/reaktor.pdf grafika/dlcgrowth.pdf grafika/dlcgrowthH.pdf diplomka.aux diplomka.bbl diplomka.log diplomka.out diplomka.idx diplomka.blg diplomka.toc diplomka.pdf programy/deconvolute grafy/CH30Adeconv.gpi grafy/CH30Cdeconv.gpi grafy/CH30Ddeconv.gpi grafy/CH83Adeconv.gpi grafy/CH87Adeconv.gpi grafy/CH88Adeconv.gpi grafy/CH89Adeconv.gpi grafy/CH90Adeconv.gpi grafy/T-multifit.pdf grafy/R-multifit.pdf grafy/T-detail-multifit.pdf tabulky/H-table.tex grafy/ell-multifit.pdf programy/H-table grafy/R-multifit2.pdf grafy/Si-detail.pdf grafy/transition.pdf grafy/Hdif.pdf grafy/T-detail-multifit2.pdf grafy/N.pdf grafy/ell-multifit2.pdf grafy/T-multifit2.pdf N.pdf
+	rm grafika/DLCDOS.pdf grafika/layerscheme.pdf grafika/reaktor.pdf grafika/dlcgrowth.pdf grafika/dlcgrowthH.pdf diplomka.aux diplomka.bbl diplomka.log diplomka.out diplomka.idx diplomka.blg diplomka.toc diplomka.pdf programy/deconvolute grafy/CH30Adeconv.gpi grafy/CH30Cdeconv.gpi grafy/CH30Ddeconv.gpi grafy/CH83Adeconv.gpi grafy/CH87Adeconv.gpi grafy/CH88Adeconv.gpi grafy/CH89Adeconv.gpi grafy/CH90Adeconv.gpi grafy/T-multifit.pdf grafy/R-multifit.pdf grafy/T-detail-multifit.pdf tabulky/H-table.tex grafy/ell-multifit.pdf programy/H-table grafy/R-multifit2.pdf grafy/Si-detail.pdf grafy/transition.pdf grafy/Hdif.pdf grafy/T-detail-multifit2.pdf grafy/N.pdf grafy/ell-multifit2.pdf grafy/T-multifit2.pdf
