@@ -49,7 +49,7 @@ Tlak v aparatuře je měřen kapacitronem Leybold. Průtoky plynů do reaktoru j
 
 \section{Depoziční podmínky}
 
-Nezávislé depožiční podmínky pro všechny depozice jsou tlak $p$, výkon $P$, čas depozice $t$ a průtoky jednotlivých plynů $Q_{\mathrm{CH_4}}$, $Q_{\mathrm{H_2}}$, $Q_{\mathrm{Ar}}$, všechny depoziční podmínky jsoun shrnuty v tabulce \ref{deppodminky}. Předpětí $U_b$ pak není nezávislý parametr, ale závisí na výkonu přibližně jako $U_b \sim \sqrt{P}$, nicméně je také zahrnuto v tabulce protože se jedná o velmi důležitý parametr pro růst vrstvy. Klíčový parametr, jak již bylo zmíněno v Kapitole jedna je především energie dopadajícího iontu v přepočtu na jeden atom. Předpětí $U_b$ tedy říká, jakou energii by měl ion po průletu stěnovou vrstvou, kdyby nedocházelo ke srážce. Bohužel ve skutečnosti se ukazuje, že závislost $U_b$ na ostatních depozičních podmínkách není moc dobře reprodukovatelná, což je z tabulky \ref{deppodminky} jasně patrné. Nejstarší vrstvy jsou totiž z roku 2008 a nejnovější z konce roku 2012, v průběhu let potom mohlo dojít na aparatuře například ke stárnutí zdroje a také třeba ke změnám v reaktrou (deponování vrstvy na stěnách a elektrodách atd.). 
+Nezávislé depožiční podmínky pro všechny depozice jsou tlak $p$, výkon $P$, čas depozice $t$ a průtoky jednotlivých plynů $Q_{\mathrm{CH_4}}$, $Q_{\mathrm{H_2}}$, $Q_{\mathrm{Ar}}$, všechny depoziční podmínky jsou shrnuty v tabulce \ref{deppodminky}. Předpětí $U_b$ pak není nezávislý parametr, ale závisí na výkonu přibližně jako $U_b \sim \sqrt{P}$, nicméně je také zahrnuto v tabulce protože se jedná o velmi důležitý parametr pro růst vrstvy. Klíčový parametr, jak již bylo zmíněno v Kapitole jedna je především energie dopadajícího iontu v přepočtu na jeden atom. Předpětí $U_b$ tedy říká, jakou energii by měl ion po průletu stěnovou vrstvou, kdyby nedocházelo ke srážce. Bohužel ve skutečnosti se ukazuje, že závislost $U_b$ na ostatních depozičních podmínkách není moc dobře reprodukovatelná, což je z tabulky \ref{deppodminky} jasně patrné. Nejstarší vrstvy jsou totiž z roku 2008 a nejnovější z konce roku 2012, v průběhu let potom mohlo dojít na aparatuře například ke stárnutí zdroje a také třeba ke změnám v reaktrou (deponování vrstvy na stěnách a elektrodách atd.). 
 
 \begin{table}[htbp]
  \centering
@@ -73,8 +73,60 @@ Nezávislé depožiční podmínky pro všechny depozice jsou tlak $p$, výkon $
 
 Všechny vrstvy byly také před depozicí plazmově čištěny v ???? plazmě. Délku a druh plazmkového čištění shrnuje tabulka.....
 
-\section{Postup měření dat}lik skenů atd. Možná něco o metodě 4x4?
-FIXME: Jak se coměřilo, kolikrát, ko
+\section{Postup měření dat}
+
+\subsection{Odrazivost}
+Klasická metoda měření odrazivosti na dvoukanálovém spektrofotometru spočívá ve stří\-dá\-ní měřeného a referenčního vzorku na vzorkovém kanálu, přičemž na referenčním kanálu bývá umístěn libovolný vzorek s dobrou odrazivostí. 
+Pro ještě kvalitnější výsledky bývá na vzorkovém kanálu měřen i signál bez vzorku, takzvaný temný proud, pro eliminaci šumu na detektoru. Tento způsob měření je sice velmi přesný, ale poměrně časově náročný, protože kvůli eliminaci chyb musíme měření opakovat vícekrát.
+
+To sice není problém pro tuto práci, kde zkoumáme pouze osm vrstev, ale může představovat komplikaci při charakterizaci většího množství vzorků. Proto byla v rámci této práce vyvinuta nová metoda analýzy dat, takzvaná metoda "4x4". Tato metoda spočívá v tom, že měříme postupně spektrální závislosti celkem ve čtyřech konfiguracích:
+\begin{itemize}
+  \item v1 -- měřený vzorek je na vzorkovém kanálu, normálový vzorek na referenčním kanálu,
+  \item v2 -- měřený vzorek je na referenčním kanálu, normálový vzorek na vzorkovém kanálu,
+  \item d1 -- vzorkový kanál je prázdný, na referenčním kanálu je normálový vzorek,
+  \item d2 -- normálový vzorek vzorek na vzorkovém kanálu, referenční kanál je prázný.
+\end{itemize}
+
+Získané signály $S_\mathrm{v1}$, $S_\mathrm{v2}$, $S_\mathrm{d1}$ a $S_\mathrm{d2}$ při jednotlivých konfiguracích pak mají tvar:
+
+\begin{equation}
+S_\mathrm{v1} = \beta \frac{R_\mathrm{v} + D_1}{R_\mathrm{n} + D_2} \text{,}
+\end{equation}
+
+\begin{equation}
+S_\mathrm{v2} = \beta \frac{R_\mathrm{n} + D_1}{R_\mathrm{v} + D_2} \text{,}
+\end{equation}
+
+\begin{equation}
+S_\mathrm{d1} = \beta \frac{D_1}{R_\mathrm{n} + D_2} \text{,}
+\end{equation}
+
+\begin{equation}
+S_\mathrm{d2} = \beta \frac{R_\mathrm{n} + D_1}{D_2} \text{,}
+\end{equation}
+kde $R_\mathrm{v}$ je odrazivost vzorku, $R_\mathrm{n}$ je odrazivost normálu, $D_1$ je temný proud (signál na detektoru bez vzorku) na vzorkovém kanálu, $D_1$ je temný proud na referenční kanálu a $\beta$ je přístrojová funkce. 
+
+Jedná se o soustavu čtyř rovnic s řešením ve tvaru
+\begin{equation}
+R_\mathrm{v} = \frac{a \pm \sqrt{b}}{2c} R_\mathrm{n} \text{,}
+\end{equation}
+kde fyzikální význam má poze kladný kořen a proměnné $a$, $b$ a $c$ mají následující tvar
+\begin{equation}
+a = -S_\mathrm{d1} S_\mathrm{d2} - S_\mathrm{v2} S_\mathrm{v1} + 2 S_\mathrm{v2} S_\mathrm{d1} \text{,}
+\end{equation}
+\begin{equation}
+b = S_\mathrm{d1}^2 S_\mathrm{d2}^2 - 2 S_\mathrm{d1} S_\mathrm{d2} S_\mathrm{v1} S_\mathrm{v2} 
+				+ S_\mathrm{v1}^2 S_\mathrm{v2}^2 + 4 S_\mathrm{v2} S_\mathrm{d2}^2 (S_\mathrm{v1} - S_\mathrm{d1}) 
+				+ 4 S_\mathrm{v2}^2 S_\mathrm{d2} (S_\mathrm{d1} - S_\mathrm{v1}) \text{,}
+\end{equation}
+\begin{equation}
+c = S_\mathrm{v2} S_\mathrm{d1} - S_\mathrm{v2} S_\mathrm{d2} \text{.}
+\end{equation}
+
+Pro zpracování dat naměřených tímto způsoben byl napsán program \texttt{spec4x4}, který je nyní součástí balíčku programů newAD. Celkový rozsah měření je čtyři měření v konfiguraci v1 a v2 a po jednom měření v konfiguracích d1 a d2. Signály bez přítomnosti vzorků jsou totiž velmi slabé v porovnání se signály od vzorků a hodnoty $D_1$ a $D_2$ mají proto na celkový výsledek jen malý vliv. 
+Pokud bychom tuto metodu chtěli použit například pro antireflexní vrstvy, kde je odrazivost blízká nule, museli bychom provést více měření na konfiguracích d1 a d2. 
+Směrodatnou odchylku veličin $S_\mathrm{v1}$ a $S_\mathrm{v2}$ získáme standardním způsobem ze čtyř získaných měření, chyby veličin $S_\mathrm{d1}$ a $S_\mathrm{d2}$ musíme mít určené předem. To ale není velký problém, protože citlivost detektoru se v čase výrazně nemění a normálový vzorek je používán pro všechna měření stejný -- krystalický křemík. 
+Směrodatnou odchylku odrazivosti vzorku $R_\mathrm{v}$ pak získáme standardním postupem podle zákona šíření chyb.   
 
 \section{Vyhodnocování dat}
 Všechna experimentální data byla vyhodnocována v programu newAD, kde probíhalo fitování metodou nejmenších čtverců. Celková suma čtverců se získá jako
@@ -88,7 +140,9 @@ kde $S^m$ je parciální suma čtverců pro jednotlivá měření (v tomto pří
 kde $X_i^\mathrm{exp}$ a $X^\mathrm{th}$ jsou měřené a teoretické hodnoty a $w_i^m$ je inverzní hodnota čtverce odhadované chyby měřených veličin. Potom platí \cite{Franta2011}
 %
 \begin{equation} \chi = \sqrt \frac{S}{\sum_m f^m N^m} \mathrm{,}\end{equation}
-kde $\chi$ je parametr určující celkovou shodu fitu s experimentálními daty, jedná se vlastně o normovanou sumu čtverců.
+kde $\chi$ je parametr určující celkovou shodu fitu s experimentálními daty, jedná se vlastně o normovanou sumu čtverců. Podobně můžeme vyjádřích $\chi_m$ pro jednotlivé měření jako
+%
+\begin{equation} \chi_m = \sqrt \frac{S^m}{f^m N^m} \mathrm{.}\end{equation}
 
 \subsection{Kalibrace pro určování vodíku}
 Pro správné vyhodnocení celkové vodíkové koncentrace bylo potřeba určit relativní sílu přechodu $\alpha_j$ (viz (odkaz)) pro jednotlivé vibrační módy uhlovodíkových skupin. Původní idea bylo použít teoreticky vypočítané hodnoty z odborné literatury. Žádnou odpovídající teorii se ale bohužel nepodařilo nalézt. Hodně publikací nicméně obsahuje experimentálně určené efektivní dynamické náboje $e_j^*$ pro uhlovodíkové skupiny kterém se dají přepočítat na relativní síly přechodu jako \cite{sumrule2}
