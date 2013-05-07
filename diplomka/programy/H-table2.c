@@ -30,6 +30,7 @@ int main(int argc, char *argv[]){
 		{"", "", 0, "", "c"},
 		{"Naf", "", 0, "$N_\\mathrm{a}$\\,[eV$^2$]", "%.0f", 1.0},
 		{"fCsp3f", "", 0, "$f_\\mathrm{Csp3}$", "%.3f", 1.0},
+		{"fCsp3/fCsp2f", "", 0, "$f_\\mathrm{C_{sp3}}/f_\\mathrm{C_{sp2}}$", "%.3f", 1.0},
 		{"df", "E", 0, "$d_\\mathrm{fE}$\\,[nm]", "%.0f", 1.0},
 		{"df", "R", 0, "$d_\\mathrm{fR}$\\,[nm]", "%.0f", 1.0},
 		{"df", "M", 0, "$d_\\mathrm{fM}$\\,[nm]", "%.0f", 1.0},
@@ -42,7 +43,10 @@ int main(int argc, char *argv[]){
 		{"Ecsigmaf", "", 1, "$E_\\mathrm{c\\sigma}$\\,[eV]", "%.1f", 1.0},
 		{"Bcsigmaf", "", 1, "$B_\\mathrm{c\\sigma}$\\,[eV]", "%.1f", 1.0},
 		{"alphaKf", "", 1, "$\\alpha_\\mathrm{K}$", "%.0f", 1.0},
-		{"EKf", "", 1, "$E_\\mathrm{K}$\\,[eV]", "%.0f", 1.0},
+		{"EKf", "", 1, "$E_\\mathrm{K}$\\,[eV]", "%.1f", 1.0},
+		{"alphapixif", "", 1, "$\\alpha_{\\pi\\xi}$", "%.3f", 1.0},
+		{"alphasigmaxif", "", 1, "$\\alpha_{\\sigma\\xi}$", "%.3f", 1.0},
+		{"Exf", "", 1, "$E_\\mathrm{x}$\\,[eV]", "%.0f", 1.0},
 		{"Qat", "", 1, "$Q_\\mathrm{t}$\\,[eV$^{3/2}$]", "%.1f", 1.0},
 		{"Egat", "", 1, "$E_\\mathrm{g}$\\,[eV]", "%.1f", 1.0},
 		{"Ehat", "", 1, "$E_\\mathrm{h}$\\,[eV]", "%.1f", 1.0},
@@ -58,6 +62,10 @@ int main(int argc, char *argv[]){
 		{"dt1", "", 1, "$d_\\mathrm{t}$\\,[nm]", "%.0f", 1.0},
 		{"db", "", 0, "$d_\\mathrm{b}$\\,[nm]", "%.1f", 1.0},
 		{"db1", "", 1, "$d_\\mathrm{b}$\\,[nm]", "%.1f", 1.0},
+		{"chi", "", 0, "$\\chi$", "%.2f", 1.0},
+		{"chi(R", ")", 0, "$\\chi_\\mathrm{R}$", "%.2f", 1.0},
+		{"chi(Is", ",IcII%*i,IcIII%*i)", 0, "$\\chi_\\mathrm{ell}$", "%.2f", 1.0},
+		{"chi(TMIR", ")", 0, "$\\chi_\\mathrm{T}$", "%.2f", 1.0},
 
 
 /*		{"alphasp3CH3af", "", 1, "$\\alpha_\\mathrm{sp3CH3a} \\times 10^{-3}$", "%.2f", 1e3},
@@ -151,6 +159,7 @@ int main(int argc, char *argv[]){
 		if (strstr(datacols[5].name, "fHsp2CH2f") != NULL)
 			datarows[i].values[5] = datarows[i].values[1] - datarows[i].values[2] - datarows[i].values[3] - datarows[i].values[4] - datarows[i].values[6];
 		datarows[i].NH = 0.000545*datarows[i].values[1]*datarows[i].values[8];
+		datarows[i].values[10] = datarows[i].values[9]/(1 - datarows[i].values[1] - datarows[i].values[9]);
 	}
 
 	printf("\\begin{tabular}{l");
