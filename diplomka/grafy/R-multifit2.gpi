@@ -33,7 +33,7 @@ set format x "%g"
 set bmargin 3
 
 plot [180:860]\
-     "< awk '/^20001$*/ {print $2,$4}' vysledky/out-CH89A" t "CH87A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
-	"< awk '/^20001$*/ {print $2,$7}' vysledky/out-CH89A" t "CH87A fit" w l lt 2 linecolor rgb "black" lw 1.4
+     "< awk '/^20001$*/ {print $2,$4}' vysledky/out-CH89A" t "CH89A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
+	"< awk '/^20001$*/ {print $2,$7}' vysledky/out-CH89A" t "CH89A fit" w l lt 2 linecolor rgb "black" lw 1.4
 
 unset multiplot
