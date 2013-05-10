@@ -1,39 +1,43 @@
 set terminal pdf enhanced font "Helvetica,14" linewidth 3 size 14cm,20cm
 set locale "cs_CZ.UTF-8"
 set encoding utf8
-set ylabel "Ic_{II}"
+set ylabel "Elipsometrie, Ic_{II}"
 
-set tmargin 0.7
-set bmargin 0.8
+set multiplot
 
-set multiplot layout 4, 1
+set tmargin 0.2
+set bmargin 0.2
+set rmargin 0.2
 
-set key autotitle column nobox samplen 1 noenhanced
-
+set xtics 200
 set format x ""
+set size 1,0.235
+set origin 0,0.765
 set key bottom
 
-plot \
+plot [0:2150][-0.78:0.85]\
      "< awk '/^90001$*/ {print $2,$3,$4}' vysledky/out-multifit | grep 7.000000000000" u 1:3 t "CH30A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^90001$*/ {print $2,$3,$7}' vysledky/out-multifit | grep 7.000000000000" u 1:3 t "CH30A fit" w l lt 2 linecolor rgb "black" lw 1.4
 
-set tmargin 0
+set origin 0,0.53
 set key top
 
-plot \
+plot [0:2150][-0.76:0.82]\
      "< awk '/^90004$*/ {print $2,$3,$4}' vysledky/out-multifit | grep 7.000000000000" u 1:3 t "CH83A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^90004$*/ {print $2,$3,$7}' vysledky/out-multifit | grep 7.000000000000" u 1:3 t "CH83A fit" w l lt 2 linecolor rgb "black" lw 1.4
 
-plot \
+set origin 0,0.295
+
+plot [0:2150][-0.78:0.7]\
      "< awk '/^90002$*/ {print $2,$3,$4}' vysledky/out-multifit | grep 7.000000000000" u 1:3 t "CH88A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^90002$*/ {print $2,$3,$7}' vysledky/out-multifit | grep 7.000000000000" u 1:3 t "CH88A fit" w l lt 2 linecolor rgb "black" lw 1.4
 
 set xlabel "Vlnová délka, {/Symbol l} [nm]"
 set format x "%g"
-set bmargin 3
+set origin 0,0.06
 set key bottom
 
-plot \
+plot [0:2150][-0.76:0.76]\
      "< awk '/^90003$*/ {print $2,$3,$4}' vysledky/out-multifit | grep 7.000000000000" u 1:3 t "CH90A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^90003$*/ {print $2,$3,$7}' vysledky/out-multifit | grep 7.000000000000" u 1:3 t "CH90A fit" w l lt 2 linecolor rgb "black" lw 1.4
 

@@ -5,7 +5,8 @@ set encoding utf8
 set xlabel "Celková koncentrace vodíku"
 set ylabel "Koncentrace vodíku v jednotlivých skupinách"
 set xtics 0.02
-set key at graph 0.375, graph 0.95 box
+set tmargin 2
+set key above samplen 2
 
 plot [0.3:0.5]\
 "vysledky/test-graph2.txt" u 1:2 lt 3 linecolor rgb "black" t "  sp3CH_3",\

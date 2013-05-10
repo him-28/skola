@@ -3,35 +3,38 @@ set locale "cs_CZ.UTF-8"
 set encoding utf8
 set ylabel "Propustnost, T"
 
-set tmargin 0.7
-set bmargin 0.8
+set multiplot
+
+set tmargin 0.2
+set bmargin 0.2
+set rmargin 0.2
+
+set size 1,0.235
+set origin 0,0.765
 set key right bottom
-
-set multiplot layout 4, 1
-
-set key autotitle column nobox samplen 1 noenhanced
-
 set format x ""
 
-plot\
+plot [0:7800][0.34:0.67]\
     "< awk '/^320001$*/ {print 1/($2*1e-7),$4}' vysledky/out-CH30C" t "CH30C experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^320001$*/ {print 1/($2*1e-7),$7}' vysledky/out-CH30C" t "CH30C fit" w l lt 2 linecolor rgb "black" lw 2
 
-set tmargin 0
+set origin 0,0.53
 
-plot\
+plot [0:7800][0.34:0.72]\
     "< awk '/^320001$*/ {print 1/($2*1e-7),$4}' vysledky/out-CH30D" t "CH30D experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^320001$*/ {print 1/($2*1e-7),$7}' vysledky/out-CH30D"  t "CH30D fit" w l lt 2 linecolor rgb "black" lw 2
 
-plot\
+set origin 0,0.295
+
+plot [0:7800][0.34:0.72]\
     "< awk '/^320001$*/ {print 1/($2*1e-7),$4}' vysledky/out-CH87A" t "CH87A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^320001$*/ {print 1/($2*1e-7),$7}' vysledky/out-CH87A" t "CH87A fit" w l lt 2 linecolor rgb "black" lw 2
 
 set xlabel "Vlnová délka, {/Symbol l} [nm]"
 set format x "%g"
-set bmargin 3
+set origin 0,0.06
 
-plot\
+plot [0:7800][0.36:0.72]\
     "< awk '/^320001$*/ {print 1/($2*1e-7),$4}' vysledky/out-CH89A" t "CH89A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^320001$*/ {print 1/($2*1e-7),$7}' vysledky/out-CH89A" t "CH89A fit" w l lt 2 linecolor rgb "black" lw 2
 

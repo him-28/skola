@@ -1,39 +1,41 @@
-set terminal pdf enhanced font "Helvetica,14" linewidth 3 size 14cm,20cm
+set terminal pdfcairo enhanced font "Helvetica,14" linewidth 3 size 14cm,20cm
 set locale "cs_CZ.UTF-8"
 set encoding utf8
 set ylabel "Odrazivost, {/Helvetica-Oblique R}"
 
-set tmargin 0.7
-set bmargin 0.8
+set multiplot
 
-set multiplot layout 4, 1
-
-set key autotitle column nobox samplen 1 noenhanced
+set tmargin 0.2
+set bmargin 0.2
+set rmargin 0.2
 
 set format x ""
+set size 1,0.235
+set origin 0,0.765
 
-plot [180:860]\
-     "< awk '/^20001$*/ {print $2,$4}' vysledky/out-CH30C" every ::1::660 t "CH30C experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
+plot [180:860][0:0.34]\
+    "< awk '/^20001$*/ {print $2,$4}' vysledky/out-CH30C" every ::1::660 t "CH30C experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^20001$*/ {print $2,$7}' vysledky/out-CH30C" every ::1::660 t "CH30C fit" w l lt 2 linecolor rgb "black" lw 1.4
 
-set tmargin 0
+set origin 0,0.53
 
-plot [180:860]\
-     "< awk '/^20001$*/ {print $2,$4}' vysledky/out-CH30D" every ::1::660 t "CH30D experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
+plot [180:860][0:0.33]\
+    "< awk '/^20001$*/ {print $2,$4}' vysledky/out-CH30D" every ::1::660 t "CH30D experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^20001$*/ {print $2,$7}' vysledky/out-CH30D" every ::1::660 t "CH30D fit" w l lt 2 linecolor rgb "black" lw 1.4
 
+set origin 0,0.295
 set key left
 
-plot [180:860]\
-     "< awk '/^20001$*/ {print $2,$4}' vysledky/out-CH87A" t " CH87A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
+plot [180:860][0:0.33]\
+    "< awk '/^20001$*/ {print $2,$4}' vysledky/out-CH87A" t " CH87A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^20001$*/ {print $2,$7}' vysledky/out-CH87A" t "CH87A fit" w l lt 2 linecolor rgb "black" lw 1.4
 
-set xlabel "Vlnová délka, {/Symbol l} [nm]"
 set format x "%g"
-set bmargin 3
+set origin 0,0.06
+set xlabel "Vlnová délka, {/Symbol l} [nm]"
 
-plot [180:860]\
-     "< awk '/^20001$*/ {print $2,$4}' vysledky/out-CH89A" t "CH89A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
+plot [180:860][0:0.33]\
+    "< awk '/^20001$*/ {print $2,$4}' vysledky/out-CH89A" t "CH89A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^20001$*/ {print $2,$7}' vysledky/out-CH89A" t "CH89A fit" w l lt 2 linecolor rgb "black" lw 1.4
 
 unset multiplot

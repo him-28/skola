@@ -1,41 +1,52 @@
-set terminal pdf enhanced font "Helvetica,14" linewidth 3 size 14cm,14cm
+set terminal pdf enhanced font "Helvetica,14" linewidth 3 size 14cm,16cm
 set termoption dash
 set locale "cs_CZ.UTF-8"
 set encoding utf8
-set ylabel "{/Symbol e}_i"
-set xtics 100
+
 E(nu) = 6.626e-34*3e8*nu*1e2/1.602e-19
 B(beta) = (6.626e-34*3e8*beta*1e2/1.602e-19)/(2*sqrt(2*log(2))) 
 G(x,e,b) = (1/(sqrt(2*3.14)*B(b)*E(e)))*(exp(-((E(x)-E(e))**2)/(2*B(b)**2))-exp(-((E(x)+E(e))**2)/(2*B(b)**2)))
 
-set multiplot layout 2, 2
-set key font "Helvetica,11"
+set multiplot
 
-set tmargin 0.7
-set bmargin 0.8
-set rmargin 0.1
+set tmargin 0.2
+set bmargin 0.2
+set rmargin 0.2
+set lmargin 0.2
+
+set key at screen 0.99, screen 1 horizontal samplen 2 width 2.5
+set origin 2,2
+set size 1,1 
+load "grafy/CH30Cdeconv.gpi"
+set nokey
+
 set format x ""
 set format y "%.2f"
-
-set label 1 "CH30C" at graph 0.05, graph 0.95
+set ylabel "{/Symbol e}_i"
+set xtics 100
+set size 0.40, 0.43
+set origin 0.115,0.51
+set label 1 "CH30C" at graph 0.08, graph 0.92
 
 load "grafy/CH30Cdeconv.gpi"
 
 set ylabel ""
-set label 1 "CH30D" at graph 0.05, graph 0.95
+set label 1 "CH30D" at graph 0.08, graph 0.92
+set origin 0.6,0.51
 
 load "grafy/CH30Ddeconv.gpi"
 
-set bmargin 3.1
 set ylabel "{/Symbol e}_i"
 set xlabel "Vlnočet, {/Symbol n} [cm^{-1}]"
 set format x "%g"
-set label 1 "CH87A" at graph 0.05, graph 0.95
+set label 1 "CH87A" at graph 0.08, graph 0.92
+set origin 0.115,0.08
 
 load "grafy/CH87Adeconv.gpi"
 
 set ylabel ""
-set label 1 "CH89A" at graph 0.05, graph 0.95
+set label 1 "CH89A" at graph 0.08, graph 0.92
+set origin 0.6,0.08
 
 load "grafy/CH89Adeconv.gpi"
 

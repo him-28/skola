@@ -2,41 +2,51 @@ set terminal pdf enhanced font "Helvetica,14" linewidth 3 size 14cm,14cm
 set locale "cs_CZ.UTF-8"
 set encoding utf8
 
-set multiplot layout 2, 2
+set multiplot
+set size 0.40,0.455 
 
 set xtics 100
-set ylabel "Propustnost, {/Helvetica-Oblique T}"
-set tmargin 0.7
-set bmargin 0.8
-set rmargin 0.1
+set ylabel "Propustnost, {/Helvetica-Italic T}"
+set tmargin 0.2
+set bmargin 0.2
+set rmargin 0.2
+set lmargin 0.2
+
 set format x ""
 set format y "%.3f"
 set key left
 
-plot [2750:3150]\
+set origin 0.115,0.545
+set ytics 0.001 
+
+plot [2750:3150][0.5462:0.5565]\
      "< awk '/^320001$*/ {print 1/($2*1e-7),$4}' vysledky/out-CH30C" t "CH30C experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^320001$*/ {print 1/($2*1e-7),$7}' vysledky/out-CH30C" t "CH30C fit" w l lt 2 linecolor rgb "black" lw 2
 
 set ylabel ""
 set key left
+set origin 0.6,0.545
+set ytics 0.002 
 
-plot [2750:3150]\
+plot [2750:3150][0.5495:0.561]\
      "< awk '/^320001$*/ {print 1/($2*1e-7),$4}' vysledky/out-CH30D" t "CH30D experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^320001$*/ {print 1/($2*1e-7),$7}' vysledky/out-CH30D"  t "CH30D fit" w l lt 2 linecolor rgb "black" lw 2
 
-set bmargin 3.1
 set ylabel "Propustnost, T"
 set xlabel "Vlnočet, {/Symbol n} [cm^{-1}]"
 set format x "%g"
+set origin 0.115,0.09
+set ytics 0.005
 
-plot [2750:3150]\
+plot [2750:3150][:0.694]\
      "< awk '/^320001$*/ {print 1/($2*1e-7),$4}' vysledky/out-CH87A" t "CH87A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^320001$*/ {print 1/($2*1e-7),$7}' vysledky/out-CH87A" t "CH87A fit" w l lt 2 linecolor rgb "black" lw 2
 
 set ylabel ""
 set key left
+set origin 0.6,0.09
 
-plot [2750:3150]\
+plot [2750:3150][:0.689]\
      "< awk '/^320001$*/ {print 1/($2*1e-7),$4}' vysledky/out-CH89A" t "CH89A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^320001$*/ {print 1/($2*1e-7),$7}' vysledky/out-CH89A" t "CH89A fit" w l lt 2 linecolor rgb "black" lw 2
 

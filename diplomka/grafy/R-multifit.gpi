@@ -1,38 +1,42 @@
-set terminal pdf enhanced font "Helvetica,14" linewidth 3 size 14cm,20cm
+set terminal pdfcairo enhanced font "Helvetica,14" linewidth 3 size 14cm,20cm
 set locale "cs_CZ.UTF-8"
 set encoding utf8
 set ylabel 'Odrazivost, {/Times-Italic R}'
 
-set tmargin 0.7
-set bmargin 0.8
+set multiplot
 
-set multiplot layout 4, 1
-
-set key autotitle column nobox samplen 1 noenhanced
+set tmargin 0.2
+set bmargin 0.2
+set rmargin 0.2
 
 set format x ""
+set size 1,0.235
+set origin 0,0.765
 
-plot [180:860]\
+plot [180:860][0:0.37]\
      "< awk '/^20001$*/ {print $2,$4}' vysledky/out-multifit" t "CH30A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^20001$*/ {print $2,$7}' vysledky/out-multifit" t "CH30A fit" w l lt 2 linecolor rgb "black" lw 1.4
 
-set tmargin 0
+set origin 0,0.53
 set key left
 
-plot [180:860]\
+plot [180:860][0:0.33]\
      "< awk '/^20004$*/ {print $2,$4}' vysledky/out-multifit" every ::1::660 t "CH83A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^20004$*/ {print $2,$7}' vysledky/out-multifit" every ::1::660 t "CH83A fit" w l lt 2 linecolor rgb "black" lw 1.4
 
-plot [180:860]\
+set origin 0,0.295
+set key left
+
+plot [180:860][0:0.33]\
      "< awk '/^20002$*/ {print $2,$4}' vysledky/out-multifit" t " CH88A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^20002$*/ {print $2,$7}' vysledky/out-multifit" t "CH88A fit" w l lt 2 linecolor rgb "black" lw 1.4
 
-set xlabel "Vlnová délka, {/Symbol l} [nm]"
 set format x "%g"
-set bmargin 3
 set key right
+set origin 0,0.06
+set xlabel "Vlnová délka, {/Symbol l} [nm]"
 
-plot [180:860]\
+plot [180:860][0:0.32]\
      "< awk '/^20003$*/ {print $2,$4}' vysledky/out-multifit" t "CH90A experiment" lt 2 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^20003$*/ {print $2,$7}' vysledky/out-multifit" t "CH90A fit" w l lt 2 linecolor rgb "black" lw 1.4
 

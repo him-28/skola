@@ -11,7 +11,7 @@
 #define sp3CH3 4
 
 int main(int argc, char *argv[]){
-	assert(argc == 3);
+	assert(argc == 4);
 
 	FILE *input_file;
 	if ((input_file = fopen(argv[1],"r")) == NULL){
@@ -24,19 +24,22 @@ int main(int argc, char *argv[]){
 		sample = "";
 	}
 
+	double maxy = strtod(argv[3], NULL);
+
 	struct {
 		char *name;
+		char *nicename;
 		int type;
 		char *opt;
 	} peak_names[] = {
-		{"sp3CH3a", sp3CH3, "lt 1 lc rgb \"red\""}, 
-		{"sp3CH3s", sp3CH3, "lt 2 lc rgb \"red\""},
-		{"sp3CH2a", sp3CH2, "lt 1 lc rgb \"blue\""},
-		{"sp3CH2s", sp3CH2, "lt 2 lc rgb \"blue\""},
-		{"sp3CH", sp3CH, "lt 1 lc rgb \"green\""},
-		{"sp2CH2a", sp2CH2, "lt 1 lc rgb \"orange\""},
-		{"sp2CH2s", sp2CH2, "lt 2 lc rgb \"orange\""},
-		{"sp2CH", sp2CH, "lt 1 lc rgb \"yellow\""}
+		{"sp3CH3a", "sp^3CH_3a", sp3CH3, "lt 1 lc rgb \"red\""}, 
+		{"sp3CH3s", "sp^3CH_3s", sp3CH3, "lt 2 lc rgb \"red\""},
+		{"sp3CH2a", "sp^3CH_2a", sp3CH2, "lt 1 lc rgb \"blue\""},
+		{"sp3CH2s", "sp^3CH_2s", sp3CH2, "lt 2 lc rgb \"blue\""},
+		{"sp3CH", "sp^3CH", sp3CH, "lt 1 lc rgb \"green\""},
+		{"sp2CH2a", "sp^2CH_2a", sp2CH2, "lt 1 lc rgb \"orange\""},
+		{"sp2CH2s", "sp^2CH_2s", sp2CH2, "lt 2 lc rgb \"orange\""},
+		{"sp2CH", "sp^2CH", sp2CH, "lt 1 lc rgb \"yellow\""}
 	};
 
 	struct {
@@ -147,11 +150,11 @@ int main(int argc, char *argv[]){
 		}
 	}
 
-	printf("plot[2750:3150]\\\n");//[2800:2100]
+	printf("plot[2750:3150][:%f]\\\n",maxy);//[2800:2100]
 	for(int i = 0; i < sizeof(peak_names)/sizeof(peak_names[0]); i++){
 		printf("G(x,%e,%e)*%e*0.000545*%e*%e t \"%s\" %s,",
 				data[i].nu, data[i].beta, Na, data[i].alpha,
-				fHx[peak_names[i].type], peak_names[i].name, peak_names[i].opt);
+				fHx[peak_names[i].type], peak_names[i].nicename, peak_names[i].opt);
 	}
 
 	for(int i = 0; i < sizeof(peak_names)/sizeof(peak_names[0]); i++){
