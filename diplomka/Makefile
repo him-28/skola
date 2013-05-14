@@ -6,7 +6,7 @@ pdffinal: pdfdraft2
 pdfdraft2: bibtex
 	pdflatex diplomka.tex
 
-grafika: grafika/DLCDOS.pdf grafika/layerscheme.pdf grafika/reaktor.pdf grafika/dlcgrowth.pdf grafika/dlcgrowthH.pdf grafika/schema-elipsometru.pdf
+grafika: grafika/DLCDOS.pdf grafika/layerscheme.pdf grafika/reaktor.pdf grafika/dlcgrowth.pdf grafika/dlcgrowthH.pdf grafika/schema-elipsometru.pdf grafika/rutherford.pdf grafika/ERDA.pdf grafika/DLCtypes.pdf
 
 grafika/DLCDOS.pdf:
 	inkscape --without-gui --export-pdf=grafika/DLCDOS.pdf grafika/DLCDOS.svg
@@ -20,6 +20,12 @@ grafika/dlcgrowthH.pdf:
 	inkscape --without-gui --export-pdf=grafika/dlcgrowthH.pdf grafika/dlcgrowthH.svg
 grafika/schema-elipsometru.pdf:
 	inkscape --without-gui --export-pdf=grafika/schema-elipsometru.pdf grafika/schema-elipsometru.svg
+grafika/rutherford.pdf:
+	inkscape --without-gui --export-pdf=grafika/rutherford.pdf grafika/rutherford.svg
+grafika/ERDA.pdf:
+	inkscape --without-gui --export-pdf=grafika/ERDA.pdf grafika/ERDA.svg
+grafika/DLCtypes.pdf:
+	inkscape --without-gui --export-pdf=grafika/DLCtypes.pdf grafika/DLCtypes.svg
 
 programy/deconvolute:
 	gcc programy/deconvolute.c -o programy/deconvolute -std=c99 -g
@@ -86,4 +92,4 @@ pdfdraft: grafika grafy tabulky
 	pdflatex diplomka.tex
 
 clean:
-	rm grafika/DLCDOS.pdf grafika/layerscheme.pdf grafika/reaktor.pdf grafika/dlcgrowth.pdf grafika/dlcgrowthH.pdf diplomka.aux diplomka.bbl diplomka.log diplomka.out diplomka.idx diplomka.blg diplomka.toc diplomka.pdf programy/deconvolute grafy/CH30Adeconv.gpi grafy/CH30Cdeconv.gpi grafy/CH30Ddeconv.gpi grafy/CH83Adeconv.gpi grafy/CH87Adeconv.gpi grafy/CH88Adeconv.gpi grafy/CH89Adeconv.gpi grafy/CH90Adeconv.gpi grafy/T-multifit.pdf grafy/R-multifit.pdf grafy/T-detail-multifit.pdf tabulky/H-table.tex grafy/ell-multifit.pdf programy/H-table grafy/R-multifit2.pdf grafy/Si-detail.pdf grafy/transition.pdf grafy/Hdif.pdf grafy/T-detail-multifit2.pdf grafy/N.pdf grafy/ell-multifit2.pdf grafy/T-multifit2.pdf grafy/deconv-multifit.pdf grafy/deconv-multifit2.pdf grafika/schema-elipsometru.pdf
+	rm grafika/DLCDOS.pdf grafika/layerscheme.pdf grafika/reaktor.pdf grafika/dlcgrowth.pdf grafika/dlcgrowthH.pdf diplomka.aux diplomka.bbl diplomka.log diplomka.out diplomka.idx diplomka.blg diplomka.toc diplomka.pdf programy/deconvolute grafy/CH30Adeconv.gpi grafy/CH30Cdeconv.gpi grafy/CH30Ddeconv.gpi grafy/CH83Adeconv.gpi grafy/CH87Adeconv.gpi grafy/CH88Adeconv.gpi grafy/CH89Adeconv.gpi grafy/CH90Adeconv.gpi grafy/T-multifit.pdf grafy/R-multifit.pdf grafy/T-detail-multifit.pdf tabulky/H-table.tex grafy/ell-multifit.pdf programy/H-table grafy/R-multifit2.pdf grafy/Si-detail.pdf grafy/transition.pdf grafy/Hdif.pdf grafy/T-detail-multifit2.pdf grafy/N.pdf grafy/ell-multifit2.pdf grafy/T-multifit2.pdf grafy/deconv-multifit.pdf grafy/deconv-multifit2.pdf grafika/schema-elipsometru.pdf grafika/rutherford.pdf grafika/ERDA.pdf grafika/DLCtypes.pdf

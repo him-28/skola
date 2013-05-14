@@ -35,18 +35,18 @@ int main(int argc, char *argv[]){
 		{"df", "R", 0, "$d_\\mathrm{fR}$\\,[nm]", "%.0f", 1.0},
 		{"df", "M", 0, "$d_\\mathrm{fM}$\\,[nm]", "%.0f", 1.0},
 		{"Egpif", "", 0, "$E_\\mathrm{g\\pi}$\\,[eV]", "%.1f", 1.0},
-		{"Ehpif", "", 1, "$E_\\mathrm{h\\pi}$\\,[eV]", "%.1f", 1.0},
+		{"Ehpif", "", 1, "$E_\\mathrm{h\\pi}$\\,[eV]", "%.2f", 1.0},
 		{"Ecpif", "", 0, "$E_\\mathrm{c\\pi}$\\,[eV]", "%.1f", 1.0},
 		{"Bcpif", "", 0, "$B_\\mathrm{c\\pi}$\\,[eV]", "%.1f", 1.0},
 		{"Egsigmaf", "", 0, "$E_\\mathrm{g\\sigma}$\\,[eV]", "%.1f", 1.0},
-		{"Ehsigmaf", "", 1, "$E_\\mathrm{h\\sigma}$\\,[eV]", "%.1f", 1.0},
-		{"Ecsigmaf", "", 1, "$E_\\mathrm{c\\sigma}$\\,[eV]", "%.1f", 1.0},
-		{"Bcsigmaf", "", 1, "$B_\\mathrm{c\\sigma}$\\,[eV]", "%.1f", 1.0},
-		{"alphaKf", "", 1, "$\\alpha_\\mathrm{K}$", "%.0f", 1.0},
-		{"EKf", "", 1, "$E_\\mathrm{K}$\\,[eV]", "%.1f", 1.0},
+		{"Ehsigmaf", "", 1, "$E_\\mathrm{h\\sigma}$\\,[eV]", "%.2f", 1.0},
+		{"Ecsigmaf", "", 1, "$E_\\mathrm{c\\sigma}$\\,[eV]", "%.2f", 1.0},
+		{"Bcsigmaf", "", 1, "$B_\\mathrm{c\\sigma}$\\,[eV]", "%.2f", 1.0},
+		{"alphaKf", "", 1, "$\\alpha_\\mathrm{K}$", "%.1f", 1.0},
+		{"EKf", "", 1, "$E_\\mathrm{K}$\\,[eV]", "%.0f", 1.0},
 		{"alphapixif", "", 1, "$\\alpha_{\\pi\\xi}$", "%.3f", 1.0},
 		{"alphasigmaxif", "", 1, "$\\alpha_{\\sigma\\xi}$", "%.3f", 1.0},
-		{"Exf", "", 1, "$E_\\mathrm{x}$\\,[eV]", "%.0f", 1.0},
+		{"Exf", "", 1, "$E_\\mathrm{x}$\\,[eV]", "%.2f", 1.0},
 		{"Qat", "", 1, "$Q_\\mathrm{t}$\\,[eV$^{3/2}$]", "%.1f", 1.0},
 		{"Egat", "", 1, "$E_\\mathrm{g}$\\,[eV]", "%.1f", 1.0},
 		{"Ehat", "", 1, "$E_\\mathrm{h}$\\,[eV]", "%.1f", 1.0},
@@ -68,42 +68,43 @@ int main(int argc, char *argv[]){
 		{"chi(TMIR", ")", 0, "$\\chi_\\mathrm{T}$", "%.2f", 1.0},
 
 
-/*		{"alphasp3CH3af", "", 1, "$\\alpha_\\mathrm{sp3CH3a} \\times 10^{-3}$", "%.2f", 1e3},
+		{"alphasp3CH3af", "", 1, "$\\alpha_\\mathrm{sp3CH3a} \\times 10^{-3}$", "%.2f", 1e3},
 		{"nusp3CH3af", "", 1, "$\\nu_\\mathrm{sp3CH3a}$\\,[cm$^{-1}$]", "%.0f", 1.0},
 		{"alphasp3CH3sf", "", 1, "$\\alpha_\\mathrm{sp3CH3s} \\times 10^{-3}$", "%.2f", 1e3},
 		{"nusp3CH3sf", "", 1, "$\\nu_\\mathrm{sp3CH3s}$\\,[cm$^{-1}$]", "%.0f", 1.0},
-		{"betasp3CH3sf", "", 0, "$\\beta_\\mathrm{sp3CH3}$\\,[cm$^{-1}$]", "%.0f", 1.0},
+		{"betasp3CH3sf", "", 0, "$\\beta_\\mathrm{sp3CH3}$\\,[10$^1$cm$^{-1}$]", "%.0f", 1e-1},
 		{"alphasp3CH3sbf", "", 1, "$\\alpha_\\mathrm{sp3CH3bs} \\times 10^{-3}$", "%.2f", 1e3},
 		{"nusp3CH3sbf", "", 1, "$\\nu_\\mathrm{sp3CH3bs}$\\,[cm$^{-1}$]", "%.0f", 1.0},
-		{"betasp3CH3sbf", "", 0, "$\\beta_\\mathrm{sp3CH3bs}$\\,[cm$^{-1}$]", "%.0f", 1.0},
+		{"betasp3CH3sbf", "", 0, "$\\beta_\\mathrm{sp3CH3bs}$\\,[10$^1$cm$^{-1}$]", "%.0f", 1e-1},
 		{"alphasp3CH2af", "", 1, "$\\alpha_\\mathrm{sp3CH2a} \\times 10^{-3}$", "%.2f", 1e3},
 		{"nusp3CH2af", "", 1, "$\\nu_\\mathrm{sp3CH2a}$\\,[cm$^{-1}$]", "%.0f", 1.0},
 		{"alphasp3CH2sf", "", 1, "$\\alpha_\\mathrm{sp3CH2s} \\times 10^{-3}$", "%.2f", 1e3},
 		{"nusp3CH2sf", "", 1, "$\\nu_\\mathrm{sp3CH2s}$\\,[cm$^{-1}$]", "%.0f", 1.0},
-		{"betasp3CH2sf", "", 0, "$\\beta_\\mathrm{sp3CH2}$\\,[cm$^{-1}$]", "%.0f", 1.0},
+		{"betasp3CH2sf", "", 0, "$\\beta_\\mathrm{sp3CH2}$\\,[10$^1$cm$^{-1}$]", "%.0f", 1e-1},
 		{"alphasp3CHf", "", 1, "$\\alpha_\\mathrm{sp3CH} \\times 10^{-3}$", "%.2f", 1e3},
 		{"nusp3CHf", "", 1, "$\\nu_\\mathrm{sp3CH}$\\,[cm$^{-1}$]", "%.0f", 1.0},
-		{"betasp3CHf", "", 0, "$\\beta_\\mathrm{sp3CH}$\\,[cm$^{-1}$]", "%.0f", 1.0},
+		{"betasp3CHf", "", 0, "$\\beta_\\mathrm{sp3CH}$\\,[10$^1$cm$^{-1}$]", "%.0f", 1e-1},
 		{"alphasp2CH2af", "", 1, "$\\alpha_\\mathrm{sp2CH2a} \\times 10^{-3}$", "%.2f", 1e3},
 		{"nusp2CH2af", "", 1, "$\\nu_\\mathrm{sp2CH2a}$\\,[cm$^{-1}$]", "%.0f", 1.0},
 		{"alphasp2CH2sf", "", 1, "$\\alpha_\\mathrm{sp2CH2s} \\times 10^{-3}$", "%.2f", 1e3},
 		{"nusp2CH2sf", "", 1, "$\\nu_\\mathrm{sp2CH2s}$\\,[cm$^{-1}$]", "%.0f", 1.0},
-		{"betasp2CH2sf", "", 0, "$\\beta_\\mathrm{sp2CH2}$\\,[cm$^{-1}$]", "%.0f", 1.0},
+		{"betasp2CH2sf", "", 0, "$\\beta_\\mathrm{sp2CH2}$\\,[10$^1$cm$^{-1}$]", "%.0f", 1e-1},
 		{"alphasp2CHf", "", 1, "$\\alpha_\\mathrm{sp2CH} \\times 10^{-3}$", "%.2f", 1e3},
 		{"nusp2CHf", "", 1, "$\\nu_\\mathrm{sp2CH}$\\,[cm$^{-1}$]", "%.0f", 1.0},
-		{"betasp2CHf", "", 0, "$\\beta_\\mathrm{sp2CH}$\\,[cm$^{-1}$]", "%.0f", 1.0},
-		{"alphaCH8f", "", 0, "$N_\\mathrm{sp2C,A}\\,[10^{-6}\\,\\mathrm{eV}^2]$", "%.0f", 0.0},
-		{"nuCH8f", "", 0, "$\\nu_\\mathrm{sp2C,A}$\\,[cm$^{-1}$]", "%.0f", 1.0},
-		{"betaCH8f", "", 0, "$\\beta_\\mathrm{sp2C,A}$\\,[cm$^{-1}$]", "%.0f", 1.0},
-		{"alphaCHof", "", 0, "$N_\\mathrm{sp2C,B}\\,[10^{-6}\\,\\mathrm{eV}^2]$", "%.2f", 0.0},
+		{"betasp2CHf", "", 0, "$\\beta_\\mathrm{sp2CH}$\\,[10$^1$cm$^{-1}$]", "%.0f", 1e-1},
+
+		{"alphaCH2wf", "", 0, "$N_\\mathrm{sp2C,A}\\,[10^{-6}\\,\\mathrm{eV}^2]$", "%.0f", 0.0},
+		{"nuCH2wf", "", 0, "$\\nu_\\mathrm{sp2C,A}$\\,[cm$^{-1}$]", "%.0f", 1.0},
+		{"betaCH2wf", "", 0, "$\\beta_\\mathrm{sp2C,A}$\\,[10$^1$cm$^{-1}$]", "%.0f", 1e-1},
+		{"alphaCHof", "", 0, "$N_\\mathrm{sp2C,B}\\,[10^{-6}\\,\\mathrm{eV}^2]$", "%.0f", 0.0},
 		{"nuCHof", "", 0, "$\\nu_\\mathrm{sp2C,B}$\\,[cm$^{-1}$]", "%.0f", 1.0},
-		{"betaCHof", "", 0, "$\\beta_\\mathrm{sp2C,B}$\\,[cm$^{-1}$]", "%.0f", 1.0},
-		{"alphaCH2wf", "", 0, "$N_\\mathrm{sp2C,C}\\,[10^{-6}\\,\\mathrm{eV}^2]$", "%.0f", 0.0},
-		{"nuCH2wf", "", 0, "$\\nu_\\mathrm{sp2C,C}$\\,[cm$^{-1}$]", "%.0f", 1.0},
-		{"betaCH2wf", "", 0, "$\\beta_\\mathrm{sp2C,C}$\\,[cm$^{-1}$]", "%.0f", 1.0},
+		{"betaCHof", "", 0, "$\\beta_\\mathrm{sp2C,B}$\\,[10$^1$cm$^{-1}$]", "%.0f", 1e-1},
+		{"alphaCH8f", "", 0, "$N_\\mathrm{sp2C,C}\\,[10^{-6}\\,\\mathrm{eV}^2]$", "%.0f", 0.0},
+		{"nuCH8f", "", 0, "$\\nu_\\mathrm{sp2C,C}$\\,[cm$^{-1}$]", "%.0f", 1.0},
+		{"betaCH8f", "", 0, "$\\beta_\\mathrm{sp2C,C}$\\,[10$^1$cm$^{-1}$]", "%.0f", 1e-1},
 		{"alphaCH2xf", "", 0, "$N_\\mathrm{sp3CHxy}\\,[10^{-6}\\,\\mathrm{eV}^2]$", "%.0f", 0.0},
 		{"nuCH2xf", "", 0, "$\\nu_\\mathrm{sp3CHxy}$\\,[cm$^{-1}$]", "%.0f", 1.0},
-		{"betaCH2xf", "", 0, "$\\beta_\\mathrm{sp3CHxy}$\\,[cm$^{-1}$]", "%.0f", 1.0},*/
+		{"betaCH2xf", "", 0, "$\\beta_\\mathrm{sp3CHxy}$\\,[10$^1$cm$^{-1}$]", "%.0f", 1e-1},
 	};
 
 	struct {
@@ -111,6 +112,7 @@ int main(int argc, char *argv[]){
 		char *nicename;
 		char *sample;
 		double values[sizeof(datacols)/sizeof(datacols[0])];
+		double errors[sizeof(datacols)/sizeof(datacols[0])];
 		double NH;
 	} datarows[] = {
 		{"vysledky/out-multifit", "CH30A", "1", 0.326, 0},
@@ -152,7 +154,7 @@ int main(int argc, char *argv[]){
 			strcat(test, " = %lf +- %lf");
 
 			while(fgets(buf, 199, input_file) != NULL) {
-				if (sscanf(buf, test, &datarows[i].values[j], dummy) >= 1)
+				if (sscanf(buf, test, &datarows[i].values[j], &datarows[i].errors[j]) >= 1)
 					break;	
 			}
 		}
@@ -181,7 +183,36 @@ int main(int argc, char *argv[]){
 			printf("%s", datacols[i].nicename);
 			for (int j = 0; j < sizeof(datarows)/sizeof(datarows[0]); j++) {
 				char format[50] = " & ";
-				strcat(format, datacols[i].format);
+				char zaok[50] = "%.";
+
+				if (datarows[j].errors[i]*datacols[i].multiply > 1.0){
+					//printf("ano %s\n", datacols[i].nicename);
+					for (int rad = 0; rad < 30; rad++){
+						if(datarows[j].errors[i]*datacols[i].multiply < pow(10.0, (double)(rad+1)) &&
+							datarows[j].errors[i]*datacols[i].multiply > pow(10.0, (double)(rad))){
+							datarows[j].values[i] = round(datarows[j].values[i]/pow(10.0, (double)rad))*pow(10.0, (double)rad);
+							break;
+						}
+					}
+				}
+				else {
+					//printf("ne %s\n", datacols[i].nicename);
+					for (int rad = -1; rad > -30; rad--){
+						if(datarows[j].errors[i]*datacols[i].multiply < pow(10.0, (double)(rad+1)) &&
+						   datarows[j].errors[i]*datacols[i].multiply > pow(10.0, (double)(rad))){
+							char cislo[10] = "";
+							sprintf(cislo, "%i", rad*(-1));
+							strcat(zaok, cislo);
+							strcat(zaok, "f");
+							//printf("%s\n",zaok);
+							break;
+						}
+					}	
+				}
+				if(strcmp(zaok,"%.") == 0)
+					strcat(format, datacols[i].format);
+				else
+					strcat(format, zaok);
 				if(datacols[i].multiply != 0.0)
 					printf(format, datarows[j].values[i]*datacols[i].multiply);
 				else
