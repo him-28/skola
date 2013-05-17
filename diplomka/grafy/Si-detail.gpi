@@ -12,5 +12,5 @@ set y2label "{/Symbol e}_i [10^{-4}]"
 set key right center
 
 plot [1200:1700]\
-     "< awk '/^320001$*/ {print 1/($2*1e-7),$4}' vysledky/out-multifit" t "CH30A experiment" lt 1 linecolor rgb "red" lw 0.2 pointsize 0.5,\
+     "< awk '/^320001$*/ {print 1/($2*1e-7),$4}' vysledky/out-multifit" t "CH30A propustnost" lt 1 linecolor rgb "red" lw 0.2 pointsize 0.5,\
 	"< awk '/^320001$*/ {print 1/($2*1e-7),2*$17*$18*1e4}' vysledky/out-multifit" t "{/Symbol e}_i c-Si" w l lt 2 linecolor rgb "black" lw 2 axes x1y2

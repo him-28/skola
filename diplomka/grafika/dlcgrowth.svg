@@ -23,7 +23,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -99,7 +99,7 @@
          x="29.492157"
          y="705.54315"
          style="font-size:40px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1" /></flowRegion><flowPara
-       id="flowPara3002"></flowPara></flowRoot>  <flowRoot
+       id="flowPara3002" /></flowRoot>  <flowRoot
      xml:space="preserve"
      id="flowRoot3004"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -215,16 +215,16 @@
      xml:space="preserve"
      id="flowRoot3846"
      style="font-size:64px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-     transform="translate(-69.33284,-126.04244)"><flowRegion
+     transform="translate(-85.374458,-49.042672)"><flowRegion
        id="flowRegion3848"><rect
          id="rect3850"
-         width="514.97845"
-         height="210.98235"
+         width="126.77135"
+         height="101.89935"
          x="1227.3274"
          y="585.30591" /></flowRegion><flowPara
-       id="flowPara3852">relaxující část, <flowSpan
-   style="font-style:italic;-inkscape-font-specification:Sans Italic"
-   id="flowSpan5825">nβ</flowSpan></flowPara></flowRoot>  <flowRoot
+       id="flowPara3852"><flowSpan
+         style="font-style:italic;-inkscape-font-specification:Sans Italic"
+         id="flowSpan5825"> nβ</flowSpan></flowPara></flowRoot>  <flowRoot
      xml:space="preserve"
      id="flowRoot3854"
      style="font-size:64px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"

@@ -137,9 +137,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="160.78687"
-     inkscape:cy="92.848585"
+     inkscape:zoom="2.8284272"
+     inkscape:cx="199.26793"
+     inkscape:cy="52.428603"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
      showgrid="false"
@@ -160,7 +160,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -215,11 +215,11 @@
        transform="translate(-45.228987,20.984447)"><flowRegion
          id="flowRegion3147"><rect
            id="rect3149"
-           width="327.78174"
-           height="47.86396"
+           width="299.85104"
+           height="24.529436"
            x="216.5"
            y="275" /></flowRegion><flowPara
-         id="flowPara3151">Zadní vrstva (b) - tabulkové Si0<flowSpan
+         id="flowPara3151">Zadní vrstva (b) - tabulkové SiO<flowSpan
    style="font-size:65.00091553%;baseline-shift:sub"
    id="flowSpan6666">2</flowSpan></flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
