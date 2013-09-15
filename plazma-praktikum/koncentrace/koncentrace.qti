@@ -1,0 +1,172 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	4
+<table>
+100pa	30	6	14.4.12 17:03
+geometry	0	0	445	220	
+header	1[X]	2[Y]	3[Y]	4[Y]	5[Y]	6[Y]
+ColWidth	100	100	100	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0	0	0
+HiddenColumn	0	0	0	0	0	0
+Comments							
+WindowLabel		2
+<data>
+0	1.6	12645.64	12643.31	2.33	1.7e+16	1.05e+17
+1	1.4	12645	12643.08	1.92	1.4e+16	8.65e+16
+2	1.2	12644.58	12643.07	1.51	1.1e+16	6.81e+16
+3	1	12644.2	12643.11	1.09	7.96e+15	4.91e+16
+4	0.8	12643.95	12643.07	0.88	6.42e+15	3.97e+16
+5	0.6	12643.61	12643.06	0.55	4.02e+15	2.48e+16
+6	0.5	12643.45	12643.06	0.39	2.85e+15	1.76e+16
+7	0.4	12643.35	12643.06	0.29	2.12e+15	1.31e+16
+8	0.3	12643.26	12643.06	0.2	1.46e+15	9.01e+15
+9	0.2	12643.15	12643.05	0.1	7.3e+14	4.51e+15
+10	0.1	12643.04	12643	0.04	2.92e+14	1.8e+15
+</data>
+</table>
+<table>
+50pa	30	6	14.4.12 18:05
+geometry	445	0	445	220	
+header	1[X]	2[Y]	3[Y]	4[Y]	5[Y]	6[Y]
+ColWidth	100	100	100	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0	0	0
+HiddenColumn	0	0	0	0	0	0
+Comments							
+WindowLabel		2
+<data>
+0	0.6	12644.52	12643.6	0.92	6.87e+15	4.15e+16
+1	0.56	12644.42	12643.62	0.8	5.97e+15	3.61e+16
+2	0.48	12644.35	12643.62	0.73	5.45e+15	3.29e+16
+3	0.42	12644.24	12643.64	0.6	4.48e+15	2.7e+16
+4	0.36	12644.11	12643.61	0.5	3.73e+15	2.25e+16
+5	0.3	12644.02	12643.62	0.4	2.99e+15	1.8e+16
+6	0.24	12643.93	12643.63	0.3	2.24e+15	1.35e+16
+7	0.18	12643.82	12643.64	0.18	1.34e+15	8.11e+15
+8	0.12	12643.73	12643.63	0.1	7.47e+14	4.51e+15
+9	0.06	12643.69	12643.65	0.04	2.99e+14	1.8e+15
+</data>
+</table>
+<table>
+200pa	30	6	14.4.12 18:05
+geometry	39	229	445	220	
+header	1[X]	2[Y]	3[Y]	4[Y]	5[Y]	6[Y]
+ColWidth	100	100	100	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0	0	0
+HiddenColumn	0	0	0	0	0	0
+Comments							
+WindowLabel		2
+<data>
+0	3	12644.39	12643.65	0.74	5.53e+15	3.34e+16
+1	2.7	12644.13	12643.57	0.56	4.18e+15	2.52e+16
+2	2.4	12644	12643.54	0.46	3.44e+15	2.07e+16
+3	2.1	12643.78	12643.43	0.35	2.61e+15	1.58e+16
+4	1.8	12643.85	12643.62	0.23	1.72e+15	1.04e+16
+5	1.5	12644.35	12644.17	0.18	1.34e+15	8.11e+15
+6	1.2	12644.5	12644.35	0.15	1.12e+15	6.76e+15
+7	0.9	12644.42	12644.31	0.11	8.22e+14	4.96e+15
+8	0.6	12644.35	12644.27	0.08	5.97e+14	3.61e+15
+</data>
+</table>
+<multiLayer>
+Graph1	1	1	14.4.12 18:06
+geometry	480	30	587	461	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	569	398
+<PageGeometry>0.00863558	0.0121065	0.982729	0.96368</PageGeometry>
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	I [mA]	<i>n</i><sub>e</sub>[10<sup>16</sup> m<sup>-3</sup>]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	100pa_1	100pa_6	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+curve	50pa_1	50pa_6	1	0	#ff0000	0	1	7	2	#000000	-1	0	#000000	14	1	2	0	0	29	1
+curve	200pa_1	200pa_6	1	0	#00ff00	0	1	9	3	#000000	-1	0	#000000	14	1	2	0	0	29	1
+scale	0	0	1.1e+17	0	7	5	0	0
+scale	1	0	1.1e+17	0	7	5	0	0
+scale	2	0	3.1	0	8	5	0	0
+scale	3	0	3.1	0	8	5	0	0
+<AxisFormula pos="0">
+y/1e16
+</AxisFormula>
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>0.12133072407045</x>
+<y>1.0516129032258e+17</y>
+<right>0.891780821917808</right>
+<bottom>8.70967741935484e+16</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(2)<i>p</i> = 50 Pa
+\l(1)<i>p</i> = 100 Pa
+\l(3)<i>p</i> = 200 Pa
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<open>1</open>

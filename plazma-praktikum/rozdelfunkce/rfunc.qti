@@ -1,0 +1,1923 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	19
+<table>
+iv40	42	3	9.4.12 13:31
+geometry	392	180	445	220	minimized	
+header	1[X]	2[Y]	3[Y]
+ColWidth	100	100	100	
+<com>
+<col nr="2">
+col("2")-0.386*col("1")-2.66
+</col>
+</com>
+ColType	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0
+HiddenColumn	0	0	0
+Comments				
+WindowLabel	/home/paulie/Dokumenty/škola/plazma-praktikum/rozdelfunkce/iv40.txt	2
+<data>
+0	-39	-12.2	0.194
+1	-38	-11.8	0.208
+2	-37	-11.6	0.022
+3	-36	-11.5	-0.264
+4	-35	-11.2	-0.35
+5	-34	-10.6	-0.136
+6	-33	-10.4	-0.322
+7	-32	-9.7	-0.007999999999999
+8	-31	-8.8	0.506
+9	-30.5	-8.2	0.913
+10	-30	-7.6	1.32
+11	-29.5	-6.8	1.927
+12	-29	-5.6	2.934
+13	-28.5	-4.4	3.941
+14	-28	-3.3	4.848
+15	-27.5	-2.1	5.855
+16	-27	-1	6.762
+17	-26.5	0.4	7.969
+18	-26	1.2	8.576
+19	-25.5	2.3	9.483
+20	-25	3.5	10.49
+21	-24.5	4.9	11.697
+22	-24	6.4	13.004
+23	-23.5	8.3	14.711
+24	-23	9.6	15.818
+25	-22.5	11.5	17.525
+26	-22	13.9	19.732
+27	-21.5	16.6	22.239
+28	-21	18.8	24.246
+29	-20.5	21.7	26.953
+30	-20	23.8	28.86
+31	-19	28.7	33.374
+32	-18	36.3	40.588
+33	-17	43.3	47.202
+34	-16	53.7	57.216
+35	-15	63.5	66.63
+</data>
+</table>
+<table>
+iv40-fit	32	7	9.4.12 13:40
+geometry	0	156	827	444	minimized	
+header	4[X]	1[Z]	2[Y]	3[Y]	5[Y]	6[Y]	7[Y]
+ColWidth	100	100	100	100	100	100	100	
+<com>
+<col nr="0">
+-27.6-col("1")
+</col>
+<col nr="4">
+col("3")*1e-6
+</col>
+<col nr="5">
+(2*sqrt(2*9.1e-31*abs(col("4"))))/((1.602e-19^(5/2))*3.14e-6)*col("5")
+</col>
+<col nr="6">
+(2*sqrt(2*9.1e-31*abs(col("4"))))/((1.602e-19^(1/2))*3.14e-6)*col("5")*col("4")
+</col>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0	0	0	0
+HiddenColumn	0	0	0	0	0	0	0
+Comments								
+WindowLabel	/home/paulie/Dokumenty/škola/plazma-praktikum/rozdelfunkce/iv40-2nd-deriv.txt	0
+<data>
+0	8.4	-36	-0.101	0.053030303	5.3030303e-08	1.285711456633e+31	2.771710221125e-06
+1	7.4	-35	-0.041	0.0863636364	8.63636364e-08	1.965289538689e+31	3.732357930605e-06
+2	6.4	-34	0.064	0.106060606	1.06060606e-07	2.24452193215e+31	3.686624041444e-06
+3	5.43125	-33.03125	0.200620045	0.155047457	1.55047457e-07	3.022694854275e+31	4.213268379502e-06
+4	4.525	-32.125	0.375362583	0.229403724	2.29403724e-07	4.082155251546e+31	4.7405979537e-06
+5	3.7125	-31.3125	0.599915789	0.312118899	3.12118899e-07	5.03075375058e+31	4.793188906132e-06
+6	3.025	-30.625	0.882591971	0.384297843	3.84297843e-07	5.591269148983e+31	4.340710291481e-06
+7	2.43125	-30.03125	1.20295414	0.591450755	5.91450755e-07	7.714595543777e+31	4.813575679557e-06
+8	1.9	-29.5	1.499	0.663636364	6.63636364e-07	7.652207498056e+31	3.73134462705e-06
+9	1.4	-29	1.749	0.409090909	4.09090909e-07	4.049147605244e+31	1.454844805497e-06
+10	0.9	-28.5	1.889	0.0878787879	8.78787879e-08	6.974050294848e+30	1.610840751561e-07
+11	0.4	-28	1.959	0.0515151515	5.15151515e-08	2.725490918366e+30	2.797884317943e-08
+</data>
+</table>
+<table>
+Integration1	12	2	9.4.12 14:05
+geometry	0	288	445	220	hidden
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel	 of Table2_6	2
+<data>
+0	8.4	0
+1	7.4	-4.274766802894e+36
+2	6.4	-9.810281048469e+36
+3	5.43125	-1.651975134252e+37
+4	4.525	-2.498614124302e+37
+5	3.7125	-3.472203282245e+37
+6	3.025	-4.432433262748e+37
+7	2.43125	-5.471257445603e+37
+8	1.9	-6.544697492678e+37
+9	1.4	-7.314007690006e+37
+10	0.9	-7.626071661385e+37
+11	0.4	-7.689841676899e+37
+</data>
+</table>
+<table>
+Integration2	12	2	9.4.12 14:18
+geometry	0	288	445	220	hidden
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel	 of Table2_6	2
+<data>
+0	8.4	0
+1	7.4	-1.625500497661e+31
+2	6.4	-3.730406233081e+31
+3	5.43125	-6.281714364005e+31
+4	4.525	-9.501099568205e+31
+5	3.7125	-1.320321885032e+32
+6	3.025	-1.685453922204e+32
+7	2.43125	-2.080471780271e+32
+8	1.9	-2.488652486069e+32
+9	1.4	-2.781186363652e+32
+10	0.9	-2.89985017952e+32
+11	0.4	-2.924099032553e+32
+</data>
+</table>
+<table>
+Integration3	12	2	9.4.12 14:31
+geometry	0	0	445	220	hidden
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel	 of Table2_7	2
+<data>
+0	8.4	0
+1	7.4	-20299838176440
+2	6.4	-43455212621030
+3	5.43125	-67341045276430
+4	4.525	-92667017075630
+5	3.7125	-1.168436769496e+14
+6	3.025	-1.364427896161e+14
+7	2.43125	-1.534070758062e+14
+8	1.9	-1.675752684182e+14
+9	1.4	-1.756685727761e+14
+10	0.9	-1.781903094813e+14
+11	0.4	-1.784853514886e+14
+</data>
+</table>
+<table>
+Integration4	12	2	9.4.12 14:36
+geometry	0	0	445	220	hidden
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel	 of Table2_6	2
+<data>
+0	8.4	0
+1	7.4	-1.625500497661e+31
+2	6.4	-3.730406233081e+31
+3	5.43125	-6.281714364005e+31
+4	4.525	-9.501099568205e+31
+5	3.7125	-1.320321885032e+32
+6	3.025	-1.685453922204e+32
+7	2.43125	-2.080471780271e+32
+8	1.9	-2.488652486069e+32
+9	1.4	-2.781186363652e+32
+10	0.9	-2.89985017952e+32
+11	0.4	-2.924099032553e+32
+</data>
+</table>
+<table>
+Integration5	12	2	9.4.12 14:37
+geometry	835	288	445	220	hidden
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel	 of Table2_7	2
+<data>
+0	8.4	0
+1	7.4	-3.252034075865e-06
+2	6.4	-6.96152506189e-06
+3	5.43125	-1.078803545329e-05
+4	4.525	-1.484525613552e-05
+5	3.7125	-1.871835704732e-05
+6	3.025	-2.18581348965e-05
+7	2.43125	-2.457581354416e-05
+8	1.9	-2.68455580006e-05
+9	1.4	-2.814210535873e-05
+10	0.9	-2.85460875789e-05
+11	0.4	-2.859335330848e-05
+</data>
+</table>
+<table>
+iv32	41	3	9.4.12 16:19
+geometry	0	180	-1	-1	minimized	
+header	1[X]	2[Y]	3[Y]
+ColWidth	100	100	100	
+<com>
+<col nr="2">
+col("2")-0.2509*col("1")-0.4909
+</col>
+</com>
+ColType	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0
+HiddenColumn	0	0	0
+Comments				
+WindowLabel	/home/paulie/Dokumenty/škola/plazma-praktikum/rozdelfunkce/iv32.txt	2
+<data>
+0	-45	-10.8	-0.000400000000001
+1	-44	-10.5	0.0487
+2	-43	-10.3	-0.0022
+3	-42	-10	0.0469
+4	-41	-9.9	-0.104
+5	-40	-9.6	-0.0549
+6	-39	-9.3	-0.005800000000001
+7	-38	-9	0.0433
+8	-37	-8.8	-0.0076
+9	-36	-8.5	0.0415
+10	-35	-8.3	-0.0094
+11	-34	-7.9	0.1397
+12	-33	-7.4	0.3888
+13	-32.5	-7.2	0.46335
+14	-32	-6.8	0.7379
+15	-31.5	-6.3	1.11245
+16	-31	-5.4	1.887
+17	-30.5	-4.6	2.56155
+18	-30	-3.6	3.4361
+19	-29.5	-2.4	4.51065
+20	-29	-1.3	5.4852
+21	-28.5	-0.4	6.25975
+22	-28	0.4	6.9343
+23	-27.5	1.5	7.90885
+24	-27	2.4	8.6834
+25	-26.5	3.2	9.35795
+26	-26	4.6	10.6325
+27	-25.5	5.8	11.70705
+28	-25	6.6	12.3816
+29	-24.5	7.9	13.55615
+30	-24	9.2	14.7307
+31	-23	12	17.2798
+32	-22	16.2	21.2289
+33	-21	20.1	24.878
+34	-20	25.4	29.9271
+35	-19	31	35.2762
+36	-18	36	40.0253
+37	-17	43.5	47.2744
+38	-16	52.4	55.9235
+39	-15	64.4	67.6726
+</data>
+</table>
+<table>
+Table1	32	7	9.4.12 16:35
+geometry	588	180	782	421	minimized	
+header	4[X]	1[Z]	2[Y]	3[Y]	5[Y]	6[Y]	7[Y]
+ColWidth	100	100	100	100	100	100	100	
+<com>
+<col nr="0">
+-29.6-col("1")
+</col>
+<col nr="4">
+col("3")*1e-6
+</col>
+<col nr="5">
+(2*sqrt(2*9.1e-31*abs(col("4"))))/((1.602e-19^(5/2))*3.14e-6)*col("5")
+</col>
+<col nr="6">
+(2*sqrt(2*9.1e-31*abs(col("4"))))/((1.602e-19^(1/2))*3.14e-6)*col("5")*col("4")
+</col>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0	0	0	0
+HiddenColumn	0	0	0	0	0	0	0
+Comments								
+WindowLabel	/home/paulie/Dokumenty/škola/plazma-praktikum/rozdelfunkce/iv32-2n-deriv.txt	2
+<data>
+0	11.4	-41	-0.0049	0.0111111111	1.11111111e-08	3.138265467555e+30	9.181625035854e-07
+1	10.4	-40	0.0031	0.0125925926	1.25925926e-08	3.397125450676e+30	9.067132198922e-07
+2	9.4	-39	0.0091	0.0037037037	3.7037037e-09	9.499044548319e+29	2.291568276949e-07
+3	8.4	-38	0.0151	0.00148148148	1.48148148e-09	3.591828829689e+29	7.743190455697e-08
+4	7.4	-37	0.0311	0.0125925926	1.25925926e-08	2.865568372681e+30	5.442112539102e-07
+5	6.42	-36.02	0.0526959746	0.0331035792	3.31035792e-08	7.016527456889e+30	1.15606507324e-06
+6	5.48	-35.08	0.0975857636	0.0604888945	6.04888945e-08	1.184528975765e+31	1.665908986032e-06
+7	4.6	-34.2	0.175351832	0.0960515936	9.60515936e-08	1.723309383317e+31	2.034445723508e-06
+8	3.8	-33.4	0.317175195	0.169165287	1.69165287e-07	2.758562387667e+31	2.690242507464e-06
+9	3.1	-32.7	0.528351811	0.289076676	2.89076676e-07	4.257686312575e+31	3.387352386834e-06
+10	2.48	-32.08	0.784020937	0.421856929	4.21856929e-07	5.557388901441e+31	3.537101266341e-06
+11	1.92	-31.52	1.05848955	0.560153357	5.60153357e-07	6.492879150782e+31	3.199363396624e-06
+12	1.4	-31	1.3331	0.568888889	5.68888889e-07	5.630814647471e+31	2.023132332834e-06
+13	0.9	-30.5	1.5651	0.411851852	4.11851852e-07	3.26845146424e+31	7.549350220469e-07
+14	0.4	-30	1.7011	0.180740741	1.80740741e-07	9.562375996783e+30	9.816368003059e-08
+</data>
+</table>
+<table>
+Integration6	15	2	9.4.12 16:58
+geometry	0	0	445	220	hidden
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel	 of Table1_6	2
+<data>
+0	11.4	0
+1	10.4	-3.267695459116e+30
+2	9.4	-5.441210411869e+30
+3	8.4	-6.09575408077e+30
+4	7.4	-7.708129708595e+30
+5	6.42	-1.255035666508e+31
+6	5.48	-2.141541075592e+31
+7	4.6	-3.420989953588e+31
+8	3.8	-5.213738661981e+31
+9	3.1	-7.669425707066e+31
+10	2.48	-1.071209902341e+32
+11	1.92	-1.408617407803e+32
+12	1.4	-1.723833446558e+32
+13	0.9	-1.946315099351e+32
+14	0.4	-2.051932325949e+32
+</data>
+</table>
+<table>
+Integration7	12	2	9.4.12 17:15
+geometry	0	0	445	220	hidden
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel	 of iv40-fit_7	2
+<data>
+0	8.4	0
+1	7.4	-3.252034075865e-06
+2	6.4	-6.96152506189e-06
+3	5.43125	-1.078803545329e-05
+4	4.525	-1.484525613552e-05
+5	3.7125	-1.871835704732e-05
+6	3.025	-2.18581348965e-05
+7	2.43125	-2.457581354416e-05
+8	1.9	-2.68455580006e-05
+9	1.4	-2.814210535873e-05
+10	0.9	-2.85460875789e-05
+11	0.4	-2.859335330848e-05
+</data>
+</table>
+<table>
+Integration8	15	2	9.4.12 17:18
+geometry	0	0	445	220	hidden
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel	 of Table1_7	2
+<data>
+0	11.4	0
+1	10.4	-9.124378617388e-07
+2	9.4	-1.480372885532e-06
+3	8.4	-1.633667251658e-06
+4	7.4	-1.944488830892e-06
+5	6.42	-2.777624231195e-06
+6	5.48	-4.103952039053e-06
+7	4.6	-5.732108111251e-06
+8	3.8	-7.62198340364e-06
+9	3.1	-9.749141616644e-06
+10	2.48	-1.189572224913e-05
+11	1.92	-1.378193235476e-05
+12	1.4	-1.513978124442e-05
+13	0.9	-1.583429808314e-05
+14	0.4	-1.604757275866e-05
+</data>
+</table>
+<multiLayer>
+Graph1	1	1	9.4.12 13:31
+geometry	196	156	531	461	minimized	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	513	398
+<PageGeometry>0.00956023	0.0121065	0.98088	0.96368</PageGeometry>
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	<i>U</i><sub>s</sub>[V]	<i>I</i><sub>s</sub>[μA]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	iv40_1	iv40_2	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	41	1
+curve	iv32_1	iv32_2	1	0	#ff0000	0	1	7	2	#000000	-1	0	#000000	14	1	2	0	0	40	1
+scale	0	-20	50	0	10	5	0	0
+scale	1	-20	50	0	10	5	0	0
+scale	2	-46	-14	0	9	5	0	0
+scale	3	-46	-14	0	8	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-39.122807017544</x>
+<y>153.97993311037</y>
+<right>-37.2233009708738</right>
+<bottom>41.1392405063291</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)%(1)
+\l(2)%(2)
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-44.777528089888</x>
+<y>46.715542521994</y>
+<right>-37.2233009708738</right>
+<bottom>41.1392405063291</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)<i>I</i><sub>v</sub> = 40mA
+\l(2)<i>I</i><sub>v</sub> = 32mA
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<multiLayer>
+Iv40dist	1	1	9.4.12 13:48
+geometry	392	156	582	461	minimized	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	564	398
+<PageGeometry>0.0087108	0.0121065	0.982578	0.96368</PageGeometry>
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	<i>E</i> [eV]	<i>f</i><sub>e</sub>[10<sup>31</sup> m<sup>-3</sup> C<sup>-1</sup> V<sup>-1</sup>]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	iv40-fit_4	iv40-fit_6	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	31	1
+<Function>
+<Type>0</Type>
+<Title>NonLinearFit1</Title>
+<Expression>a*sqrt(x)*exp(-(x^1)/(1*b^1))</Expression>
+<Variable>x</Variable>
+<Range>0.1	8.4</Range>
+<Points>100</Points>
+<Constant>a	5.3581584593041e+31</Constant>
+<Constant>b	4.3827231280766</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>NonLinearFit2</Title>
+<Expression>a*sqrt(x)*exp(-(x^2)/(2*b^2))</Expression>
+<Variable>x</Variable>
+<Range>0.1	8.4</Range>
+<Points>100</Points>
+<Constant>a	4.2286307194991e+31</Constant>
+<Constant>b	3.8297007502979</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>1</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>NonLinearFit3</Title>
+<Expression>a*sqrt(x)*exp(-(x^k)/(k*b^k))</Expression>
+<Variable>x</Variable>
+<Range>0.1	8.4</Range>
+<Points>100</Points>
+<Constant>a	3.9256201489714e+31</Constant>
+<Constant>b	3.8736006798639</Constant>
+<Constant>k	2.656572815952</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>2</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	0	8e+31	0	9	5	0	0
+scale	1	0	8e+31	0	8	5	0	0
+scale	2	0	9	0	6	5	0	0
+scale	3	0	9	0	6	5	0	0
+<AxisFormula pos="0">
+y/1e31
+</AxisFormula>
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-14.37343358396</x>
+<y>1.1531772575251e+38</y>
+<right>2.13725490196078</right>
+<bottom>6.9873417721519e+31</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)%(1)
+\l(2)%(2)
+\l(3)%(3)
+\l(4)%(4)
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>5.0951374207188</x>
+<y>2.3826979472141e+37</y>
+<right>2.13725490196078</right>
+<bottom>6.9873417721519e+31</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(2)Standartní rozdělení
+\l(2)%(2)
+\l(3)%(3)
+\l(4)%(4)
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>4.8852140077821</x>
+<y>7.5777126099707e+31</y>
+<right>8.6147859922179</right>
+<bottom>6.26392961876833e+31</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(2)Maxwellovo rozdělení
+\l(3)Druyvesteynovo rozdělení
+\l(4)Standardní rozdělení
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<multiLayer>
+iv32dist	1	1	9.4.12 16:36
+geometry	196	180	583	461	minimized	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	565	398
+<PageGeometry>0.00869565	0.0121065	0.982609	0.96368</PageGeometry>
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	<i>E</i> [eV]	<i>f</i><sub>e</sub>[10<sup>31</sup> m<sup>-3</sup> C<sup>-1</sup> V<sup>-1</sup>]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table1_4	Table1_6	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	31	1
+<Function>
+<Type>0</Type>
+<Title>NonLinearFit1</Title>
+<Expression>a*sqrt(x)*exp(-(x^1)/(1*b^1))</Expression>
+<Variable>x</Variable>
+<Range>0.2	11.4</Range>
+<Points>100</Points>
+<Constant>a	6.7815952278611e+31</Constant>
+<Constant>b	2.5719926735023</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>NonLinearFit2</Title>
+<Expression>a*sqrt(x)*exp(-(x^2)/(2*b^2))</Expression>
+<Variable>x</Variable>
+<Range>0.2	11.4</Range>
+<Points>100</Points>
+<Constant>a	4.8400328241695e+31</Constant>
+<Constant>b	2.6198326977524</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>1</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>NonLinearFit3</Title>
+<Expression>a*sqrt(x)*exp(-(x^k)/(k*b^k))</Expression>
+<Variable>x</Variable>
+<Range>0.2	11.4</Range>
+<Points>100</Points>
+<Constant>a	4.3206923407901e+31</Constant>
+<Constant>b	2.6936972545536</Constant>
+<Constant>k	3.1026682965424</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>2</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	-5e+30	7e+31	0	9	5	0	0
+scale	1	-5e+30	7e+31	0	9	5	0	0
+scale	2	0	12	0	8	5	0	0
+scale	3	0	12	0	8	5	0	0
+<AxisFormula pos="0">
+y/1e31
+</AxisFormula>
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>6.6640776699029</x>
+<y>6.6260997067449e+31</y>
+<right>2.89380530973451</right>
+<bottom>6.07407407407407e+31</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(2)Maxwellovo rozdělení
+\l(3)Druyvesteynovo rozdělení
+\l(4)Standardní rozdělení
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<table>
+iv40druv	42	7	14.4.12 15:25
+geometry	980	180	749	444	minimized	
+header	7[X]	1[Z]	2[Y]	3[Y]	4[Y]	5[Y]	6[Y]
+ColWidth	100	100	100	100	100	155	100	
+<com>
+<col nr="0">
+-27.6-col("1")
+</col>
+<col nr="5">
+(col("4")*1e-6*4)/15.6
+</col>
+<col nr="6">
+(2*sqrt(2*9.1e-31*abs(col("7"))))/((1.602e-19^(5/2))*3.14e-6)*col("5")
+</col>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0	0	0	0
+HiddenColumn	0	0	0	0	0	0	0
+Comments								
+WindowLabel		2
+<data>
+0	11.4	-39	-12.2	-0.5	11.7	3e-06	8.473316770871e+32
+1	10.4	-38	-11.8	-0.2	11.6	2.974358974359e-06	8.023979566561e+32
+2	9.4	-37	-11.6	0.1	11.7	3e-06	7.694226091833e+32
+3	8.4	-36	-11.5	0.8	12.3	3.153846153846e-06	7.646450997004e+32
+4	7.4	-35	-11.2	1.7	12.9	3.307692307692e-06	7.526979363631e+32
+5	6.4	-34	-10.6	3.4	14	3.589743589744e-06	7.596843467002e+32
+6	5.4	-33	-10.4	5.1	15.5	3.974358974359e-06	7.725804839041e+32
+7	4.4	-32	-9.7	6.8	16.5	4.230769230769e-06	7.423785886129e+32
+8	3.4	-31	-8.8	8.8	17.6	4.512820512821e-06	6.960930241376e+32
+9	2.9	-30.5	-8.2	9.6	17.8	4.564102564103e-06	6.50180823832e+32
+10	2.4	-30	-7.6	10.4	18	4.615384615385e-06	5.981268262484e+32
+11	1.9	-29.5	-6.8	11.5	18.3	4.692307692308e-06	5.410570314418e+32
+12	1.4	-29	-5.6	12.3	17.9	4.589743589744e-06	4.542889821367e+32
+13	0.9	-28.5	-4.4	13.3	17.7	4.538461538462e-06	3.601717750873e+32
+14	0.4	-28	-3.3	14.1	17.4	4.461538461538e-06	2.360447791532e+32
+</data>
+</table>
+<multiLayer>
+iv40druv-pict	1	1	14.4.12 15:35
+geometry	687	7	563	461	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	545	398
+<PageGeometry>0.00900901	0.0121065	0.981982	0.96368</PageGeometry>
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	<i>E</i> [eV]	<i>f</i><sub>e</sub>[10<sup>32</sup> m<sup>-3</sup> C<sup>-1</sup> V<sup>-1</sup>]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	iv40druv_7	iv40druv_6	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	41	1
+<Function>
+<Type>0</Type>
+<Title>NonLinearFit1</Title>
+<Expression>a*sqrt(x)*exp(-(x^1)/(1*b^1))</Expression>
+<Variable>x</Variable>
+<Range>0.4	8</Range>
+<Points>100</Points>
+<Constant>a	4.37579671943378e+32</Constant>
+<Constant>b	17.7589129467283</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>NonLinearFit2</Title>
+<Expression>a*sqrt(x)*exp(-(x^2)/(2*b^2))</Expression>
+<Variable>x</Variable>
+<Range>0.4	8</Range>
+<Points>100</Points>
+<Constant>a	4.0000482118049e+32</Constant>
+<Constant>b	8.6466168206808</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>1</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>NonLinearFit3</Title>
+<Expression>a*sqrt(x)*exp(-(x^k)/(k*b^k))</Expression>
+<Variable>x</Variable>
+<Range>0.4	8</Range>
+<Points>100</Points>
+<Constant>a	3.9222237499916e+32</Constant>
+<Constant>b	7.76087595666418</Constant>
+<Constant>k	2.47376794711632</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>2</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	2e+32	9e+32	0	8	5	0	0
+scale	1	2e+32	9e+32	0	8	5	0	0
+scale	2	0	12	0	8	5	0	0
+scale	3	0	12	0	8	5	0	0
+<AxisFormula pos="0">
+y/1e32
+</AxisFormula>
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>6.4484848484848</x>
+<y>3.4780058651026e+32</y>
+<right>11.6121212121212</right>
+<bottom>2.32844574780059e+32</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(2)Maxwellovo rozdělení
+\l(3)Druyvesteynovo rozdělení
+\l(4)Standardní rozdělení
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<table>
+iv32druv	41	7	14.4.12 15:47
+geometry	784	180	666	481	minimized	
+header	7[X]	1[Z]	2[Y]	3[Y]	4[Y]	5[Y]	8[Y]
+ColWidth	100	100	100	100	100	100	100	
+<com>
+<col nr="0">
+-29.6-col("1")
+</col>
+<col nr="5">
+(col("4")*1e-6*4)/15.6
+</col>
+<col nr="6">
+(2*sqrt(2*9.1e-31*abs(col("7"))))/((1.602e-19^(5/2))*3.14e-6)*col("5")
+</col>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0	0	0	0
+HiddenColumn	0	0	0	0	0	0	0
+Comments								
+WindowLabel		2
+<data>
+0	15.4	-45	-10.8	-3	7.8	2e-06	6.565534961502e+32
+1	14.4	-44	-10.5	-2.9	7.6	1.948717948718e-06	6.186001108844e+32
+2	13.4	-43	-10.3	-2.7	7.6	1.948717948718e-06	5.967344993038e+32
+3	12.4	-42	-10	-2.6	7.4	1.897435897436e-06	5.589303821593e+32
+4	11.4	-41	-9.9	-2.5	7.4	1.897435897436e-06	5.359191803799e+32
+5	10.4	-40	-9.6	-2.3	7.3	1.871794871795e-06	5.049573347922e+32
+6	9.4	-39	-9.3	-2.1	7.2	1.846153846154e-06	4.734908364205e+32
+7	8.4	-38	-9	-1.7	7.3	1.871794871795e-06	4.538137583588e+32
+8	7.4	-37	-8.8	-1.5	7.3	1.871794871795e-06	4.259453438335e+32
+9	6.4	-36	-8.5	-0.8	7.7	1.974358974359e-06	4.178263906851e+32
+10	5.4	-35	-8.3	0.1	8.4	2.153846153846e-06	4.186887783738e+32
+11	4.4	-34	-7.9	1.5	9.4	2.410256410256e-06	4.229308323006e+32
+12	3.4	-33	-7.4	3.2	10.6	2.717948717949e-06	4.192378440829e+32
+13	2.9	-32.5	-7.2	4	11.2	2.871794871795e-06	4.091025408381e+32
+14	2.4	-32	-6.8	4.8	11.6	2.974358974359e-06	3.854595102489e+32
+15	1.9	-31.5	-6.3	5.7	12	3.076923076923e-06	3.547914960274e+32
+16	1.4	-31	-5.4	6.5	11.9	3.051282051282e-06	3.020133456662e+32
+17	0.9	-30.5	-4.6	7.3	11.9	3.051282051282e-06	2.421493855107e+32
+18	0.4	-30	-3.6	8.1	11.7	3e-06	1.587197652927e+32
+</data>
+</table>
+<multiLayer>
+iv32druv-img	1	1	14.4.12 15:49
+geometry	75	9	563	461	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	545	398
+<PageGeometry>0.00900901	0.0121065	0.981982	0.96368</PageGeometry>
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	<i>E</i> [eV]	<i>f</i><sub>e</sub>[10<sup>32</sup> m<sup>-3</sup> C<sup>-1</sup> V<sup>-1</sup>]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	iv32druv_7	iv32druv_8	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	40	1
+<Function>
+<Type>0</Type>
+<Title>NonLinearFit1</Title>
+<Expression>a*sqrt(x)*exp(-(x^1)/(1*b^1))</Expression>
+<Variable>x</Variable>
+<Range>0.4	6</Range>
+<Points>100</Points>
+<Constant>a	2.94638547867812e+32</Constant>
+<Constant>b	11.8522987404244</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>NonLinearFit3</Title>
+<Expression>a*sqrt(x)*exp(-(x^2)/(2*b^2))</Expression>
+<Variable>x</Variable>
+<Range>0.4	6</Range>
+<Points>100</Points>
+<Constant>a	2.6529102428602e+32</Constant>
+<Constant>b	6.1097240814119</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>1</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>NonLinearFit2</Title>
+<Expression>a*sqrt(x)*exp(-(x^k)/(k*b^k))</Expression>
+<Variable>x</Variable>
+<Range>0.4	6</Range>
+<Points>100</Points>
+<Constant>a	2.6181741368233e+32</Constant>
+<Constant>b	5.7728743623713</Constant>
+<Constant>k	2.243871586758</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>2</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	1e+32	5.5e+32	0	7	5	0	0
+scale	1	1e+32	5.5e+32	0	8	5	0	0
+scale	2	0	12	0	9	5	0	0
+scale	3	0	12	0	9	5	0	0
+<AxisFormula pos="0">
+y/1e32
+</AxisFormula>
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>6.4</x>
+<y>2.0029325513196e+32</y>
+<right>11.5636363636364</right>
+<bottom>1.26392961876833e+32</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(2)Maxwellovo rozdělení
+\l(3)Druyvesteynovo rozdělení
+\l(4)Standardní rozdělení
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<open>1</open>
+<log>
+[9.4.12 13:32	Plot: ''Graph1'']
+Non-linear Fit of dataset: iv40_2, using function: a*x+b
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = -3,9000000000000e+01 to x = -3,1000000000000e+01
+a = 3,8666666611104e-01 +/- 3,9319610247343e-02
+b = 2,6666666472627e+00 +/- 1,3799260019569e+00
+--------------------------------------------------------------------------------------
+Chi^2/doF = 9,2761904761904e-02
+R^2 = 0,9325017325017
+Adjusted R^2 = 0,9100023100023
+RMSE (Root Mean Squared Error) = 0,3045683909435
+RSS (Residual Sum of Squares) = 0,6493333333333
+---------------------------------------------------------------------------------------
+Iterations = 2
+Status = success
+---------------------------------------------------------------------------------------
+
+[9.4.12 13:53	Plot: ''Graph3'']
+Non-linear Fit of dataset: Table2_6, using function: a*sqrt(x)*exp(-(x^k)/(k*b^k))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 8,4000000000000e+00 to x = 4,0000000000000e-01
+a = 1,0323689530799e+37 +/- 2,3963294454817e+36
+b = 3,8735877927792e+00 +/- 5,8108752850348e-01
+k = 2,6565868024270e+00 +/- 1,4876630282930e+00
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2,1018360878915e+73
+R^2 = 0,6063233812736
+Adjusted R^2 = 0,4586946492512
+RMSE (Root Mean Squared Error) = 4,584578593384e+36
+RSS (Residual Sum of Squares) = 1,891652479102e+74
+---------------------------------------------------------------------------------------
+Iterations = 14
+Status = success
+---------------------------------------------------------------------------------------
+[9.4.12 13:54	Plot: ''Graph3'']
+Non-linear Fit of dataset: Table2_6, using function: a*sqrt(x)*exp(-(x^k)/(k*b^k))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 8,4000000000000e+00 to x = 4,0000000000000e-01
+a = 1,0323583016953e+37 +/- 2,3962625117563e+36
+b = 3,8736137622360e+00 +/- 5,8108747861351e-01
+k = 2,6566618616082e+00 +/- 1,4877079740203e+00
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2,1018360874495e+73
+R^2 = 0,6063233813564
+Adjusted R^2 = 0,458694649365
+RMSE (Root Mean Squared Error) = 4,584578592902e+36
+RSS (Residual Sum of Squares) = 1,891652478705e+74
+---------------------------------------------------------------------------------------
+Iterations = 11
+Status = success
+---------------------------------------------------------------------------------------
+[9.4.12 13:54	Plot: ''Graph3'']
+Non-linear Fit of dataset: Table2_6, using function: a*sqrt(x)*exp(-(x^k)/(k*b^k))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 8,4000000000000e+00 to x = 4,0000000000000e-01
+a = 1,0323615613233e+37 +/- 2,3962900252603e+36
+b = 3,8736074066817e+00 +/- 5,8108846598561e-01
+k = 2,6566282465421e+00 +/- 1,4876895084173e+00
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2,1018360872788e+73
+R^2 = 0,6063233813883
+Adjusted R^2 = 0,458694649409
+RMSE (Root Mean Squared Error) = 4,584578592716e+36
+RSS (Residual Sum of Squares) = 1,891652478551e+74
+---------------------------------------------------------------------------------------
+Iterations = 1
+Status = success
+---------------------------------------------------------------------------------------
+[9.4.12 13:54	Plot: ''Graph3'']
+Non-linear Fit of dataset: Table2_6, using function: a*sqrt(x)*exp(-(x^k)/(k*b^k))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 8,4000000000000e+00 to x = 4,0000000000000e-01
+a = 1,0323610873941e+37 +/- 2,3962836580589e+36
+b = 3,8736095657625e+00 +/- 5,8108813363318e-01
+k = 2,6566355904740e+00 +/- 1,4876931203842e+00
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2,1018360872752e+73
+R^2 = 0,606323381389
+Adjusted R^2 = 0,4586946494099
+RMSE (Root Mean Squared Error) = 4,584578592712e+36
+RSS (Residual Sum of Squares) = 1,891652478548e+74
+---------------------------------------------------------------------------------------
+Iterations = 1
+Status = success
+---------------------------------------------------------------------------------------
+[9.4.12 13:55	Plot: ''Graph3'']
+Non-linear Fit of dataset: Table2_6, using function: a*sqrt(x)*exp(-(x^2)/(2*b^2))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 8,4000000000000e+00 to x = 4,0000000000000e-01
+a = 1,1120539521182e+37 +/- 1,8366477158208e+36
+b = -3,8296920237119e+00 +/- 5,5397435129588e-01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,9907396557383e+73
+R^2 = 0,585702096398
+Adjusted R^2 = 0,4936358955976
+RMSE (Root Mean Squared Error) = 4,461770563059e+36
+RSS (Residual Sum of Squares) = 1,990739655738e+74
+---------------------------------------------------------------------------------------
+Iterations = 21
+Status = success
+---------------------------------------------------------------------------------------
+[9.4.12 13:56	Plot: ''Graph3'']
+Non-linear Fit of dataset: Table2_6, using function: a*sqrt(x)*exp(-(x^4)/(2*b^4))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 8,4000000000000e+00 to x = 4,0000000000000e-01
+a = 1,0000000000000e+00 +/- 1,6237218896237e+37
+b = 1,0000000000000e+00 +/- 9,5175526208434e+36
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,5765020849955e+74
+R^2 = -2,280898669774
+Adjusted R^2 = -3,009987263057
+RMSE (Root Mean Squared Error) = 1,255588342171e+37
+RSS (Residual Sum of Squares) = 1,576502084995e+75
+---------------------------------------------------------------------------------------
+Iterations = 1
+Status = cannot reach the specified tolerance in F
+---------------------------------------------------------------------------------------
+[9.4.12 13:56	Plot: ''Graph3'']
+Non-linear Fit of dataset: Table2_6, using function: a*sqrt(x)*exp(-(x^4)/(2*b^4))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 8,4000000000000e+00 to x = 4,0000000000000e-01
+a = 1,0246188747656e+36 +/- inf
+b = -1,4585130010963e-01 +/- inf
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,5765020849955e+74
+R^2 = -2,280898669774
+Adjusted R^2 = -3,009987263057
+RMSE (Root Mean Squared Error) = 1,255588342171e+37
+RSS (Residual Sum of Squares) = 1,576502084995e+75
+---------------------------------------------------------------------------------------
+Iterations = 3
+Status = singularity or extremely bad function behavior detected
+---------------------------------------------------------------------------------------
+[9.4.12 13:57	Plot: ''Graph3'']
+Non-linear Fit of dataset: Table2_6, using function: a*sqrt(x)*exp(-(x^4)/(4*b^4))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 8,4000000000000e+00 to x = 4,0000000000000e-01
+a = 9,5205516358176e+36 +/- 1,3776411737183e+36
+b = 3,9860913097486e+00 +/- 3,9737256307025e-01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2,0673128874327e+73
+R^2 = 0,569766245986
+Adjusted R^2 = 0,474158745094
+RMSE (Root Mean Squared Error) = 4,546771258193e+36
+RSS (Residual Sum of Squares) = 2,067312887433e+74
+---------------------------------------------------------------------------------------
+Iterations = 10
+Status = success
+---------------------------------------------------------------------------------------
+[9.4.12 13:57	Plot: ''Graph3'']
+Non-linear Fit of dataset: Table2_6, using function: a*sqrt(x)*exp(-(x^2)/(2*b^2))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 8,4000000000000e+00 to x = 4,0000000000000e-01
+a = 1,1120531172586e+37 +/- 1,8366464352604e+36
+b = 3,8296956917366e+00 +/- 5,5397507195547e-01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,9907396557630e+73
+R^2 = 0,5857020963928
+Adjusted R^2 = 0,4936358955913
+RMSE (Root Mean Squared Error) = 4,461770563087e+36
+RSS (Residual Sum of Squares) = 1,990739655763e+74
+---------------------------------------------------------------------------------------
+Iterations = 5
+Status = success
+---------------------------------------------------------------------------------------
+[9.4.12 13:58	Plot: ''Graph3'']
+Non-linear Fit of dataset: Table2_6, using function: a*sqrt(x)*exp(-(x^k)/(k*b^k))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 8,4000000000000e+00 to x = 4,0000000000000e-01
+a = 1,0323450177456e+37 +/- 2,3961768471005e+36
+b = 3,8736480604618e+00 +/- 5,8108730226787e-01
+k = 2,6567572584969e+00 +/- 1,4877645999331e+00
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2,1018360909466e+73
+R^2 = 0,6063233807014
+Adjusted R^2 = 0,4586946484644
+RMSE (Root Mean Squared Error) = 4,584578596716e+36
+RSS (Residual Sum of Squares) = 1,891652481852e+74
+---------------------------------------------------------------------------------------
+Iterations = 15
+Status = success
+---------------------------------------------------------------------------------------
+[9.4.12 14:05	Plot: ''Iv40'']
+
+Numerical integration of: Table2_6 using the Trapezoidal Rule
+Points: 12 from x = 0 to x = 9
+Peak at x = 2,43125	y = 2,028796483037e+37
+Area = -7,689841676899e+37
+-------------------------------------------------------------
+
+[9.4.12 14:18	Plot: ''Iv40'']
+
+Numerical integration of: Table2_6 using the Trapezoidal Rule
+Points: 12 from x = 0,4 to x = 8,4
+Peak at x = 2,43125	y = 7,714595543777e+31
+Area = -2,924099032553e+32
+-------------------------------------------------------------
+[9.4.12 14:31	Plot: ''Graph3'']
+
+Numerical integration of: Table2_7 using the Trapezoidal Rule
+Points: 12 from x = 0,4 to x = 8,4
+Peak at x = 2,43125	y = 3,004728888613e+13
+Area = -1,784853514886e+14
+-------------------------------------------------------------
+
+[9.4.12 14:36	Plot: ''Iv40'']
+
+Numerical integration of: Table2_6 using the Trapezoidal Rule
+Points: 12 from x = 0,4 to x = 8,4
+Peak at x = 2,43125	y = 7,714595543777e+31
+Area = -2,924099032553e+32
+-------------------------------------------------------------
+[9.4.12 14:37	Plot: ''Graph3'']
+
+Numerical integration of: Table2_7 using the Trapezoidal Rule
+Points: 12 from x = 0,4 to x = 8,4
+Peak at x = 2,43125	y = 4,813575679557e-06
+Area = -2,859335330848e-05
+-------------------------------------------------------------
+[9.4.12 15:08	Plot: ''Iv40'']
+Non-linear Fit of dataset: Table2_6, using function: a*sqrt(x)*exp(-(x^1)/(1*b^1))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 8,4000000000000e+00 to x = 4,0000000000000e-01
+a = 5,3581584593041e+31 +/- 1,4760058519587e+31
+b = 4,3827231280766e+00 +/- 1,4090737364601e+00
+--------------------------------------------------------------------------------------
+Chi^2/doF = 4,0735160162962e+62
+R^2 = 0,413702099819
+Adjusted R^2 = 0,2834136775565
+RMSE (Root Mean Squared Error) = 2,018295324351e+31
+RSS (Residual Sum of Squares) = 4,073516016296e+63
+---------------------------------------------------------------------------------------
+Iterations = 12
+Status = success
+---------------------------------------------------------------------------------------
+[9.4.12 15:09	Plot: ''Iv40'']
+Non-linear Fit of dataset: Table2_6, using function: a*sqrt(x)*exp(-(x^2)/(2*b^2))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 8,4000000000000e+00 to x = 4,0000000000000e-01
+a = 1,0000000000000e+00 +/- 6,8001757847533e+31
+b = 1,0000000000000e+00 +/- 4,8535652703754e+31
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2,2795226240866e+63
+R^2 = -2,280898669774
+Adjusted R^2 = -3,009987263058
+RMSE (Root Mean Squared Error) = 4,77443465144e+31
+RSS (Residual Sum of Squares) = 2,279522624087e+64
+---------------------------------------------------------------------------------------
+Iterations = 1
+Status = cannot reach the specified tolerance in F
+---------------------------------------------------------------------------------------
+[9.4.12 15:09	Plot: ''Iv40'']
+Non-linear Fit of dataset: Table2_6, using function: a*sqrt(x)*exp(-(x^2)/(2*b^2))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 8,4000000000000e+00 to x = 4,0000000000000e-01
+a = 4,2286307194991e+31 +/- 6,9839291110751e+30
+b = 3,8297007502979e+00 +/- 5,5397606663035e-01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2,8784840358375e+62
+R^2 = 0,5857020963795
+Adjusted R^2 = 0,4936358955749
+RMSE (Root Mean Squared Error) = 1,696609570832e+31
+RSS (Residual Sum of Squares) = 2,878484035838e+63
+---------------------------------------------------------------------------------------
+Iterations = 6
+Status = success
+---------------------------------------------------------------------------------------
+[9.4.12 15:10	Plot: ''Iv40'']
+Non-linear Fit of dataset: Table2_6, using function: a*sqrt(x)*exp(-(x^k)/(k*b^k))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 8,4000000000000e+00 to x = 4,0000000000000e-01
+a = 1,0000000000000e+31 +/- 3,4289056567579e+32
+b = 1,0000000000000e+00 +/- 1,3062289007887e+01
+k = 1,0000000000000e+00 +/- 3,0219497797112e+01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2,4259994239605e+63
+R^2 = -2,142549400018
+Adjusted R^2 = -3,321005425025
+RMSE (Root Mean Squared Error) = 4,925443557651e+31
+RSS (Residual Sum of Squares) = 2,183399481564e+64
+---------------------------------------------------------------------------------------
+Iterations = 1
+Status = singularity or extremely bad function behavior detected
+---------------------------------------------------------------------------------------
+[9.4.12 15:10	Plot: ''Iv40'']
+Non-linear Fit of dataset: Table2_6, using function: a*sqrt(x)*exp(-(x^k)/(k*b^k))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 8,4000000000000e+00 to x = 4,0000000000000e-01
+a = 3,9256201489714e+31 +/- 9,1121732202094e+30
+b = 3,8736006798639e+00 +/- 5,8109083722418e-01
+k = 2,6565728159520e+00 +/- 1,4876603877709e+00
+--------------------------------------------------------------------------------------
+Chi^2/doF = 3,0391224726558e+62
+R^2 = 0,6063233812548
+Adjusted R^2 = 0,4586946492253
+RMSE (Root Mean Squared Error) = 1,743307911029e+31
+RSS (Residual Sum of Squares) = 2,73521022539e+63
+---------------------------------------------------------------------------------------
+Iterations = 20
+Status = success
+---------------------------------------------------------------------------------------
+[9.4.12 16:26	Plot: ''Graph1'']
+Non-linear Fit of dataset: iv32_2, using function: a*x+b
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = -4,5000000000000e+01 to x = -3,5000000000000e+01
+a = 2,5090909117413e-01 +/- 4,7334845845923e-03
+b = 4,9090910158340e-01 +/- 1,8993014869456e-01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2,4646464646464e-03
+R^2 = 0,9968071185554
+Adjusted R^2 = 0,9960088981942
+RMSE (Root Mean Squared Error) = 0,04964520585763
+RSS (Residual Sum of Squares) = 0,02218181818182
+---------------------------------------------------------------------------------------
+Iterations = 2
+Status = success
+---------------------------------------------------------------------------------------
+[9.4.12 16:40	Plot: ''iv32dist'']
+Non-linear Fit of dataset: Table1_6, using function: a*sqrt(x)*exp(-(x^1)/(1*b^1))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 1,1400000000000e+01 to x = 4,0000000000000e-01
+a = 6,7815952278611e+31 +/- 1,2758940114975e+31
+b = 2,5719926735023e+00 +/- 4,5498428339933e-01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,5072950578593e+62
+R^2 = 0,7277705439388
+Adjusted R^2 = 0,6823989679286
+RMSE (Root Mean Squared Error) = 1,227719454053e+31
+RSS (Residual Sum of Squares) = 1,959483575217e+63
+---------------------------------------------------------------------------------------
+Iterations = 12
+Status = success
+---------------------------------------------------------------------------------------
+[9.4.12 16:40	Plot: ''iv32dist'']
+Non-linear Fit of dataset: Table1_6, using function: a*sqrt(x)*exp(-(x^2)/(2*b^2))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 1,1400000000000e+01 to x = 4,0000000000000e-01
+a = 1,0000000000000e+00 +/- 4,8077826971660e+31
+b = 1,0000000000000e+00 +/- 3,4716763805634e+31
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,1327260747018e+63
+R^2 = -1,04579323454
+Adjusted R^2 = -1,38675877363
+RMSE (Root Mean Squared Error) = 3,36559961181e+31
+RSS (Residual Sum of Squares) = 1,472543897112e+64
+---------------------------------------------------------------------------------------
+Iterations = 1
+Status = cannot reach the specified tolerance in F
+---------------------------------------------------------------------------------------
+[9.4.12 16:41	Plot: ''iv32dist'']
+Non-linear Fit of dataset: Table1_6, using function: a*sqrt(x)*exp(-(x^2)/(2*b^2))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 1,1400000000000e+01 to x = 4,0000000000000e-01
+a = 4,8400328241695e+31 +/- 4,7511421795035e+30
+b = 2,6198326977524e+00 +/- 2,0974963553236e-01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 6,8924062775188e+61
+R^2 = 0,8755176697423
+Adjusted R^2 = 0,8547706146994
+RMSE (Root Mean Squared Error) = 8,302051720821e+30
+RSS (Residual Sum of Squares) = 8,960128160774e+62
+---------------------------------------------------------------------------------------
+Iterations = 7
+Status = success
+---------------------------------------------------------------------------------------
+[9.4.12 16:42	Plot: ''iv32dist'']
+Non-linear Fit of dataset: Table1_6, using function: a*sqrt(x)*exp(-(x^k)/(k*b^k))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 1,1400000000000e+01 to x = 4,0000000000000e-01
+a = 4,3206923407901e+31 +/- 5,0649474968100e+30
+b = 2,6936972545536e+00 +/- 2,0577864814893e-01
+k = 3,1026682965424e+00 +/- 9,1690329192212e-01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 5,9824942831992e+61
+R^2 = 0,9002628334198
+Adjusted R^2 = 0,8730617879889
+RMSE (Root Mean Squared Error) = 7,734658546568e+30
+RSS (Residual Sum of Squares) = 7,178993139839e+62
+---------------------------------------------------------------------------------------
+Iterations = 17
+Status = success
+---------------------------------------------------------------------------------------
+
+[9.4.12 16:58	Plot: ''iv32dist'']
+
+Numerical integration of: Table1_6 using the Trapezoidal Rule
+Points: 15 from x = 0,4 to x = 11,4
+Peak at x = 1,92	y = 6,492879150782e+31
+Area = -2,051932325949e+32
+-------------------------------------------------------------
+[9.4.12 17:15	Plot: ''Graph2'']
+
+Numerical integration of: iv40-fit_7 using the Trapezoidal Rule
+Points: 12 from x = 0,4 to x = 8,4
+Peak at x = 2,43125	y = 4,813575679557e-06
+Area = -2,859335330848e-05
+-------------------------------------------------------------
+[9.4.12 17:18	Plot: ''Graph2'']
+
+Numerical integration of: Table1_7 using the Trapezoidal Rule
+Points: 15 from x = 0,4 to x = 11,4
+Peak at x = 2,48	y = 3,537101266341e-06
+Area = -1,604757275866e-05
+-------------------------------------------------------------
+
+
+[14.4.12 15:37	Plot: ''iv40druv-pict'']
+Non-linear Fit of dataset: iv40druv_6, using function: a*sqrt(x)*exp(-(x^1)/(1*b^1))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 1,1400000000000e+01 to x = 4,0000000000000e-01
+a = 4,3022091503126e+32 +/- 1,1131106711538e+31
+b = 1,8891313051499e+01 +/- 1,2832410478454e+00
+--------------------------------------------------------------------------------------
+Chi^2/doF = 9,1071112633231e+62
+R^2 = 0,9734577655646
+Adjusted R^2 = 0,9690340598254
+RMSE (Root Mean Squared Error) = 3,017799076036e+31
+RSS (Residual Sum of Squares) = 1,183924464232e+64
+---------------------------------------------------------------------------------------
+Iterations = 5
+Status = success
+---------------------------------------------------------------------------------------
+[14.4.12 15:40	Plot: ''iv40druv-pict'']
+Non-linear Fit of dataset: iv40druv_6, using function: a*sqrt(x)*exp(-(x^2)/(2*b^2))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 1,1400000000000e+01 to x = 4,0000000000000e-01
+a = 3,7465643134506e+32 +/- 1,0216583987154e+31
+b = 1,1251079895668e+01 +/- 5,8911673156938e-01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,9165889470480e+63
+R^2 = 0,9441419439403
+Adjusted R^2 = 0,9348322679304
+RMSE (Root Mean Squared Error) = 4,377886415895e+31
+RSS (Residual Sum of Squares) = 2,491565631162e+64
+---------------------------------------------------------------------------------------
+Iterations = 8
+Status = success
+---------------------------------------------------------------------------------------
+[14.4.12 15:42	Plot: ''iv40druv-pict'']
+Non-linear Fit of dataset: iv40druv_6, using function: a*sqrt(x)*exp(-(x^k)/(k*b^k))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 1,1400000000000e+01 to x = 4,0000000000000e-01
+a = 1,0000000000000e+32 +/- 3,4260525480967e+32
+b = 5,0000000000000e+00 +/- 9,9308520393175e+00
+k = 2,0000000000000e+00 +/- 1,4348794457358e+01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 4,2054047705007e+65
+R^2 = -10,31364468122
+Adjusted R^2 = -13,39918413974
+RMSE (Root Mean Squared Error) = 6,484909228741e+32
+RSS (Residual Sum of Squares) = 5,046485724601e+66
+---------------------------------------------------------------------------------------
+Iterations = 1
+Status = singularity or extremely bad function behavior detected
+---------------------------------------------------------------------------------------
+[14.4.12 15:43	Plot: ''iv40druv-pict'']
+Non-linear Fit of dataset: iv40druv_6, using function: a*sqrt(x)*exp(-(x^k)/(k*b^k))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 1,1400000000000e+01 to x = 4,0000000000000e-01
+a = 4,2900692828428e+32 +/- 3,0304910889335e+31
+b = 1,8637319165136e+01 +/- 5,8338735483409e+00
+k = 1,0114117218243e+00 +/- 2,6297216416618e-01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 9,8638047257733e+62
+R^2 = 0,9734637715125
+Adjusted R^2 = 0,9662266182887
+RMSE (Root Mean Squared Error) = 3,140669470953e+31
+RSS (Residual Sum of Squares) = 1,183656567093e+64
+---------------------------------------------------------------------------------------
+Iterations = 12
+Status = success
+---------------------------------------------------------------------------------------
+[14.4.12 15:53	Plot: ''iv32druv-img'']
+Non-linear Fit of dataset: iv32druv_8, using function: a*sqrt(x)*exp(-(x^1)/(1*b^1))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 5,4000000000000e+00 to x = 4,0000000000000e-01
+a = 2,9463854786781e+32 +/- 1,0223401226095e+31
+b = 1,1852298740424e+01 +/- 1,4083881941992e+00
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2,4149106709447e+62
+R^2 = 0,9758424858454
+Adjusted R^2 = 0,9677899811272
+RMSE (Root Mean Squared Error) = 1,553998285374e+31
+RSS (Residual Sum of Squares) = 1,690437469661e+63
+---------------------------------------------------------------------------------------
+Iterations = 5
+Status = success
+---------------------------------------------------------------------------------------
+[14.4.12 15:55	Plot: ''iv32druv-img'']
+Non-linear Fit of dataset: iv32druv_8, using function: a*sqrt(x)*exp(-(x^2)/(2*b^2))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 5,4000000000000e+00 to x = 4,0000000000000e-01
+a = 2,6529102118243e+32 +/- 2,5176853371659e+30
+b = -6,1097243061308e+00 +/- 1,4405369707826e-01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 3,9344902777174e+61
+R^2 = 0,9960641399403
+Adjusted R^2 = 0,9947521865871
+RMSE (Root Mean Squared Error) = 6,27255153643e+30
+RSS (Residual Sum of Squares) = 2,754143194402e+62
+---------------------------------------------------------------------------------------
+Iterations = 7
+Status = success
+---------------------------------------------------------------------------------------
+[14.4.12 15:56	Plot: ''iv32druv-img'']
+Non-linear Fit of dataset: iv32druv_8, using function: a*sqrt(x)*exp(-(x^2)/(2*b^2))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 5,4000000000000e+00 to x = 4,0000000000000e-01
+a = 2,6529102428602e+32 +/- 2,5176853559713e+30
+b = 6,1097240814119e+00 +/- 1,4405368218018e-01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 3,9344902777163e+61
+R^2 = 0,9960641399403
+Adjusted R^2 = 0,9947521865871
+RMSE (Root Mean Squared Error) = 6,272551536429e+30
+RSS (Residual Sum of Squares) = 2,754143194401e+62
+---------------------------------------------------------------------------------------
+Iterations = 4
+Status = success
+---------------------------------------------------------------------------------------
+[14.4.12 16:00	Plot: ''iv32druv-img'']
+Non-linear Fit of dataset: iv32druv_8, using function: a*sqrt(x)*exp(-(x^k)/(k*b^k))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 1,5400000000000e+01 to x = 4,0000000000000e-01
+a = 5,4926100482584e+34 +/- 2,3138144032772e+36
+b = 1,7416265834153e+20 +/- 5,8739471032736e+22
+k = 3,5605504105925e-02 +/- 2,6621314333824e-01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,4818886824707e+63
+R^2 = 0,9160980611206
+Adjusted R^2 = 0,8993176733447
+RMSE (Root Mean Squared Error) = 3,849530727856e+31
+RSS (Residual Sum of Squares) = 2,371021891953e+64
+---------------------------------------------------------------------------------------
+Iterations = 1000
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[14.4.12 16:01	Plot: ''iv32druv-img'']
+Non-linear Fit of dataset: iv32druv_8, using function: a*sqrt(x)*exp(-(x^k)/(k*b^k))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 5,4000000000000e+00 to x = 4,0000000000000e-01
+a = 2,6181741368233e+32 +/- 4,3986541278046e+30
+b = 5,7728743623713e+00 +/- 3,4877421311258e-01
+k = 2,2438715867580e+00 +/- 2,8636646516363e-01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 3,9530607249296e+61
+R^2 = 0,9966104825953
+Adjusted R^2 = 0,9945767721525
+RMSE (Root Mean Squared Error) = 6,287337055487e+30
+RSS (Residual Sum of Squares) = 2,371836434958e+62
+---------------------------------------------------------------------------------------
+Iterations = 6
+Status = success
+---------------------------------------------------------------------------------------
+[14.4.12 16:13	Plot: ''iv40druv-pict'']
+Non-linear Fit of dataset: iv40druv_6, using function: a*sqrt(x)*exp(-(x^1)/(1*b^1))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 7,4000000000000e+00 to x = 4,0000000000000e-01
+a = 4,3757967194338e+32 +/- 1,3216879715455e+31
+b = 1,7758912946728e+01 +/- 1,9939628082334e+00
+--------------------------------------------------------------------------------------
+Chi^2/doF = 7,2646960717844e+62
+R^2 = 0,9798942251982
+Adjusted R^2 = 0,9748677814978
+RMSE (Root Mean Squared Error) = 2,69531001404e+31
+RSS (Residual Sum of Squares) = 6,538226464606e+63
+---------------------------------------------------------------------------------------
+Iterations = 8
+Status = success
+---------------------------------------------------------------------------------------
+[14.4.12 16:14	Plot: ''iv40druv-pict'']
+Non-linear Fit of dataset: iv40druv_6, using function: a*sqrt(x)*exp(-(x^2)/(2*b^2))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 7,4000000000000e+00 to x = 4,0000000000000e-01
+a = 4,0000482118049e+32 +/- 3,5405808434944e+30
+b = 8,6466168206808e+00 +/- 1,9889391454177e-01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,2849964867096e+62
+R^2 = 0,9964436433778
+Adjusted R^2 = 0,9955545542223
+RMSE (Root Mean Squared Error) = 1,133576855228e+31
+RSS (Residual Sum of Squares) = 1,156496838039e+63
+---------------------------------------------------------------------------------------
+Iterations = 5
+Status = success
+---------------------------------------------------------------------------------------
+[14.4.12 16:14	Plot: ''iv40druv-pict'']
+Non-linear Fit of dataset: iv40druv_6, using function: a*sqrt(x)*exp(-(x^k)/(k*b^k))
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 7,4000000000000e+00 to x = 4,0000000000000e-01
+a = 3,9222237499916e+32 +/- 4,4762296118215e+30
+b = 7,7608759566642e+00 +/- 3,6324643657205e-01
+k = 2,4737679471163e+00 +/- 2,5973462426002e-01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 9,1434789533087e+61
+R^2 = 0,9977506226836
+Adjusted R^2 = 0,9967866038337
+RMSE (Root Mean Squared Error) = 9,562154021615e+30
+RSS (Residual Sum of Squares) = 7,314783162647e+62
+---------------------------------------------------------------------------------------
+Iterations = 7
+Status = success
+---------------------------------------------------------------------------------------
+</log>

@@ -1,0 +1,411 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	5
+<table>
+Table1	30	3	3.4.12 14:31
+geometry	196	484	-1	-1	minimized	
+header	1[X]	2[Y]	3[Y]
+ColWidth	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0
+HiddenColumn	0	0	0
+Comments				
+WindowLabel		2
+<data>
+0	405		18.8888888889
+1	606		35.8674463938
+2	877		39.7660818713
+3	1090		55.1656920078
+4	1200		68.2261208577
+5	1260		81.4814814815
+6	1350		115.0097465887
+7	1440		148.343079922
+</data>
+</table>
+<table>
+Table2	30	3	3.4.12 14:32
+geometry	0	484	-1	-1	minimized	
+header	1[X]	2[Y]	3[Y]
+ColWidth	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0
+HiddenColumn	0	0	0
+Comments				
+WindowLabel		2
+<data>
+0	1170		196.8810916179
+1	1050		186.7446393762
+2	936		166.8615984405
+3	860		149.5126705653
+4	816		135.0877192982
+5	691		119.6881091618
+6	558		109.1617933723
+7	360		90.6432748538
+8	230		51.8518518519
+</data>
+</table>
+<table>
+Table3	30	3	3.4.12 14:51
+geometry	0	0	445	220	
+header	1[X]	3[Y]	5[Y]
+ColWidth	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0
+HiddenColumn	0	0	0
+Comments				
+WindowLabel		2
+<data>
+0	0	0.0174064404	0.0195822454
+1	2	0.1566579634	0.0696257615
+2	4	0.2088772846	0.0826805918
+3	6	0.2806788512	0.1392515231
+4	8	0.3590078329	0.1588337685
+5	10	0.411227154	0.1653611836
+6	12	0.4765013055	0.2001740644
+7	14	0.5548302872	0.2067014795
+8	16	0.5635335074	0.1588337685
+9	18	0.6157528285	0.1501305483
+10	20	0.6331592689	0.1501305483
+</data>
+</table>
+<multiLayer>
+Graph1	1	1	3.4.12 14:32
+geometry	515	25	527	461	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	509	398
+<PageGeometry>0.00963391	0.0121065	0.980732	0.96368</PageGeometry>
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	<i>U</i> [V]	<i>I</i> [mA]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table1_1	Table1_3	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+curve	Table2_1	Table2_3	1	0	#ff0000	0	1	7	2	#000000	-1	0	#000000	14	1	2	0	0	29	1
+scale	0	0	210	0	8	5	0	0
+scale	1	0	210	0	8	5	0	0
+scale	2	200	1600	0	8	5	0	0
+scale	3	200	1600	0	8	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<line>	989.908256880734	75.7478005865103	1166.51376146789	68.9736070381232	1	#000000	SolidLine	1	0	4	45	1	1</line>
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>244.95412844037</x>
+<y>200.76246334311</y>
+<right>550</right>
+<bottom>185.982404692082</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)vzrůstající napětí
+\l(2)klesající napětí
+</Text>
+<Font>Sans Serif	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>655.96330275229</x>
+<y>83.75366568915</y>
+<right>550</right>
+<bottom>185.982404692082</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+zápalné napětí
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>0</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<multiLayer>
+Graph2	1	1	3.4.12 14:51
+geometry	445	0	519	461	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	501	398
+<PageGeometry>0.00978474	0.0121065	0.980431	0.96368</PageGeometry>
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	<i>t</i> [min]	<i>n</i><sub>perox</sub> [mmol/l]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table3_1	Table3_3	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+curve	Table3_1	Table3_5	1	0	#ff0000	0	1	7	2	#000000	-1	0	#000000	14	1	2	0	0	29	1
+<Function>
+<Type>0</Type>
+<Title>NonLinearFit1</Title>
+<Expression>a*x</Expression>
+<Variable>x</Variable>
+<Range>0	14</Range>
+<Points>100</Points>
+<Constant>a	0.041612271540461</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>NonLinearFit2</Title>
+<Expression>a*x</Expression>
+<Variable>x</Variable>
+<Range>0	14</Range>
+<Points>100</Points>
+<Constant>a	0.017010133032852</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>1</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	-0.1	0.7	0	9	5	0	0
+scale	1	-0.1	0.7	0	8	5	0	0
+scale	2	-5	25	0	7	5	0	0
+scale	3	-5	25	0	6	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-0.44874715261959</x>
+<y>0.6791788856305</y>
+<right>5.215</right>
+<bottom>0.611526479750779</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)anodová část aparatury
+\l(3)fit
+\l(2)katodová část aparatury
+\l(4)fit
+</Text>
+<Font>Sans Serif	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<open>1</open>
+<log>
+[3.4.12 14:59	Plot: ''Graph2'']
+Linear Regression of dataset: Table3_3, using function: A*x
+Weighting Method: No weighting
+From x = 0,0000000000000e+00 to x = 2,0000000000000e+01
+A (slope) = 3,6406587319351e-02 +/- 1,5410995483355e-03
+--------------------------------------------------------------------------------------
+Chi^2/doF = 3,6574812395352e-03
+R^2 = 0,9117156830898
+Adjusted R^2 = 0,9019063145442
+RMSE (Root Mean Squared Error) = 0,06047711335319
+RSS (Residual Sum of Squares) = 0,03657481239535
+---------------------------------------------------------------------------------------
+[3.4.12 14:59	Plot: ''Graph2'']
+Linear Regression of dataset: Table3_5, using function: A*x
+Weighting Method: No weighting
+From x = 0,0000000000000e+00 to x = 2,0000000000000e+01
+A (slope) = 1,1540243915584e-02 +/- 1,4423897499664e-03
+--------------------------------------------------------------------------------------
+Chi^2/doF = 3,2039518138444e-03
+R^2 = 0,005934799995876
+Adjusted R^2 = -0,1045168888935
+RMSE (Root Mean Squared Error) = 0,05660346114722
+RSS (Residual Sum of Squares) = 0,03203951813844
+---------------------------------------------------------------------------------------
+[3.4.12 15:01	Plot: ''Graph2'']
+Non-linear Fit of dataset: Table3_3, using function: a*x
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 0,0000000000000e+00 to x = 1,4000000000000e+01
+a = 4,1612271540461e-02 +/- 1,6330559556925e-03
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,4934481832171e-03
+R^2 = 0,9525881156463
+Adjusted R^2 = 0,9446861349207
+RMSE (Root Mean Squared Error) = 0,03864515730615
+RSS (Residual Sum of Squares) = 0,01045413728252
+---------------------------------------------------------------------------------------
+Iterations = 2
+Status = success
+---------------------------------------------------------------------------------------
+[3.4.12 15:01	Plot: ''Graph2'']
+Non-linear Fit of dataset: Table3_5, using function: a*x
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 0,0000000000000e+00 to x = 2,0000000000000e+01
+a = 1,1540243914591e-02 +/- 1,4423897495182e-03
+--------------------------------------------------------------------------------------
+Chi^2/doF = 3,2039518138444e-03
+R^2 = 0,005934799995876
+Adjusted R^2 = -0,1045168888935
+RMSE (Root Mean Squared Error) = 0,05660346114722
+RSS (Residual Sum of Squares) = 0,03203951813844
+---------------------------------------------------------------------------------------
+Iterations = 2
+Status = success
+---------------------------------------------------------------------------------------
+[3.4.12 15:02	Plot: ''Graph2'']
+Non-linear Fit of dataset: Table3_5, using function: a*x
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 0,0000000000000e+00 to x = 2,0000000000000e+01
+a = 1,1540243914591e-02 +/- 1,4423897495182e-03
+--------------------------------------------------------------------------------------
+Chi^2/doF = 3,2039518138444e-03
+R^2 = 0,005934799995876
+Adjusted R^2 = -0,1045168888935
+RMSE (Root Mean Squared Error) = 0,05660346114722
+RSS (Residual Sum of Squares) = 0,03203951813844
+---------------------------------------------------------------------------------------
+Iterations = 2
+Status = success
+---------------------------------------------------------------------------------------
+[3.4.12 15:02	Plot: ''Graph2'']
+Non-linear Fit of dataset: Table3_5, using function: a*x
+Weighting Method: No weighting
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+From x = 0,0000000000000e+00 to x = 1,4000000000000e+01
+a = 1,7010133032852e-02 +/- 1,1057516883966e-03
+--------------------------------------------------------------------------------------
+Chi^2/doF = 6,8470460522211e-04
+R^2 = 0,8456409934687
+Adjusted R^2 = 0,8199144923802
+RMSE (Root Mean Squared Error) = 0,02616686082093
+RSS (Residual Sum of Squares) = 0,004792932236555
+---------------------------------------------------------------------------------------
+Iterations = 2
+Status = success
+---------------------------------------------------------------------------------------
+
+
+</log>

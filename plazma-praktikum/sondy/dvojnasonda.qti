@@ -1,0 +1,217 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	3
+<table>
+Table1	30	2	24.3.12 15:33
+geometry	0	0	445	220	
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	7.2	-14
+1	16.7	-4.4
+2	17.7	-3.6
+3	20.2	-1.1
+4	21.1	-0.2
+5	24	2.5
+6	24.5	3.1
+7	28.25	7
+8	30.5	9.5
+9	36	14.9
+10	36.65	15.5
+</data>
+</table>
+<table>
+Table2	30	2	24.3.12 15:47
+geometry	0	220	445	220	
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	0.75	-25.4
+1	2.9	-20.8
+2	4	-18.7
+3	5	-16.5
+4	6.65	-13.1
+5	7.65	-11.2
+6	14.2	2.1
+7	16.9	7.6
+8	19.6	13.2
+9	22.8	19.4
+10	25.85	26.5
+</data>
+</table>
+<multiLayer>
+Graph1	1	1	24.3.12 15:38
+geometry	445	0	531	461	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	513	398
+<PageGeometry>0.00956023	0.0121065	0.98088	0.96368</PageGeometry>
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	<i>x</i> [cm]	<i>I</i> [μA]		<i>U</i> [V]	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table1_1	Table1_2	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	1	0	29	1
+<Function>
+<Type>0</Type>
+<Title>LinearFit1</Title>
+<Expression>A*x+B</Expression>
+<Variable>x</Variable>
+<Range>7.2	36.65</Range>
+<Points>2</Points>
+<Constant>A	1.0043885349673</Constant>
+<Constant>B	-21.3412097263097</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>1</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+curve	Table2_1	Table2_2	1	0	#00ff00	0	1	7	2	#000000	-1	0	#000000	14	1	2	0	0	29	1
+<Function>
+<Type>0</Type>
+<Title>LinearFit2</Title>
+<Expression>A*x+B</Expression>
+<Variable>x</Variable>
+<Range>0.75	25.85</Range>
+<Points>2</Points>
+<Constant>A	2.04522928994083</Constant>
+<Constant>B	-26.8374963017751</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>1</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	-30	30	0	8	5	0	0
+scale	1	-15	20	0	8	5	0	0
+scale	2	0	40	0	9	5	0	0
+scale	3	0	40	0	8	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>26.331658291457</x>
+<y>-15.043988269795</y>
+<right>37.7889447236181</right>
+<bottom>-27.5366568914956</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)<i>U</i>
+\l(2)fit A*x+B
+\l(3)<i>I</i>
+\l(4)fit A*x+B
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<open>1</open>
+<log>
+[24.3.12 15:38	Plot: ''Graph1'']
+Linear Regression of dataset: Table1_2, using function: A*x+B
+Weighting Method: No weighting
+From x = 7,2000000000000e+00 to x = 3,6650000000000e+01
+B (y-intercept) = -2,1341209726310e+01 +/- 1,3512831137978e-01
+A (slope) = 1,0043885349673e+00 +/- 5,3410153223332e-03
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2,1752101291451e-02
+R^2 = 0,9997455654114
+Adjusted R^2 = 0,9996819567642
+RMSE (Root Mean Squared Error) = 0,1474859359107
+RSS (Residual Sum of Squares) = 0,1957689116231
+---------------------------------------------------------------------------------------
+[24.3.12 15:52	Plot: ''Graph1'']
+Linear Regression of dataset: Table2_2, using function: A*x+B
+Weighting Method: No weighting
+From x = 7,5000000000000e-01 to x = 2,5850000000000e+01
+B (y-intercept) = -2,6837496301775e+01 +/- 1,1582150509773e-01
+A (slope) = 2,0452292899408e+00 +/- 8,1672215071205e-03
+--------------------------------------------------------------------------------------
+Chi^2/doF = 5,0830498027613e-02
+R^2 = 0,999856502331
+Adjusted R^2 = 0,9998206279138
+RMSE (Root Mean Squared Error) = 0,2254561997986
+RSS (Residual Sum of Squares) = 0,4574744822485
+---------------------------------------------------------------------------------------
+
+</log>
