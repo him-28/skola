@@ -8,24 +8,8 @@ pdfdraft2: bibtex
 
 grafika: grafika/DLCDOS.pdf grafika/layerscheme.pdf grafika/reaktor.pdf grafika/dlcgrowth.pdf grafika/dlcgrowthH.pdf grafika/schema-elipsometru.pdf grafika/rutherford.pdf grafika/ERDA.pdf grafika/DLCtypes.pdf
 
-grafika/DLCDOS.pdf:
-	inkscape --without-gui --export-pdf=grafika/DLCDOS.pdf grafika/DLCDOS.svg
-grafika/layerscheme.pdf:
-	inkscape --without-gui --export-pdf=grafika/layerscheme.pdf grafika/layerscheme.svg
-grafika/reaktor.pdf:
-	inkscape --without-gui --export-pdf=grafika/reaktor.pdf grafika/reaktor.svg
-grafika/dlcgrowth.pdf:
-	inkscape --without-gui --export-pdf=grafika/dlcgrowth.pdf grafika/dlcgrowth.svg
-grafika/dlcgrowthH.pdf:
-	inkscape --without-gui --export-pdf=grafika/dlcgrowthH.pdf grafika/dlcgrowthH.svg
-grafika/schema-elipsometru.pdf:
-	inkscape --without-gui --export-pdf=grafika/schema-elipsometru.pdf grafika/schema-elipsometru.svg
-grafika/rutherford.pdf:
-	inkscape --without-gui --export-pdf=grafika/rutherford.pdf grafika/rutherford.svg
-grafika/ERDA.pdf:
-	inkscape --without-gui --export-pdf=grafika/ERDA.pdf grafika/ERDA.svg
-grafika/DLCtypes.pdf:
-	inkscape --without-gui --export-pdf=grafika/DLCtypes.pdf grafika/DLCtypes.svg
+%.pdf: %.svg
+	inkscape --without-gui --export-pdf=$@ $<
 
 programy/deconvolute:
 	gcc programy/deconvolute.c -o programy/deconvolute -std=c99 -g
