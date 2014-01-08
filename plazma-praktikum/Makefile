@@ -1,8 +1,13 @@
 SUBDIRS = ecr koncentrace paschen peroxid rozdelfunkce sondy townsend vyhasinani
 
-.PHONY: all clean
+.PHONY: all clean $(SUBDIRS)
 
-all clean:
+all: $(SUBDIRS)
+
+$(SUBDIRS):
+	$(MAKE) -C $@
+
+clean:
 	for dir in $(SUBDIRS); do \
 		$(MAKE) -C $$dir $@; \
 	done

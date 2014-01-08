@@ -1,6 +1,6 @@
 all: ecr.pdf 
 
-%.pdf: %.aux %.tex grafika
+%.pdf: %.tex %.aux
 	pdflatex $<
 
 %.aux: %.tex grafika

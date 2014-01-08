@@ -1,10 +1,10 @@
 all: sondy.pdf 
 
-%.pdf: %.tex %.aux
-	pdflatex %.tex
+%.pdf: %.aux
+	pdflatex sondy.tex
 
 %.aux: %.tex
-	pdflatex %.tex
+	pdflatex $<
 
 clean:
 	rm -rf *.aux *.out *.log sondy.pdf *~

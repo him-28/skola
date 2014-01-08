@@ -1,23 +1,14 @@
 all: paschen.pdf 
 
-%.pdf: %.tex %.aux grafika
-	pdflatex $<
+paschen.pdf: paschen.aux
+	pdflatex paschen.tex
 
 %.aux: %.tex grafika
 	pdflatex $<
 
 grafika: nakres1.pdf nakres2.pdf nakres3.pdf VA.pdf Graph1.pdf Graph2.pdf Graph3.pdf
 
-nakres1.pdf: nakres1.svg
-	inkscape --without-gui --export-pdf=$@ $<
-
-nakres2.pdf: nakres2.svg
-	inkscape --without-gui --export-pdf=$@ $<
-
-nakres3.pdf: nakres3.svg
-	inkscape --without-gui --export-pdf=$@ $<
-
-VA.pdf: VA.svg
+%.pdf: %.svg
 	inkscape --without-gui --export-pdf=$@ $<
 
 clean:
