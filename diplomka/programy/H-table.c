@@ -32,13 +32,13 @@ int main(int argc, char *argv[]){
 		char *sample;
 		double values[sizeof(datacols)/sizeof(datacols[0])];
 	} datarows[] = {
-		{"vysledky/out-multifit", "CH30A", "1", 0.326, 0},
-		{"vysledky/out-multifit", "CH83A", "4", 0.48, 0}, 
-		{"vysledky/out-multifit", "CH88A", "2", 0.38, 0}, 
-		{"vysledky/out-multifit", "CH90A", "3", 0.31, 0},
-		{"vysledky/out-CH87A", "CH87A", "", 0.48, 0},
-		{"vysledky/out-CH89A", "CH89A", "", 0.35, 0},
-		{"vysledky/out-CH30C", "CH30C", "", 0.306, 0} 
+		{"../grafy/vysledky/out-multifit", "CH30A", "1", 0.326, 0},
+		{"../grafy/vysledky/out-multifit", "CH83A", "4", 0.48, 0}, 
+		{"../grafy/vysledky/out-multifit", "CH88A", "2", 0.38, 0}, 
+		{"../grafy/vysledky/out-multifit", "CH90A", "3", 0.31, 0},
+		{"../grafy/vysledky/out-CH87A", "CH87A", "", 0.48, 0},
+		{"../grafy/vysledky/out-CH89A", "CH89A", "", 0.35, 0},
+		{"../grafy/vysledky/out-CH30C", "CH30C", "", 0.306, 0} 
 	};
 
 

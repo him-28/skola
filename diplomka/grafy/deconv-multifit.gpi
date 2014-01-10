@@ -17,7 +17,7 @@ set lmargin 0.2
 set key at screen 0.99, screen 1 horizontal samplen 2 width 2.5
 set origin 2,2
 set size 1,1 
-load "grafy/CH30Adeconv.gpi"
+load "CH30Adeconv.gpi"
 set nokey
 
 set ylabel "{/Symbol e}_i"
@@ -28,13 +28,13 @@ set size 0.40, 0.43
 set origin 0.115,0.51
 set label 1 "CH30A" at graph 0.08, graph 0.92
 
-load "grafy/CH30Adeconv.gpi"
+load "CH30Adeconv.gpi"
 
 set ylabel ""
 set label 1 "CH83A" at graph 0.08, graph 0.92
 set origin 0.6,0.51
 
-load "grafy/CH83Adeconv.gpi"
+load "CH83Adeconv.gpi"
 
 set ylabel "{/Symbol e}_i"
 set xlabel "Vlnočet, {/Symbol n} [cm^{-1}]"
@@ -42,13 +42,13 @@ set format x "%g"
 set label 1 "CH88A" at graph 0.08, graph 0.92
 set origin 0.115,0.08
 
-load "grafy/CH88Adeconv.gpi"
+load "CH88Adeconv.gpi"
 
 
 set ylabel ""
 set label 1 "CH90A" at graph 0.08, graph 0.92
 set origin 0.6,0.08
 
-load "grafy/CH90Adeconv.gpi"
+load "CH90Adeconv.gpi"
 
 unset multiplot
