@@ -1,0 +1,62 @@
+ ===========================================================================
+ Report of Free Surface Energy Measurement
+ Created with See Software 6.3 on 3/22/2012, 11:21:44 AM.
+
+ 1. Calculated contact angles [°]
+
+    1: water                     28.93  ± 2.64    99.9%
+    2: diiodomethane             51.22  ± 3.18    99.9%
+    3: glycerol                  22.66  ± 1.33    99.9%
+    4: ethylene glycol           8.08   ± 2.20    99.9%
+    5: a-bromonaphthalene        40.46  ± 9.17    99.9%
+
+ 2. Calculated free surface energy [mJ/m^2], Zisman model
+
+                              g         Sg-       Sg+
+ ---------------------------------------------------------------------------
+    gtotal                 101.28    252.38    252.38  68.3%
+    b                        0.00      0.01      0.01  68.3%
+    correl                   0.30
+
+ ===========================================================================
+ Report of Free Surface Energy Measurement
+ Created with See Software 6.3 on 3/22/2012, 11:22:37 AM.
+
+ 1. Calculated contact angles [°]
+
+    1: water                     28.93  ± 2.64    99.9%
+    2: diiodomethane             51.22  ± 3.18    99.9%
+    3: glycerol                  22.66  ± 1.33    99.9%
+    4: ethylene glycol           8.08   ± 2.20    99.9%
+    5: a-bromonaphthalene        40.46  ± 9.17    99.9%
+
+ 2. Calculated free surface energy [mJ/m^2], Owens-Wendt Regression model
+
+    component                 g         Sg-       Sg+
+ ---------------------------------------------------------------------------
+    gtotal                  60.90     10.77     10.77  68.3%
+    gLW                     31.00      7.19      7.19  68.3%
+    gAB                     29.90      8.02      8.02  68.3%
+    correl                   0.98
+
+ ===========================================================================
+ Report of Free Surface Energy Measurement
+ Created with See Software 6.3 on 3/22/2012, 11:23:05 AM.
+
+ 1. Calculated contact angles [°]
+
+    1: water                     28.93  ± 2.64    99.9%
+    2: diiodomethane             51.22  ± 3.18    99.9%
+    3: glycerol                  22.66  ± 1.33    99.9%
+    4: ethylene glycol           8.08   ± 2.20    99.9%
+    5: a-bromonaphthalene        40.46  ± 9.17    99.9%
+
+ 2. Calculated free surface energy [mJ/m^2], Acid-Base Regression model
+
+    component                 g         Sg-       Sg+
+ ---------------------------------------------------------------------------
+    gtotal                  54.38     12.92     12.92  68.3%
+    gLW                     33.58      6.19      6.19  68.3%
+    gAB                     20.80     11.35     11.35  68.3%
+    g+                       2.54      2.62      2.62  68.3%
+    g-                      42.55     15.26     15.26  68.3%
