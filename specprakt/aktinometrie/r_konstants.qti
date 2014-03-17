@@ -1,0 +1,934 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	9
+<table>
+Table1	30	6	24.6.12 13:06
+geometry	392	518	-1	-1	minimized	
+header	1[X]	2[Y]	3[Y]	4[Y]	5[Y]	6[Y]
+ColWidth	66	100	100	100	100	100	
+<com>
+<col nr="4">
+col("3")/col("2")
+</col>
+<col nr="5">
+col("4")/col("2")
+</col>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13	0;0/4	0;0/3
+ReadOnlyColumn	0	0	0	0	0	0
+HiddenColumn	0	0	0	0	0	0
+Comments							
+WindowLabel		2
+<data>
+0	15000	5.24e-14	3.15e-13	7.02e-16	6.011	0.0134
+1	20000	8.69e-13	3.18e-12	1.86e-14	3.659	0.0214
+2	25000	4.8e-12	1.32e-11	1.36e-13	2.75	0.0283
+3	30000	1.52e-11	3.45e-11	5.22e-13	2.27	0.0343
+4	35000	3.46e-11	6.91e-11	1.38e-12	1.997	0.0399
+5	40000	6.44e-11	1.17e-10	2.89e-12	1.817	0.0449
+6	45000	1.04e-10	1.77e-10	5.16e-12	1.702	0.0496
+7	50000	1.54e-10	2.46e-10	8.26e-12	1.597	0.0536
+8	55000	2.11e-10	3.24e-10	1.22e-11	1.536	0.0578
+9	60000	2.74e-10	4.06e-10	1.69e-11	1.482	0.0617
+10	65000	3.42e-10	4.92e-10	2.24e-11	1.439	0.0655
+11	70000	4.13e-10	5.81e-10	2.85e-11	1.407	0.069
+</data>
+</table>
+<table>
+ACTINOMETRY0015	130	4	24.6.12 15:02
+geometry	196	518	-1	-1	minimized	
+header	1[X]	2[Y]	3[Y]	4[Y]
+ColWidth	100	100	100	100	
+<com>
+<col nr="3">
+col("2")/col("3")
+</col>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0
+HiddenColumn	0	0	0	0
+Comments					
+WindowLabel	/home/Paulie/Dokumenty/škola/specprakt/aktinometrie/convert/ACTINOMETRY0015.trt	2
+<data>
+0	731	81.1192	1	81.1192
+1	732	-87.9563	0.991	-88.75509586276
+2	733	-51.5314	0.976	-52.79856557377
+3	734	148.1101	0.927	159.773570658
+4	735	86.4773	0.958	90.26858037578
+5	736	212.8008	0.989	215.1676440849
+6	737	380.0983	0.904	420.4627212389
+7	738	834.5408	0.888	939.7981981982
+8	739	447.841	0.87	514.7597701149
+9	740	45.6461	0.879	51.92957906712
+10	741	281.9966	0.857	329.0508751459
+11	742	205.2752	0.821	250.0306942753
+12	743	125.362	0.793	158.0857503153
+13	744	524.7383	0.802	654.2871571072
+14	745	118.938	0.795	149.6075471698
+15	746	69.3633	0.731	94.88823529412
+16	747	58.602	0.734	79.83923705722
+17	748	-34.163	0.773	-44.19534282018
+18	749	-10.0131	0.738	-13.56788617886
+19	750	2957.806	0.726	4074.112947658
+20	751	2631.485	0.676	3892.729289941
+21	752	792.2863	0.696	1138.342385057
+22	753	88.3858	0.679	130.170544919
+23	754	26.6145	0.675	39.42888888889
+24	755	24.8778	0.657	37.86575342466
+25	756	4.427	0.65	6.810769230769
+26	757	7.2751	0.652	11.15812883436
+27	758	-212.7419	0.645	-329.8324031008
+28	759	-63.3391	0.613	-103.3264274062
+29	760	215.593	0.604	356.9420529801
+30	761	270.5016	0.613	441.275040783
+31	762	0.5529	0.593	0.9323777403035
+32	763	1477.308	0.578	2555.896193772
+33	764	1000.378	0.573	1745.860383944
+34	765	-64.3388	0.557	-115.5095152603
+35	766	32.7696	0.565	57.9992920354
+36	767	-91.4085	0.558	-163.814516129
+37	768	-108.6321	0.558	-194.6811827957
+38	769	-45.2151	0.546	-82.81153846154
+39	770	-61.9538	0.531	-116.6738229755
+40	771	-73.9785	0.524	-141.1803435115
+41	772	460.474	0.536	859.0932835821
+42	773	265.1901	0.523	507.0556405354
+43	774	-11.7463	0.522	-22.50249042146
+44	775	-80.1319	0.542	-147.8448339483
+45	776	174.2963	0.537	324.5741154562
+46	777	4873.634	0.53	9195.535849057
+47	778	2113.89	0.52	4065.173076923
+48	779	79.0422	0.516	153.1825581395
+49	780	40.2398	0.517	77.8332688588
+50	781	-82.0006	0.492	-166.6678861789
+51	782	-71.5383	0.514	-139.1795719844
+52	783	62.3396	0.477	130.6909853249
+53	784	115.265	0.501	230.0698602794
+54	785	-126.2783	0.469	-269.2501066098
+55	786	-97.4265	0.478	-203.8211297071
+56	787	8.3171	0.482	17.25539419087
+57	788	-1.6266	0.468	-3.475641025641
+58	789	-31.3644	0.44	-71.28272727273
+59	790	-47.2471	0.468	-100.9553418803
+60	791	-111.1156	0.443	-250.825282167
+61	792	-93.1775	0.453	-205.6898454746
+62	793	-84.2002	0.434	-194.0096774194
+63	794	239.3685	0.438	546.5034246575
+64	795	367.8365	0.411	894.9793187348
+65	796	32.4007	0.411	78.83381995134
+66	797	27.5863	0.386	71.4670984456
+67	798	-35.2184	0.416	-84.65961538462
+68	799	-92.0099	0.398	-231.1806532663
+69	800	264.8668	0.382	693.3685863874
+70	801	419.5361	0.388	1081.278608247
+71	802	206.3571	0.38	543.045
+72	803	-64.2016	0.377	-170.2960212202
+73	804	-170.8288	0.384	-444.8666666667
+74	805	5.5156	0.395	13.9635443038
+75	806	-161.1362	0.385	-418.5355844156
+76	807	84.1738	0.384	219.2026041667
+77	808	-76.6932	0.366	-209.5442622951
+78	809	-44.94	0.369	-121.7886178862
+79	810	595.652	0.362	1645.447513812
+80	811	1359.608	0.371	3664.711590296
+81	812	1092.94	0.348	3140.632183908
+82	813	-68.2141	0.359	-190.0114206128
+83	814	5.7409	0.32	17.9403125
+84	815	-80.8866	0.344	-235.1354651163
+85	816	-102.5896	0.348	-294.7977011494
+86	817	26.3081	0.352	74.73892045455
+87	818	-70.3455	0.345	-203.9
+88	819	-27.3278	0.335	-81.57552238806
+89	820	-65.855	0.324	-203.2561728395
+90	821	21.2194	0.333	63.72192192192
+91	822	-39.0091	0.35	-111.4545714286
+92	823	-168.7189	0.331	-509.7247734139
+93	824	-83.7982	0.329	-254.705775076
+94	825	-97.5311	0.317	-307.6690851735
+95	826	204.3855	0.324	630.8194444444
+96	827	15.4717	0.329	47.026443769
+97	828	-75.8334	0.322	-235.5074534161
+98	829	-64.8023	0.315	-205.7215873016
+99	830	-155.799	0.303	-514.1881188119
+100	831	35.9463	0.305	117.8567213115
+101	832	-215.0093	0.316	-680.4091772152
+102	833	-59.3852	0.315	-188.5244444444
+103	834	-132.3584	0.312	-424.2256410256
+104	835	-119.5517	0.287	-416.556445993
+105	836	-12.6944	0.296	-42.88648648649
+106	837	59.6047	0.288	206.9607638889
+107	838	-14.3644	0.308	-46.63766233766
+108	839	68.3685	0.309	221.2572815534
+109	840	160.8493	0.318	505.815408805
+110	841	379.8342	0.29	1309.773103448
+111	842	526.4525	0.28	1880.1875
+112	843	403.3641	0.29	1390.910689655
+113	844	448.6192	0.296	1515.605405405
+114	845	855.3639	0.29	2949.530689655
+115	846	-9.461	0.291	-32.51202749141
+116	847	-65.8362	0.289	-227.8069204152
+117	848	11.4607	0.306	37.45326797386
+118	849	-156.1917	0.28	-557.8275
+119	850	-162.0329	0.285	-568.5364912281
+120	851	-93.4492	0.306	-305.3895424837
+121	852	105.3041	0.305	345.2593442623
+122	853	-169.602	0.3	-565.34
+123	854	-28.6403	0.318	-90.06383647799
+124	855	-59.8208	0.317	-188.709148265
+125	856	82.2377	0.288	285.5475694444
+126	857	5.3083	0.284	18.6911971831
+127	858	-111.3509	0.287	-387.9822299652
+128	859	30.4581	0.289	105.391349481
+129	860	58.878	0.305	193.0426229508
+</data>
+</table>
+<table>
+citlivost_avantes	130	3	24.6.12 15:07
+geometry	0	518	-1	-1	minimized	
+header	1[X]	2[Y]	3[Y]
+ColWidth	100	104	100	
+<com>
+<col nr="2">
+col("2")/163794801.0401
+</col>
+</com>
+ColType	0;0/13	0;0/13	0;0/3
+ReadOnlyColumn	0	0	0
+HiddenColumn	0	0	0
+Comments				
+WindowLabel	/home/Paulie/Dokumenty/škola/specprakt/aktinometrie/citlivost_avantes.txt	2
+<data>
+0	731	163794801.0401	1
+1	732	162276652.0635	0.991
+2	733	159911451.2301	0.976
+3	734	151880195.9428	0.927
+4	735	156885903.6323	0.958
+5	736	161939788.976	0.989
+6	737	148105383.3598	0.904
+7	738	145390047.0979	0.888
+8	739	142505590.7287	0.87
+9	740	144052037.945	0.879
+10	741	140362026.1237	0.857
+11	742	134451810.6998	0.821
+12	743	129928201.9643	0.793
+13	744	131365916.0793	0.802
+14	745	130265921.9823	0.795
+15	746	119805159.6464	0.731
+16	747	120256068.2272	0.734
+17	748	126660732.0962	0.773
+18	749	120825580.7302	0.738
+19	750	118876825.965	0.726
+20	751	110790200.9938	0.676
+21	752	114038338.3426	0.696
+22	753	111274246.1173	0.679
+23	754	110628973.5486	0.675
+24	755	107578839.3931	0.657
+25	756	106477259.9079	0.65
+26	757	106837318.5353	0.652
+27	758	105582189.2844	0.645
+28	759	100462045.1184	0.613
+29	760	98949913.21389	0.604
+30	761	100444359.289	0.613
+31	762	97150871.02821	0.593
+32	763	94668120.15057	0.578
+33	764	93904215.81098	0.573
+34	765	91274532.1008	0.557
+35	766	92512479.31986	0.565
+36	767	91356017.27687	0.558
+37	768	91337731.08253	0.558
+38	769	89460807.05242	0.546
+39	770	86955028.55676	0.531
+40	771	85751779.15842	0.524
+41	772	87772663.46378	0.536
+42	773	85739408.38036	0.523
+43	774	85520684.27518	0.522
+44	775	88814991.26266	0.542
+45	776	87892346.12277	0.537
+46	777	86855600.65841	0.53
+47	778	85177578.91825	0.52
+48	779	84469179.92975	0.516
+49	780	84740292.14288	0.517
+50	781	80662697.95422	0.492
+51	782	84234396.65754	0.514
+52	783	78182396.95059	0.477
+53	784	82030900.38705	0.501
+54	785	76847456.14599	0.469
+55	786	78324633.0861	0.478
+56	787	78922043.22898	0.482
+57	788	76623379.89068	0.468
+58	789	72149604.72608	0.44
+59	790	76631266.30929	0.468
+60	791	72636819.39288	0.443
+61	792	74184285.21015	0.453
+62	793	71167334.94796	0.434
+63	794	71768905.87508	0.438
+64	795	67305395.83625	0.411
+65	796	67400333.80319	0.411
+66	797	63200577.11448	0.386
+67	798	68178461.41021	0.416
+68	799	65256459.78049	0.398
+69	800	62521388.43928	0.382
+70	801	63510040.00194	0.388
+71	802	62254926.40944	0.38
+72	803	61732635.6271	0.377
+73	804	62842544.17685	0.384
+74	805	64680046.62642	0.395
+75	806	63132288.56296	0.385
+76	807	62815796.50799	0.384
+77	808	59942438.07507	0.366
+78	809	60474288.13263	0.369
+79	810	59238174.03045	0.362
+80	811	60813674.38846	0.371
+81	812	56945064.39524	0.348
+82	813	58836496.00492	0.359
+83	814	52392739.13968	0.32
+84	815	56315366.43467	0.344
+85	816	57068918.79306	0.348
+86	817	57711059.86427	0.352
+87	818	56586738.70943	0.345
+88	819	54868221.02738	0.335
+89	820	53052159.61254	0.324
+90	821	54619347.43836	0.333
+91	822	57254742.49875	0.35
+92	823	54189869.62258	0.331
+93	824	53916250.04882	0.329
+94	825	51842692.81317	0.317
+95	826	53067359.58689	0.324
+96	827	53869821.65611	0.329
+97	828	52791813.68551	0.322
+98	829	51522691.79786	0.315
+99	830	49566092.891	0.303
+100	831	50033703.01288	0.305
+101	832	51679609.38687	0.316
+102	833	51595238.16817	0.315
+103	834	51110995.80633	0.312
+104	835	46985607.22126	0.287
+105	836	48459060.73321	0.296
+106	837	47237834.58047	0.288
+107	838	50427640.0675	0.308
+108	839	50567380.27298	0.309
+109	840	52144467.36604	0.318
+110	841	47528621.61737	0.29
+111	842	45917243.20716	0.28
+112	843	47490890.45172	0.29
+113	844	48537959.79068	0.296
+114	845	47451162.40494	0.29
+115	846	47719104.62405	0.291
+116	847	47297601.70056	0.289
+117	848	50119419.62771	0.306
+118	849	45810759.28676	0.28
+119	850	46745899.51711	0.285
+120	851	50078884.95602	0.306
+121	852	49946420.39636	0.305
+122	853	49143999.28997	0.3
+123	854	52132899.13543	0.318
+124	855	51914034.45915	0.317
+125	856	47220369.12106	0.288
+126	857	46573761.09063	0.284
+127	858	47047634.82568	0.287
+128	859	47276589.80526	0.289
+129	860	49986286.15349	0.305
+</data>
+</table>
+<table>
+prutokar	30	3	24.6.12 16:05
+geometry	50	50	549	408	
+header	1[X]	2[Y]	3[Y]
+ColWidth	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0
+HiddenColumn	0	0	0
+Comments				
+WindowLabel		2
+<data>
+0	0.139	0.24	0.2158
+1	0.278	0.51	0.4158
+2	0.417	0.72	0.5958
+3	0.556	0.87	0.7758
+4	0.695	1.07	0.9558
+5	0.834	1.13	1.1078
+6	0.973	1.28	1.268
+7	1.112	1.43	1.4194
+8	1.251	1.6	1.5652
+9	1.39	1.71	1.7102
+</data>
+</table>
+<table>
+prutoko2	30	3	24.6.12 16:08
+geometry	85	112	445	220	
+header	1[X]	2[Y]	3[Y]
+ColWidth	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0
+HiddenColumn	0	0	0
+Comments				
+WindowLabel		2
+<data>
+0	4.9	3.97	4.0522
+1	5.88	4.47	4.5764
+2	6.86	4.97	5.0728
+3	7.35	5.27	5.3191
+</data>
+</table>
+<multiLayer>
+Graph1	1	1	24.6.12 13:32
+geometry	0	0	546	461	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	528	398
+<PageGeometry>0.00929368	0.0121065	0.981413	0.96368</PageGeometry>
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	T [K]	<i>k</i><sub>e</sub>		<i>k</i><sub>de</sub>	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table1_1	Table1_5	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+curve	Table1_1	Table1_6	1	0	#ff0000	0	1	7	2	#000000	-1	0	#000000	14	1	2	1	0	29	1
+scale	0	1	7	0	7	5	0	0
+scale	1	0.01	0.07	0	8	5	0	0
+scale	2	12000	72000	0	8	5	0	0
+scale	3	12000	72000	0	8	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>18518.518518519</x>
+<y>6.8064516129032</y>
+<right>28740.7407407407</right>
+<bottom>6.24050632911392</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)<i>k</i><sub>e</sub>
+\l(2)<i>k</i><sub>de</sub>
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<multiLayer>
+Graph2	1	1	24.6.12 15:09
+geometry	473	60	776	519	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	6	5	756	455
+<PageGeometry>0.0078125	0.0106157	0.984375	0.96603</PageGeometry>
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	Vlnová délka [nm]	Intenzita [a.u.]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans Serif	13	75	0	0	0
+ScaleFont0	Sans Serif	10	75	0	0	0
+ScaleFont1	Sans Serif	10	75	0	0	0
+ScaleFont2	Sans Serif	10	75	0	0	0
+ScaleFont3	Sans Serif	10	75	0	0	0
+AxisFont0	Sans Serif	10	50	0	0	0
+AxisFont1	Sans Serif	10	50	0	0	0
+AxisFont2	Sans Serif	10	50	0	0	0
+AxisFont3	Sans Serif	10	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	ACTINOMETRY0015_1	ACTINOMETRY0015_4	0	1	#000000	0	1	7	0	#000000	#000000	0	#000000	14	1	2	0	0	129	1
+scale	0	-600	10000	0	6	5	0	0
+scale	1	-600	10000	0	7	5	0	0
+scale	2	728	865	0	9	5	0	0
+scale	3	728	865	0	8	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>747.8371040724</x>
+<y>8009.1370558376</y>
+<right>751.635114503817</right>
+<bottom>8912.1052631579</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+Ar I 750,38 / 751,46
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>90</Angle>
+<AutoUpdate>0</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>760.64856711916</x>
+<y>4834.5177664975</y>
+<right>751.635114503817</right>
+<bottom>8912.1052631579</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+Ar I 763,51
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>90</Angle>
+<AutoUpdate>0</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>769.32730015083</x>
+<y>3220.3045685279</y>
+<right>751.635114503817</right>
+<bottom>8912.1052631579</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+Ar I 772,37
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>90</Angle>
+<AutoUpdate>0</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>777.38612368024</x>
+<y>9838.578680203</y>
+<right>751.635114503817</right>
+<bottom>8912.1052631579</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+O I 777,19 / 777,41 / 777,43
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>90</Angle>
+<AutoUpdate>0</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>792.47058823529</x>
+<y>3327.9187817259</y>
+<right>751.635114503817</right>
+<bottom>8912.1052631579</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+Ar I 794,81
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>90</Angle>
+<AutoUpdate>0</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>798.46304675716</x>
+<y>4942.1319796954</y>
+<right>751.635114503817</right>
+<bottom>8912.1052631579</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+Ar I 800,61 / 801,47
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>90</Angle>
+<AutoUpdate>0</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>808.58823529412</x>
+<y>7659.3908629442</y>
+<right>751.635114503817</right>
+<bottom>8912.1052631579</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+Ar I 810,36 / 811,53
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>90</Angle>
+<AutoUpdate>0</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>823.87933634992</x>
+<y>3085.7868020305</y>
+<right>751.635114503817</right>
+<bottom>8912.1052631579</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+Ar I 826,45
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>90</Angle>
+<AutoUpdate>0</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>839.37707390649</x>
+<y>5749.2385786802</y>
+<right>751.635114503817</right>
+<bottom>8912.1052631579</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+Ar I 840,82 / 842,46
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>90</Angle>
+<AutoUpdate>0</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>842.98325722983</x>
+<y>5279.1878172589</y>
+<right>751.635114503817</right>
+<bottom>8912.1052631579</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+O I 844,67
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>90</Angle>
+<AutoUpdate>0</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<multiLayer>
+prutokar-img	1	1	24.6.12 16:05
+geometry	0	0	525	455	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	507	392
+<PageGeometry>0.00967118	0.012285	0.980658	0.963145</PageGeometry>
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	<i>Q</i><sub>Ar</sub>[sccm]	<i>p</i> [Pa]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	prutokar_1	prutokar_2	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+curve	prutokar_1	prutokar_3	1	0	#ff0000	0	1	7	2	#000000	-1	0	#000000	14	1	2	0	0	29	1
+scale	0	0.2	1.8	0	8	5	0	0
+scale	1	0.2	1.8	0	9	5	0	0
+scale	2	0	1.6	0	8	5	0	0
+scale	3	0	1.6	0	8	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>0.051025056947608</x>
+<y>1.7296187683284</y>
+<right>0.444897959183673</right>
+<bottom>1.59354838709677</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)Leybold DM21
+\l(2)%(2)MKS PR4000
+</Text>
+<Font>Sans Serif	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<multiLayer>
+prutoko2-img	1	1	24.6.12 16:08
+geometry	702	34	522	452	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	504	389
+<PageGeometry>0.00972763	0.0123762	0.980545	0.962871</PageGeometry>
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	<i>Q</i><sub>O<sub>2</sub></sub>[sccm]	<i>p</i> [Pa]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	prutoko2_1	prutoko2_2	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+curve	prutoko2_1	prutoko2_3	1	0	#ff0000	0	1	7	2	#000000	-1	0	#000000	14	1	2	0	0	29	1
+scale	0	3.8	5.4	0	9	5	0	0
+scale	1	3.8	5.4	0	9	5	0	0
+scale	2	4.5	7.5	0	9	5	0	0
+scale	3	4.5	7.5	0	9	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>4.6286681715576</x>
+<y>5.3228915662651</y>
+<right>5.30678851174935</right>
+<bottom>5.19153094462541</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)Leybold DM21
+\l(2)%(2)MKS PR4000
+</Text>
+<Font>Sans Serif	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<open>1</open>

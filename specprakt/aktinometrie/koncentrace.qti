@@ -1,0 +1,257 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	5
+<table>
+8_5Pa7_05eta	30	3	24.6.12 17:32
+geometry	0	0	753	299	
+header	1[X]	7[Y]	8[Y]
+ColWidth	100	100	176	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0
+HiddenColumn	0	0	0
+Comments				
+WindowLabel		2
+<data>
+0	40	0.0956376304	3.779479416154e+20
+1	35	0.1075693283	4.251005175217e+20
+2	30	0.1050198599	4.150253376872e+20
+3	25	0.1004390933	3.969227218537e+20
+4	20	0.0976091958	3.857393211505e+20
+5	15	0.0906943321	3.584126454811e+20
+6	10	0.0861317828	3.40382022013e+20
+</data>
+</table>
+<table>
+8_5Pa14_1eta	30	3	24.6.12 17:33
+geometry	123	87	802	384	
+header	1[X]	7[Y]	8[Y]
+ColWidth	100	100	155	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0
+HiddenColumn	0	0	0
+Comments				
+WindowLabel		2
+<data>
+0	10	0.0828	3.489109000091e+20
+1	15	0.0971	4.08950426271e+20
+2	20	0.1056	4.448031360246e+20
+3	25	0.1103	4.647469399898e+20
+4	30	0.1182	4.980410051514e+20
+5	35	0.1256	5.292528693805e+20
+6	40	0.1316	5.546485913949e+20
+</data>
+</table>
+<table>
+12_1Pa14_1eta	30	3	24.6.12 17:34
+geometry	250	186	802	384	
+header	1[X]	12[Y]	13[Y]
+ColWidth	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0
+HiddenColumn	0	0	0
+Comments				
+WindowLabel		2
+<data>
+0	40	0.1265	7.590299465461e+20
+1	35	0.1246	7.475330797812e+20
+2	30	0.1173	7.035469599424e+20
+3	25	0.11	6.595643702468e+20
+4	20	0.1055	6.329962650102e+20
+5	15	0.0976	5.856672314499e+20
+6	10	0.0848	5.085422417842e+20
+</data>
+</table>
+<multiLayer>
+Graph1	1	1	24.6.12 17:35
+geometry	651	39	551	461	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	533	398
+<PageGeometry>0.0092081	0.0121065	0.981584	0.96368</PageGeometry>
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	P [W]	α<sub>d</sub> [%]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	8_5Pa7_05eta_1	8_5Pa7_05eta_7	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+curve	8_5Pa14_1eta_1	8_5Pa14_1eta_7	1	0	#ff0000	0	1	7	2	#000000	-1	0	#000000	14	1	2	0	0	29	1
+curve	12_1Pa14_1eta_1	12_1Pa14_1eta_12	1	0	#00ff00	0	1	9	4	#000000	-1	0	#000000	14	1	2	0	0	29	1
+scale	0	0.08	0.14	0	8	5	0	0
+scale	1	0.08	0.14	0	8	5	0	0
+scale	2	5	45	0	9	5	0	0
+scale	3	5	45	0	8	5	0	0
+<AxisFormula pos="0">
+y*100
+</AxisFormula>
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>6.6842105263158</x>
+<y>0.13648093841642</y>
+<right>28.2421052631579</right>
+<bottom>0.126627565982405</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)p = 8,5 Pa, η = 7,05 (12,4% Ar)
+\l(2)p = 8,5 Pa, η = 14,1 (6,6% Ar)
+\l(3)p = 12,1 Pa, η = 14,1 (6,6% Ar)
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<multiLayer>
+Graph2	1	1	24.6.12 18:16
+geometry	365	64	551	461	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	533	398
+<PageGeometry>0.0092081	0.0121065	0.981584	0.96368</PageGeometry>
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	P [W]	[O] [10<sup>19</sup> m<sup>-3</sup>]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	8_5Pa7_05eta_1	8_5Pa7_05eta_8	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+curve	8_5Pa14_1eta_1	8_5Pa14_1eta_8	1	0	#ff0000	0	1	7	2	#000000	-1	0	#000000	14	1	2	0	0	29	1
+curve	12_1Pa14_1eta_1	12_1Pa14_1eta_13	1	0	#00ff00	0	1	9	4	#000000	-1	0	#000000	14	1	2	0	0	29	1
+scale	0	3e+20	8e+20	0	9	5	0	0
+scale	1	3e+20	8e+20	0	8	5	0	0
+scale	2	5	45	0	9	5	0	0
+scale	3	5	45	0	9	5	0	0
+<AxisFormula pos="0">
+y/1e19
+
+</AxisFormula>
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>6.0105263157895</x>
+<y>7.8240469208211e+20</y>
+<right>28.2421052631579</right>
+<bottom>7.00293255131965e+20</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)p = 8,5 Pa, η = 7,05 (12,4% Ar)
+\l(2)p = 8,5 Pa, η = 14,1 (6,6% Ar)
+\l(3)p = 12,1 Pa, η = 14,1 (6,6% Ar)
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<open>1</open>

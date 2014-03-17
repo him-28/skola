@@ -1,0 +1,411 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	5
+<table>
+prutokar	30	3	24.6.12 16:05
+geometry	679	94	549	408	
+header	1[X]	2[Y]	3[Y]
+ColWidth	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0
+HiddenColumn	0	0	0
+Comments				
+WindowLabel		2
+<data>
+0	0.139	0.24	0.2158
+1	0.278	0.51	0.4158
+2	0.417	0.72	0.5958
+3	0.556	0.87	0.7758
+4	0.695	1.07	0.9558
+5	0.834	1.13	1.1078
+6	0.973	1.28	1.268
+7	1.112	1.43	1.4194
+8	1.251	1.6	1.5652
+9	1.39	1.71	1.7102
+</data>
+</table>
+<table>
+prutoko2	30	3	24.6.12 16:08
+geometry	169	294	445	220	
+header	1[X]	2[Y]	3[Y]
+ColWidth	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0
+HiddenColumn	0	0	0
+Comments				
+WindowLabel		2
+<data>
+0	4.9	3.97	4.0522
+1	5.88	4.47	4.5764
+2	6.86	4.97	5.0728
+3	7.35	5.27	5.3191
+</data>
+</table>
+<multiLayer>
+prutokar-img	1	1	24.6.12 16:05
+geometry	0	0	525	455	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	507	392
+<PageGeometry>0.00967118	0.012285	0.980658	0.963145</PageGeometry>
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	<i>Q</i><sub>Ar</sub>[sccm]	<i>p</i> [Pa]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	prutokar_1	prutokar_2	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+curve	prutokar_1	prutokar_3	1	0	#ff0000	0	1	7	2	#000000	-1	0	#000000	14	1	2	0	0	29	1
+<Function>
+<Type>0</Type>
+<Title>LinearFit1</Title>
+<Expression>A*x+B</Expression>
+<Variable>x</Variable>
+<Range>0.139	1.39</Range>
+<Points>100</Points>
+<Constant>A	1.1877915849139</Constant>
+<Constant>B	0.094893333333333</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	0.2	1.8	0	8	5	0	0
+scale	1	0.2	1.8	0	9	5	0	0
+scale	2	0	1.6	0	8	5	0	0
+scale	3	0	1.6	0	8	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>0.051025056947608</x>
+<y>1.7296187683284</y>
+<right>0.444897959183673</right>
+<bottom>1.59354838709677</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)Leybold DM21
+\l(2)%(2)MKS PR4000
+\l(3)MKS linear fit
+</Text>
+<Font>Sans Serif	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<multiLayer>
+prutoko2-img	1	1	24.6.12 16:08
+geometry	592	7	522	452	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	504	389
+<PageGeometry>0.00972763	0.0123762	0.980545	0.962871</PageGeometry>
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	<i>Q</i><sub>O<sub>2</sub></sub>[sccm]	<i>p</i> [Pa]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	prutoko2_1	prutoko2_2	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+curve	prutoko2_1	prutoko2_3	1	0	#ff0000	0	1	7	2	#000000	-1	0	#000000	14	1	2	0	0	29	1
+<Function>
+<Type>0</Type>
+<Title>LinearFit1</Title>
+<Expression>A*x+B</Expression>
+<Variable>x</Variable>
+<Range>4.9	7.35</Range>
+<Points>2</Points>
+<Constant>A	0.516516776202006</Constant>
+<Constant>B	1.52818644067797</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	3.8	5.4	0	9	5	0	0
+scale	1	3.8	5.4	0	9	5	0	0
+scale	2	4.5	7.5	0	9	5	0	0
+scale	3	4.5	7.5	0	9	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>4.6286681715576</x>
+<y>5.3228915662651</y>
+<right>5.30678851174935</right>
+<bottom>5.19153094462541</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)Leybold DM21
+\l(2)MKS PR4000
+\l(3)MKS linear fit
+</Text>
+<Font>Sans Serif	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<table>
+Table1	100	2	27.7.12 10:55
+geometry	0	0	760	365	
+header	1[X]	2[Y]
+ColWidth	185	144	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel	Data set generated from curve: LinearFit1	2
+<data>
+0	0.139	0.2599963636364
+1	0.1516363636364	0.2750057300275
+2	0.1642727272727	0.2900150964187
+3	0.1769090909091	0.3050244628099
+4	0.1895454545455	0.3200338292011
+5	0.2021818181818	0.3350431955923
+6	0.2148181818182	0.3500525619835
+7	0.2274545454545	0.3650619283747
+8	0.2400909090909	0.3800712947658
+9	0.2527272727273	0.395080661157
+10	0.2653636363636	0.4100900275482
+11	0.278	0.4250993939394
+12	0.2906363636364	0.4401087603306
+13	0.3032727272727	0.4551181267218
+14	0.3159090909091	0.470127493113
+15	0.3285454545455	0.4851368595041
+16	0.3411818181818	0.5001462258953
+17	0.3538181818182	0.5151555922865
+18	0.3664545454545	0.5301649586777
+19	0.3790909090909	0.5451743250689
+20	0.3917272727273	0.5601836914601
+21	0.4043636363636	0.5751930578512
+22	0.417	0.5902024242424
+23	0.4296363636364	0.6052117906336
+24	0.4422727272727	0.6202211570248
+25	0.4549090909091	0.635230523416
+26	0.4675454545455	0.6502398898072
+27	0.4801818181818	0.6652492561984
+28	0.4928181818182	0.6802586225895
+29	0.5054545454545	0.6952679889807
+30	0.5180909090909	0.7102773553719
+31	0.5307272727273	0.7252867217631
+32	0.5433636363636	0.7402960881543
+33	0.556	0.7553054545455
+34	0.5686363636364	0.7703148209366
+35	0.5812727272727	0.7853241873278
+36	0.5939090909091	0.800333553719
+37	0.6065454545455	0.8153429201102
+38	0.6191818181818	0.8303522865014
+39	0.6318181818182	0.8453616528926
+40	0.6444545454545	0.8603710192838
+41	0.6570909090909	0.8753803856749
+42	0.6697272727273	0.8903897520661
+43	0.6823636363636	0.9053991184573
+44	0.695	0.9204084848485
+45	0.7076363636364	0.9354178512397
+46	0.7202727272727	0.9504272176309
+47	0.7329090909091	0.965436584022
+48	0.7455454545455	0.9804459504132
+49	0.7581818181818	0.9954553168044
+50	0.7708181818182	1.010464683196
+51	0.7834545454545	1.025474049587
+52	0.7960909090909	1.040483415978
+53	0.8087272727273	1.055492782369
+54	0.8213636363636	1.07050214876
+55	0.834	1.085511515152
+56	0.8466363636364	1.100520881543
+57	0.8592727272727	1.115530247934
+58	0.8719090909091	1.130539614325
+59	0.8845454545455	1.145548980716
+60	0.8971818181818	1.160558347107
+61	0.9098181818182	1.175567713499
+62	0.9224545454545	1.19057707989
+63	0.9350909090909	1.205586446281
+64	0.9477272727273	1.220595812672
+65	0.9603636363636	1.235605179063
+66	0.973	1.250614545455
+67	0.9856363636364	1.265623911846
+68	0.9982727272727	1.280633278237
+69	1.010909090909	1.295642644628
+70	1.023545454545	1.310652011019
+71	1.036181818182	1.32566137741
+72	1.048818181818	1.340670743802
+73	1.061454545455	1.355680110193
+74	1.074090909091	1.370689476584
+75	1.086727272727	1.385698842975
+76	1.099363636364	1.400708209366
+77	1.112	1.415717575758
+78	1.124636363636	1.430726942149
+79	1.137272727273	1.44573630854
+80	1.149909090909	1.460745674931
+81	1.162545454545	1.475755041322
+82	1.175181818182	1.490764407714
+83	1.187818181818	1.505773774105
+84	1.200454545455	1.520783140496
+85	1.213090909091	1.535792506887
+86	1.225727272727	1.550801873278
+87	1.238363636364	1.565811239669
+88	1.251	1.580820606061
+89	1.263636363636	1.595829972452
+90	1.276272727273	1.610839338843
+91	1.288909090909	1.625848705234
+92	1.301545454545	1.640858071625
+93	1.314181818182	1.655867438017
+94	1.326818181818	1.670876804408
+95	1.339454545455	1.685886170799
+96	1.352090909091	1.70089553719
+97	1.364727272727	1.715904903581
+98	1.377363636364	1.730914269972
+99	1.39	1.745923636364
+</data>
+</table>
+<open>1</open>
+<log>
+[27.7.12 10:48	Plot: ''prutokar-img'']
+Linear Regression of dataset: prutokar_3, using function: A*x+B
+Weighting Method: No weighting
+From x = 1,390000000000000e-01 to x = 1,390000000000000e+00
+B (y-intercept) = 9,489333333333330e-02 +/- 1,882715629460312e-02
+A (slope) = 1,187791584913887e+00 +/- 2,182928761077149e-02
+--------------------------------------------------------------------------------------
+Chi^2/doF = 7,595610303030299e-04
+R^2 = 0,997305260833897
+Adjusted R^2 = 0,996535335357867
+RMSE (Root Mean Squared Error) = 0,0275601348019749
+RSS (Residual Sum of Squares) = 0,00607648824242424
+---------------------------------------------------------------------------------------
+[27.7.12 10:51	Plot: ''prutoko2-img'']
+Linear Regression of dataset: prutoko2_3, using function: A*x+B
+Weighting Method: No weighting
+From x = 4,900000000000000e+00 to x = 7,350000000000000e+00
+B (y-intercept) = 1,528186440677966e+00 +/- 3,380338830080110e-02
+A (slope) = 5,165167762020063e-01 +/- 5,350363974229326e-03
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,013796610169465e-04
+R^2 = 0,999785446997088
+Adjusted R^2 = 0,999356340991265
+RMSE (Root Mean Squared Error) = 0,0100687467450992
+RSS (Residual Sum of Squares) = 0,000202759322033893
+---------------------------------------------------------------------------------------
+</log>
