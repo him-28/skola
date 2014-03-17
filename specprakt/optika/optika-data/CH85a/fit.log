@@ -1,0 +1,196 @@
+newAD: log 2.0
+
+time: 2012-04-10 11:13:43
+
+model: GL 1ER none DLC:Q:AP0 none Table:Si19.1105 none
+
+input: p.dat R.dat
+
+factors:
+   Is1,IcII1,IcIII1: 1
+   R1: 1
+
+fit:
+   S =  8.919782e+06
+   S(Is1,IcII1,IcIII1) =  8.874917e+06
+   S(R1) =  4.486502e+04
+ chi =  4.519967e+01
+ chi(Is1,IcII1,IcIII1) =  4.996459e+01
+ chi(R1) =  7.437783e+00
+
+parameters:
+    Qpif =  2.096058e-01 +- 1.876336e-01
+ Qsigmaf =  1.377776e+02 +- 2.524807e-01
+    df1e =  4.171671e+02 +- 6.428030e-01
+    df1r =  4.152369e+02 +- 1.262391e+00
+   Egpif =  9.490000e-01 fixed
+   Ehpif =  6.710000e+00 fixed
+Egsigmaf =  1.584000e+00 fixed
+Ehsigmaf =  5.170000e+01 fixed
+
+newAD: log 2.0
+
+time: 2012-04-10 11:15:19
+
+model: GL 1ER none DLC:Q:AP0 none Table:Si19.1105 none
+
+input: p.dat R.dat
+
+factors:
+   Is1,IcII1,IcIII1: 1
+   R1: 1
+
+fit:
+   S =  7.004147e+06
+   S(Is1,IcII1,IcIII1) =  6.966987e+06
+   S(R1) =  3.716053e+04
+ chi =  4.005307e+01
+ chi(Is1,IcII1,IcIII1) =  4.426930e+01
+ chi(R1) =  6.769094e+00
+
+parameters:
+    Qpif =  2.896410e-02 +- 7.360050e+00
+   Egpif =  9.490000e-01 +- 1.812842e+02
+ Qsigmaf =  1.414397e+02 +- 2.783638e-01
+Egsigmaf =  1.651520e+00 +- 1.251429e-02
+    df1e =  4.120672e+02 +- 6.418056e-01
+    df1r =  4.113375e+02 +- 1.106047e+00
+   Ehpif =  6.710000e+00 fixed
+Ehsigmaf =  5.170000e+01 fixed
+
+newAD: log 2.0
+
+time: 2012-04-10 11:17:35
+
+model: GL 1ERC none DLC:Q:AP0 none Table:Si19.1105 none
+
+input: p.dat R.dat
+
+factors:
+   Is1,IcII1,IcIII1: 1
+   R1: 1
+
+fit:
+   S =  7.749182e+05
+   S(Is1,IcII1,IcIII1) =  7.679969e+05
+   S(R1) =  6.921370e+03
+ chi =  1.332251e+01
+ chi(Is1,IcII1,IcIII1) =  1.469806e+01
+ chi(R1) =  2.921364e+00
+
+parameters:
+    Qpif =  3.559884e+00 +- 1.503751e-02
+   Egpif =  1.390767e+00 +- 3.766042e-03
+ Qsigmaf =  1.471355e+02 +- 1.014228e-01
+Egsigmaf =  2.202284e+00 +- 4.664062e-03
+    df1e =  4.165864e+02 +- 1.827018e-01
+    df1r =  4.134584e+02 +- 3.680086e-01
+   Ehpif =  6.710000e+00 fixed
+Ehsigmaf =  5.170000e+01 fixed
+     ds1 =  3.800000e-01 fixed
+     fE1 =  1.000000e+00 fixed
+     fR1 =  1.000000e+00 fixed
+    fR12 =  1.000000e+00 fixed
+
+newAD: log 2.0
+
+time: 2012-04-10 11:19:52
+
+model: GL 1ERC none DLC:Q:AP0 none Table:Si19.1105 none
+
+input: p.dat R.dat
+
+factors:
+   Is1,IcII1,IcIII1: 1
+   R1: 1
+
+fit:
+   S =  7.293110e+05
+   S(Is1,IcII1,IcIII1) =  7.223900e+05
+   S(R1) =  6.920969e+03
+ chi =  1.292452e+01
+ chi(Is1,IcII1,IcIII1) =  1.425496e+01
+ chi(R1) =  2.921279e+00
+
+parameters:
+    Qpif =  3.565346e+00 +- 1.467278e-02
+   Egpif =  1.392603e+00 +- 3.663371e-03
+ Qsigmaf =  1.471963e+02 +- 9.859824e-02
+Egsigmaf =  2.202617e+00 +- 4.543150e-03
+    df1e =  4.163907e+02 +- 1.778183e-01
+    df1r =  4.133280e+02 +- 3.570616e-01
+     fE1 =  9.084592e-01 +- 8.281875e-03
+   Ehpif =  6.710000e+00 fixed
+Ehsigmaf =  5.170000e+01 fixed
+     ds1 =  3.800000e-01 fixed
+     fR1 =  1.000000e+00 fixed
+    fR12 =  1.000000e+00 fixed
+
+newAD: log 2.0
+
+time: 2012-04-10 11:21:03
+
+model: GL 1ERC none DLC:Q:AP0 none Table:Si19.1105 none
+
+input: p.dat R.dat
+
+factors:
+   Is1,IcII1,IcIII1: 1
+   R1: 1
+
+fit:
+   S =  7.129362e+05
+   S(Is1,IcII1,IcIII1) =  7.061421e+05
+   S(R1) =  6.794055e+03
+ chi =  1.277861e+01
+ chi(Is1,IcII1,IcIII1) =  1.409374e+01
+ chi(R1) =  2.894370e+00
+
+parameters:
+    Qpif =  3.236734e+00 +- 4.499306e-02
+   Egpif =  1.400526e+00 +- 3.842650e-03
+   Ehpif =  6.341568e+00 +- 4.829283e-02
+ Qsigmaf =  1.477210e+02 +- 1.182318e-01
+Egsigmaf =  2.195182e+00 +- 4.683880e-03
+    df1e =  4.160827e+02 +- 1.804402e-01
+    df1r =  4.130828e+02 +- 3.539570e-01
+     fE1 =  9.083144e-01 +- 8.185880e-03
+Ehsigmaf =  5.170000e+01 fixed
+     ds1 =  3.800000e-01 fixed
+     fR1 =  1.000000e+00 fixed
+    fR12 =  1.000000e+00 fixed
+
+newAD: log 2.0
+
+time: 2012-04-10 11:21:32
+
+model: GL 1ERC none DLC:Q:AP0 none Table:Si19.1105 none
+
+input: p.dat R.dat
+
+factors:
+   Is1,IcII1,IcIII1: 1
+   R1: 1
+
+fit:
+   S =  7.121615e+05
+   S(Is1,IcII1,IcIII1) =  7.053726e+05
+   S(R1) =  6.788849e+03
+ chi =  1.277166e+01
+ chi(Is1,IcII1,IcIII1) =  1.408606e+01
+ chi(R1) =  2.893261e+00
+
+parameters:
+    Qpif =  3.255887e+00 +- 7.643972e-02
+   Egpif =  1.400379e+00 +- 3.847469e-03
+   Ehpif =  6.363466e+00 +- 8.397090e-02
+ Qsigmaf =  1.483893e+02 +- 2.142680e+00
+Egsigmaf =  2.194555e+00 +- 4.904076e-03
+Ehsigmaf =  5.190292e+01 +- 6.427693e-01
+    df1e =  4.160738e+02 +- 1.889948e-01
+    df1r =  4.130757e+02 +- 3.566776e-01
+     fE1 =  9.083554e-01 +- 8.183003e-03
+     ds1 =  3.800000e-01 fixed
+     fR1 =  1.000000e+00 fixed
+    fR12 =  1.000000e+00 fixed
+
