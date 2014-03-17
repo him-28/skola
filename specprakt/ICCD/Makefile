@@ -6,8 +6,5 @@ all: ICCD.pdf
 	pdflatex $<
 	pdflatex $<
 
-%.pdf: %.svg
-	inkscape --without-gui --export-pdf=$@ $<
-
 clean:
 	rm -f *.log *.out *.aux ICCD.pdf
