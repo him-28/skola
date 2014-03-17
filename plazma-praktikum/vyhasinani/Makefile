@@ -1,9 +1,7 @@
 all: vyhasinani.pdf 
 
-%.pdf: %.tex %.aux
+%.pdf: %.tex
 	pdflatex $<
-
-%.aux: %.tex
 	pdflatex $<
 
 clean:

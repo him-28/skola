@@ -1,14 +1,12 @@
+.PHONY: all clean
+
 all: ecr.pdf 
 
-%.pdf: %.tex %.aux
+%.pdf: %.tex schema.pdf
+	pdflatex $<
 	pdflatex $<
 
-%.aux: %.tex grafika
-	pdflatex $<
-
-grafika: schema.pdf
-
-schema.pdf: schema.svg
+%.pdf: %.svg
 	inkscape --without-gui --export-pdf=$@ $<
 
 clean:

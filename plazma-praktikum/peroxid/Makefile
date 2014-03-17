@@ -1,14 +1,12 @@
+.PHONY: all clean
+
 all: peroxid.pdf 
 
-%.pdf: %.tex %.aux grafika
+%.pdf: %.tex schema.pdf
+	pdflatex $<
 	pdflatex $<
 
-%.aux: %.tex grafika
-	pdflatex $<
-
-grafika: schema.pdf
-
-schema.pdf: schema.svg
+%.pdf: %.svg
 	inkscape --without-gui --export-pdf=$@ $<
 
 clean:

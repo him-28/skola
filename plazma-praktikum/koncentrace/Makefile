@@ -1,9 +1,9 @@
+.PHONY: all clean
+
 all: koncentrace.pdf 
 
-%.pdf: %.tex %.aux
+%.pdf: %.tex
 	pdflatex $<
-
-%.aux: %.tex
 	pdflatex $<
 
 clean:

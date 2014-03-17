@@ -1,9 +1,7 @@
 all: sondy.pdf 
 
-%.pdf: %.aux
-	pdflatex sondy.tex
-
-%.aux: %.tex
+%.pdf: %.tex
+	pdflatex $<
 	pdflatex $<
 
 clean:
