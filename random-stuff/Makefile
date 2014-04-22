@@ -1,10 +1,15 @@
-all: spec-elettra
+CFLAGS = -std=gnu99 -g -Wall -Wextra
+
+all: spec-elettra parse
 
 spec-elettra: spec-elettra.c
-	gcc -std=gnu99 -g -Wall -Wextra -o spec-elettra spec-elettra.c `pkg-config --cflags --libs gsl glib-2.0`
+	gcc $(CFLAGS) -o spec-elettra spec-elettra.c `pkg-config --cflags --libs gsl glib-2.0`
+
+parse: parse.c
+	gcc $(CFLAGS) -o parse parse.c 
 
 clean:
-	rm spec-elettra
+	rm spec-elettra parse
 
 .PHONY: all clean
 
