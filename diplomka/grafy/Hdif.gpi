@@ -4,7 +4,7 @@ set encoding utf8
 
 set multiplot layout 2,1
 
-set xlabel "Celková koncentrace vodíku z optiky"
+set xlabel "Celková koncentrace vodíku"
 set ylabel "Koncentrace vodíku v jednotlivých skupinách"
 set xtics 0.02
 set tmargin 2
@@ -18,7 +18,7 @@ plot [0.3:0.5]\
 "vysledky/test-graph2.txt" u 1:5 lt 4 linecolor rgb "black" t "sp^3CH",\
 "vysledky/test-graph1.txt" u 1:5 lt 4 linecolor rgb "red" t ""
 
-set xlabel "Celková koncentrace vodíku z ERDA"
+set xlabel "Celková koncentrace vodíku"
 
 plot [0.3:0.5]\
 "vysledky/test-graph2.txt" u 1:6 lt 2 linecolor rgb "black" t "sp^2CH_2",\
