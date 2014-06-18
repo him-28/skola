@@ -1,4 +1,4 @@
-SUBDIRS = diplomka bakalarka specprakt plazma-praktikum F1400 F7270-mat-metody prezentace
+SUBDIRS = diplomka bakalarka specprakt plazma-praktikum F1400 F7270-mat-metody prezentace maruska-praktika-patfyz
 
 .PHONY: all clean $(SUBDIRS)
 
