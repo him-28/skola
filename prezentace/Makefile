@@ -1,4 +1,4 @@
-SUBDIRS = diplomka bakalarka specprakt plazma-praktikum F1400 F7270-mat-metody prezentace
+SUBDIRS = Leoben-17.6.14-DFT
 
 .PHONY: all clean $(SUBDIRS)
 
