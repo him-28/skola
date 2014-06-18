@@ -17,7 +17,7 @@ set xlabel 'Photon energy, E (eV)'
 set ylabel 'Dielectric function, ε_i'
 set format x '%g'
 set format y '%g'
-set key at graph 0.45,0.90
+set key center top
 
 set title "HfO_2 calculated dielectric function compared with experiment"
 

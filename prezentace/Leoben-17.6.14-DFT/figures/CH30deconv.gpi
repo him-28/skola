@@ -2,6 +2,8 @@ set terminal pdf enhanced font "Helvetica,14" linewidth 3 size 14cm,9cm
 set locale "cs_CZ.UTF-8"
 set encoding utf8
 
+set title "DLC dielectric function decomposition"
+
 set xlabel "Energy [eV]"
 set ylabel "Imaginary part of the dielectric function"
 
