@@ -49,6 +49,10 @@ int isA(int *Apositions, int nAatoms, int n_sqs_atoms, int pos){
 }
 
 int main(int argc, char *argv[]){
+
+	typedef enum {DEFAULT, VASP, WIEN2K} format;
+	format input_format = VASP;
+	format output_format = DEFAULT;
 	
 	if(argc < 2){
 		fprintf(stderr, "sqs: input file unspecified!\n");
@@ -65,15 +69,6 @@ int main(int argc, char *argv[]){
 	double a, b, c, alpha, beta, gamma;
 	double u1[3], u2[3], u3[3];
 
-	/* import cell parameters and basis vectors */
-	if(fscanf(input_file, "%le %le %le %le %le %le", &a, &b, &c, &alpha, &beta, &gamma) != 6 ||
-		fscanf(input_file, "%le %le %le", &u1[0], &u1[1], &u1[2]) != 3 ||
-		fscanf(input_file, "%le %le %le", &u2[0], &u2[1], &u2[2]) != 3 ||
-		fscanf(input_file, "%le %le %le", &u3[0], &u3[1], &u3[2]) != 3){
-		fprintf(stderr, "sqs: error while reading input file\n");
-		return 1;
-	}
-
 	double pos[3];
 	char atomname[20];
 	typedef struct {
@@ -88,21 +83,103 @@ int main(int argc, char *argv[]){
 	int n_sqs_atoms_prim_cell = 0;
 	int n_atoms_prim_cell = 0;
 
-	/* import primitive cell structure */
-	for(int i = 0; fscanf(input_file, "%le %le %le %s", &pos[0], &pos[1], &pos[2], atomname) == 4; i++){
-		inat = realloc(inat, (i + 1) * sizeof(input_atom));
-		n_atoms_prim_cell++;
-		inat[i].v1 = pos[0];
-		inat[i].v2 = pos[1];
-		inat[i].v3 = pos[2];
-		printf("sqs: input atom %i at %.3f %.3f %.3f\n", i, inat[i].v1, inat[i].v2, inat[i].v3);
-		strcpy(inat[i].name, atomname);
-		if(strstr(atomname,",")){
-			inat[i].is_sqs = 1;
-			n_sqs_atoms_prim_cell++;
+	int basis_is_cartesian = 0;
+	double factor = 1.0;
+
+	/* import cell parameters and basis vectors */
+	if(input_format == DEFAULT){
+		if(fscanf(input_file, "%le %le %le %le %le %le", &a, &b, &c, &alpha, &beta, &gamma) != 6 ||
+			fscanf(input_file, "%le %le %le", &u1[0], &u1[1], &u1[2]) != 3 ||
+			fscanf(input_file, "%le %le %le", &u2[0], &u2[1], &u2[2]) != 3 ||
+			fscanf(input_file, "%le %le %le", &u3[0], &u3[1], &u3[2]) != 3){
+			fprintf(stderr, "sqs: error while reading input file\n");
+			return 1;
 		}
-		else
-			inat[i].is_sqs = 0;
+
+		/* import primitive cell structure in own format*/
+		for(int i = 0; fscanf(input_file, "%le %le %le %s", &pos[0], &pos[1], &pos[2], atomname) == 4; i++){
+			inat = realloc(inat, (i + 1) * sizeof(input_atom));
+			n_atoms_prim_cell++;
+			inat[i].v1 = pos[0];
+			inat[i].v2 = pos[1];
+			inat[i].v3 = pos[2];
+			printf("sqs: input atom %i at %.3f %.3f %.3f\n", i, inat[i].v1, inat[i].v2, inat[i].v3);
+			strcpy(inat[i].name, atomname);
+			if(strstr(atomname,",")){
+				inat[i].is_sqs = 1;
+				n_sqs_atoms_prim_cell++;
+			}
+			else
+				inat[i].is_sqs = 0;
+		}
+	}
+	else if(input_format == VASP){
+		basis_is_cartesian = 1;
+
+		char compound[100], components[100], numbers[100], coordinates[100];
+		if(fgets(compound, 100, input_file) == NULL ||
+			fscanf(input_file, "%le", &factor) != 1 ||
+			fscanf(input_file, "%le %le %le", &u1[0], &u1[1], &u1[2]) != 3 ||
+			fscanf(input_file, "%le %le %le", &u2[0], &u2[1], &u2[2]) != 3 ||
+			fscanf(input_file, "%le %le %le\n", &u3[0], &u3[1], &u3[2]) != 3){
+			fprintf(stderr, "sqs: error 1 while reading vasp file\n");
+			return 1;
+		}
+		if(fgets(components, 100, input_file) == NULL ||
+			fgets(numbers, 100, input_file) == NULL ||
+			fgets(coordinates, 100, input_file) == NULL){
+			fprintf(stderr, "sqs: error 2 while reading vasp file\n");
+		}
+
+		if(strstr(coordinates,"Direct") == NULL){
+			fprintf(stderr, "sqs: error usopported coordinate system %s, use Direct\n", coordinates);
+			return 1;
+		}
+		//printf("%f %f %f\n", u1[0], u1[1], u1[2]);
+		//printf("%f %f %f\n", u2[0], u2[1], u2[2]);
+		//printf("%f %f %f\n", u3[0], u3[1], u3[2]);
+		//printf("%s|%s|%s|%s", compound, components, numbers, coordinates);
+
+		struct {
+			char name[10];
+			char amount[10];
+			int n;
+		} comp[10];
+		int i = 0;
+		char *p_components = components, *p_numbers = numbers;
+		for(i = 0; sscanf(p_components, "%s", &comp[i].name) == 1 && sscanf(p_numbers, "%s", &comp[i].amount) == 1; i++){
+			p_components = strstr(components, comp[i].name) + strlen(comp[i].name);
+			p_numbers = strstr(numbers, comp[i].amount) + strlen(comp[i].amount);
+			sscanf(comp[i].amount, "%d", &comp[i].n); 
+		}
+		printf("sqs: found %i atom types:\n", i);
+		for(int j = 0; j < i; j++)
+			printf("%i: %s\n", j, comp[j].name);
+		printf("sqs: which one you want to SQS:");
+		int n_atom_sqs = -1, k = 0, l = 0;
+		scanf("%i",&n_atom_sqs);
+		
+		for(int j = 0; fscanf(input_file, "%le %le %le", &pos[0], &pos[1], &pos[2]) == 3; j++){
+			
+			inat = realloc(inat, (j + 1) * sizeof(input_atom));
+			n_atoms_prim_cell++;
+			inat[j].v1 = pos[0];
+			inat[j].v2 = pos[1];
+			inat[j].v3 = pos[2];
+			printf("sqs: input atom %i at %.3f %.3f %.3f\n", j, inat[j].v1, inat[j].v2, inat[j].v3);
+			strcpy(inat[j].name, atomname);
+			if(k == n_atom_sqs){
+				inat[j].is_sqs = 1;
+				n_sqs_atoms_prim_cell++;
+			}
+			else
+				inat[j].is_sqs = 0;
+			l++;
+			if(l == comp[k].n){
+				l = 0;
+				k++;		
+			}
+		}	
 	}
 
 	int ncelsa, ncelsb, ncelsc;
@@ -128,17 +205,31 @@ int main(int argc, char *argv[]){
 
 	/* precompute latice coordinates to cartesian transformation matrix */
 	double T[3][3];
-	T[0][0] = a * ncelsa;
-	T[0][1] = b * ncelsb * cos(gamma);
-	T[0][2] = c * ncelsc * cos(beta);
-	T[1][0] = 0;
-	T[1][1] = b * ncelsb * sin(gamma);
-	T[1][2] = c * ncelsc * (cos(alpha) - cos(beta) * cos(gamma)) / sin(gamma);
-	T[2][0] = 0;
-	T[2][1] = 0;
-	T[2][2] = c * ncelsc * sqrt(1.0 - cos(alpha)* cos(alpha) - cos(beta) * cos(beta) 
-				- cos(gamma) * cos(gamma) + 2 * cos(alpha) * cos(beta) * cos(gamma))
-				 / sin(gamma);
+
+	if(basis_is_cartesian == 0){
+		T[0][0] = a * ncelsa;
+		T[0][1] = b * ncelsb * cos(gamma);
+		T[0][2] = c * ncelsc * cos(beta);
+		T[1][0] = 0;
+		T[1][1] = b * ncelsb * sin(gamma);
+		T[1][2] = c * ncelsc * (cos(alpha) - cos(beta) * cos(gamma)) / sin(gamma);
+		T[2][0] = 0;
+		T[2][1] = 0;
+		T[2][2] = c * ncelsc * sqrt(1.0 - cos(alpha)* cos(alpha) - cos(beta) * cos(beta) 
+					- cos(gamma) * cos(gamma) + 2 * cos(alpha) * cos(beta) * cos(gamma))
+					 / sin(gamma);
+	}
+	else {
+		T[0][0] = factor * u1[0];
+		T[0][1] = factor * u2[0];
+		T[0][2] = factor * u3[0];
+		T[1][0] = factor * u1[1];
+		T[1][1] = factor * u2[1];
+		T[1][2] = factor * u3[1];
+		T[2][0] = factor * u1[2];
+		T[2][1] = factor * u2[2];
+		T[2][2] = factor * u3[2];
+	}
 
 	printf("Latice to cartesian transformation matrix\n");
 	printf("%.3f %.3f %.3f\n", T[0][0], T[0][1], T[0][2]);
@@ -181,7 +272,7 @@ int main(int argc, char *argv[]){
 		for(int nb = -1; nb <= 1; nb++){
 			for(int nc = -1; nc <= 1; nc++){
 				for(int n = 0; n < n_sqs_atoms; n++){
-					printf("%i %i %i %i", na, nb, nc, n);
+					//printf("%i %i %i %i", na, nb, nc, n);
 					large_s_cell[i].v1 = na + s_cell[n].v1;
 					large_s_cell[i].v2 = nb + s_cell[n].v2;
 					large_s_cell[i].v3 = nc + s_cell[n].v3;
@@ -202,9 +293,9 @@ int main(int argc, char *argv[]){
 	for(int i = 0; i < n_sqs_atoms; i++){
 		for(int j = 0; j < n_sqs_atoms * 27; j++){
 
-			double mindv1 = fabs(s_cell[i].v1 - large_s_cell[j].v1);
-			double mindv2 = fabs(s_cell[i].v2 - large_s_cell[j].v2);
-			double mindv3 = fabs(s_cell[i].v3 - large_s_cell[j].v3);
+			double mindv1 = s_cell[i].v1 - large_s_cell[j].v1;
+			double mindv2 = s_cell[i].v2 - large_s_cell[j].v2;
+			double mindv3 = s_cell[i].v3 - large_s_cell[j].v3;
 
 			/* transform to cartesian and compute distance */
 			double x = T[0][0] * mindv1 + T[0][1] * mindv2 + T[0][2] * mindv3;
@@ -227,8 +318,8 @@ int main(int argc, char *argv[]){
 						dist_list[dist_list_length - 1] = distances[i][j];
 					}
 				}
-			
-			//printf("%5.2f ", distances[i][j]);
+			//printf("%f %f %f %f %f %f", s_cell[i].v1, s_cell[i].v2, s_cell[i].v3, large_s_cell[j].v1, large_s_cell[j].v2, large_s_cell[j].v3);
+			//printf("%5.2f", distances[i][j]);
 		}
 		//printf("\n");
 	}
@@ -236,7 +327,7 @@ int main(int argc, char *argv[]){
 	qsort(dist_list, dist_list_length, sizeof(double), compare_double);
 	printf("Unique atomic distances: %i\n", dist_list_length);
 	for(int l = 0; l < dist_list_length; l++){
-		printf("%.3f ", dist_list[l]);
+		printf("%.5f ", dist_list[l]);
 	}
 	printf("\n\n");
 
@@ -254,7 +345,7 @@ int main(int argc, char *argv[]){
 	Apositions[6] = 9;
 	Apositions[7] = 11;*/
 
-	/* special cell from David rutile out_atomPositionsSQS_2*/
+	/* special cell from David rutile out_atomPositionsSQS_2
 	Apositions[0] = 0;
 	Apositions[1] = 1;
 	Apositions[2] = 3;
@@ -262,7 +353,7 @@ int main(int argc, char *argv[]){
 	Apositions[4] = 9;
 	Apositions[5] = 12;
 	Apositions[6] = 13;
-	Apositions[7] = 14;
+	Apositions[7] = 14;*/
 
 	/* special cell from David TiAlN out_atomPositionsSQS_1
 	Apositions[0] = 1;
