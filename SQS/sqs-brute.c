@@ -2,12 +2,17 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
+#include <time.h>
+
+#include <gsl/gsl_rng.h>
 
 #ifndef M_PI
 #    define M_PI 3.14159265358979323846
 #endif
 
 #define DIST_MARGIN 1e-5
+
+gsl_rng * r;
 
 int compare_double(const void * a, const void * b)
 {
@@ -37,7 +42,22 @@ int next_sqs_position(int *Apositions, int nAatoms, int n_sqs_atoms){
 }
 
 int random_sqs_position(int *Apositions, int nAatoms, int n_sqs_atoms){
-	return 0;
+	for(int j = 0; j < nAatoms; j++)
+		Apositions[j] = -1;	
+
+	int i = 0;
+	while(i < nAatoms){
+		Apositions[i] = gsl_rng_uniform_int(r, n_sqs_atoms);
+		for(int j = 0; j < i; j++)
+			if(Apositions[i] == Apositions[j])
+				i--;
+		i++;		
+	}
+	
+	for(int j = 0; j < nAatoms; j++)	
+		//printf("%i %i\n", j, Apositions[j]);
+
+	return 1;
 }
 
 int isA(int *Apositions, int nAatoms, int n_sqs_atoms, int pos){
@@ -50,9 +70,12 @@ int isA(int *Apositions, int nAatoms, int n_sqs_atoms, int pos){
 
 int main(int argc, char *argv[]){
 
+	gsl_rng_default_seed = time(NULL);
+	r = gsl_rng_alloc (gsl_rng_default);
+
 	typedef enum {DEFAULT, VASP, WIEN2K} format;
 	format input_format = VASP;
-	format output_format = DEFAULT;
+	format output_format = VASP;
 	
 	if(argc < 2){
 		fprintf(stderr, "sqs: input file unspecified!\n");
@@ -70,15 +93,17 @@ int main(int argc, char *argv[]){
 	double u1[3], u2[3], u3[3];
 
 	double pos[3];
-	char atomname[20];
+	char atomname[20], sqs_atomname[20], sqs_atomname_old[20];
 	typedef struct {
 		double v1;
 		double v2;
 		double v3;
 		char name[20];
 		int is_sqs;
+		int atomtype;
 	} input_atom;
 
+	int atomtypes;
 	input_atom *inat = NULL;
 	int n_sqs_atoms_prim_cell = 0;
 	int n_atoms_prim_cell = 0;
@@ -145,6 +170,7 @@ int main(int argc, char *argv[]){
 			char amount[10];
 			int n;
 		} comp[10];
+
 		int i = 0;
 		char *p_components = components, *p_numbers = numbers;
 		for(i = 0; sscanf(p_components, "%s", &comp[i].name) == 1 && sscanf(p_numbers, "%s", &comp[i].amount) == 1; i++){
@@ -158,6 +184,10 @@ int main(int argc, char *argv[]){
 		printf("sqs: which one you want to SQS:");
 		int n_atom_sqs = -1, k = 0, l = 0;
 		scanf("%i",&n_atom_sqs);
+		printf("sqs: symbol of the replacement atom:");
+		scanf("%s",sqs_atomname);
+
+		strcpy(sqs_atomname_old, comp[n_atom_sqs].name);
 		
 		for(int j = 0; fscanf(input_file, "%le %le %le", &pos[0], &pos[1], &pos[2]) == 3; j++){
 			
@@ -167,7 +197,8 @@ int main(int argc, char *argv[]){
 			inat[j].v2 = pos[1];
 			inat[j].v3 = pos[2];
 			printf("sqs: input atom %i at %.3f %.3f %.3f\n", j, inat[j].v1, inat[j].v2, inat[j].v3);
-			strcpy(inat[j].name, atomname);
+			inat[i].atomtype = k;
+			strcpy(inat[j].name, comp[k].name);
 			if(k == n_atom_sqs){
 				inat[j].is_sqs = 1;
 				n_sqs_atoms_prim_cell++;
@@ -179,7 +210,8 @@ int main(int argc, char *argv[]){
 				l = 0;
 				k++;		
 			}
-		}	
+		}
+		atomtypes = k;
 	}
 
 	int ncelsa, ncelsb, ncelsc;
@@ -194,6 +226,8 @@ int main(int argc, char *argv[]){
 	scanf("%le", &conc);
 	int n_sqs_atoms = ncelsa * ncelsb * ncelsc * n_sqs_atoms_prim_cell;
 	int nAatoms = round( conc * n_sqs_atoms );
+	conc = (double)nAatoms/(double)n_sqs_atoms;
+	printf("sqs: nearest possible concentration for selected supercell size is %f\n", conc);
 	printf("sqs: we have a total of %i atoms of supercell\n", n_atoms_prim_cell * ncelsa * ncelsb * ncelsc);
 	printf("sqs: %i of them are being SQS'd\n", n_sqs_atoms);
 	printf("sqs: with A concentration of %.2f, %i of them are A type\n\n",  conc, nAatoms);
@@ -220,15 +254,15 @@ int main(int argc, char *argv[]){
 					 / sin(gamma);
 	}
 	else {
-		T[0][0] = factor * u1[0];
-		T[0][1] = factor * u2[0];
-		T[0][2] = factor * u3[0];
-		T[1][0] = factor * u1[1];
-		T[1][1] = factor * u2[1];
-		T[1][2] = factor * u3[1];
-		T[2][0] = factor * u1[2];
-		T[2][1] = factor * u2[2];
-		T[2][2] = factor * u3[2];
+		T[0][0] = factor * u1[0] * ncelsa;
+		T[0][1] = factor * u2[0] * ncelsb;
+		T[0][2] = factor * u3[0] * ncelsc;
+		T[1][0] = factor * u1[1] * ncelsa;
+		T[1][1] = factor * u2[1] * ncelsb;
+		T[1][2] = factor * u3[1] * ncelsc;
+		T[2][0] = factor * u1[2] * ncelsa;
+		T[2][1] = factor * u2[2] * ncelsb;
+		T[2][2] = factor * u3[2] * ncelsc;
 	}
 
 	printf("Latice to cartesian transformation matrix\n");
@@ -256,7 +290,7 @@ int main(int argc, char *argv[]){
 						s_cell[i].v2 = (nb + inat[n].v2) / ncelsb;
 						s_cell[i].v3 = (nc + inat[n].v3) / ncelsc;
 						strcpy(s_cell[i].name, inat[n].name);
-						printf("sqs: atom %2i at %.3f %.3f %.3f\n", i, s_cell[i].v1, s_cell[i].v2, s_cell[i].v3);
+						//printf("sqs: atom %2i at %.3f %.3f %.3f\n", i, s_cell[i].v1, s_cell[i].v2, s_cell[i].v3);
 						i++;
 					}
 				}
@@ -326,7 +360,8 @@ int main(int argc, char *argv[]){
 
 	qsort(dist_list, dist_list_length, sizeof(double), compare_double);
 	printf("Unique atomic distances: %i\n", dist_list_length);
-	for(int l = 0; l < dist_list_length; l++){
+	printf("Smallest 10 distances: %i\n", dist_list_length);
+	for(int l = 1; l < 11; l++){
 		printf("%.5f ", dist_list[l]);
 	}
 	printf("\n\n");
@@ -355,8 +390,8 @@ int main(int argc, char *argv[]){
 	Apositions[6] = 13;
 	Apositions[7] = 14;*/
 
-	/* special cell from David TiAlN out_atomPositionsSQS_1
-	Apositions[0] = 1;
+/* special cell from David TiAlN out_atomPositionsSQS_1
+	Apositions[0] = 22;
 	Apositions[1] = 3;
 	Apositions[2] = 4;
 	Apositions[3] = 6;
@@ -367,24 +402,28 @@ int main(int argc, char *argv[]){
 	Apositions[8] = 17;
 	Apositions[9] = 20;
 	Apositions[10] = 21;
-	Apositions[11] = 22;
-	Apositions[12] = 23;
-	Apositions[13] = 24;
-	Apositions[14] = 25;
-	Apositions[15] = 29;
-	Apositions[16] = 33;
-	Apositions[17] = 34;
-	Apositions[18] = 37;
-	Apositions[19] = 38;
-	Apositions[20] = 41;
-	Apositions[21] = 44;
-	Apositions[22] = 45;
-	Apositions[23] = 47;*/
+	Apositions[11] = 1;*/
+
 
 	/* actually start SQS */
 	/* try all possibilities for now, Monte Carlo later*/
-	//do {
+	random_sqs_position(Apositions, nAatoms, n_sqs_atoms);
+
+	struct {
+		int Apositions[nAatoms];
+		double match[8];
+		double match_sum;
+	} best_candidates[5];
+
+	for(int i = 0; i < 5; i++)
+		best_candidates[i].match_sum = 999.9;		
+
+	int n_runs = 0;
+
+	do {
 		double match[dist_list_length];
+		double match_sum = 0.0;
+
 		for(int d = 1; d < 8/*dist_list_length*/; d++){
 			int M = 0, NAB = 0;
 			/* go over the table and find all pairs */
@@ -399,10 +438,94 @@ int main(int argc, char *argv[]){
 			}
 			M *= 2.0;
 			match[d] = 1.0 - (NAB / (conc * (1.0 - conc) * M));
-			printf("%f ", match[d]);
+			match_sum += fabs(match[d]) * (1.0 + 2.0 * ((7.0 - d) / 7.0));
+			//printf("%f ", match[d]);
 		}
-	//printf("\n");
-	//} while(next_sqs_position(Apositions, nAatoms, n_sqs_atoms));
+
+		if(match_sum <= best_candidates[0].match_sum){
+			for(int i = 3; i >= 0; i--){
+				for(int j = 0; j < nAatoms; j++)
+					best_candidates[i+1].Apositions[j] = best_candidates[i].Apositions[j];
+				for(int j = 1; j < 8; j++)
+					best_candidates[i+1].match[j] = best_candidates[i].match[j];
+				best_candidates[i+1].match_sum = best_candidates[i].match_sum;
+			}
+			for(int j = 0; j < nAatoms; j++)
+				best_candidates[0].Apositions[j] = Apositions[j];
+			for(int j = 1; j < 8; j++)
+				best_candidates[0].match[j] = match[j];
+			best_candidates[0].match_sum = match_sum;
+		}
+
+	} while(random_sqs_position(Apositions, nAatoms, n_sqs_atoms) && n_runs++ < 1000 );
+
+	for(int i = 0; i < 5; i++){
+		//for(int j = 0; j < nAatoms; j++)
+			//best_candidates[i+1].Apositions[j] = best_candidates[i].Apositions[j];
+		for(int j = 1; j < 8; j++)
+			printf ("%.5f ", best_candidates[i].match[j]);
+		printf ("%.5f\n", best_candidates[i].match_sum);
+	}
+
+	/* Output results to files */
+	if(output_format == VASP){
+		FILE * out_file = fopen(argv[2], "w");
+		fprintf(out_file, "SQS generated %ix%ix%i supercell\n", ncelsa, ncelsb, ncelsc);
+		fprintf(out_file, "%f\n", factor);
+		fprintf(out_file, "%20.10f %20.10f %20.10f\n", u1[0] * ncelsa, u1[1] * ncelsa, u1[2] * ncelsa);
+		fprintf(out_file, "%20.10f %20.10f %20.10f\n", u2[0] * ncelsb, u2[1] * ncelsb, u2[2] * ncelsb);
+		fprintf(out_file, "%20.10f %20.10f %20.10f\n", u3[0] * ncelsc, u3[1] * ncelsc, u3[2] * ncelsc);
+
+		fprintf(out_file, "%5s", sqs_atomname);
+		fprintf(out_file, "%5s", sqs_atomname_old);
+		char cur_atom[20] = {0}; 
+		for(int i = 0; i < n_atoms_prim_cell; i++){
+			if(inat[i].is_sqs == 0 && strcmp(inat[i].name, cur_atom) != 0){
+				fprintf(out_file, "%5s", inat[i].name);
+				strcpy(cur_atom, inat[i].name);
+			}
+		}
+	
+		fprintf(out_file, "\n%5i", nAatoms);
+		fprintf(out_file, "%5i", n_sqs_atoms - nAatoms);
+		int count = 0; 
+		for(int i = 0; i < n_atoms_prim_cell; i++){
+			if(inat[i].is_sqs == 0){
+				count++;
+				if(i == n_atoms_prim_cell - 1)
+					fprintf(out_file, "%5i", count * ncelsa * ncelsb * ncelsc);
+				else if(strcmp(inat[i].name, inat[i+1].name) != 0){
+					fprintf(out_file, "%5i", count * ncelsa * ncelsb * ncelsc);
+					count = 0;
+				}
+			}
+		}
+
+		fprintf(out_file, "\nDirect\n");
+
+		for(int i = 0; i < n_sqs_atoms; i++)
+			if(isA(Apositions, nAatoms, n_sqs_atoms, i) == 1)
+				fprintf(out_file, "%16.9f %16.9f %16.9f\n", s_cell[i].v1, s_cell[i].v2, s_cell[i].v3);
+		for(int i = 0; i < n_sqs_atoms; i++)
+			if(isA(Apositions, nAatoms, n_sqs_atoms, i) == 0)
+				fprintf(out_file, "%16.9f %16.9f %16.9f\n", s_cell[i].v1, s_cell[i].v2, s_cell[i].v3);
+		
+		for(int i = 0; i < atomtypes; i++){
+	 		for(int na = 0; na < ncelsa; na++){
+				for(int nb = 0; nb < ncelsb; nb++){
+					for(int nc = 0; nc < ncelsc; nc++){
+						for(int n = 0; n < n_atoms_prim_cell; n++){
+							if(inat[n].is_sqs == 0 && inat[n].atomtype == i)
+								fprintf(out_file, "%16.9f %16.9f %16.9f\n", 
+									(na + inat[n].v1) / ncelsa, (nb + inat[n].v2) / ncelsb, (nc + inat[n].v3) / ncelsc);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	free(inat);
 
 	return 0;
 }
