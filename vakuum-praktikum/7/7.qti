@@ -1,0 +1,348 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	5
+<table>
+Table1	30	3	6.10.11 13:20
+geometry	196	484	-1	-1	minimized	
+header	1[X]	2[Y]	3[Y]
+ColWidth	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0
+HiddenColumn	0	0	0
+Comments				
+WindowLabel		2
+<data>
+0	0.0001	1.44e-09	3.08e-09
+1	0.0002	2.92e-09	6.16e-09
+2	0.0003	4.44e-09	9.33e-09
+3	0.0004	6e-09	1.252e-08
+4	0.0005	7.6e-09	1.575e-08
+5	0.0006	9.18e-09	1.9e-08
+6	0.0007	1.085e-08	2.233e-08
+7	0.0008	1.248e-08	2.56e-08
+8	0.0009	1.422e-08	2.889e-08
+9	0.001	1.59e-08	3.23e-08
+</data>
+</table>
+<table>
+Table2	30	3	6.10.11 21:39
+geometry	36	14	634	386	
+header	1[X]	2[Y]	3[Y]
+ColWidth	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0
+HiddenColumn	0	0	0
+Comments				
+WindowLabel		2
+<data>
+0	0.00043		0.0742
+1	0.00054		0.0691
+2	0.00061		0.0667
+3	0.00066		0.0655
+4	0.00073		0.0653
+5	0.00083		0.0636
+6	0.00091		0.0625
+7	0.00099		0.0617
+8	0.0012		0.0594
+9	0.0015		0.0574
+10	0.002		0.057
+11	0.0026		0.0519
+12	0.0029		0.0497
+13	0.0035		0.0503
+14	0.004		0.0498
+</data>
+</table>
+<table>
+Table3	30	3	6.10.11 21:39
+geometry	130	131	445	220	
+header	1[X]	2[Y]	3[Y]
+ColWidth	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0
+HiddenColumn	0	0	0
+Comments				
+WindowLabel		2
+<data>
+0	0.0041		0.049
+1	0.0034		0.05
+2	0.0031		0.05
+3	0.0025		0.0508
+4	0.002		0.0515
+5	0.0014		0.0547
+6	0.0011		0.0564
+7	0.00091		0.057
+8	0.00082		0.058
+9	0.0007		0.06
+10	0.00063		0.0629
+11	0.00057		0.0667
+12	0.00049		0.07
+13	0.00043		0.0735
+14	0.00042		0.0729
+</data>
+</table>
+<multiLayer>
+Graph1	1	1	6.10.11 13:21
+geometry	0	484	603	494	minimized	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	585	431
+<PageGeometry>0.00980392	0.0121951	1.14706	1.05122</PageGeometry>
+PlotTitle	Závislost kolektorového a emitorového proudu při konstantním tlaku 	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	I<sub>e</sub>[A]	I<sub>c</sub>[A]		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans	13	75	0	0	0
+ScaleFont0	Sans	11	75	0	0	0
+ScaleFont1	Sans	11	75	0	0	0
+ScaleFont2	Sans	11	75	0	0	0
+ScaleFont3	Sans	11	75	0	0	0
+AxisFont0	Sans	11	50	0	0	0
+AxisFont1	Sans	11	50	0	0	0
+AxisFont2	Sans	11	50	0	0	0
+AxisFont3	Sans	11	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Table1_1	Table1_2	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+curve	Table1_1	Table1_3	1	0	#ff0000	0	1	7	2	#ff0000	#ff0000	0	#000000	14	1	2	0	0	29	1
+<Function>
+<Type>0</Type>
+<Title>LinearSlopeFit1</Title>
+<Expression>A*x</Expression>
+<Variable>x</Variable>
+<Range>0.0001	0.001</Range>
+<Points>2</Points>
+<Constant>A	1.55961038961039e-05</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>LinearSlopeFit2</Title>
+<Expression>A*x</Expression>
+<Variable>x</Variable>
+<Range>0.0001	0.001</Range>
+<Points>2</Points>
+<Constant>A	3.19568831168831e-05</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff0000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	0	3.5e-08	0	8	5	0	0
+scale	1	0	3.5e-08	0	8	5	0	0
+scale	2	0	0.0011	0	6	5	0	0
+scale	3	0	0.0011	0	8	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>0.00010649350649351</x>
+<y>3.2878787878788e-08</y>
+<right>0.00023203125</right>
+<bottom>3.07075471698113e-08</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)p<sub>1</sub> = 6,3e-5 Pa
+\l(2)p<sub>2</sub> = 4,1e-4 Pa
+\l(3)fit (y=a<sub>1</sub>x)
+\l(4)fit (y=a<sub>2</sub>x)
+</Text>
+<Font>Sans	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<multiLayer>
+Graph2	1	1	6.10.11 21:39
+geometry	684	11	557	472	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	539	409
+<PageGeometry>0.00910747	0.0117925	0.981785	0.964623</PageGeometry>
+PlotTitle	Koeficient K při proměnném tlaku pro dvě konstantní hodnoty emisního proudu	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	p[Pa]	K [Pa<sup>-1</sup>]		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Table2_1	Table2_3	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+curve	Table3_1	Table3_3	1	0	#ff0000	0	1	7	2	#ff0000	#ff0000	0	#000000	14	1	2	0	0	29	1
+scale	0	0.045	0.075	0	8	5	0	0
+scale	1	0.045	0.075	0	8	5	0	0
+scale	2	0	0.0045	0	10	5	0	0
+scale	3	0	0.0045	0	8	5	0	0
+LabelsFormat	0	6	0	6	2	1	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>0.0029496644295302</x>
+<y>0.071728971962617</y>
+<right>0.00110224719101124</right>
+<bottom>0.0710869565217391</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)I<sub>e</sub>=0,5mA
+\l(2)I<sub>e</sub>=1mA
+</Text>
+<Font>Sans	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<open>1</open>
+<log>
+[6.10.11 13:23	Plot: ''Graph1'']
+Linear Regression of dataset: Table1_2, using function: A*x+B
+Weighting Method: No weighting
+From x = 1,000000000000000e-04 to x = 1,000000000000000e-03
+B (y-intercept) = -3,493333333333331e-10 +/- 7,927716371609586e-11
+A (slope) = 1,609515151515151e-05 +/- 1,277667180904594e-07
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,346757575757572e-20
+R^2 = 0,999496132386236
+Adjusted R^2 = 0,999352170210874
+RMSE (Root Mean Squared Error) = 1,16049884780536e-10
+RSS (Residual Sum of Squares) = 1,07740606060606e-19
+---------------------------------------------------------------------------------------
+[6.10.11 13:24	Plot: ''Graph1'']
+Linear Regression of dataset: Table1_2, using function: A*x
+Weighting Method: No weighting
+From x = 1,000000000000000e-04 to x = 1,000000000000000e-03
+A (slope) = 1,559610389610390e-05 +/- 1,032294630081228e-07
+--------------------------------------------------------------------------------------
+Chi^2/doF = 4,102683982683976e-20
+R^2 = 0,998273177868983
+Adjusted R^2 = 0,998057325102606
+RMSE (Root Mean Squared Error) = 2,02550832698461e-10
+RSS (Residual Sum of Squares) = 3,69241558441558e-19
+---------------------------------------------------------------------------------------
+[6.10.11 13:25	Plot: ''Graph1'']
+Linear Regression of dataset: Table1_3, using function: A*x
+Weighting Method: No weighting
+From x = 1,000000000000000e-04 to x = 1,000000000000000e-03
+A (slope) = 3,195688311688312e-05 +/- 1,103114569283555e-07
+--------------------------------------------------------------------------------------
+Chi^2/doF = 4,684917748917722e-20
+R^2 = 0,999515967912417
+Adjusted R^2 = 0,999455463901469
+RMSE (Root Mean Squared Error) = 2,16446708196677e-10
+RSS (Residual Sum of Squares) = 4,21642597402595e-19
+---------------------------------------------------------------------------------------
+
+
+</log>

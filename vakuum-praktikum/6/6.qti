@@ -1,0 +1,423 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	6
+<table>
+Table1	46	4	3.12.11 18:40
+geometry	196	588	672	466	minimized	
+header	1[Y]	2[Y]	3[Y]	4[X]
+ColWidth	100	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0
+HiddenColumn	0	0	0	0
+Comments					
+WindowLabel		2
+<data>
+0	10000			0
+1	6700			0.003
+2	4300			0.006
+3	2800			0.008
+4	1800			0.011
+5	1200			0.014
+6	750			0.017
+7	510			0.019
+8	340			0.022
+9	230			0.025
+10	150			0.028
+11	100			0.031
+12	74			0.033
+13	52			0.036
+14	38			0.039
+15	28			0.042
+16	20			0.044
+17	16			0.047
+18	13			0.05
+19	10			0.053
+20	8.6			0.056
+21	7.4			0.058
+22	6.4			0.061
+23	5.6			0.064
+24	4.9			0.067
+25	4.5			0.069
+26	4.1			0.072
+27	3.8			0.075
+28	3.5			0.078
+29	3.3			0.081
+30	3.1			0.083
+31	2.8			0.089
+32	2.6			0.094
+33	2.4			0.1
+34	2.2			0.106
+35	2.1			0.111
+36	2			0.117
+37	1.9			0.125
+38	1.8			0.133
+39	1.7			0.142
+40	1.6			0.15
+41	1.5			0.167
+42	1.4			0.183
+43	1.3			0.2
+44	1.2			0.217
+</data>
+</table>
+<multiLayer>
+Graph1	1	1	3.12.11 18:40
+geometry	0	588	571	461	minimized	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	553	398
+<PageGeometry>0.00888099	0.0121065	0.982238	0.96368</PageGeometry>
+PlotTitle	Průběh čerpání rotační olejovou vývěvou	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	t [hod]	p [Pa]		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table1_4	Table1_1	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	45	1
+scale	0	1	15000	0	6	5	1	0
+scale	1	1	15000	0	8	5	1	0
+scale	2	-0.005	0.24	0	7	5	0	0
+scale	3	-0.005	0.24	0	8	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>0.16244234800839</x>
+<y>6393.4392351936</y>
+<right>0.197368972746331</right>
+<bottom>2976.39515263059</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)data
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<table>
+Table2	30	3	3.12.11 18:44
+geometry	588	588	445	220	minimized	
+header	1[Y]	2[Y]	3[X]
+ColWidth	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0
+HiddenColumn	0	0	0
+Comments				
+WindowLabel		2
+<data>
+0	1.3		0
+1	1.1		0.003
+2	0.54		0.006
+3	0.043		0.008
+4	0.015		0.011
+5	0.0082		0.014
+6	0.0048		0.017
+7	0.0037		0.019
+8	0.0032		0.022
+9	0.0029		0.025
+10	0.0026		0.028
+11	0.0025		0.031
+12	0.0024		0.033
+13	0.002		0.039
+14	0.0019		0.044
+15	0.0018		0.05
+16	0.0016		0.056
+17	0.0016		0.061
+18	0.0015		0.067
+19	0.0014		0.075
+20	0.0013		0.083
+21	0.0014		0.1
+22	0.0012		0.117
+23	0.0011		0.133
+24	0.00093		0.175
+25	0.00082		0.217
+26	0.00071		0.275
+</data>
+</table>
+<multiLayer>
+Graph2	1	1	3.12.11 18:45
+geometry	392	588	571	461	minimized	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	553	398
+<PageGeometry>0.00888099	0.0121065	0.982238	0.96368</PageGeometry>
+PlotTitle	Průběh čerpání turmolekulární vývěvou	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	t [hod]	p [Pa]		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table2_3	Table2_1	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+scale	0	0.0005	1.5	0	6	5	1	0
+scale	1	0.0005	1.5	0	8	5	1	0
+scale	2	-0.02	0.3	0	8	5	0	0
+scale	3	-0.02	0.3	0	8	5	0	0
+LabelsFormat	2	1	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>0.20148471615721</x>
+<y>0.66863501215089</y>
+<right>0.264366812227074</right>
+<bottom>0.35376980111875</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)data
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<table>
+Table3	45	2	3.12.11 18:51
+geometry	0	0	487	445	
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	6700	25.92
+1	4300	28.7
+2	2800	27.76
+3	1800	28.59
+4	1200	26.24
+5	750	30.42
+6	510	24.96
+7	340	26.24
+8	230	25.3
+9	150	27.66
+10	100	26.24
+11	74	19.49
+12	52	22.83
+13	38	20.3
+14	28	19.76
+15	20	21.78
+16	16	14.44
+17	13	13.44
+18	10	16.98
+19	8.6	9.76
+20	7.4	9.73
+21	6.4	9.4
+22	5.6	8.64
+23	4.9	8.64
+24	4.5	5.51
+25	4.1	6.02
+26	3.8	4.92
+27	3.5	5.32
+28	3.3	3.81
+29	3.1	4.05
+30	2.8	3.29
+31	2.6	2.4
+32	2.4	2.59
+33	2.2	2.82
+34	2.1	1.51
+35	2	1.58
+36	1.9	1.11
+37	1.8	1.17
+38	1.7	1.23
+39	1.6	1.31
+40	1.5	0.7
+41	1.4	0.74
+42	1.3	0.8
+43	1.2	0.86
+</data>
+</table>
+<multiLayer>
+Graph3	1	1	3.12.11 18:51
+geometry	495	40	560	488	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	542	425
+<PageGeometry>0.00905797	0.0113636	0.981884	0.965909</PageGeometry>
+PlotTitle	Čerpací rychlost rotační olejové vývěvy	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	p [Pa]	S [m<sup>3</sup>hod<sup>-1</sup>]		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans Serif	12	75	0	0	0
+ScaleFont0	Sans Serif	10	75	0	0	0
+ScaleFont1	Sans Serif	10	75	0	0	0
+ScaleFont2	Sans Serif	10	75	0	0	0
+ScaleFont3	Sans Serif	10	75	0	0	0
+AxisFont0	Sans Serif	10	50	0	0	0
+AxisFont1	Sans Serif	10	50	0	0	0
+AxisFont2	Sans Serif	10	50	0	0	0
+AxisFont3	Sans Serif	10	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table3_1	Table3_2	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	44	1
+scale	0	0	35	0	8	5	0	0
+scale	1	0	35	0	8	5	0	0
+scale	2	1	10000	0	9	5	1	0
+scale	3	1	10000	0	8	5	1	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>1.7082222462541</x>
+<y>67.15625</y>
+<right>9.23164967095749</right>
+<bottom>61.46875</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)data
+</Text>
+<Font>Sans Serif	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<open>1</open>

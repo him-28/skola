@@ -1,0 +1,607 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	5
+<table>
+Table1	30	6	26.11.11 12:52
+geometry	0	445	750	568	minimized	
+header	1[Y]	2[Z]	3[Z]	4[Z]	5[Z]	6[X]
+ColWidth	100	100	100	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0	0	0
+HiddenColumn	0	0	0	0	0	0
+Comments							
+WindowLabel		2
+<data>
+0	0	127	121	100	71.1	55
+1	20	297	236	189	125	83
+2	40	440	354	279	181	112
+3	60	584	472	366	236	140
+4	80	731	586	455	292	169
+5	100	879	703	544	347	197
+6	120	1029	821	634	402	226
+7	140	1172	937	721	458	254
+8	160	1323	1055	808	514	282
+9	180		1170	896	569	311
+</data>
+</table>
+<multiLayer>
+Graph1	1	1	26.11.11 12:53
+geometry	392	445	551	461	minimized	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	533	398
+<PageGeometry>0.0092081	0.0121065	0.981584	0.96368</PageGeometry>
+PlotTitle	Závislost tlaku v aparatuře na čase	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	t [s]	p [Pa]		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table1_1	Table1_2	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+curve	Table1_1	Table1_3	1	0	#ff0000	0	1	7	2	#ff0000	#ff0000	0	#000000	14	1	2	0	0	29	1
+curve	Table1_1	Table1_4	1	0	#00ff00	0	1	7	3	#00ff00	#00ff00	0	#000000	14	1	2	0	0	29	1
+curve	Table1_1	Table1_5	1	0	#0000ff	0	1	7	4	#0000ff	#0000ff	0	#000000	14	1	2	0	0	29	1
+curve	Table1_1	Table1_6	1	0	#00ffff	0	1	7	5	#00ffff	#00ffff	0	#000000	14	1	2	0	0	29	1
+<Function>
+<Type>0</Type>
+<Title>LinearFit1</Title>
+<Expression>A*x+B</Expression>
+<Variable>x</Variable>
+<Range>0	160</Range>
+<Points>2</Points>
+<Constant>A	7.40166666666667</Constant>
+<Constant>B	139.2</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>LinearFit2</Title>
+<Expression>A*x+B</Expression>
+<Variable>x</Variable>
+<Range>0	180</Range>
+<Points>2</Points>
+<Constant>A	5.83424242424242</Constant>
+<Constant>B	120.418181818182</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff0000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>LinearFit3</Title>
+<Expression>A*x+B</Expression>
+<Variable>x</Variable>
+<Range>0	180</Range>
+<Points>2</Points>
+<Constant>A	4.42424242424242</Constant>
+<Constant>B	101.018181818182</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#00ff00</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>LinearFit4</Title>
+<Expression>A*x+B</Expression>
+<Variable>x</Variable>
+<Range>0	180</Range>
+<Points>2</Points>
+<Constant>A	2.77033333333333</Constant>
+<Constant>B	70.18</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#0000ff</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>LinearFit5</Title>
+<Expression>A*x+B</Expression>
+<Variable>x</Variable>
+<Range>0	180</Range>
+<Points>2</Points>
+<Constant>A	1.42212121212121</Constant>
+<Constant>B	54.9090909090909</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#00ffff</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	0	1400	0	8	5	0	0
+scale	1	0	1400	0	8	5	0	0
+scale	2	-5	190	0	6	5	0	0
+scale	3	-5	190	0	8	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>2.1290322580645</x>
+<y>1373.75</y>
+<right>42.3870967741936</right>
+<bottom>1221.65605095541</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>0</visible>
+<Text>
+\l(1)I<sub>1</sub> = 44,4 sccm
+\l(2)I<sub>2</sub> = 34,5 sccm
+\l(3)I<sub>3</sub> = 25,3 sccm
+\l(4)I<sub>4</sub> = 15,2 sccm
+\l(5)I<sub>5</sub> = 7,0 sccm
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-0.80645161290323</x>
+<y>1356.25</y>
+<right>60.4193548387097</right>
+<bottom>980</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)S<sub>v</sub>=44,4 sccm
+\l(2)S<sub>v</sub>=34,3 sccm
+\l(3)S<sub>v</sub>=25,3 sccm
+\l(4)S<sub>v</sub>=15,2 sccm
+\l(5)S<sub>v</sub>=7,0 sccm
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<multiLayer>
+Graph2	1	1	26.11.11 14:00
+geometry	196	445	531	461	minimized	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	513	398
+<PageGeometry>0.00956023	0.0121065	0.98088	0.96368</PageGeometry>
+PlotTitle	Title	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	%(?X)	%(?Y)		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table1_6	Table1_1	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+<Function>
+<Type>0</Type>
+<Title>LinearFit1</Title>
+<Expression>A*x+B</Expression>
+<Variable>x</Variable>
+<Range>55	311</Range>
+<Points>2</Points>
+<Constant>A	0.703167023519311</Constant>
+<Constant>B	-38.609248601682</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff0000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	-50	200	0	8	5	0	0
+scale	1	-50	200	0	8	5	0	0
+scale	2	50	350	0	8	5	0	0
+scale	3	50	350	0	8	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>57.518796992481</x>
+<y>191.63879598662</y>
+<right>131.954887218045</right>
+<bottom>167.391304347826</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)%(1)
+\l(2)%(2)
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<table>
+Table2	30	3	26.11.11 14:41
+geometry	0	0	445	220	
+header	1[X]	2[Y]	3[Y]
+ColWidth	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0
+HiddenColumn	0	0	0
+Comments				
+WindowLabel		2
+<data>
+0	22.4	2	0.54
+1	32.2	5.3	0.99
+2	44.8	11.1	1.49
+3	52.7	15.3	1.75
+4	61.4	20.5	2.01
+5	69	25.4	2.22
+6	75.9	30.2	2.4
+7	82.8	35.4	2.58
+8	89.3	40.4	2.73
+9	95.8	45.6	2.87
+</data>
+</table>
+<multiLayer>
+Graph3	1	1	26.11.11 14:42
+geometry	501	-7	519	461	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	501	398
+<PageGeometry>0.00978474	0.0121065	0.980431	0.96368</PageGeometry>
+PlotTitle	Závislost čerpací rychlosti na tlaku v aparatuře	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	p [Pa]	S [m<sup>3</sup> hod<sup>-1</sup>]		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans Serif	11	75	0	0	0
+ScaleFont0	Sans Serif	9	75	0	0	0
+ScaleFont1	Sans Serif	9	75	0	0	0
+ScaleFont2	Sans Serif	9	75	0	0	0
+ScaleFont3	Sans Serif	9	75	0	0	0
+AxisFont0	Sans Serif	9	50	0	0	0
+AxisFont1	Sans Serif	9	50	0	0	0
+AxisFont2	Sans Serif	9	50	0	0	0
+AxisFont3	Sans Serif	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table2_1	Table2_3	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+scale	0	0.5	3	0	8	5	0	0
+scale	1	0.5	3	0	8	5	0	0
+scale	2	20	100	0	8	5	0	0
+scale	3	20	100	0	8	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>22.005012531328</x>
+<y>2.9163879598662</y>
+<right>37.7168949771689</right>
+<bottom>2.7109375</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)data
+</Text>
+<Font>Sans Serif	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<open>1</open>
+<log>
+[26.11.11 12:59	Plot: ''Graph1'']
+Linear Regression of dataset: Table1_2, using function: A*x+B
+Weighting Method: No weighting
+From x = 0,000000000000000e+00 to x = 1,600000000000000e+02
+B (y-intercept) = 1,392000000000000e+02 +/- 3,900698621458691e+00
+A (slope) = 7,401666666666666e+00 +/- 4,096552945068089e-02
+--------------------------------------------------------------------------------------
+Chi^2/doF = 4,027619047619048e+01
+R^2 = 0,999785620612864
+Adjusted R^2 = 0,999714160817153
+RMSE (Root Mean Squared Error) = 6,34635253324226
+RSS (Residual Sum of Squares) = 281,933333333333
+---------------------------------------------------------------------------------------
+[26.11.11 13:00	Plot: ''Graph1'']
+Linear Regression of dataset: Table1_3, using function: A*x+B
+Weighting Method: No weighting
+From x = 0,000000000000000e+00 to x = 1,800000000000000e+02
+B (y-intercept) = 1,204181818181818e+02 +/- 5,805858160575080e-01
+A (slope) = 5,834242424242424e+00 +/- 5,437684377250412e-03
+--------------------------------------------------------------------------------------
+Chi^2/doF = 9,757575757575757e-01
+R^2 = 0,999993050620658
+Adjusted R^2 = 0,999991065083703
+RMSE (Root Mean Squared Error) = 0,987804421815157
+RSS (Residual Sum of Squares) = 7,80606060606061
+---------------------------------------------------------------------------------------
+[26.11.11 13:00	Plot: ''Graph1'']
+Linear Regression of dataset: Table1_4, using function: A*x+B
+Weighting Method: No weighting
+From x = 0,000000000000000e+00 to x = 1,800000000000000e+02
+B (y-intercept) = 1,010181818181818e+02 +/- 6,638646348793752e-01
+A (slope) = 4,424242424242424e+00 +/- 6,217661978388846e-03
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,275757575757576e+00
+R^2 = 0,999984199911872
+Adjusted R^2 = 0,999979685600979
+RMSE (Root Mean Squared Error) = 1,12949438943165
+RSS (Residual Sum of Squares) = 10,2060606060606
+---------------------------------------------------------------------------------------
+[26.11.11 13:01	Plot: ''Graph1'']
+Linear Regression of dataset: Table1_5, using function: A*x+B
+Weighting Method: No weighting
+From x = 0,000000000000000e+00 to x = 1,800000000000000e+02
+B (y-intercept) = 7,017999999999999e+01 +/- 3,057826520635692e-01
+A (slope) = 2,770333333333333e+00 +/- 2,863916933505607e-03
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2,706666666666653e-01
+R^2 = 0,999991450453998
+Adjusted R^2 = 0,999989007726569
+RMSE (Root Mean Squared Error) = 0,520256347070043
+RSS (Residual Sum of Squares) = 2,16533333333332
+---------------------------------------------------------------------------------------
+[26.11.11 13:01	Plot: ''Graph1'']
+Linear Regression of dataset: Table1_6, using function: A*x+B
+Weighting Method: No weighting
+From x = 0,000000000000000e+00 to x = 1,800000000000000e+02
+B (y-intercept) = 5,490909090909091e+01 +/- 1,801438054266891e-01
+A (slope) = 1,422121212121212e+00 +/- 1,687201322069704e-03
+--------------------------------------------------------------------------------------
+Chi^2/doF = 9,393939393939393e-02
+R^2 = 0,999988739810948
+Adjusted R^2 = 0,999985522614076
+RMSE (Root Mean Squared Error) = 0,306495340811886
+RSS (Residual Sum of Squares) = 0,751515151515152
+---------------------------------------------------------------------------------------
+
+[26.11.11 13:54	Plot: ''Graph2'']
+Linear Regression of dataset: Table1_1, using function: A*x+B
+Weighting Method: No weighting
+From x = 1,270000000000000e+02 to x = 1,323000000000000e+03
+B (y-intercept) = -1,878539300268519e+01 +/- 6,169232122511173e-01
+A (slope) = 1,350757424831611e-01 +/- 7,475950425714739e-04
+--------------------------------------------------------------------------------------
+Chi^2/doF = 7,350150416074739e-01
+R^2 = 0,999785620612864
+Adjusted R^2 = 0,999714160817153
+RMSE (Root Mean Squared Error) = 0,857330182372856
+RSS (Residual Sum of Squares) = 5,14510529125232
+---------------------------------------------------------------------------------------
+[26.11.11 13:55	Plot: ''Graph2'']
+Linear Regression of dataset: Table1_1, using function: A*x+B
+Weighting Method: No weighting
+From x = 1,210000000000000e+02 to x = 1,170000000000000e+03
+B (y-intercept) = -2,063913139664436e+01 +/- 1,161900471329979e-01
+A (slope) = 1,714006683139339e-01 +/- 1,597504300589603e-04
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2,866618978709122e-02
+R^2 = 0,999993050620658
+Adjusted R^2 = 0,999991065083703
+RMSE (Root Mean Squared Error) = 0,169310926366526
+RSS (Residual Sum of Squares) = 0,22932951829673
+---------------------------------------------------------------------------------------
+[26.11.11 13:57	Plot: ''Graph2'']
+Linear Regression of dataset: Table1_1, using function: A*x+B
+Weighting Method: No weighting
+From x = 1,000000000000000e+02 to x = 8,960000000000000e+02
+B (y-intercept) = -2,283109394293301e+01 +/- 1,779368258655372e-01
+A (slope) = 2,260238260074780e-01 +/- 3,176452857728094e-04
+--------------------------------------------------------------------------------------
+Chi^2/doF = 6,517536352681386e-02
+R^2 = 0,999984199911872
+Adjusted R^2 = 0,999979685600979
+RMSE (Root Mean Squared Error) = 0,255294660200353
+RSS (Residual Sum of Squares) = 0,521402908214511
+---------------------------------------------------------------------------------------
+[26.11.11 13:58	Plot: ''Graph2'']
+Linear Regression of dataset: Table1_1, using function: A*x+B
+Weighting Method: No weighting
+From x = 7,109999999999999e+01 to x = 5,690000000000000e+02
+B (y-intercept) = -2,533170557137180e+01 +/- 1,331988292987124e-01
+A (slope) = 3,609643065048724e-01 +/- 3,731579075166932e-04
+--------------------------------------------------------------------------------------
+Chi^2/doF = 3,526687725688304e-02
+R^2 = 0,999991450453998
+Adjusted R^2 = 0,999989007726569
+RMSE (Root Mean Squared Error) = 0,187794774306643
+RSS (Residual Sum of Squares) = 0,282135018055064
+---------------------------------------------------------------------------------------
+[26.11.11 14:01	Plot: ''Graph2'']
+Linear Regression of dataset: Table1_1, using function: A*x+B
+Weighting Method: No weighting
+From x = 5,500000000000000e+01 to x = 3,110000000000000e+02
+B (y-intercept) = -3,860924860168203e+01 +/- 1,671107653786347e-01
+A (slope) = 7,031670235193113e-01 +/- 8,342357329358792e-04
+--------------------------------------------------------------------------------------
+Chi^2/doF = 4,644827984039772e-02
+R^2 = 0,999988739810948
+Adjusted R^2 = 0,999985522614076
+RMSE (Root Mean Squared Error) = 0,215518629914905
+RSS (Residual Sum of Squares) = 0,371586238723182
+---------------------------------------------------------------------------------------
+</log>
