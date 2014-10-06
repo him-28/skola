@@ -61,10 +61,14 @@ int random_sqs_position(int *Apositions, int nAatoms, int n_sqs_atoms){
 }
 
 int isA(int *Apositions, int nAatoms, int n_sqs_atoms, int pos){
+	//printf("isA: nAatoms %i, n_sqs_atoms: %i, pos: %i, posn_sqs: %i, ", nAatoms, n_sqs_atoms, pos, pos % n_sqs_atoms);
 	pos = pos % n_sqs_atoms;
 	for(int i = 0; i < nAatoms; i++)
-		if(Apositions[i] == pos)
+		if(Apositions[i] == pos){
+			//printf("return: 1\n");
 			return 1;
+		}
+	//printf("return: 0\n");
 	return 0;
 }
 
@@ -370,41 +374,6 @@ int main(int argc, char *argv[]){
 	for (int i = 0; i < nAatoms; i++)
 		Apositions[i] = i;
 
-	/* special cell from David rutile out_atomPositionsSQS_1
-	Apositions[0] = 0;
-	Apositions[1] = 3;
-	Apositions[2] = 4;
-	Apositions[3] = 6;
-	Apositions[4] = 7;
-	Apositions[5] = 8;
-	Apositions[6] = 9;
-	Apositions[7] = 11;*/
-
-	/* special cell from David rutile out_atomPositionsSQS_2
-	Apositions[0] = 0;
-	Apositions[1] = 1;
-	Apositions[2] = 3;
-	Apositions[3] = 8;
-	Apositions[4] = 9;
-	Apositions[5] = 12;
-	Apositions[6] = 13;
-	Apositions[7] = 14;*/
-
-/* special cell from David TiAlN out_atomPositionsSQS_1
-	Apositions[0] = 22;
-	Apositions[1] = 3;
-	Apositions[2] = 4;
-	Apositions[3] = 6;
-	Apositions[4] = 7;
-	Apositions[5] = 8;
-	Apositions[6] = 10;
-	Apositions[7] = 11;
-	Apositions[8] = 17;
-	Apositions[9] = 20;
-	Apositions[10] = 21;
-	Apositions[11] = 1;*/
-
-
 	/* actually start SQS */
 	/* try all possibilities for now, Monte Carlo later*/
 	random_sqs_position(Apositions, nAatoms, n_sqs_atoms);
@@ -430,12 +399,18 @@ int main(int argc, char *argv[]){
 			for(int i = 0; i < n_sqs_atoms; i++){
 				for(int j = 0; j < n_sqs_atoms * 27; j++){
 					if(fabs(distances[i][j] - dist_list[d]) < DIST_MARGIN){
+					//printf("a1: %f %f %f, a2: %f %f %f\n", s_cell[i].v1,s_cell[i].v2,s_cell[i].v3,large_s_cell[j].v1,large_s_cell[j].v2,large_s_cell[j].v3);
 						M++;
-						if(isA(Apositions, nAatoms, n_sqs_atoms, i) != isA(Apositions, nAatoms, n_sqs_atoms, j))
+						int A = isA(Apositions, nAatoms, n_sqs_atoms, i);
+						int B = isA(Apositions, nAatoms, n_sqs_atoms, j);
+						if(A != B){
 							NAB++;
+							//printf("is AB\n");
+						}
 					}
 				}
 			}
+			//printf("pošet párů pro vzdálenost %f: %i\n\n", dist_list[d], M);
 			M *= 2.0;
 			match[d] = 1.0 - (NAB / (conc * (1.0 - conc) * M));
 			match_sum += fabs(match[d]) * (1.0 + 2.0 * ((7.0 - d) / 7.0));
@@ -457,7 +432,7 @@ int main(int argc, char *argv[]){
 			best_candidates[0].match_sum = match_sum;
 		}
 
-	} while(random_sqs_position(Apositions, nAatoms, n_sqs_atoms) && n_runs++ < 1000 );
+	} while(random_sqs_position(Apositions, nAatoms, n_sqs_atoms) && n_runs++ < 1e6 );
 
 	for(int i = 0; i < 5; i++){
 		//for(int j = 0; j < nAatoms; j++)
@@ -466,6 +441,11 @@ int main(int argc, char *argv[]){
 			printf ("%.5f ", best_candidates[i].match[j]);
 		printf ("%.5f\n", best_candidates[i].match_sum);
 	}
+
+	//printf("A pozice jsou: ");
+	for (int i = 0; i < nAatoms; i++)
+		//printf("%i ", best_candidates[0].Apositions[i]);
+	//printf("\n");
 
 	/* Output results to files */
 	if(output_format == VASP){
@@ -504,10 +484,10 @@ int main(int argc, char *argv[]){
 		fprintf(out_file, "\nDirect\n");
 
 		for(int i = 0; i < n_sqs_atoms; i++)
-			if(isA(Apositions, nAatoms, n_sqs_atoms, i) == 1)
+			if(isA(best_candidates[0].Apositions, nAatoms, n_sqs_atoms, i) == 1)
 				fprintf(out_file, "%16.9f %16.9f %16.9f\n", s_cell[i].v1, s_cell[i].v2, s_cell[i].v3);
 		for(int i = 0; i < n_sqs_atoms; i++)
-			if(isA(Apositions, nAatoms, n_sqs_atoms, i) == 0)
+			if(isA(best_candidates[0].Apositions, nAatoms, n_sqs_atoms, i) == 0)
 				fprintf(out_file, "%16.9f %16.9f %16.9f\n", s_cell[i].v1, s_cell[i].v2, s_cell[i].v3);
 		
 		for(int i = 0; i < atomtypes; i++){
