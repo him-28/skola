@@ -1,0 +1,26 @@
+set term pdfcairo enhanced color font "Arial,10" size 10cm,8cm lw 2 dl 0.5
+
+set title "Band gap of Ti_{1-x}X_xO_2 solid solutions"
+
+set xlabel 'X element concentration'
+set ylabel 'Band gap, E_g (eV)
+set format x '%g'
+set format y '%.1f'
+set key top left
+
+set style line 1 lc rgb "#e00000" lt 1 pt 1
+set style line 2 lc rgb "#008000" lt 1 pt 2
+set style line 3 lc rgb '#0040c0' lt 1 pt 3 
+
+set pointsize 0.5
+
+plot [-0.05:1.05] \
+	"gap.txt" u 1:2 t "SiTiO2 anatase" with linespoints,\
+    "gap.txt" u 1:3 t "SiTiO2 rutile" with linespoints,\
+    "SiTiO2-beta-tridymite-P63mmc.txt" t "SiTiO2 beta tridymite" with linespoints,\
+    "SiTiO2-quartz-beta_P6222.txt" t "SiTiO2 beta quartz" with linespoints,\
+    "GeTiO2-anatase.txt" t "GeTiO2 anatase" with linespoints,\
+    "HfTiO2-anatase.txt" t "HfTiO2 anatase" with linespoints,\
+    "HfTiO2-rutile.txt" t "HfTiO2 rutile" with linespoints,\
+    "ZrTiO2-anatase.txt" t "ZrTiO2 anatase" with linespoints,\
+    "ZrTiO2-rutile.txt" t "ZrTiO2 rutile" with linespoints

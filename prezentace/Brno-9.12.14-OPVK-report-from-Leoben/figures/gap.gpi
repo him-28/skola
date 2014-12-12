@@ -1,0 +1,21 @@
+set term pdfcairo enhanced color font "Arial,10" size 10cm,8cm lw 2 dl 0.5
+
+set title "Band gap evolution during relaxation"
+
+set xlabel 'Number of iterations'
+set ylabel 'Band gap, E_g (eV)
+set format x '%g'
+set format y '%.1f'
+set key bottom right
+
+set style line 1 lc rgb "#e00000" lt 1 pt 1
+set style line 2 lc rgb "#008000" lt 1 pt 2
+set style line 3 lc rgb '#0040c0' lt 1 pt 3 
+
+set pointsize 0.3
+
+plot [][1:2.5]  \
+    "gap-PBE.txt" t "PBE" ls 1,\
+    "gap-LDA.txt" t "LDA" ls 2,\
+	"gap-PBESOL.txt" t "PBESOL" ls 3
+
