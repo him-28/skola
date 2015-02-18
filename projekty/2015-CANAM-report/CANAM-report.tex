@@ -1,0 +1,52 @@
+\documentclass[10pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[plainpages=false,pdfpagelabels,unicode]{hyperref}
+\usepackage[pdftex]{graphicx}
+\usepackage[margin=1.8cm]{geometry}
+\usepackage[numbers,sort&compress]{natbib}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+\LARGE{Determination of hydrogen content and density of hydrogenated diamond like carbon films -- project report}
+\end{center}
+\vspace{0.2cm}
+
+Amorphous hydrogenated carbon (a-C:H) thin films were prepared by means of plasma enhanced chemical vapor deposition in a capacitively coupled radio frequency discharge from mixture of methane, hydrogen and argon.
+As deposited and annealed samples were measured using the RBS/ERDA methods at the CANAM facility (Institute of Nuclear Physics, Rez).
+We were able to obtain the hydrogen content and atomic density using the aforementioned techniques.
+
+In order to evaluate possibility of using optical infrared measurement to determine hydrogen content in a-C:H, we fitted optical data of four samples were with multisample method while fixing hydrogen content to values obtained from ERDA/RBS. Relative transition strengths of hydrocarbon groups stretching vibration states were obtained and later used to analyze total hydrogen concentration as well as hydrogen distribution between different sp$_x$CH$_y$ groups in another four samples (figure \ref{hydrogen}a). Therefore we confirmed optical methods can be used either alone or as a verification of ion beam methods for determination of hydrogen content in DLC thin films \cite{Ondracka2013}. 
+
+Moreover using the TRK-sum rule consistent model \cite{Franta2013432}, when we fixed the ratio of hydrogen content to values obtained from ERDA and fitted optical data in broad spectral range (including synchrotron reflectance data up to 50\,eV), we were able to obtain a trend in mass density that was matching the mass density obtained by ERDA/RBS.
+The discrepancy in absolute values is believed to be caused by underestimated effective number of electron participating in valence to conduction band transitions.
+We used exact number of 4 valence electrons for carbon, however the effective value may be higher as shown for Al by \citet{Shiles1980}.
+Possible solution is to fix both mass density and hydrogen content to values obtained from ERDA/RBS and try to fit the effective number of valence electrons with multisample method or try to obtain it from \textit{ab initio} calculations.
+
+It was also shown, that especially the ERDA measurement is nontrivial and the results are highly dependent on correct data analysis. This was demonstrated for the case of two selected samples. Depending on different data analysis method, a hydrogen concentrations of 0.39, 0.52 and 0.38 for sample 1 and 0.36, 0.28 and 0.31 for sample 2 were obtained. 
+
+Regarding the effect of film thickness, we were unable to disprove effect of the film thickness on the analysis.
+This is shown in figure \ref{thickness}b where the dependence on hydrogen content on film thickness is demonstrated and we can see an suspicious correlation.
+However, the possible cause for this correlation may be also of another origin, connected to means of sample preparations.
+As our deposition apparatus is not equipped with sample heater/cooler, we can not eliminate the effect of sample heating during the deposition and hence the different hydrogen content in thicker film can be due to excessive heating during the deposition.
+
+\begin{figure}[h!]
+\begin{centering}
+\includegraphics{figures/hydrogen.pdf}
+\includegraphics{figures/thickness.pdf}
+\caption{ a) Distribution of hydrogen between different sp$^3$CH$_x$ groups~\cite{Ondracka2013} b) Correlation between hydrogen concentration and film thickness}
+\label{thickness}
+\label{hydrogen}
+\end{centering}
+\end{figure}
+
+\vspace{-0.6cm}
+
+\bibliographystyle{unsrtnat}
+\bibliography{bib-db}
+
+\end{document}
