@@ -15,7 +15,8 @@ int main(int argc, char *argv[]){
 
 	if(argc != 3){
 		printf("incorect number of arguments\n");
-		printf("expected filtene <bandindex> <energyfile>\n");
+		printf("expected: ./filtene <bandindex> <energyfile>\n");
+		return 1;
 	}
 
 	int sel_band = atoi(argv[1]);
@@ -24,6 +25,7 @@ int main(int argc, char *argv[]){
 	FILE *enefile;
 	if((enefile = fopen(argv[2], "r")) == NULL){
 		printf("unable to open input file %s", argv[2]);
+		return 1;
 	}
 
 	char out_file_name[1000] = {};
