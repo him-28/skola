@@ -1,162 +1,151 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/* FIXME: do printing in functions... */
-
-typedef struct {
-	int narg;
-	int *args;
-	char ret_type;
-	int iret;
-	float fret;
-	char *sret[4];
-} cont;
-
-void add(cont *a){
-	printf("%i\n", a->args[0] + a->args[1]);
+int npow(int a, int b){
+	int ret = 1;
+	for (int i = 0; i < b; i++)
+		ret *= a;
+	return ret;
 }
 
-void sub(cont *a){
-	printf("%i\n", a->args[0] - a->args[1]);
-}
-
-void divide(cont *a){
-	printf("%.3f\n", (float)a->args[0] / a->args[1]);
-}
-
-void idiv(cont *a){
-	printf("%i\n", a->args[0] / a->args[1]);
-}
-
-void mod(cont *a){
-	a->iret = a->args[0] % a->args[1];
-}
-
-void mult(cont *a){
-	a->iret = a->args[0] * a->args[1];
-}
-
-void npow(cont *a){
-	a->iret = 1;
-	for (int i = 0; i < a->args[1]; i++)
-		a->iret *= a->args[0];
-}
-
-void fact(cont *a){
-	a->iret = 1;
-	while(a->args[0] > 0){
-		a->iret *= a->args[0];
-		a->args[0]--;
+int fact(int a){
+	int ret = 1;
+	while(a > 0){
+		ret *= a;
+		a--;
 	}
+	return ret;
 }
 
-void sum(cont *a){
-	a->iret = 0;
-	while(a->args[0] != 0){
-		a->iret += a->args[a->args[0]];
-		a->args[0]--;
+int sum(int num, int *data){
+	int ret = 0;
+	while(num != 0){
+		ret += data[num-1];
+		num--;
 	}
+	return ret;
 }
 
-void aver(cont *a){
-	int tot = 0;
-	int n = a->args[0];
-	while(a->args[0] != 0){
-		tot += a->args[a->args[0]];
-		a->args[0]--;
+float aver(int num, int *data){
+	int sum = 0;
+	int n = num;
+	while(num != 0){
+		sum += data[num-1];
+		num--;
 	}
-	a->fret = tot / n;
+	return (float)sum / n;
 }
 
-void prime(cont *a){
-	if(a->args[0] == 1){
-		printf("no\n");
-		return;
-	}
-	for(int i = 2; i <= a->args[0] / 2; i++)
-		if((a->args[0] % i) == 0){
-			printf("no\n");
-			return;
+int binom(int top, int bot){
+	return fact(top) / (fact(bot) * fact(top - bot));
+}
+
+int prime(int a){
+  if(a == 2)
+		return 1;
+	if(a == 1 || a % 2 == 0)
+		return 0;
+	for(int i = 3; i <= a / 2; i += 2)
+		if((a % i) == 0){
+			return 0;
 		}
-	printf("yes\n");
+	return 1;
 }
 
 int main(){
 
-	struct optable{
-		char op;
-		unsigned min_arg;
-		unsigned max_arg;
-		char ret_type;
-		void (*func)(cont *);
-	} ops[] = {
-		{'+', 2, 2, 'n', add},
-		{'-', 2, 2, 'n', &sub},
-		{'/', 2, 2, 'n', &divide},
-		{'d', 2, 2, 'n', &idiv},
-		{'m', 2, 2, 'i', &mod},
-		{'*', 2, 2, 'i', &mult},
-		{'^', 2, 2, 'i', &npow},
-		{'!', 1, 1, 'i', &fact},
-		{'s', 1, 0, 'i', &sum},
-		{'a', 1, 0, 'f', &aver},
-//		{'c', 2, 2, 'i',},
-		{'p', 1, 1, 'n', &prime},
-	};
-
 	char op;
+  printf("> ");
+
 	while(scanf("%c", &op) != EOF){
 
-		for(unsigned i = 0; i < sizeof(ops) / sizeof(ops[0]); i++){
+		int n1, n2;
+		float fn1, fn2;
+	  int *data;
 
-			/* find correct operation in the operations table */
-			if(ops[i].op == op){
-				cont data;
-				data.args = NULL;
-				int temp;
-				unsigned narg = 0;
+		switch(op){
 
-				/* read integer input values and store them in data structure */
-				while(scanf("%i", &temp) == 1){
-					if((data.args = realloc(data.args, ++narg * sizeof(int))) == NULL){
-						printf("Failed to allocate memory\n");
-						return 1;
-					}
-					data.args[narg - 1] = temp;
-
-					/* new line means end of expression */
-					if(getchar() == '\n')
-						break;
-				}
-				data.narg = narg;
-
-				/* check the right number of arguments */
-				if(narg < ops[i].min_arg){
-					printf("Not enough arguments\n");
-					break;
-				}
-				if(ops[i].max_arg < narg && ops[i].max_arg != 0){
-					printf("Too many arguments, ingnoring the superfluous ones\n");
-				}
-
-				/* call coresponding function */
-				ops[i].func(&data);
-
-				/* print output with correct type */
-				if(ops[i].ret_type == 'i')
-					printf("%i\n", data.iret);
-				else if(ops[i].ret_type == 'f')
-					printf("%.3f\n", data.fret);
-
-				/* clean up */
-				free(data.args);
+			case '+':
+				scanf("%i %i", &n1, &n2);
+				printf("# %i\n", n1 + n2);
 				break;
 
-			}
-			else if(i == sizeof(ops) / sizeof(ops[0]) - 1)
+			case '-':
+				scanf("%i %i", &n1, &n2);
+				printf("# %i\n", n1 - n2);
+				break;
+
+			case '/':
+				scanf("%f %f", &fn1, &fn2);
+				printf("# %.3f\n", fn1 / fn2);
+				break;
+
+			case 'd':
+				scanf("%i %i", &n1, &n2);
+				printf("# %i\n", n1 / n2);
+				break;
+
+			case 'm':
+				scanf("%i %i", &n1, &n2);
+				printf("# %i\n", n1 % n2);
+				break;
+
+			case '*':
+				scanf("%i %i", &n1, &n2);
+				printf("# %i\n", n1 * n2);
+				break;
+
+			case '^':
+				scanf("%i %i", &n1, &n2);
+				printf("# %i\n", npow(n1, n2));
+				break;
+
+			case '!':
+				scanf("%i", &n1);
+				printf("# %i\n", fact(n1));
+				break;
+
+			case 's':
+				scanf("%i", &n1);
+				if((data = (int*)malloc(n1 * sizeof(int))) == NULL){
+					printf("failed to allocate memory\n");
+					exit(1);
+				}
+				for(int i = 0; i < n1; i++)
+					scanf("%i", &data[i]);
+				printf("# %i\n", sum(n1, data));
+				free(data);
+				break;
+
+			case 'a':
+				scanf("%i", &n1);
+				if((data = (int*)malloc(n1 * sizeof(int))) == NULL){
+					printf("failed to allocate memory\n");
+					exit(1);
+				}
+				for(int i = 0; i < n1; i++)
+					scanf("%i", &data[i]);
+				printf("# %.3f\n", aver(n1, data));
+				free(data);
+				break;
+
+			case 'c':
+				scanf("%i %i", &n1, &n2);
+				printf("# %i\n", binom(n1, n2));
+				break;
+
+			case 'p':
+				scanf("%i", &n1);
+				printf("# %s\n", prime(n1) ? "yes" : "no");
+				break;
+
+			default:
 				printf("Unknown operation %c\n", op);
+				break;
 		}
-	}	
+	while(getchar() != '\n');
+  	printf("> ");
+	}
 
 	return 0;
 }
