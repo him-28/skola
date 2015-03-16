@@ -56,7 +56,7 @@ void rotate(double *vec1, double *vec2, double angle){
 }
 
 /**
- * Multiply input vector by selected scale
+ * Modify input vector by selected scale
  *
  * @param input vector
  * @param result vector
@@ -73,8 +73,8 @@ void scale(double *vec1, double *vec2, double scale_x, double scale_y){
 /**
  * Read standard input until EOF or newline is reached
  *
- * Input is stored in a zero terminated string, max lenght of
- * input is defined by MAXINPUT. Terminatin newline is not stored.
+ * Input is stored in a zero terminated string, max length of
+ * input is defined by MAXINPUT. Terminating newline is not stored.
  *
  * @param strint for storage of input
  */
@@ -85,7 +85,7 @@ void read_input(char *str){
          break;
       }
       if(i == (MAXINPUT - 2)){
-         printf("input too long!\n");
+         fprintf(stderr, "input too long!\n");
          exit(4);
       }
       i++;
@@ -98,14 +98,14 @@ void read_input(char *str){
  * Read next floating point number from string previously passed to strtok
  *
  * This is basically a wrapper for strtod function plus some
- * additional cripling to disallow some formats normally that
- * are normally being accepted, but are disallowed in this
- * exercise such as 1e5, +5.0 etc.
+ * additional cripling to disallow formats that are normally
+ * being accepted, but are disallowed in this exercise such as
+ * 1e5, +5.0 etc.
  */
 double parse_number(){
    char *str;
    if((str = strtok(NULL, " ")) == NULL){
-      printf("chybny format!");
+      fprintf(stderr, "chybny format!");
       exit(2);
    }
 
@@ -119,7 +119,7 @@ double parse_number(){
          continue;
       if(i > 0 && i < l - 1 && str[i] == '.' && !have_dot++)
          continue;
-      printf("chybny argument!");
+      fprintf(stderr, "chybny argument!");
       exit(3);
    }
 
@@ -129,7 +129,7 @@ double parse_number(){
 /**
  * Calculates some basic tranformation of 2D vectors
  *
- * Reads transformation type, input vector and transfomration
+ * Reads transformation type, input vector and transformation
  * parameters from standard input and prints the resulting vector.
  *
  * Expected syntax:
@@ -152,7 +152,7 @@ int main(){
    else if(strcmp(str, "s") == 0)
       trans_type = s;
    else{
-      printf("neznama transformace!");
+      fprintf(stderr, "neznama transformace!");
       return 1;
    }
 
@@ -178,7 +178,7 @@ int main(){
    }
 
    if((strtok(NULL, " ")) != NULL){
-      printf("chybny format!");
+      fprintf(stderr, "chybny format!");
       return 2;
    }
 
