@@ -2,18 +2,42 @@
 
 FILTENE=$HOME/programs/skola/random-stuff/filtene/filtene
 
-METHOD="AIM" 
+METHOD="AIM"
+if [ "$1" == "-p" ]
+then
+   PARA="-p"
+   cd $PBS_O_WORKDIR
+fi
 
 CASE=$(basename $(pwd))
-export SCRATCH=$PWD
+export SCRATCH=$PBS_O_WORKDIR
 
-rm -r IPR
+rm -rf IPR
 mkdir IPR
 cp $CASE.klist IPR/IPR.klist
 cp $CASE.vsp IPR/IPR.vsp
 cp $CASE.kgen IPR/IPR.kgen
 cp $CASE.struct IPR/IPR.struct
 cp $CASE.in2f IPR/IPR.in2
+
+if [ -n "$PARA" ]
+then
+   rm -f .machine*
+   echo "granularity:1" >> .machines
+   echo "lapw0:$(hostname):16" >> .machines
+   for i in {1..4}
+   do
+      echo "1:$(hostname):4" >> .machines
+   done
+
+   mv .machines IPR/.machines
+
+   # we need in1 file for parallel initialisation
+   cp $CASE.in1 IPR/IPR.in1
+fi
+#FIXME: read from .machines
+NPROC=4
+
 
 if [ "$METHOD" == "AIM" ]
 then
@@ -48,20 +72,46 @@ then
    done
 fi
 
-
-for band in {1..2}
+# get number of bands from input, for now iterate till filtvec returns error
+for band in {40..10000}
 do
-   # create case.inf file and run filtvec
-   printf "2 1 -$NKPOINTS \n1 $band\n" > $CASE.inf
-   x filtvec
-   cp $CASE.vectorf IPR/IPR.vector
+   export SCRATCH=$PBS_O_WORKDIR
 
-   # run filtene
-   $FILTENE $band $CASE.energy
-   cp $CASE.energyf IPR/IPR.energy
+   if [ -n "$PARA" ]
+   then
+      for (( proc=1 ; proc<=$NPROC ; proc++  ))
+      do
+         #create case.inf
+         K_NUM=$(( $(wc -l $CASE.klist_$proc | awk '{print $1}') - 1 ))
+         # kpoint are actually numbered from 1 in CASE.vertor_x files
+         printf "2 1 -$K_NUM \n1 $band\n" > $CASE.inf
 
-   # run lapw on filtered data 
-   cd IPR && SCRATCH=$PWD x lapw2
+         # run filtvec on partial vector files
+         cp $CASE.vector_$proc $CASE.vector
+
+         # run filtvec and stop when missing a band index
+         x filtvec 2>&1 | grep ERROR && break 2
+         mv $CASE.vectorf IPR/IPR.vector_$proc
+
+         # run filtene on partial energy files
+         $FILTENE $band $CASE.energy_$proc
+         mv $CASE.energy_${proc}f IPR/IPR.energy_$proc
+      done
+   else
+      printf "2 1 -$NKPOINTS \n1 $band\n" > $CASE.inf
+
+      # run filtvec and stop when missing a band index
+      x filtvec 2>&1 | grep ERROR && break 2
+      mv $CASE.vectorf IPR/IPR.vector
+
+      # run filtene
+      $FILTENE $band $CASE.energy
+      mv $CASE.energyf IPR/IPR.energy
+   fi
+
+   # run lapw on filtered data
+   export SCRATCH=$SCRATCH/IPR
+   cd IPR && x lapw1 -d $PARA && x lapw2 $PARA
 
    if [ "$METHOD" == "SCF2" ]
    then
@@ -71,8 +121,10 @@ do
       echo "" >> IPR.txt
    elif [ "$METHOD" == "AIM" ]
    then
+      # mix the electron density for current band
       x mixer
       grep "BAN" IPR.scf2 | sed "s/:BAN.....:...//" | tr '\n' ' '>> IPR.txt
+      # integrate el. density on precomputed areas for all atoms
       for (( atom=1 ; atom<=$NATOMS ; atom++ ))
       do
          cp IPR.surf$atom IPR.surf
@@ -88,8 +140,8 @@ done
 
 if [ "$METHOD" == "SCF2" ]
 then
-   #fixme: count for different multiplicity 
+   #FIXME: count for different multiplicity
    awk '{print $2, $3, $5/2/($5+$6), $6/4/($5+$6)}' IPR/IPR.txt | awk '{print $1, $2, 2*$3*$3+4*$4*$4}' > IPRfinal.txt
 fi
 
-exit 
+exit
