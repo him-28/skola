@@ -1,4 +1,4 @@
-SUBDIRS = Leoben-17.6.14-DFT Brno-9.12.14-OPVK-report-from-Leoben Brno-29.10.14-DFT
+SUBDIRS = 14.6.17-Leoben-DFT 14.12.9-Brno-OPVK-report-from-Leoben 14.10.29-Brno-DFT
 
 .PHONY: all clean $(SUBDIRS)
 
