@@ -1,0 +1,12 @@
+set term pdfcairo monochrome font "Arial,10" size 7cm,5cm lw 2 dl 0.5
+
+set xlabel 'Film thickness (nm)'
+set ylabel 'Hydrogen content (at. %)'
+
+set xtics 200
+
+unset key
+set pointsize 0.8
+
+plot [][23:52] "thickness.txt"
+

@@ -1,6 +1,6 @@
 .PHONY: all clean
 
-FIGURES = DLCtypes.pdf DLCDOS.pdf T-detail-multifit2.pdf
+FIGURES = DLCtypes.pdf DLCDOS.pdf T-detail-multifit2.pdf deconv-multifit2.pdf CH30deconv.pdf thickness.pdf
 
 all: $(FIGURES)
 
