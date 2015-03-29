@@ -19,18 +19,13 @@ void stack_push (struct stack* stack){
       return;
    }
 
-   stack->stack_values[stack->stack_top - 1] = mem_register;
+   stack->stack_values[stack->stack_top] = mem_register;
    stack->stack_top++;
 }
 
 void stack_pop (struct stack* stack){
    if(!stack){
       fprintf(stderr, "Null argument!\n");
-      return;
-   }
-
-   if(stack->stack_top > 19){
-      fprintf(stderr, "Stack full!\n");
       return;
    }
 
@@ -46,7 +41,7 @@ void print (const struct stack* stack){
 
    printf("# Register %i | Stack ", mem_register);
    for(unsigned int i = 0; i < stack->stack_top; i++)
-      printf("%i", stack->stack_values[i]);
+      printf("%i ", stack->stack_values[i]);
    printf("\n");
 }
 

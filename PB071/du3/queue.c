@@ -1,18 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#ifndef my_assert
-#include <assert.h>
-#define my_assert(x) assert(x)
-#endif
-
-typedef enum {INST_ADD, INST_SUB, INST_INC, INST_DEC, INST_MUL, INST_DIV} instruction_type;
-
-//struct instruction;
+#include "queue.h"
 
 struct instruction{
    struct instruction *next;
-   instruction_type type;
+   enum instruction_type type;
    long value;
 };
 
@@ -22,13 +15,13 @@ struct queue {
 };
 
 void queue_create (struct queue* container){
-   my_assert(!container && "NULL argument!");
+   my_assert(container && "NULL argument!");
    container->first = NULL;
    container->last = NULL;
 }
 
 void queue_push (struct queue* container, struct instruction* item){
-   my_assert(!container && "NULL argument!");
+   my_assert(container && "NULL argument!");
    if(!item)
       fprintf(stderr, "NULL argument\n");
    if(container->first == NULL){
@@ -42,19 +35,19 @@ void queue_push (struct queue* container, struct instruction* item){
 }
 
 struct instruction* queue_pop (struct queue* container){
-   my_assert(!container && "NULL argument!");
+   my_assert(container && "NULL argument!");
    if(!container->first)
       fprintf(stderr, "Instruction queue is empty\n");
    return container->first;
 }
 
 unsigned int queue_empty (const struct queue* container){
-   my_assert(!container && "NULL argument!");
+   my_assert(container && "NULL argument!");
    return !container->first ? 1 : 0;
 }
 
 unsigned int queue_size (const struct queue* container){
-   my_assert(!container && "NULL argument!");
+   my_assert(container && "NULL argument!");
 
    if(!container->first)
       return 0;
@@ -69,7 +62,7 @@ unsigned int queue_size (const struct queue* container){
 }
 
 unsigned int queue_clear (struct queue* container){
-   my_assert(!container && "NULL argument!");
+   my_assert(container && "NULL argument!");
 
    if(!container->first)
       return 0;
@@ -82,5 +75,10 @@ unsigned int queue_clear (struct queue* container){
       free(last);
       n++;
    }
+   free(current);
+
+   container->first = NULL;
+   container->last = NULL;
+
    return n;
 }

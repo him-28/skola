@@ -5,6 +5,7 @@
 
 struct queue;
 struct instruction;
+enum instruction_type {INST_ADD, INST_SUB, INST_INC, INST_DEC, INST_MUL, INST_DIV};
 
 void queue_create (struct queue* container);
 
