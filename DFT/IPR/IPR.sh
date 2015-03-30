@@ -12,13 +12,24 @@ fi
 CASE=$(basename $(pwd))
 export SCRATCH=$PBS_O_WORKDIR
 
+# check if we have a complex case
+ls $CASE.in1c &> /dev/null
+if [ "$?" == "0" ]
+then
+   COMPLEX="c"
+fi
+
 rm -rf IPR
 mkdir IPR
 cp $CASE.klist IPR/IPR.klist
 cp $CASE.vsp IPR/IPR.vsp
 cp $CASE.kgen IPR/IPR.kgen
 cp $CASE.struct IPR/IPR.struct
-cp $CASE.in2f IPR/IPR.in2
+cp $CASE.in2$COMPLEX IPR/IPR.in2$COMPLEX
+# set number of electrons to 2 in CASE.in2
+awk 'NR != 2 {print $0} \
+     NR ==2 {printf "%8.2f%8.2f%7.2f%5.2f%3i\n", $1, 2, $3, $4, $5}'\
+     $CASE.in2$COMPLEX > IPR/IPR.in2$COMPLEX
 
 if [ -n "$PARA" ]
 then
@@ -30,20 +41,19 @@ then
       echo "1:$(hostname):4" >> .machines
    done
 
-   mv .machines IPR/.machines
+   cp .machines IPR/.machines
 
    # we need in1 file for parallel initialisation
-   cp $CASE.in1 IPR/IPR.in1
+   cp $CASE.in1$COMPLEX IPR/IPR.in1$COMPLEX
 fi
 #FIXME: read from .machines
 NPROC=4
 
-
 if [ "$METHOD" == "AIM" ]
 then
+   ls $CASE.inaim > /dev/null || exit
    cp $CASE.inm IPR/IPR.inm
    cp $CASE.inc IPR/IPR.inc
-   printf "IRHO\nWEIT\n30\nEND" >> IPR/IPR.inaim
    #switch of renormalization in mixer
    sed -i 's/YES/NO/g' IPR/IPR.inm
 fi
@@ -64,16 +74,33 @@ echo "kpoint number $NKPOINTS"
 
 if [ "$METHOD" == "AIM" ]
 then
+   # this run x aim in paralel over atoms
    for (( atom=1 ; atom<=$NATOMS ; atom++ ))
    do
-      sed -i "2s/[0-9]\+/$atom/g" $CASE.inaim
-      x aim
-      mv $CASE.surf IPR/IPR.surf$atom
+      (
+         mkdir IPR/surf$atom
+         cd IPR/surf$atom
+         cp ../../$CASE.inaim surf$atom.inaim
+         cp ../../$CASE.clmsum surf$atom.clmsum
+         cp ../../$CASE.struct surf$atom.struct
+         sed -i "2s/[0-9]\+/$atom/g" surf$atom.inaim
+         SCRATCH=$PWD x aim
+         # prepare inaim file for integration
+         printf "IRHO\nWEIT\n30\nEND" > surf$atom.inaim
+      ) &
+
+      # limit number of processes to number of processors
+      while [ "$(jobs | wc -l)" -gt "$(nproc)" ]
+      do
+         sleep 1
+      done
    done
+   wait
+   echo "AIM surfaces calculation finished"
 fi
 
-# get number of bands from input, for now iterate till filtvec returns error
-for band in {40..10000}
+# FIXME: get number of bands from input, for now iterate till filtvec returns error
+for band in {1..10000}
 do
    export SCRATCH=$PBS_O_WORKDIR
 
@@ -84,7 +111,7 @@ do
          #create case.inf
          K_NUM=$(( $(wc -l $CASE.klist_$proc | awk '{print $1}') - 1 ))
          # kpoint are actually numbered from 1 in CASE.vertor_x files
-         printf "2 1 -$K_NUM \n1 $band\n" > $CASE.inf
+         printf "2 1 -$K_NUM \n1 $band\n" > $CASE.inf$COMPLEX
 
          # run filtvec on partial vector files
          cp $CASE.vector_$proc $CASE.vector
@@ -98,7 +125,7 @@ do
          mv $CASE.energy_${proc}f IPR/IPR.energy_$proc
       done
    else
-      printf "2 1 -$NKPOINTS \n1 $band\n" > $CASE.inf
+      printf "2 1 -$NKPOINTS \n1 $band\n" > $CASE.inf$COMPLEX
 
       # run filtvec and stop when missing a band index
       x filtvec 2>&1 | grep ERROR && break 2
@@ -109,9 +136,16 @@ do
       mv $CASE.energyf IPR/IPR.energy
    fi
 
-   # run lapw on filtered data
    export SCRATCH=$SCRATCH/IPR
-   cd IPR && x lapw1 -d $PARA && x lapw2 $PARA
+   cd IPR
+   # use lapw1 to regenerate needed machine and processes files
+   if [ -z "$LAPW1_INIT" ] && [ -n "$PARA" ]
+   then
+      x lapw1 -d $PARA
+      LAPW1_INIT=1
+   fi
+   # run lapw2 on filtered data
+   x lapw2 $PARA
 
    if [ "$METHOD" == "SCF2" ]
    then
@@ -127,11 +161,26 @@ do
       # integrate el. density on precomputed areas for all atoms
       for (( atom=1 ; atom<=$NATOMS ; atom++ ))
       do
-         cp IPR.surf$atom IPR.surf
-         sed -i "2s/[0-9]\+/$atom/g" IPR.inaim
-         SCRATCH=$PWD x aim
-         grep "CUBE.*CHARGE" IPR.outputaim | grep -o "[0-9]\+\.[0-9]\{8\}" | head -n1 | tr '\n' ' ' >> IPR.txt
+         (
+            cd surf$atom
+            cp ../IPR.clmsum surf$atom.clmsum
+            SCRATCH=$PWD x aim
+         ) &
+
+         # limit number of processes to number of processors
+         while [ "$(jobs | wc -l)" -gt "$(nproc)" ]
+         do
+            sleep 1
+         done
       done
+      wait
+
+      for (( atom=1 ; atom<=$NATOMS ; atom++ ))
+      do
+         CHARGE[$atom]=$(grep "CUBE.*CHARGE" surf$atom/surf$atom.outputaim | grep -o "[0-9]\+\.[0-9]\{8\}" | head -n1)
+         printf "${CHARGE[$atom]} " >> IPR.txt
+      done
+
       echo "" >> IPR.txt
    fi
 
@@ -141,7 +190,10 @@ done
 if [ "$METHOD" == "SCF2" ]
 then
    #FIXME: count for different multiplicity
-   awk '{print $2, $3, $5/2/($5+$6), $6/4/($5+$6)}' IPR/IPR.txt | awk '{print $1, $2, 2*$3*$3+4*$4*$4}' > IPRfinal.txt
+   awk '{print $2, $3, $5/2/($5+$6), $6/4/($5+$6)}' IPR/IPR.txt | awk '{print $1, $2, 2*$3*$3+4*$4*$4}' > IPR/IPRfinal.txt
+elif [ "$METHOD" == "AIM" ]
+then
+   awk -v n="$NATOMS" '{sum=0; for (i=5; i<=4+n; i++) sum+= $i*$i/4; print $2, $3, sum}' IPR/IPR.txt > IPR/IPRfinal.txt
 fi
 
 exit
