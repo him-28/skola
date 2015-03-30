@@ -9,7 +9,8 @@ all: $(FIGURES)
 	gnuplot $< > $@
 
 update_data:
-	scp $(HOST)cubic/wyckoff/5000k_9Rk_mBJ/5000k_9Rk_mBJ.epsilon cubic.epsilon
+	scp $(HOST)cubic/wyckoff/20000k_9Rk_mBJ/20000k_9Rk_mBJ.epsilon cubic.epsilon
+	scp $(HOST)cubic/wyckoff/20000k_9Rk_mBJ/20000k_9Rk_mBJ.epsilon_br cubic.epsilon_br
 	scp $(HOST)amorphous/am-HfO2-96at-fastcool/27k_9Rk_mBJ/64k_9Rk_mBJ_5Emax/64k_9Rk_mBJ_5Emax.epsilon amorphous.epsilon
 	scp $(HOST)monoclinic/ruh/1000k_9Rk_mBJ/1000k_9Rk_mBJ.epsilon monoclinic.epsilon
 
