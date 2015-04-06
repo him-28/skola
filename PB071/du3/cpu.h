@@ -1,3 +1,8 @@
+/**
+ * @author  Pavel Ondračka <pavel.ondracka@gmail.com>
+ * @version 1.0
+ */
+
 struct stack;
 int mem_register;
 

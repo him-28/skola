@@ -1,3 +1,8 @@
+/**
+ * @author  Pavel Ondračka <pavel.ondracka@gmail.com>
+ * @version 1.0
+ */
+
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -14,12 +19,23 @@ struct queue {
    struct instruction* last;
 };
 
+/**
+ * Initializes queue
+ *
+ * @param queue pointer
+ */
 void queue_create (struct queue* container){
    my_assert(container && "NULL argument!");
    container->first = NULL;
    container->last = NULL;
 }
 
+/**
+ * Adds instruction to the queue end
+ *
+ * @param queue pointer
+ * @param pointer to the instruction
+ */
 void queue_push (struct queue* container, struct instruction* item){
    my_assert(container && "NULL argument!");
    if(!item)
@@ -41,11 +57,21 @@ struct instruction* queue_pop (struct queue* container){
    return container->first;
 }
 
+/**
+ * Checks if queue is empty
+ *
+ * @param queue pointer
+ */
 unsigned int queue_empty (const struct queue* container){
    my_assert(container && "NULL argument!");
    return !container->first ? 1 : 0;
 }
 
+/**
+ * Returns number of instructions in the queue
+ *
+ * @param queue pointer
+ */
 unsigned int queue_size (const struct queue* container){
    my_assert(container && "NULL argument!");
 
@@ -61,6 +87,11 @@ unsigned int queue_size (const struct queue* container){
    return n;
 }
 
+/**
+ * Clears queue and dealocates all instructions
+ *
+ * @param queue pointer
+ */
 unsigned int queue_clear (struct queue* container){
    my_assert(container && "NULL argument!");
 

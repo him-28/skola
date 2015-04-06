@@ -1,3 +1,8 @@
+/**
+ * @author  Pavel Ondračka <pavel.ondracka@gmail.com>
+ * @version 1.0
+ */
+
 #ifndef my_assert
 #include <assert.h>
 #define my_assert(x) assert(x)

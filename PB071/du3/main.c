@@ -1,3 +1,8 @@
+/**
+ * @author  Pavel Ondračka <pavel.ondracka@gmail.com>
+ * @version 1.0
+ */
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -21,6 +26,13 @@ struct stack{
    int stack_values[20];
 };
 
+/**
+ * Add an insturction to the queue
+ *
+ * @param pointer to the queue
+ * @param instruction type
+ * @param instruction value
+ */
 void queue_add (struct queue* container, const enum instruction_type type, const int value){
    my_assert(container && "NULL argument!");
 
@@ -32,10 +44,25 @@ void queue_add (struct queue* container, const enum instruction_type type, const
    queue_push(container, item);
 }
 
+/**
+ * Print info about program usage 
+ */
 void print_help(){
-   
+   printf("Usage: cpu [options]\n");
+   printf("Simulates simple CPU with queue and stack\n\n");
+   printf("Allowed options\n");
+   printf("-h\tprogram prints information abou usage and options, and exits\n");
+   printf("-r <number>\tafter run commaind, program evaluates <number> of instruction\n");
+   printf("-R\tafter run command, program evaluates all instructions in queue\n");
 }
 
+/**
+ * Parse input arguments
+ *
+ * @param number of input arguments
+ * @param string array with input arguments
+ * @param argument of -r option  
+ */
 void parse_args(int argc, char *argv[], int* batch_size){
    my_assert(argc > 1 && "Number of arguments too low");
 
@@ -56,6 +83,12 @@ void parse_args(int argc, char *argv[], int* batch_size){
       my_assert(0 && "Unknown input switch");   
 }
 
+/**
+ * Evalueate <batch_size> number of instructions in queue
+ *
+ * @param queue pointer
+ * @param number of instruction to be evaluated, -1 if no limit
+ */
 void inst_run(struct queue *my_queue, int batch_size){
    struct instruction *next;
 
@@ -97,6 +130,9 @@ void inst_run(struct queue *my_queue, int batch_size){
    }
 }
 
+/**
+ * Reads one line from stdin
+ */
 char* read_line(){
    char c;
    char *line = NULL;
