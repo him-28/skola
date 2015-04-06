@@ -33,7 +33,8 @@ void queue_add (struct queue* container, const enum instruction_type type, const
 }
 
 void print_help(){
-};
+   
+}
 
 void parse_args(int argc, char *argv[], int* batch_size){
    my_assert(argc > 1 && "Number of arguments too low");
