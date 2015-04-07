@@ -1,7 +1,7 @@
 .PHONY: all clean update_data
 HOST = ondracka@anselm.it4i.cz:HfO2/
 
-FIGURES = c-HfO2.pdf
+FIGURES = c-HfO2.pdf m-HfO2.pdf
 
 all: $(FIGURES)
 

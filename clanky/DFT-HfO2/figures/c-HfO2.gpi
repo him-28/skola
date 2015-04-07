@@ -22,7 +22,7 @@ set origin 0,0.57
 
 set label at graph 0.05,0.9 "a)"
 
-set xrange [4:15]
+set xrange [4:10]
 
 plot [][]  \
     "cubic.epsilon_br" u 1:2 t 'calculation' w l ls 1,\
