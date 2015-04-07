@@ -10,21 +10,7 @@
 #include "queue.h"
 #include "cpu.h"
 
-struct instruction{
-   struct instruction *next;
-   enum instruction_type type;
-   long value;
-};
-
-struct queue {
-   struct instruction* first;
-   struct instruction* last;
-};
-
-struct stack{
-   unsigned int stack_top;
-   int stack_values[20];
-};
+int mem_register = 0;
 
 /**
  * Add an insturction to the queue

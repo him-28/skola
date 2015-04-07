@@ -8,9 +8,18 @@
 #define my_assert(x) assert(x)
 #endif
 
-struct queue;
-struct instruction;
 enum instruction_type {INST_ADD, INST_SUB, INST_INC, INST_DEC, INST_MUL, INST_DIV};
+
+struct queue {
+   struct instruction* first;
+   struct instruction* last;
+};
+
+struct instruction{
+   struct instruction *next;
+   enum instruction_type type;
+   long value;
+};
 
 void queue_create (struct queue* container);
 

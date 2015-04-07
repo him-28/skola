@@ -8,17 +8,6 @@
 
 #include "queue.h"
 
-struct instruction{
-   struct instruction *next;
-   enum instruction_type type;
-   long value;
-};
-
-struct queue {
-   struct instruction* first;
-   struct instruction* last;
-};
-
 /**
  * Initializes queue
  *

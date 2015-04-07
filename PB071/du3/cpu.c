@@ -6,12 +6,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-struct stack{
-   unsigned int stack_top;
-   int stack_values[20];
-};
-
-int mem_register = 0;
+#include "cpu.h"
 
 /**
  * Puts a value from mem_register at end of the stack

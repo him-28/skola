@@ -3,7 +3,11 @@
  * @version 1.0
  */
 
-struct stack;
+struct stack{
+   unsigned int stack_top;
+   int stack_values[20];
+};
+
 int mem_register;
 
 void stack_push (struct stack* stack);
