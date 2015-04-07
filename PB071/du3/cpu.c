@@ -13,6 +13,11 @@ struct stack{
 
 int mem_register = 0;
 
+/**
+ * Puts a value from mem_register at end of the stack
+ *
+ * @param stack pointer
+ */
 void stack_push (struct stack* stack){
    if(!stack){
       fprintf(stderr, "Null argument!\n");
@@ -28,16 +33,27 @@ void stack_push (struct stack* stack){
    stack->stack_top++;
 }
 
+/**
+ * Clears a last value from the stack
+ *
+ * @param stack pointer
+ */
 void stack_pop (struct stack* stack){
    if(!stack){
       fprintf(stderr, "Null argument!\n");
       return;
    }
-
+   if(stack->stack_top < 1)
+      return;
    stack->stack_values[stack->stack_top - 1] = 0;
    stack->stack_top--;
 }
 
+/**
+ * Prints stack values and memory values
+ *
+ * @param stack pointer
+ */
 void print (const struct stack* stack){
    if(!stack){
       fprintf(stderr, "Null argument!\n");
@@ -49,4 +65,3 @@ void print (const struct stack* stack){
       printf("%i ", stack->stack_values[i]);
    printf("\n");
 }
-

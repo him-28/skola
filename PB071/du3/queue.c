@@ -50,6 +50,11 @@ void queue_push (struct queue* container, struct instruction* item){
    return;
 }
 
+/**
+ * Returns pointer to the first instruction in queue 
+ *
+ * @param queue pointer
+ */
 struct instruction* queue_pop (struct queue* container){
    my_assert(container && "NULL argument!");
    if(!container->first)
