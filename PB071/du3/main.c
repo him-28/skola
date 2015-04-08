@@ -24,7 +24,7 @@ void queue_add (struct queue* container, const enum instruction_type type, const
 
    struct instruction *item = malloc(sizeof(struct instruction));
    item->type = type;
-   item->value = value;
+   item->arg = value;
    item->next = NULL;
 
    queue_push(container, item);
@@ -40,6 +40,7 @@ void print_help(){
    printf("-h\tprogram prints information abou usage and options, and exits\n");
    printf("-r <number>\tafter run commaind, program evaluates <number> of instruction\n");
    printf("-R\tafter run command, program evaluates all instructions in queue\n");
+   exit(0);
 }
 
 /**
@@ -60,7 +61,7 @@ void parse_args(int argc, char *argv[], int* batch_size){
    else if(strstr(argv[1], "-r") == argv[1]){
       my_assert(argc == 3 && "Number of arguments too low");
       *batch_size = strtol(argv[2], NULL, 10);
-      assert(*batch_size >= 0 && "Incorrect argument value");
+      my_assert(*batch_size >= 0 && "Incorrect argument value");
    }
    else if(strstr(argv[1], "-R") == argv[1]){
       my_assert(argc == 2 && "Number of arguments too low");
@@ -85,10 +86,10 @@ void inst_run(struct queue *my_queue, int batch_size){
 
       switch(next->type){
          case INST_ADD:
-            mem_register += next->value;
+            mem_register += next->arg;
             break;
          case INST_SUB:
-            mem_register -= next->value;
+            mem_register -= next->arg;
             break;
          case INST_INC:
             mem_register++;
@@ -97,10 +98,10 @@ void inst_run(struct queue *my_queue, int batch_size){
             mem_register--;
             break;
          case INST_MUL:
-            mem_register *= next->value;
+            mem_register *= next->arg;
             break;
          case INST_DIV:
-            mem_register /= next->value;
+            mem_register /= next->arg;
             break;
       }
 
@@ -198,7 +199,7 @@ int main(int argc, char *argv[]){
          print(&my_stack);
       }
       else
-         assert(0 && "Unexpected input!");
+         my_assert(0 && "Unexpected input!");
    
    printf("> ");
    free(input_line);

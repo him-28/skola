@@ -18,7 +18,7 @@ struct queue {
 struct instruction{
    struct instruction *next;
    enum instruction_type type;
-   long value;
+   long arg;
 };
 
 void queue_create (struct queue* container);

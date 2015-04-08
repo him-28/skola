@@ -62,7 +62,7 @@ unsigned int queue_empty (const struct queue* container){
 }
 
 /**
- * Returns number of instructions in the queue
+ * Returns number of instructions in the queuevalgrind
  *
  * @param queue pointer
  */
