@@ -27,8 +27,11 @@ void queue_create (struct queue* container){
  */
 void queue_push (struct queue* container, struct instruction* item){
    my_assert(container && "NULL argument!");
-   if(!item)
+   if(!item){
       fprintf(stderr, "NULL argument\n");
+      return;
+   }
+   item->next = NULL;
    if(container->first == NULL){
       container->first = item;
       container->last = item;
@@ -36,11 +39,10 @@ void queue_push (struct queue* container, struct instruction* item){
    }
    container->last->next = item;
    container->last = item;
-   return;
 }
 
 /**
- * Returns pointer to the first instruction in queue 
+ * Returns pointer to the first instruction in queue
  *
  * @param queue pointer
  */
@@ -62,7 +64,7 @@ unsigned int queue_empty (const struct queue* container){
 }
 
 /**
- * Returns number of instructions in the queuevalgrind
+ * Returns number of instructions in the queue
  *
  * @param queue pointer
  */
@@ -73,7 +75,7 @@ unsigned int queue_size (const struct queue* container){
       return 0;
 
    struct instruction* current = container->first;
-   int n = 0;
+   unsigned int n = 0;
    while(current->next){
       n++;
       current = current->next;
@@ -93,7 +95,7 @@ unsigned int queue_clear (struct queue* container){
       return 0;
 
    struct instruction* current = container->first;
-   int n = 0;
+   unsigned int n = 0;
    while(current->next){
       struct instruction* last = current;
       current = current->next;

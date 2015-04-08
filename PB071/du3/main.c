@@ -191,6 +191,12 @@ int main(int argc, char *argv[]){
       else if(strstr(cmd, "pop") == cmd){
          stack_pop(&my_stack);
       }
+      else if(strstr(cmd, "size") == cmd){
+         printf("> %i\n", queue_size(my_queue));
+      }
+      else if(strstr(cmd, "empty") == cmd){
+         printf("> %i\n", queue_empty(my_queue));
+      }
       else if(strstr(cmd, "print") == cmd){
          print(&my_stack);
       }
