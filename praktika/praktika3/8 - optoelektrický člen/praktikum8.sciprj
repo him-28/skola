@@ -1,0 +1,525 @@
+SciDAVis 0.2.4 project file
+<scripting-lang>	muParser
+<windows>	11
+<table>
+2969
+<table creation_time="1910-22-03 12:48:00:000" caption_spec="%n%C{ - }%c" name="Tabulka1" columns="2" rows="30"><comment><![CDATA[]]></comment><column creation_time="2010-22-03 12:48:57:465" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-22-03 12:48:57:471" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-22-03 12:48:57:471" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="14" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">1.2000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">1.1890000000000001e+00</row><row type="TypeDouble" index="2" invalid="no">1.1799999999999999e+00</row><row type="TypeDouble" index="3" invalid="no">1.1730000000000000e+00</row><row type="TypeDouble" index="4" invalid="no">1.1690000000000000e+00</row><row type="TypeDouble" index="5" invalid="no">1.1639999999999999e+00</row><row type="TypeDouble" index="6" invalid="no">1.1530000000000000e+00</row><row type="TypeDouble" index="7" invalid="no">1.1430000000000000e+00</row><row type="TypeDouble" index="8" invalid="no">1.1160000000000001e+00</row><row type="TypeDouble" index="9" invalid="no">1.0120000000000000e+00</row></column><column creation_time="2010-22-03 12:48:57:472" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-22-03 12:48:57:472" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-22-03 12:48:57:473" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="14" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">1.4279999999999999e+01</row><row type="TypeDouble" index="1" invalid="no">1.2070000000000000e+01</row><row type="TypeDouble" index="2" invalid="no">1.0500000000000000e+01</row><row type="TypeDouble" index="3" invalid="no">9.3000000000000007e+00</row><row type="TypeDouble" index="4" invalid="no">8.6999999999999993e+00</row><row type="TypeDouble" index="5" invalid="no">7.8499999999999996e+00</row><row type="TypeDouble" index="6" invalid="no">6.3799999999999999e+00</row><row type="TypeDouble" index="7" invalid="no">5.2500000000000000e+00</row><row type="TypeDouble" index="8" invalid="no">2.8900000000000001e+00</row><row type="TypeDouble" index="9" invalid="no">2.8000000000000003e-01</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	32	201	654	404	minimized	
+
+</table>
+<table>
+16500
+<table creation_time="1910-22-03 13:17:00:000" caption_spec="%n%C{ - }%c" name="Údaje ke křivce 1" columns="2" rows="100"><comment><![CDATA[]]></comment><column creation_time="2010-22-03 13:17:08:617" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-22-03 13:17:08:617" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-22-03 13:17:08:617" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="14" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">9.4999999999999996e-01</row><row type="TypeDouble" index="1" invalid="no">9.5252525252525244e-01</row><row type="TypeDouble" index="2" invalid="no">9.5505050505050493e-01</row><row type="TypeDouble" index="3" invalid="no">9.5757575757575741e-01</row><row type="TypeDouble" index="4" invalid="no">9.6010101010100990e-01</row><row type="TypeDouble" index="5" invalid="no">9.6262626262626239e-01</row><row type="TypeDouble" index="6" invalid="no">9.6515151515151487e-01</row><row type="TypeDouble" index="7" invalid="no">9.6767676767676736e-01</row><row type="TypeDouble" index="8" invalid="no">9.7020202020201984e-01</row><row type="TypeDouble" index="9" invalid="no">9.7272727272727233e-01</row><row type="TypeDouble" index="10" invalid="no">9.7525252525252482e-01</row><row type="TypeDouble" index="11" invalid="no">9.7777777777777730e-01</row><row type="TypeDouble" index="12" invalid="no">9.8030303030302979e-01</row><row type="TypeDouble" index="13" invalid="no">9.8282828282828227e-01</row><row type="TypeDouble" index="14" invalid="no">9.8535353535353476e-01</row><row type="TypeDouble" index="15" invalid="no">9.8787878787878725e-01</row><row type="TypeDouble" index="16" invalid="no">9.9040404040403973e-01</row><row type="TypeDouble" index="17" invalid="no">9.9292929292929222e-01</row><row type="TypeDouble" index="18" invalid="no">9.9545454545454470e-01</row><row type="TypeDouble" index="19" invalid="no">9.9797979797979719e-01</row><row type="TypeDouble" index="20" invalid="no">1.0005050505050497e+00</row><row type="TypeDouble" index="21" invalid="no">1.0030303030303023e+00</row><row type="TypeDouble" index="22" invalid="no">1.0055555555555549e+00</row><row type="TypeDouble" index="23" invalid="no">1.0080808080808075e+00</row><row type="TypeDouble" index="24" invalid="no">1.0106060606060601e+00</row><row type="TypeDouble" index="25" invalid="no">1.0131313131313127e+00</row><row type="TypeDouble" index="26" invalid="no">1.0156565656565653e+00</row><row type="TypeDouble" index="27" invalid="no">1.0181818181818179e+00</row><row type="TypeDouble" index="28" invalid="no">1.0207070707070705e+00</row><row type="TypeDouble" index="29" invalid="no">1.0232323232323230e+00</row><row type="TypeDouble" index="30" invalid="no">1.0257575757575756e+00</row><row type="TypeDouble" index="31" invalid="no">1.0282828282828282e+00</row><row type="TypeDouble" index="32" invalid="no">1.0308080808080808e+00</row><row type="TypeDouble" index="33" invalid="no">1.0333333333333334e+00</row><row type="TypeDouble" index="34" invalid="no">1.0358585858585860e+00</row><row type="TypeDouble" index="35" invalid="no">1.0383838383838386e+00</row><row type="TypeDouble" index="36" invalid="no">1.0409090909090912e+00</row><row type="TypeDouble" index="37" invalid="no">1.0434343434343438e+00</row><row type="TypeDouble" index="38" invalid="no">1.0459595959595964e+00</row><row type="TypeDouble" index="39" invalid="no">1.0484848484848490e+00</row><row type="TypeDouble" index="40" invalid="no">1.0510101010101016e+00</row><row type="TypeDouble" index="41" invalid="no">1.0535353535353542e+00</row><row type="TypeDouble" index="42" invalid="no">1.0560606060606068e+00</row><row type="TypeDouble" index="43" invalid="no">1.0585858585858594e+00</row><row type="TypeDouble" index="44" invalid="no">1.0611111111111120e+00</row><row type="TypeDouble" index="45" invalid="no">1.0636363636363646e+00</row><row type="TypeDouble" index="46" invalid="no">1.0661616161616172e+00</row><row type="TypeDouble" index="47" invalid="no">1.0686868686868698e+00</row><row type="TypeDouble" index="48" invalid="no">1.0712121212121224e+00</row><row type="TypeDouble" index="49" invalid="no">1.0737373737373750e+00</row><row type="TypeDouble" index="50" invalid="no">1.0762626262626276e+00</row><row type="TypeDouble" index="51" invalid="no">1.0787878787878802e+00</row><row type="TypeDouble" index="52" invalid="no">1.0813131313131328e+00</row><row type="TypeDouble" index="53" invalid="no">1.0838383838383854e+00</row><row type="TypeDouble" index="54" invalid="no">1.0863636363636380e+00</row><row type="TypeDouble" index="55" invalid="no">1.0888888888888906e+00</row><row type="TypeDouble" index="56" invalid="no">1.0914141414141432e+00</row><row type="TypeDouble" index="57" invalid="no">1.0939393939393958e+00</row><row type="TypeDouble" index="58" invalid="no">1.0964646464646484e+00</row><row type="TypeDouble" index="59" invalid="no">1.0989898989899010e+00</row><row type="TypeDouble" index="60" invalid="no">1.1015151515151536e+00</row><row type="TypeDouble" index="61" invalid="no">1.1040404040404062e+00</row><row type="TypeDouble" index="62" invalid="no">1.1065656565656588e+00</row><row type="TypeDouble" index="63" invalid="no">1.1090909090909113e+00</row><row type="TypeDouble" index="64" invalid="no">1.1116161616161639e+00</row><row type="TypeDouble" index="65" invalid="no">1.1141414141414165e+00</row><row type="TypeDouble" index="66" invalid="no">1.1166666666666691e+00</row><row type="TypeDouble" index="67" invalid="no">1.1191919191919217e+00</row><row type="TypeDouble" index="68" invalid="no">1.1217171717171743e+00</row><row type="TypeDouble" index="69" invalid="no">1.1242424242424269e+00</row><row type="TypeDouble" index="70" invalid="no">1.1267676767676795e+00</row><row type="TypeDouble" index="71" invalid="no">1.1292929292929321e+00</row><row type="TypeDouble" index="72" invalid="no">1.1318181818181847e+00</row><row type="TypeDouble" index="73" invalid="no">1.1343434343434373e+00</row><row type="TypeDouble" index="74" invalid="no">1.1368686868686899e+00</row><row type="TypeDouble" index="75" invalid="no">1.1393939393939425e+00</row><row type="TypeDouble" index="76" invalid="no">1.1419191919191951e+00</row><row type="TypeDouble" index="77" invalid="no">1.1444444444444477e+00</row><row type="TypeDouble" index="78" invalid="no">1.1469696969697003e+00</row><row type="TypeDouble" index="79" invalid="no">1.1494949494949529e+00</row><row type="TypeDouble" index="80" invalid="no">1.1520202020202055e+00</row><row type="TypeDouble" index="81" invalid="no">1.1545454545454581e+00</row><row type="TypeDouble" index="82" invalid="no">1.1570707070707107e+00</row><row type="TypeDouble" index="83" invalid="no">1.1595959595959633e+00</row><row type="TypeDouble" index="84" invalid="no">1.1621212121212159e+00</row><row type="TypeDouble" index="85" invalid="no">1.1646464646464685e+00</row><row type="TypeDouble" index="86" invalid="no">1.1671717171717211e+00</row><row type="TypeDouble" index="87" invalid="no">1.1696969696969737e+00</row><row type="TypeDouble" index="88" invalid="no">1.1722222222222263e+00</row><row type="TypeDouble" index="89" invalid="no">1.1747474747474789e+00</row><row type="TypeDouble" index="90" invalid="no">1.1772727272727315e+00</row><row type="TypeDouble" index="91" invalid="no">1.1797979797979841e+00</row><row type="TypeDouble" index="92" invalid="no">1.1823232323232367e+00</row><row type="TypeDouble" index="93" invalid="no">1.1848484848484893e+00</row><row type="TypeDouble" index="94" invalid="no">1.1873737373737419e+00</row><row type="TypeDouble" index="95" invalid="no">1.1898989898989945e+00</row><row type="TypeDouble" index="96" invalid="no">1.1924242424242470e+00</row><row type="TypeDouble" index="97" invalid="no">1.1949494949494996e+00</row><row type="TypeDouble" index="98" invalid="no">1.1974747474747522e+00</row><row type="TypeDouble" index="99" invalid="no">1.2000000000000048e+00</row></column><column creation_time="2010-22-03 13:17:08:618" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-22-03 13:17:08:618" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-22-03 13:17:08:618" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="14" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">-3.3902586082223923e-01</row><row type="TypeDouble" index="1" invalid="no">-3.2824556470892896e-01</row><row type="TypeDouble" index="2" invalid="no">-3.1701209008846282e-01</row><row type="TypeDouble" index="3" invalid="no">-3.0530638639328778e-01</row><row type="TypeDouble" index="4" invalid="no">-2.9310860221441942e-01</row><row type="TypeDouble" index="5" invalid="no">-2.8039805163593823e-01</row><row type="TypeDouble" index="6" invalid="no">-2.6715317915426051e-01</row><row type="TypeDouble" index="7" invalid="no">-2.5335152312270376e-01</row><row type="TypeDouble" index="8" invalid="no">-2.3896967765934235e-01</row><row type="TypeDouble" index="9" invalid="no">-2.2398325295356308e-01</row><row type="TypeDouble" index="10" invalid="no">-2.0836683390399358e-01</row><row type="TypeDouble" index="11" invalid="no">-1.9209393701767274e-01</row><row type="TypeDouble" index="12" invalid="no">-1.7513696549735869e-01</row><row type="TypeDouble" index="13" invalid="no">-1.5746716244081649e-01</row><row type="TypeDouble" index="14" invalid="no">-1.3905456207270211e-01</row><row type="TypeDouble" index="15" invalid="no">-1.1986793892636571e-01</row><row type="TypeDouble" index="16" invalid="no">-9.9874754889362760e-02</row><row type="TypeDouble" index="17" invalid="no">-7.9041104022880670e-02</row><row type="TypeDouble" index="18" invalid="no">-5.7331655061518494e-02</row><row type="TypeDouble" index="19" invalid="no">-3.4709591495876713e-02</row><row type="TypeDouble" index="20" invalid="no">-1.1136549136356755e-02</row><row type="TypeDouble" index="21" invalid="no">1.3427448947692877e-02</row><row type="TypeDouble" index="22" invalid="no">3.9024060223857404e-02</row><row type="TypeDouble" index="23" invalid="no">6.5696693342507273e-02</row><row type="TypeDouble" index="24" invalid="no">9.3490581752438406e-02</row><row type="TypeDouble" index="25" invalid="no">1.2245286041114190e-01</row><row type="TypeDouble" index="26" invalid="no">1.5263264571979784e-01</row><row type="TypeDouble" index="27" invalid="no">1.8408111881853662e-01</row><row type="TypeDouble" index="28" invalid="no">2.1685161238326456e-01</row><row type="TypeDouble" index="29" invalid="no">2.5099970107119951e-01</row><row type="TypeDouble" index="30" invalid="no">2.8658329576853980e-01</row><row type="TypeDouble" index="31" invalid="no">3.2366274180008170e-01</row><row type="TypeDouble" index="32" invalid="no">3.6230092126733981e-01</row><row type="TypeDouble" index="33" invalid="no">4.0256335968872603e-01</row><row type="TypeDouble" index="34" invalid="no">4.4451833712263256e-01</row><row type="TypeDouble" index="35" invalid="no">4.8823700396185543e-01</row><row type="TypeDouble" index="36" invalid="no">5.3379350159577987e-01</row><row type="TypeDouble" index="37" invalid="no">5.8126508814488742e-01</row><row type="TypeDouble" index="38" invalid="no">6.3073226948086603e-01</row><row type="TypeDouble" index="39" invalid="no">6.8227893575449594e-01</row><row type="TypeDouble" index="40" invalid="no">7.3599250366285041e-01</row><row type="TypeDouble" index="41" invalid="no">7.9196406469708214e-01</row><row type="TypeDouble" index="42" invalid="no">8.5028853962217721e-01</row><row type="TypeDouble" index="43" invalid="no">9.1106483945072469e-01</row><row type="TypeDouble" index="44" invalid="no">9.7439603318360135e-01</row><row type="TypeDouble" index="45" invalid="no">1.0403895226021067e+00</row><row type="TypeDouble" index="46" invalid="no">1.1091572244079471e+00</row><row type="TypeDouble" index="47" invalid="no">1.1808157600199607e+00</row><row type="TypeDouble" index="48" invalid="no">1.2554866533494526e+00</row><row type="TypeDouble" index="49" invalid="no">1.3332965368895517e+00</row><row type="TypeDouble" index="50" invalid="no">1.4143773664680501e+00</row><row type="TypeDouble" index="51" invalid="no">1.4988666450280173e+00</row><row type="TypeDouble" index="52" invalid="no">1.5869076558155633e+00</row><row type="TypeDouble" index="53" invalid="no">1.6786497053703036e+00</row><row type="TypeDouble" index="54" invalid="no">1.7742483767305717e+00</row><row type="TypeDouble" index="55" invalid="no">1.8738657932827874e+00</row><row type="TypeDouble" index="56" invalid="no">1.9776708937024354e+00</row><row type="TypeDouble" index="57" invalid="no">2.0858397184529367e+00</row><row type="TypeDouble" index="58" invalid="no">2.1985557083282079e+00</row><row type="TypeDouble" index="59" invalid="no">2.3160100155453560e+00</row><row type="TypeDouble" index="60" invalid="no">2.4384018279148889e+00</row><row type="TypeDouble" index="61" invalid="no">2.5659387066383275e+00</row><row type="TypeDouble" index="62" invalid="no">2.6988369383060364e+00</row><row type="TypeDouble" index="63" invalid="no">2.8373219016922251e+00</row><row type="TypeDouble" index="64" invalid="no">2.9816284499691617e+00</row><row type="TypeDouble" index="65" invalid="no">3.1320013089887198e+00</row><row type="TypeDouble" index="66" invalid="no">3.2886954923068856e+00</row><row type="TypeDouble" index="67" invalid="no">3.4519767336547891e+00</row><row type="TypeDouble" index="68" invalid="no">3.6221219375898852e+00</row><row type="TypeDouble" index="69" invalid="no">3.7994196490914320e+00</row><row type="TypeDouble" index="70" invalid="no">3.9841705428966843e+00</row><row type="TypeDouble" index="71" invalid="no">4.1766879334076261e+00</row><row type="TypeDouble" index="72" invalid="no">4.3772983060330173e+00</row><row type="TypeDouble" index="73" invalid="no">4.5863418708667316e+00</row><row type="TypeDouble" index="74" invalid="no">4.8041731396416125e+00</row><row type="TypeDouble" index="75" invalid="no">5.0311615269369563e+00</row><row type="TypeDouble" index="76" invalid="no">5.2676919766594388e+00</row><row type="TypeDouble" index="77" invalid="no">5.5141656148598139e+00</row><row type="TypeDouble" index="78" invalid="no">5.7710004299925197e+00</row><row type="TypeDouble" index="79" invalid="no">6.0386319817718004e+00</row><row type="TypeDouble" index="80" invalid="no">6.3175141398265131e+00</row><row type="TypeDouble" index="81" invalid="no">6.6081198534061363e+00</row><row type="TypeDouble" index="82" invalid="no">6.9109419534436789e+00</row><row type="TypeDouble" index="83" invalid="no">7.2264939883351786e+00</row><row type="TypeDouble" index="84" invalid="no">7.5553110948535673e+00</row><row type="TypeDouble" index="85" invalid="no">7.8979509056736843e+00</row><row type="TypeDouble" index="86" invalid="no">8.2549944950475194e+00</row><row type="TypeDouble" index="87" invalid="no">8.6270473642334906e+00</row><row type="TypeDouble" index="88" invalid="no">9.0147404683506931e+00</row><row type="TypeDouble" index="89" invalid="no">9.4187312864000337e+00</row><row type="TypeDouble" index="90" invalid="no">9.8397049362662337e+00</row><row type="TypeDouble" index="91" invalid="no">1.0278375336592079e+01</row><row type="TypeDouble" index="92" invalid="no">1.0735486417495121e+01</row><row type="TypeDouble" index="93" invalid="no">1.1211813382180082e+01</row><row type="TypeDouble" index="94" invalid="no">1.1708164021586514e+01</row><row type="TypeDouble" index="95" invalid="no">1.2225380084301200e+01</row><row type="TypeDouble" index="96" invalid="no">1.2764338704058286e+01</row><row type="TypeDouble" index="97" invalid="no">1.3325953887248613e+01</row><row type="TypeDouble" index="98" invalid="no">1.3911178062960028e+01</row><row type="TypeDouble" index="99" invalid="no">1.4521003698178014e+01</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	362	35	772	449	hidden
+
+</table>
+<table>
+2821
+<table creation_time="1910-27-03 12:42:00:000" caption_spec="%n%C{ - }%c" name="Tabulka2" columns="2" rows="30"><comment><![CDATA[]]></comment><column creation_time="2010-27-03 12:42:37:248" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-27-03 12:42:37:248" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-27-03 12:42:37:248" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="14" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">3.7000000000000000e-01</row><row type="TypeDouble" index="1" invalid="no">5.1000000000000001e-01</row><row type="TypeDouble" index="2" invalid="no">6.5000000000000002e-01</row><row type="TypeDouble" index="3" invalid="no">8.0000000000000004e-01</row><row type="TypeDouble" index="4" invalid="no">9.3000000000000005e-01</row><row type="TypeDouble" index="5" invalid="no">1.0600000000000001e+00</row><row type="TypeDouble" index="6" invalid="no">1.1499999999999999e+00</row><row type="TypeDouble" index="7" invalid="no">1.2400000000000000e+00</row><row type="TypeDouble" index="8" invalid="no">1.2800000000000000e+00</row></column><column creation_time="2010-27-03 12:42:37:250" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-27-03 12:42:37:250" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-27-03 12:42:37:250" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="14" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">8.1999999999999995e-01</row><row type="TypeDouble" index="1" invalid="no">9.0000000000000002e-01</row><row type="TypeDouble" index="2" invalid="no">9.6999999999999997e-01</row><row type="TypeDouble" index="3" invalid="no">1.0500000000000000e+00</row><row type="TypeDouble" index="4" invalid="no">1.1100000000000001e+00</row><row type="TypeDouble" index="5" invalid="no">1.1599999999999999e+00</row><row type="TypeDouble" index="6" invalid="no">1.2000000000000000e+00</row><row type="TypeDouble" index="7" invalid="no">1.2400000000000000e+00</row><row type="TypeDouble" index="8" invalid="no">1.2600000000000000e+00</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	69	85	572	404	minimized	
+
+</table>
+<table>
+2967
+<table creation_time="1910-10-04 10:38:00:000" caption_spec="%n%C{ - }%c" name="Tabulka3" columns="2" rows="30"><comment><![CDATA[]]></comment><column creation_time="2010-10-04 10:38:54:486" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-10-04 10:38:54:486" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-10-04 10:38:54:487" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">2.5699999999999998e+00</row><row type="TypeDouble" index="1" invalid="no">2.2700000000000000e+00</row><row type="TypeDouble" index="2" invalid="no">1.9350000000000001e+00</row><row type="TypeDouble" index="3" invalid="no">1.5200000000000000e+00</row><row type="TypeDouble" index="4" invalid="no">1.0389999999999999e+00</row><row type="TypeDouble" index="5" invalid="no">7.3299999999999998e-01</row><row type="TypeDouble" index="6" invalid="no">3.7600000000000000e-01</row><row type="TypeDouble" index="7" invalid="no">2.0200000000000001e-01</row><row type="TypeDouble" index="8" invalid="no">1.6800000000000001e-01</row><row type="TypeDouble" index="9" invalid="no">1.0600000000000000e-01</row></column><column creation_time="2010-10-04 10:38:54:489" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-10-04 10:38:54:489" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-10-04 10:38:54:489" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">1.6000000000000000e+01</row><row type="TypeDouble" index="1" invalid="no">1.5000000000000000e+01</row><row type="TypeDouble" index="2" invalid="no">1.3699999999999999e+01</row><row type="TypeDouble" index="3" invalid="no">1.2100000000000000e+01</row><row type="TypeDouble" index="4" invalid="no">1.0100000000000000e+01</row><row type="TypeDouble" index="5" invalid="no">8.6999999999999993e+00</row><row type="TypeDouble" index="6" invalid="no">6.7999999999999998e+00</row><row type="TypeDouble" index="7" invalid="no">4.5000000000000000e+00</row><row type="TypeDouble" index="8" invalid="no">3.2999999999999998e+00</row><row type="TypeDouble" index="9" invalid="no">1.1000000000000001e+00</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	0	0	572	404	minimized	
+
+</table>
+<table>
+2819
+<table creation_time="1910-10-04 10:39:00:000" caption_spec="%n%C{ - }%c" name="Tabulka4" columns="2" rows="30"><comment><![CDATA[]]></comment><column creation_time="2010-10-04 10:39:03:214" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-10-04 10:39:03:214" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-10-04 10:39:03:214" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">1.2929999999999999e+00</row><row type="TypeDouble" index="1" invalid="no">1.0180000000000000e+00</row><row type="TypeDouble" index="2" invalid="no">7.5100000000000000e-01</row><row type="TypeDouble" index="3" invalid="no">5.9699999999999998e-01</row><row type="TypeDouble" index="4" invalid="no">3.6499999999999999e-01</row><row type="TypeDouble" index="5" invalid="no">2.5900000000000001e-01</row><row type="TypeDouble" index="6" invalid="no">1.7299999999999999e-01</row><row type="TypeDouble" index="7" invalid="no">1.4199999999999999e-01</row><row type="TypeDouble" index="8" invalid="no">9.4000000000000000e-02</row></column><column creation_time="2010-10-04 10:39:03:216" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-10-04 10:39:03:216" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-10-04 10:39:03:216" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">1.5400000000000000e+01</row><row type="TypeDouble" index="1" invalid="no">1.4000000000000000e+01</row><row type="TypeDouble" index="2" invalid="no">1.2500000000000000e+01</row><row type="TypeDouble" index="3" invalid="no">1.1600000000000000e+01</row><row type="TypeDouble" index="4" invalid="no">9.8000000000000007e+00</row><row type="TypeDouble" index="5" invalid="no">8.4000000000000004e+00</row><row type="TypeDouble" index="6" invalid="no">5.2000000000000002e+00</row><row type="TypeDouble" index="7" invalid="no">3.7000000000000002e+00</row><row type="TypeDouble" index="8" invalid="no">1.5000000000000000e+00</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	223	45	572	404	minimized	
+
+</table>
+<table>
+2967
+<table creation_time="1910-10-04 10:39:00:000" caption_spec="%n%C{ - }%c" name="Tabulka5" columns="2" rows="30"><comment><![CDATA[]]></comment><column creation_time="2010-10-04 10:39:06:600" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-10-04 10:39:06:600" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-10-04 10:39:06:600" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">7.2099999999999997e-01</row><row type="TypeDouble" index="1" invalid="no">5.5500000000000005e-01</row><row type="TypeDouble" index="2" invalid="no">2.9899999999999999e-01</row><row type="TypeDouble" index="3" invalid="no">2.4800000000000000e-01</row><row type="TypeDouble" index="4" invalid="no">2.2300000000000000e-01</row><row type="TypeDouble" index="5" invalid="no">2.0200000000000001e-01</row><row type="TypeDouble" index="6" invalid="no">1.7999999999999999e-01</row><row type="TypeDouble" index="7" invalid="no">1.4999999999999999e-01</row><row type="TypeDouble" index="8" invalid="no">1.0700000000000000e-01</row><row type="TypeDouble" index="9" invalid="no">6.6000000000000003e-02</row></column><column creation_time="2010-10-04 10:39:06:602" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-10-04 10:39:06:602" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-10-04 10:39:06:602" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">1.5000000000000000e+01</row><row type="TypeDouble" index="1" invalid="no">1.3800000000000001e+01</row><row type="TypeDouble" index="2" invalid="no">1.1100000000000000e+01</row><row type="TypeDouble" index="3" invalid="no">1.0000000000000000e+01</row><row type="TypeDouble" index="4" invalid="no">9.0000000000000000e+00</row><row type="TypeDouble" index="5" invalid="no">8.0999999999999996e+00</row><row type="TypeDouble" index="6" invalid="no">6.7999999999999998e+00</row><row type="TypeDouble" index="7" invalid="no">5.0000000000000000e+00</row><row type="TypeDouble" index="8" invalid="no">2.6000000000000001e+00</row><row type="TypeDouble" index="9" invalid="no">1.0000000000000000e+00</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	610	92	572	404	minimized	
+
+</table>
+<table>
+3119
+<table creation_time="2010-10-04 11:09:19:322" caption_spec="%n%C{ - }%c" name="Tabulka6" columns="2" rows="30"><comment><![CDATA[]]></comment><column creation_time="2010-10-04 11:09:19:322" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-10-04 11:09:19:322" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-10-04 11:09:19:323" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">4.7800000000000002e+00</row><row type="TypeDouble" index="1" invalid="no">4.4800000000000004e+00</row><row type="TypeDouble" index="2" invalid="no">4.2500000000000000e+00</row><row type="TypeDouble" index="3" invalid="no">3.9399999999999999e+00</row><row type="TypeDouble" index="4" invalid="no">3.7500000000000000e+00</row><row type="TypeDouble" index="5" invalid="no">3.4800000000000000e+00</row><row type="TypeDouble" index="6" invalid="no">2.9900000000000002e+00</row><row type="TypeDouble" index="7" invalid="no">2.7000000000000002e+00</row><row type="TypeDouble" index="8" invalid="no">2.4900000000000002e+00</row><row type="TypeDouble" index="9" invalid="no">2.0600000000000001e+00</row><row type="TypeDouble" index="10" invalid="yes">0.0000000000000000e+00</row></column><column creation_time="2010-10-04 11:09:19:327" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-10-04 11:09:19:327" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-10-04 11:09:19:327" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">4.3470000000000000e+03</row><row type="TypeDouble" index="1" invalid="no">3.9050000000000000e+03</row><row type="TypeDouble" index="2" invalid="no">3.5550000000000000e+03</row><row type="TypeDouble" index="3" invalid="no">3.0770000000000000e+03</row><row type="TypeDouble" index="4" invalid="no">2.7900000000000000e+03</row><row type="TypeDouble" index="5" invalid="no">2.3800000000000000e+03</row><row type="TypeDouble" index="6" invalid="no">1.5920000000000000e+03</row><row type="TypeDouble" index="7" invalid="no">1.1470000000000000e+03</row><row type="TypeDouble" index="8" invalid="no">7.9800000000000000e+02</row><row type="TypeDouble" index="9" invalid="no">1.8000000000000000e+02</row><row type="TypeDouble" index="10" invalid="yes">0.0000000000000000e+00</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	339	0	572	404	minimized	
+
+</table>
+<multiLayer>
+Nákres1	1	1	22.3.10 13:21
+geometry	708	119	508	428	minimized	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	439	299
+Alignement	0	0
+<graph>
+ggeometry	5	5	489	369
+PlotTitle	Voltampérová charakteristika fotodiody	#000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0	#a0a0a4	2	0	#0000ff	0	0	#a0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	U [V]	I [mA]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Tabulka1_1	Tabulka1_2	1	0	0	0	1	7	1	0	0	0	0	0	1	2	0	0	29	1
+FunctionCurve	0,ExpGrowthUmíst?ní1,x,1.012,1.2	100			0	1	1	0	1	0	0	0	19	0	0	0	0	2	0	163843344	-377957122	1
+<formula>
+A=4.80009836978785e-08
+t=0.0613251461761214
+y0=-0.595469585437535
+
+y0+A*exp(x/t)
+
+
+
+</formula>
+scale	0	-2	16	0	8	5	0	0
+scale	1	-2	16	0	8	5	0	0
+scale	2	1	1.25	0	8	5	0	0
+scale	3	1	1.25	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	1.01647058823529	14.4641638225256	Sans	10	50	0	0	0	#000000	1	0	#ffffff	0	\c{1}data	\c{2}Exp fit</legend>
+</graph>
+</multiLayer>
+<multiLayer>
+Nákres2	1	1	27.3.10 12:42
+geometry	655	29	509	428	minimized	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	435	299
+Alignement	0	0
+<graph>
+ggeometry	4	5	493	369
+PlotTitle	Logaritmický tvar převodní charakteristiky	#000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0	#a0a0a4	2	0	#0000ff	0	0	#a0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	log (I<sub>f</sub>)	log (I<sub>c</sub>)			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Tabulka2_1	Tabulka2_2	1	0	0	0	1	7	1	0	0	0	0	0	1	2	0	0	29	1
+FunctionCurve	0,LineárníUmíst?ní1,x,0.37,1.28	2			0	1	1	0	1	0	0	0	19	0	0	0	0	2	0	165190416	2061584302	1
+<formula>
+B=0.657580615753282
+A=0.474565013544488
+
+A*x+B
+
+</formula>
+scale	0	0.8	1.3	0	8	5	0	0
+scale	1	0.8	1.3	0	8	5	0	0
+scale	2	0.2	1.4	0	8	5	0	0
+scale	3	0.2	1.4	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	0.241860465116279	1.28464163822526	Sans	10	50	0	0	0	#000000	1	0	#ffffff	0	\c{1}data	\c{2}Linear fit</legend>
+</graph>
+</multiLayer>
+<multiLayer>
+Nákres3	1	1	10.4.10 10:39
+geometry	349	9	613	428	hidden
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	440	299
+Alignement	0	0
+<graph>
+ggeometry	5	5	593	369
+PlotTitle	Výstupní charakteristika fototranzistoru	#000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0	#a0a0a4	2	0	#0000ff	0	0	#a0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	U<sub>ce</sub> [V]	I<sub>c</sub> [V]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Tabulka3_1	Tabulka3_2	1	0	0	0	1	7	1	0	0	0	0	0	1	2	0	0	29	1
+curve	Tabulka4_1	Tabulka4_2	1	0	3	0	1	7	2	1	1	0	0	0	1	2	0	0	29	1
+curve	Tabulka5_1	Tabulka5_2	1	0	4	0	1	7	4	3	3	0	0	0	1	2	0	0	29	1
+scale	0	0	18	0	8	5	0	0
+scale	1	0	18	0	8	5	0	0
+scale	2	0	3	0	8	5	0	0
+scale	3	0	3	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	1.88846880907372	7.80204778156997	Sans	10	50	0	0	0	#000000	1	0	#ffffff	0	\c{1}I<sub>f</sub> = 5mA	\c{2}I<sub>f</sub> = 10mA	\c{3}I<sub>f</sub> = 15mA</legend>
+</graph>
+</multiLayer>
+<multiLayer>
+Nákres5	1	1	10.4.10 11:09
+geometry	204	4	508	428	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	415	299
+Alignement	0	0
+<graph>
+ggeometry	5	5	489	369
+PlotTitle	Převodník napětí - frekvence	#000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0	#a0a0a4	2	0	#0000ff	0	0	#a0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	U [V]	f [Hz]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Tabulka6_1	Tabulka6_2	1	0	0	0	1	7	1	0	0	0	0	0	1	2	0	0	29	1
+scale	0	0	5000	0	7	5	0	0
+scale	1	0	5000	0	8	5	0	0
+scale	2	2	5	0	8	5	0	0
+scale	3	2	5	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	2.07211538461538	4829.35153583618	Sans	10	50	0	0	0	#000000	1	0	#ffffff	0	\c{1}data</legend>
+</graph>
+</multiLayer>
+<log>
+[22.3.10 12:51	Nákres: ''Nákres1'']
+Exponenciální růst Umístění záznamu s údaji: Tabulka1_2, za použití funkce: y0+A*exp(x/t)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 1,012 do x = 1,2
+A (rozkmit) = 4,80021268737837e-08 +/- 4,27152566449211e-08
+t (životnost) = 0,0613252204245727 +/- 0,733915456455734
+y0 (posun) = -0,595476199901627 +/- 0,292660444085245
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0466707194309166
+R^2 = 0,997954681540164
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 218
+Stav = success
+---------------------------------------------------------------------------------------
+[22.3.10 12:53	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*e^(x)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 1,012 do x = 1,2
+a  = 2,50144060190868 +/- 0,407730576257394
+b  = 1 +/- 0
+--------------------------------------------------------------------------------------
+Chi^2/doF = 16,6602980817667
+R^2 = 0,165567603878756
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 1
+Stav = cannot reach the specified tolerance in F
+---------------------------------------------------------------------------------------
+[22.3.10 12:54	Nákres: ''Nákres1'']
+Exponenciální růst Umístění záznamu s údaji: Tabulka1_2, za použití funkce: y0+A*exp(x/t)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 1,012 do x = 1,2
+A (rozkmit) = 4,80009836978785e-08 +/- 4,27142584768141e-08
+t (životnost) = 0,0613251461761214 +/- 0,733915805887879
+y0 (posun) = -0,595469585437535 +/- 0,292660101646755
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0466707194247824
+R^2 = 0,997954681540433
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 221
+Stav = success
+---------------------------------------------------------------------------------------
+[22.3.10 12:59	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*exp(b*x) + c
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 1,012 do x = 1,2
+a  = 1 +/- nan
+b  = 1 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2/doF = nan
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[22.3.10 13:01	Nákres: ''Nákres1'']
+Exponenciální růst Umístění záznamu s údaji: Tabulka1_2, za použití funkce: y0+A*exp(x/t)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 1,012 do x = 1,2
+A (rozkmit) = 4,80019003444629e-08 +/- 4,2715057831937e-08
+t (životnost) = 0,0613252056361027 +/- 0,733915508226171
+y0 (posun) = -0,595474884547717 +/- 0,292660375874978
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0466707194281348
+R^2 = 0,997954681540286
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 220
+Stav = success
+---------------------------------------------------------------------------------------
+[22.3.10 13:01	Nákres: ''Nákres1'']
+Exponenciální růst Umístění záznamu s údaji: Tabulka1_2, za použití funkce: y0+A*exp(x/t)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 1,012 do x = 1,2
+A (rozkmit) = 4,80010115810881e-08 +/- 4,27142826912171e-08
+t (životnost) = 0,0613251479773267 +/- 0,733915795100838
+y0 (posun) = -0,595469746080142 +/- 0,292660109953525
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0466707194247712
+R^2 = 0,997954681540433
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = success
+---------------------------------------------------------------------------------------
+[22.3.10 13:01	Nákres: ''Nákres1'']
+Exponenciální růst Umístění záznamu s údaji: Tabulka1_2, za použití funkce: y0+A*exp(x/t)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 1,012 do x = 1,2
+A (rozkmit) = 4,80010582185448e-08 +/- 4,27143232047053e-08
+t (životnost) = 0,0613251509909487 +/- 0,73391577727258
+y0 (posun) = -0,595470014847512 +/- 0,292660123851721
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0466707194247623
+R^2 = 0,997954681540433
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = success
+---------------------------------------------------------------------------------------
+[22.3.10 13:01	Nákres: ''Nákres1'']
+Exponenciální růst Umístění záznamu s údaji: Tabulka1_2, za použití funkce: y0+A*exp(x/t)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 1,012 do x = 1,2
+A (rozkmit) = 4,80010557814116e-08 +/- 4,27143210871996e-08
+t (životnost) = 0,0613251508334367 +/- 0,733915778197491
+y0 (posun) = -0,595470000800162 +/- 0,292660123125309
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0466707194247601
+R^2 = 0,997954681540434
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = success
+---------------------------------------------------------------------------------------
+[22.3.10 13:01	Nákres: ''Nákres1'']
+Exponenciální růst Umístění záznamu s údaji: Tabulka1_2, za použití funkce: y0+A*exp(x/t)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 1,012 do x = 1,2
+A (rozkmit) = 4,80010559087948e-08 +/- 4,27143211978769e-08
+t (životnost) = 0,0613251508416694 +/- 0,733915778149152
+y0 (posun) = -0,595470001534375 +/- 0,292660123163287
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,046670719424762
+R^2 = 0,997954681540433
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = success
+---------------------------------------------------------------------------------------
+[22.3.10 13:01	Nákres: ''Nákres1'']
+Exponenciální růst Umístění záznamu s údaji: Tabulka1_2, za použití funkce: y0+A*exp(x/t)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 1,012 do x = 1,2
+A (rozkmit) = 4,80010559081292e-08 +/- 4,27143211972957e-08
+t (životnost) = 0,0613251508416263 +/- 0,733915778149355
+y0 (posun) = -0,595470001530744 +/- 0,292660123163075
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0466707194247609
+R^2 = 0,997954681540434
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = success
+---------------------------------------------------------------------------------------
+[22.3.10 13:01	Nákres: ''Nákres1'']
+Exponenciální růst Umístění záznamu s údaji: Tabulka1_2, za použití funkce: y0+A*exp(x/t)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 1,012 do x = 1,2
+A (rozkmit) = 4,80010559021696e-08 +/- 4,27143211921202e-08
+t (životnost) = 0,0613251508412412 +/- 0,73391577815166
+y0 (posun) = -0,595470001496188 +/- 0,292660123161307
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0466707194247629
+R^2 = 0,997954681540433
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = success
+---------------------------------------------------------------------------------------
+[22.3.10 13:01	Nákres: ''Nákres1'']
+Exponenciální růst Umístění záznamu s údaji: Tabulka1_2, za použití funkce: y0+A*exp(x/t)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 1,012 do x = 1,2
+A (rozkmit) = 4,80010559024801e-08 +/- 4,27143211923895e-08
+t (životnost) = 0,0613251508412613 +/- 0,733915778151534
+y0 (posun) = -0,595470001497984 +/- 0,292660123161397
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0466707194247625
+R^2 = 0,997954681540433
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = success
+---------------------------------------------------------------------------------------
+[22.3.10 13:09	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a* log(x/b) + c
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 1,012 do x = 1,2
+a  = 1 +/- nan
+b  = 1 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2/doF = nan
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[22.3.10 13:10	Nákres: ''Nákres1'']
+Exponenciální růst Umístění záznamu s údaji: Tabulka1_2, za použití funkce: y0+A*exp(x/t)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 1,012 do x = 1,2
+A (rozkmit) = 4,80019003444629e-08 +/- 4,2715057831937e-08
+t (životnost) = 0,0613252056361027 +/- 0,733915508226171
+y0 (posun) = -0,595474884547717 +/- 0,292660375874978
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0466707194281348
+R^2 = 0,997954681540286
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 220
+Stav = success
+---------------------------------------------------------------------------------------
+[22.3.10 13:12	Nákres: ''Nákres1'']
+Exponenciální růst Umístění záznamu s údaji: Tabulka1_2, za použití funkce: y0+A*exp(x/t)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 1,012 do x = 1,2
+A (rozkmit) = 4,80009836978785e-08 +/- 4,27142584768141e-08
+t (životnost) = 0,0613251461761214 +/- 0,733915805887879
+y0 (posun) = -0,595469585437535 +/- 0,292660101646755
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0466707194247824
+R^2 = 0,997954681540433
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 221
+Stav = success
+---------------------------------------------------------------------------------------
+[22.3.10 13:21	Nákres: ''Nákres1'']
+Exponenciální růst Umístění záznamu s údaji: Tabulka1_2, za použití funkce: y0+A*exp(x/t)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 1,012 do x = 1,2
+A (rozkmit) = 4,80009836978785e-08 +/- 4,27142584768141e-08
+t (životnost) = 0,0613251461761214 +/- 0,733915805887879
+y0 (posun) = -0,595469585437535 +/- 0,292660101646755
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0466707194247824
+R^2 = 0,997954681540433
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 221
+Stav = success
+---------------------------------------------------------------------------------------
+[27.3.10 12:42	Nákres: ''Nákres2'']
+Lineární regrese Umístění záznamu s údaji: Tabulka2_2, za použití funkce: A*x+B
+Obvyklé chyby Y: Neznámý
+Od x = 0,37 do x = 1,28
+B (y-úsek osy) = 0,657580615753282 +/- 0,00900156299876287
+A (stoupání) = 0,474565013544488 +/- 0,00957968516225872
+--------------------------------------------------------------------------------------
+Chi^2/doF = 7,82943991307718e-05
+R^2 = 0,997155721862969
+---------------------------------------------------------------------------------------
+[10.4.10 10:36	Nákres: ''Nákres2'']
+Lineární regrese Umístění záznamu s údaji: Tabulka2_2, za použití funkce: A*x+B
+Obvyklé chyby Y: Neznámý
+Od x = 0,37 do x = 1,28
+B (y-úsek osy) = 0,657580615753282 +/- 0,00900156299876287
+A (stoupání) = 0,474565013544488 +/- 0,00957968516225872
+--------------------------------------------------------------------------------------
+Chi^2/doF = 7,82943991307718e-05
+R^2 = 0,997155721862969
+---------------------------------------------------------------------------------------
+</log>

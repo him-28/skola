@@ -1,0 +1,329 @@
+QtiPlot 0.9.7 project file
+<scripting-lang>	muParser
+<windows>	6
+<table>
+Table1	30	2	11.3.10 11:03
+geometry	588	564	-1	-1	minimized	active
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/14	0;0/14
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	-1.25000000000000e+00	2.72000000000000e+00
+1	-2.33000000000000e+00	5.06000000000000e+00
+2	-2.78000000000000e+00	6.03000000000000e+00
+3	-3.03000000000000e+00	6.56000000000000e+00
+4	-3.25000000000000e+00	7.01000000000000e+00
+5	-3.19000000000000e+00	6.92000000000000e+00
+6	-3.61000000000000e+00	7.83000000000000e+00
+7	-4.00000000000000e+00	8.67000000000000e+00
+8	-4.28000000000000e+00	9.29000000000000e+00
+9	-4.74000000000000e+00	1.02600000000000e+01
+</data>
+</table>
+<table>
+Table2	30	4	11.3.10 11:20
+geometry	0	564	-1	-1	minimized	
+header	1[X]	2[Y]	3[Y]	4[Y]
+ColWidth	100	100	100	100	
+<com>
+</com>
+ColType	0;0/14	0;0/14	0;0/14	0;0/14
+ReadOnlyColumn	0	0	0	0
+HiddenColumn	0	0	0	0
+Comments					
+WindowLabel		2
+<data>
+0	1.90000000000000e+01	-1.88000000000000e+00	4.08000000000000e+00	-2.17000000000000e+00
+1	5.02000000000000e+01	-2.00000000000000e+00	4.40000000000000e+00	-2.20000000000000e+00
+2	8.45000000000000e+01	-1.96000000000000e+00	4.32000000000000e+00	-2.20000000000000e+00
+3	1.41000000000000e+02	-1.96000000000000e+00	4.32000000000000e+00	-2.20000000000000e+00
+4	3.61000000000000e+02	-1.88000000000000e+00	4.08000000000000e+00	-2.17000000000000e+00
+5	7.81000000000000e+02	-2.00000000000000e+00	4.40000000000000e+00	-2.20000000000000e+00
+6	1.50000000000000e+03	-1.88000000000000e+00	4.08000000000000e+00	-2.17000000000000e+00
+7	4.20000000000000e+03	-2.00000000000000e+00	4.40000000000000e+00	-2.20000000000000e+00
+8	7.50000000000000e+03	-1.96000000000000e+00	4.32000000000000e+00	-2.20000000000000e+00
+9	1.03000000000000e+04	-2.00000000000000e+00	4.56000000000000e+00	-2.28000000000000e+00
+10	2.00000000000000e+04	-2.12000000000000e+00	4.80000000000000e+00	-2.26000000000000e+00
+11	4.46000000000000e+04	-2.08000000000000e+00	4.64000000000000e+00	-2.23000000000000e+00
+12	7.50000000000000e+04	-2.08000000000000e+00	4.16000000000000e+00	-2.00000000000000e+00
+13	1.20200000000000e+05	-2.00000000000000e+00	2.88000000000000e+00	-1.44000000000000e+00
+14	1.55000000000000e+05	-2.00000000000000e+00	2.24000000000000e+00	-1.12000000000000e+00
+15	2.05000000000000e+05	-2.12000000000000e+00	1.68000000000000e+00	-7.90000000000000e-01
+</data>
+</table>
+<multiLayer>
+Graph1	1	1	11.3.10 11:03
+geometry	392	564	496	457	minimized	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<graph>
+ggeometry	5	5	478	394
+PlotTitle	inverting amplifier configuration	#000000	4228
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	U<sub>1</sub>[V]	U<sub>0</sub>[V]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+EnabledTickLabels	1	1	1	1
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Table1_1	Table1_2	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+<Function>
+<Type>0</Type>
+<Title>LinearFit1</Title>
+<Expression>A*x+B</Expression>
+<Variable>x</Variable>
+<Range>-4.74	-1.25</Range>
+<Points>2</Points>
+<Constant>A	-2.1635042629759</Constant>
+<Constant>B	0.0122651623802283</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff0000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	2	11	0	8	5	0	0
+scale	1	2	11	0	8	5	0	0
+scale	2	-5	-1	0	8	5	0	0
+scale	3	-5	-1	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-3.4962406015038</x>
+<y>10.458193979933</y>
+<right>-3.83516483516484</right>
+<bottom>9.65894039735099</bottom>
+<attachTo>0</attachTo>
+<Text>
+\l(1)measurement
+\l(2)linear fit
+</Text>
+<Font>Sans	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+</multiLayer>
+<multiLayer>
+Graph2	1	1	11.3.10 11:25
+geometry	196	564	516	457	minimized	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<graph>
+ggeometry	5	5	493	394
+PlotTitle	Dependence of the gain on the frequency<br>	#000000	4228
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	frequency [Hz]	Gain			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+EnabledTickLabels	1	1	1	1
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Table2_1	Table2_4	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+scale	0	-2.4	-0.6	0	8	5	0	0
+scale	1	-2.4	-0.6	0	8	5	0	0
+scale	2	0	250000	0	7	5	0	0
+scale	3	0	250000	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+</graph>
+<LinkXAxes>0</LinkXAxes>
+</multiLayer>
+<table>
+Table3	30	4	27.3.10 11:35
+geometry	0	0	499	277	
+header	1[X]	2[Y]	3[Y]	4[Y]
+ColWidth	100	100	100	100	
+<com>
+</com>
+ColType	0;0/14	0;0/14	0;0/14	0;0/14
+ReadOnlyColumn	0	0	0	0
+HiddenColumn	0	0	0	0
+Comments					
+WindowLabel		2
+<data>
+0	3.28800000000000e+01	5.68000000000000e-01	2.72000000000000e+00	4.79000000000000e+00
+1	4.75000000000000e+01	4.20000000000000e-01	2.92000000000000e+00	6.95000000000000e+00
+2	8.44000000000000e+01	2.36000000000000e-01	2.84000000000000e+00	1.20300000000000e+01
+3	1.86000000000000e+02	1.16000000000000e-01	2.96000000000000e+00	2.55200000000000e+01
+4	1.95000000000000e+02	1.08000000000000e-01	2.92000000000000e+00	2.70400000000000e+01
+5	4.01000000000000e+02	5.60000000000000e-02	2.96000000000000e+00	5.28600000000000e+01
+6	5.61000000000000e+02	4.08000000000000e-02	2.96000000000000e+00	7.25500000000000e+01
+7	7.62000000000000e+02	3.20000000000000e-02	2.88000000000000e+00	9.00000000000000e+01
+8	1.10000000000000e+03	2.40000000000000e-02	2.88000000000000e+00	1.20000000000000e+02
+</data>
+</table>
+<multiLayer>
+Graph3	1	1	27.3.10 11:35
+geometry	554	29	634	527	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<graph>
+ggeometry	5	5	616	464
+PlotTitle	Dependency of the amplification on the frequency	#000000	4228
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Frequency [Hz]	Amplification			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans	14	75	0	0	0
+ScaleFont0	Sans	12	75	0	0	0
+ScaleFont1	Sans	12	75	0	0	0
+ScaleFont2	Sans	12	75	0	0	0
+ScaleFont3	Sans	12	75	0	0	0
+AxisFont0	Sans	12	50	0	0	0
+AxisFont1	Sans	12	50	0	0	0
+AxisFont2	Sans	12	50	0	0	0
+AxisFont3	Sans	12	50	0	0	0
+EnabledTickLabels	1	1	1	1
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Table3_1	Table3_4	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+scale	0	0	140	0	8	5	0	0
+scale	1	0	140	0	8	5	0	0
+scale	2	0	1200	0	8	5	0	0
+scale	3	0	1200	0	7	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	-16777216	0	72
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>30.075187969925</x>
+<y>134.84949832776</y>
+<right>378.947368421053</right>
+<bottom>121.739130434783</bottom>
+<attachTo>0</attachTo>
+<Text>
+\l(1)data
+</Text>
+<Font>Sans	12	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+</multiLayer>
+<open>1</open>
+<log>
+[11.3.10 11:04	Plot: ''Graph1'']
+Linear Regression of dataset: Table1_2, using function: A*x+B
+Weighting Method: No weighting
+From x = -1,250000000000000e+00 to x = -4,740000000000000e+00
+B (y-intercept) = 1,226516238022830e-02 +/- 1,655302508730319e-02
+A (slope) = -2,163504262975900e+00 +/- 4,892777145362646e-03
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2,176615718458789e-04
+R^2 = 0,999959086411035
+Adjusted R^2 = 0,999947396814187
+RMSE (Root Mean Squared Error) = 0,0147533579854174
+RSS (Residual Sum of Squares) = 0,00174129257476703
+---------------------------------------------------------------------------------------
+
+
+
+
+</log>

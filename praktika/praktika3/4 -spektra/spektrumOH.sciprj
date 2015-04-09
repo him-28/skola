@@ -1,0 +1,82 @@
+SciDAVis 0.2.4 project file
+<scripting-lang>	muParser
+<windows>	2
+<table>
+2232
+<table creation_time="2010-17-05 13:53:38:982" caption_spec="%n%C{ - }%c" name="Tabulka1" columns="2" rows="30"><comment><![CDATA[]]></comment><column creation_time="2010-17-05 13:53:38:982" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-17-05 13:53:38:982" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-17-05 13:53:38:983" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">1.0000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">2.0000000000000000e+00</row><row type="TypeDouble" index="2" invalid="no">4.0000000000000000e+00</row><row type="TypeDouble" index="3" invalid="no">5.0000000000000000e+00</row><row type="TypeDouble" index="4" invalid="no">6.0000000000000000e+00</row></column><column creation_time="2010-17-05 13:53:38:986" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-17-05 13:53:38:986" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-17-05 13:53:38:986" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">-1.4999999999999999e-01</row><row type="TypeDouble" index="1" invalid="no">-1.7399999999999999e-01</row><row type="TypeDouble" index="2" invalid="no">-2.2600000000000001e-01</row><row type="TypeDouble" index="3" invalid="no">-2.6000000000000001e-01</row><row type="TypeDouble" index="4" invalid="no">-2.9899999999999999e-01</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	0	0	693	442	minimized	active
+
+</table>
+<multiLayer>
+Nákres1	1	1	17.5.10 13:54
+geometry	655	52	508	428	minimized	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	423	299
+Alignement	0	0
+<graph>
+ggeometry	5	5	489	369
+PlotTitle	OH radikál	#000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0	#a0a0a4	2	0	#0000ff	0	0	#a0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	N'	ln (I*λ/S)*k/(b*h*c) [K<sup>-1</sup>]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Tabulka1_1	Tabulka1_2	1	0	0	0	1	7	1	0	0	0	0	0	1	2	0	0	29	1
+FunctionCurve	0,NelineárníUmíst?ní1,x,1,6	100			0	1	1	0	1	0	0	0	19	0	0	0	0	2	0	165365856	0	1
+<formula>
+a=273.132098082902
+b=-0.148575359030681
+
+-x*(x+1)/a + b
+</formula>
+scale	0	-0.32	-0.14	0	8	5	0	0
+scale	1	-0.32	-0.14	0	8	5	0	0
+scale	2	0	7	0	8	5	0	0
+scale	3	0	7	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	3.67541766109785	-0.148600682593857	Sans	10	50	0	0	0	#000000	1	0	#ffffff	0	\c{1}data	\c{2}-x*(x+1)/T + b	</legend>
+</graph>
+</multiLayer>
+<log>
+[17.5.10 13:56	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: -x*(x+1)/a + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 1 do x = 6
+a  = 273,132098082902 +/- 11,4558594849028
+b  = -0,148575359030681 +/- 0,00382611234684283
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2,60335748792422e-05
+R^2 = 0,994750166390774
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 2
+Stav = success
+---------------------------------------------------------------------------------------
+</log>

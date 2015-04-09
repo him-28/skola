@@ -1,0 +1,706 @@
+SciDAVis 0.2.4 project file
+<scripting-lang>	muParser
+<windows>	3
+<table>
+2670
+<table creation_time="1910-20-05 12:34:00:000" caption_spec="%n%C{ - }%c" name="Tabulka1" columns="2" rows="8"><comment><![CDATA[]]></comment><column creation_time="2010-20-05 12:34:45:407" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-20-05 12:34:45:407" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-20-05 12:34:45:407" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">4.5699999999999996e-19</row><row type="TypeDouble" index="1" invalid="no">6.9100000000000002e-19</row><row type="TypeDouble" index="2" invalid="no">7.0000000000000003e-19</row><row type="TypeDouble" index="3" invalid="no">7.0699999999999997e-19</row><row type="TypeDouble" index="4" invalid="no">7.0999999999999998e-19</row><row type="TypeDouble" index="5" invalid="no">7.1700000000000002e-19</row><row type="TypeDouble" index="6" invalid="no">7.8700000000000003e-19</row><row type="TypeDouble" index="7" invalid="no">8.5000000000000000e-19</row></column><column creation_time="2010-20-05 12:34:45:408" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-20-05 12:34:45:408" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-20-05 12:34:45:408" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">1.5789999999999999e+01</row><row type="TypeDouble" index="1" invalid="no">1.1560000000000000e+01</row><row type="TypeDouble" index="2" invalid="no">1.1800000000000001e+01</row><row type="TypeDouble" index="3" invalid="no">1.1859999999999999e+01</row><row type="TypeDouble" index="4" invalid="no">1.1539999999999999e+01</row><row type="TypeDouble" index="5" invalid="no">1.1590000000000000e+01</row><row type="TypeDouble" index="6" invalid="no">1.1350000000000000e+01</row><row type="TypeDouble" index="7" invalid="no">1.0690000000000000e+01</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	114	35	947	500	
+
+</table>
+<multiLayer>
+Nákres1	1	1	20.5.10 12:52
+geometry	538	172	508	428	minimized	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	426	299
+Alignement	0	0
+<graph>
+ggeometry	-306	82	489	369
+PlotTitle	Název	#000000	4228
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0	#a0a0a4	2	0	#0000ff	0	0	#a0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Název osy X	Název osy Y			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Tabulka1_1	Tabulka1_2	1	0	0	0	1	7	1	0	0	0	0	0	1	2	0	0	29	1
+FunctionCurve	0,LineárníUmíst?ní1,x,6.91e-19,8.5e-19	2			0	1	1	0	1	0	0	0	19	0	0	0	0	2	0	154919208	2073212572	1
+<formula>
+B=14.3184420369556
+A=-4.25786405631324e+18
+
+A*x+B
+
+
+</formula>
+scale	0	10	16	0	8	5	0	0
+scale	1	10	16	0	8	5	0	0
+scale	2	4e-19	9e-19	0	8	5	0	0
+scale	3	6.5e-19	9e-19	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	7.74694376528117e-19	11.5877133105802	Sans	10	50	0	0	0	#000000	1	0	#ffffff	0	\c{1}Tabulka1_2	\c{2}linear fit</legend>
+<text>	6.62224938875306e-19	11.5180887372014	Sans	10	50	0	0	0	#000000	-12094516	-797010752	#000000	255	</text>
+<text>	6.62224938875306e-19	11.5180887372014	Sans	10	50	0	0	0	#000000	-12094516	-797010752	#000000	255	</text>
+<text>	6.62224938875306e-19	11.5180887372014	Sans	10	50	0	0	0	#000000	-12094516	-797010752	#000000	255	</text>
+<text>	6.62224938875306e-19	11.5180887372014	Sans	10	50	0	0	0	#000000	-12094516	-797010752	#000000	255	</text>
+<text>	6.62224938875306e-19	11.5180887372014	Sans	10	50	0	0	0	#000000	-12094516	-797010752	#000000	255	</text>
+</graph>
+<graph>
+ggeometry	-303	82	489	369
+PlotTitle	Název	#000000	4228
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0	#a0a0a4	2	0	#0000ff	0	0	#a0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Název osy X	Název osy Y			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Tabulka1_1	Tabulka1_2	1	0	0	0	1	7	1	0	0	0	0	0	1	2	0	0	29	1
+FunctionCurve	0,LineárníUmíst?ní1,x,6.91e-19,8.5e-19	2			0	1	1	0	1	0	0	0	19	0	0	0	0	2	0	155010752	2073212572	1
+<formula>
+B=14.3184420369556
+A=-4.25786405631324e+18
+
+A*x+B
+
+
+</formula>
+scale	0	10	16	0	8	5	0	0
+scale	1	10	16	0	8	5	0	0
+scale	2	4e-19	9e-19	0	8	5	0	0
+scale	3	6.5e-19	9e-19	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	7.74694376528117e-19	11.5877133105802	Sans	10	50	0	0	0	#000000	1	0	#ffffff	0	\c{1}Tabulka1_2	\c{2}linear fit</legend>
+<text>	6.62224938875306e-19	11.5180887372014	Sans	10	50	0	0	0	#000000	-12094516	-797010752	#000000	255	</text>
+<text>	6.62224938875306e-19	11.5180887372014	Sans	10	50	0	0	0	#000000	-12094516	-797010752	#000000	255	</text>
+<text>	6.62224938875306e-19	11.5180887372014	Sans	10	50	0	0	0	#000000	-12094516	-797010752	#000000	255	</text>
+<text>	6.62224938875306e-19	11.5180887372014	Sans	10	50	0	0	0	#000000	-12094516	-797010752	#000000	255	</text>
+<text>	6.62224938875306e-19	11.5180887372014	Sans	10	50	0	0	0	#000000	-12094516	-797010752	#000000	255	</text>
+<text>	4.07537688442211e-19	15.6296296296296	Sans	10	50	0	0	0	#000000	-12094516	155042992	#000000	255	</text>
+</graph>
+<graph>
+ggeometry	-297	92	489	369
+PlotTitle	Název	#000000	4228
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0	#a0a0a4	2	0	#0000ff	0	0	#a0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Název osy X	Název osy Y			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Tabulka1_1	Tabulka1_2	1	0	0	0	1	7	1	0	0	0	0	0	1	2	0	0	29	1
+FunctionCurve	0,LineárníUmíst?ní1,x,6.91e-19,8.5e-19	2			0	1	1	0	1	0	0	0	19	0	0	0	0	2	0	155010752	2073212572	1
+<formula>
+B=14.3184420369556
+A=-4.25786405631324e+18
+
+A*x+B
+
+
+</formula>
+scale	0	10	16	0	8	5	0	0
+scale	1	10	16	0	8	5	0	0
+scale	2	4e-19	9e-19	0	8	5	0	0
+scale	3	6.5e-19	9e-19	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	7.74694376528117e-19	11.5877133105802	Sans	10	50	0	0	0	#000000	1	0	#ffffff	0	\c{1}Tabulka1_2	\c{2}linear fit</legend>
+<text>	6.62224938875306e-19	11.5180887372014	Sans	10	50	0	0	0	#000000	-12094516	-797010752	#000000	255	</text>
+<text>	6.62224938875306e-19	11.5180887372014	Sans	10	50	0	0	0	#000000	-12094516	-797010752	#000000	255	</text>
+<text>	6.62224938875306e-19	11.5180887372014	Sans	10	50	0	0	0	#000000	-12094516	-797010752	#000000	255	</text>
+<text>	6.62224938875306e-19	11.5180887372014	Sans	10	50	0	0	0	#000000	-12094516	-797010752	#000000	255	</text>
+<text>	6.62224938875306e-19	11.5180887372014	Sans	10	50	0	0	0	#000000	-12094516	-797010752	#000000	255	</text>
+<text>	4.07537688442211e-19	15.6296296296296	Sans	10	50	0	0	0	#000000	-12094516	155042992	#000000	255	</text>
+</graph>
+</multiLayer>
+<multiLayer>
+Nákres2	1	1	24.5.10 15:57
+geometry	315	40	508	428	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	439	299
+Alignement	0	0
+<graph>
+ggeometry	5	5	489	369
+PlotTitle	Železo	#000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0	#a0a0a4	2	0	#0000ff	0	0	#a0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	E [J]	ln (I<sub>mn</sub>λ<sub>mn</sub>/A<sub>mn</sub> g<sub>m</sub>)			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Tabulka1_1	Tabulka1_2	1	0	0	0	1	7	1	0	0	0	0	0	1	2	0	0	7	1
+FunctionCurve	0,LineárníUmíst?ní1,x,4.57e-19,8.5e-19	2			0	1	1	0	1	0	0	0	19	0	0	0	0	2	0	156218544	855247264	1
+<formula>
+B=21.2971799200541
+A=-1.32047409433054e+19
+
+A*x+B
+</formula>
+scale	0	10	16	0	8	5	0	0
+scale	1	10	16	0	8	5	0	0
+scale	2	4e-19	9e-19	0	8	5	0	0
+scale	3	4e-19	9e-19	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	6.50593824228029e-19	15.3242320819113	Sans	10	50	0	0	0	#000000	1	0	#ffffff	0	\c{1}data	\c{2}Linear fit	</legend>
+</graph>
+</multiLayer>
+<log>
+[20.5.10 12:35	Nákres: ''Nákres1'']
+Lineární regrese Umístění záznamu s údaji: Tabulka1_2, za použití funkce: A*x+B
+Obvyklé chyby Y: Neznámý
+Od x = 1 do x = 5
+B (y-úsek osy) = 1 +/- 0
+A (stoupání) = 1 +/- 0
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0
+R^2 = 1
+---------------------------------------------------------------------------------------
+[20.5.10 12:35	Nákres: ''Nákres1'']
+Boltzmannovo umístění (esovité) Umístění záznamu s údaji: Tabulka1_2, za použití funkce: (A1-A2)/(1+exp((x-x0)/dx))+A2
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 1 do x = 5
+A1 (počáteční hodnota) = -365 368,123175748 +/- 299 245,999683308
+A2 (konečná hodnota) = 365 376,254760974 +/- 299 246,007765675
+x0 (střed) = 3,06579261296082 +/- 0,67806318539132
+dx (stálá hodnota času) = 182 686,094482338 +/- 149 623,001861938
+--------------------------------------------------------------------------------------
+Chi^2/doF = 3,61170158336667e-22
+R^2 = 1
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 31
+Stav = success
+---------------------------------------------------------------------------------------
+[20.5.10 12:36	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,91 do x = 5,31
+a  = -2,17500000000102 +/- inf
+b  = 24,3392500000061 +/- inf
+--------------------------------------------------------------------------------------
+Chi^2/doF = inf
+R^2 = 1
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 1
+Stav = success
+---------------------------------------------------------------------------------------
+[20.5.10 12:36	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,31 do x = 5,31
+a  = -0,669113726265167 +/- 0,2596777095116
+b  = 16,5626920371806 +/- 1,19854040532095
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0549806107859978
+R^2 = 0,570425623379338
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 1
+Stav = success
+---------------------------------------------------------------------------------------
+[20.5.10 12:37	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,91 do x = 5,31
+a  = -2,17500000000013 +/- inf
+b  = 3,60924999999988 +/- inf
+--------------------------------------------------------------------------------------
+Chi^2/doF = inf
+R^2 = 1
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 1
+Stav = success
+---------------------------------------------------------------------------------------
+[20.5.10 12:37	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,31 do x = 5,31
+a  = -0,679433718737249 +/- 0,259486737342149
+b  = -4,11409222604067 +/- 1,19765894241142
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0548997694221537
+R^2 = 0,57826874812884
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 1
+Stav = success
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,91 do x = 5,31
+a  = -2,17500000000012 +/- inf
+b  = 22,0292500000013 +/- inf
+--------------------------------------------------------------------------------------
+Chi^2/doF = inf
+R^2 = 1
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 1
+Stav = success
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,91 do x = 5,31
+a  = -2,175 +/- inf
+b  = 22,02925 +/- inf
+--------------------------------------------------------------------------------------
+Chi^2/doF = inf
+R^2 = 1
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = success
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,91 do x = 5,31
+a  = -2,175 +/- inf
+b  = 22,02925 +/- inf
+--------------------------------------------------------------------------------------
+Chi^2/doF = inf
+R^2 = 1
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = cannot reach the specified tolerance in X
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,91 do x = 5,31
+a  = -2,175 +/- inf
+b  = 22,02925 +/- inf
+--------------------------------------------------------------------------------------
+Chi^2/doF = inf
+R^2 = 1
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = cannot reach the specified tolerance in X
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,91 do x = 5,31
+a  = -2,175 +/- inf
+b  = 22,02925 +/- inf
+--------------------------------------------------------------------------------------
+Chi^2/doF = inf
+R^2 = 1
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = cannot reach the specified tolerance in X
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,31 do x = 5,31
+a  = -0,679433854631294 +/- 0,259486714028853
+b  = 14,3059083994602 +/- 1,19765885772156
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0548997694221566
+R^2 = 0,578268748128817
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 1
+Stav = success
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,31 do x = 5,31
+a  = -0,679433662189911 +/- 0,259486689302212
+b  = 14,3059075136799 +/- 1,19765875407022
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0548997694221539
+R^2 = 0,578268748128837
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = success
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,31 do x = 5,31
+a  = -0,6794337282107 +/- 0,259486698562921
+b  = 14,3059078165809 +/- 1,19765880533503
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0548997694221536
+R^2 = 0,57826874812884
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = success
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,31 do x = 5,31
+a  = -0,679433715624985 +/- 0,259486684887239
+b  = 14,3059077599789 +/- 1,19765876882753
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0548997694221534
+R^2 = 0,578268748128842
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = success
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,31 do x = 5,31
+a  = -0,679433703501956 +/- 0,259486658289626
+b  = 14,3059077046084 +/- 1,19765863798188
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0548997694221537
+R^2 = 0,578268748128839
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = success
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,31 do x = 5,31
+a  = -0,679433697865463 +/- 0,259486708039
+b  = 14,3059076789829 +/- 1,19765886634425
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0548997694221536
+R^2 = 0,57826874812884
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = success
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,31 do x = 5,31
+a  = -0,679433697865463 +/- 0,259486693071107
+b  = 14,3059076789829 +/- 1,19765878669305
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0548997694221535
+R^2 = 0,578268748128841
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,31 do x = 5,31
+a  = -0,679433697865463 +/- 0,259486693071107
+b  = 14,3059076789829 +/- 1,19765878669305
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0548997694221535
+R^2 = 0,578268748128841
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,31 do x = 5,31
+a  = -0,679433697865463 +/- 0,259486693071107
+b  = 14,3059076789829 +/- 1,19765878669305
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0548997694221535
+R^2 = 0,578268748128841
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,31 do x = 5,31
+a  = -0,679433697865463 +/- 0,259486693071107
+b  = 14,3059076789829 +/- 1,19765878669305
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0548997694221535
+R^2 = 0,578268748128841
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,31 do x = 5,31
+a  = -0,679433697865463 +/- 0,259486693071107
+b  = 14,3059076789829 +/- 1,19765878669305
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0548997694221535
+R^2 = 0,578268748128841
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,31 do x = 5,31
+a  = -0,679433697865463 +/- 0,259486693071107
+b  = 14,3059076789829 +/- 1,19765878669305
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0548997694221535
+R^2 = 0,578268748128841
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,31 do x = 5,31
+a  = -0,679433697865463 +/- 0,259486693071107
+b  = 14,3059076789829 +/- 1,19765878669305
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0548997694221535
+R^2 = 0,578268748128841
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,31 do x = 5,31
+a  = -0,679433697865463 +/- 0,259486693071107
+b  = 14,3059076789829 +/- 1,19765878669305
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0548997694221535
+R^2 = 0,578268748128841
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,31 do x = 5,31
+a  = -0,679433697865463 +/- 0,259486693071107
+b  = 14,3059076789829 +/- 1,19765878669305
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0548997694221535
+R^2 = 0,578268748128841
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[20.5.10 12:41	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x + b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 4,31 do x = 5,31
+a  = -0,679433697865463 +/- 0,259486693071107
+b  = 14,3059076789829 +/- 1,19765878669305
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0548997694221535
+R^2 = 0,578268748128841
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[20.5.10 12:47	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x +b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 7,87e-19 do x = 8,5e-19
+a  = 1 +/- nan
+b  = 10,915 +/- inf
+--------------------------------------------------------------------------------------
+Chi^2/doF = inf
+R^2 = -5,94142790522056e-17
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 1
+Stav = success
+---------------------------------------------------------------------------------------
+[20.5.10 12:47	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x +b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 7,87e-19 do x = 8,5e-19
+a  = 1 +/- nan
+b  = 10,915 +/- inf
+--------------------------------------------------------------------------------------
+Chi^2/doF = inf
+R^2 = -5,94142790522056e-17
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = cannot reach the specified tolerance in F
+---------------------------------------------------------------------------------------
+[20.5.10 12:47	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x +b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 6,91e-19 do x = 8,5e-19
+a  = 1 +/- 0
+b  = 11,1785714285714 +/- 0,136369833968061
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,130177142857143
+R^2 = 1,19262238973405e-17
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 1
+Stav = success
+---------------------------------------------------------------------------------------
+[20.5.10 12:48	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*x +b
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0
+Od x = 6,91e-19 do x = 8,5e-19
+a  = 1 +/- 0
+b  = 11,1785714285714 +/- 0,136369833968061
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,130177142857143
+R^2 = 1,19262238973405e-17
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = cannot reach the specified tolerance in F
+---------------------------------------------------------------------------------------
+[20.5.10 12:49	Nákres: ''Nákres1'']
+Lineární regrese Umístění záznamu s údaji: Tabulka1_2, za použití funkce: A*x+B
+Obvyklé chyby Y: Neznámý
+Od x = 6,91e-19 do x = 8,5e-19
+B (y-úsek osy) = 14,3184420369556 +/- 1,20102297082562
+A (stoupání) = -4,25786405631324e+18 +/- 1,62423583656841e+18
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0548251143862735
+R^2 = 0,578842236179365
+---------------------------------------------------------------------------------------
+[20.5.10 12:52	Nákres: ''Nákres1'']
+Lineární regrese Umístění záznamu s údaji: Tabulka1_2, za použití funkce: A*x+B
+Obvyklé chyby Y: Neznámý
+Od x = 6,91e-19 do x = 8,5e-19
+B (y-úsek osy) = 14,3184420369556 +/- 1,20102297082562
+A (stoupání) = -4,25786405631324e+18 +/- 1,62423583656841e+18
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0548251143862735
+R^2 = 0,578842236179365
+---------------------------------------------------------------------------------------
+[24.5.10 15:57	Nákres: ''Nákres2'']
+Lineární regrese Umístění záznamu s údaji: Tabulka1_2, za použití funkce: A*x+B
+Obvyklé chyby Y: Neznámý
+Od x = 4,57e-19 do x = 8,5e-19
+B (y-úsek osy) = 21,2971799200541 +/- 1,19041876892973
+A (stoupání) = -1,32047409433054e+19 +/- 1,67593213933876e+18
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,251641047714055
+R^2 = 0,911867502573653
+---------------------------------------------------------------------------------------
+</log>

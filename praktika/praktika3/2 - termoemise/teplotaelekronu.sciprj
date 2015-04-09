@@ -1,0 +1,87 @@
+SciDAVis 0.2.4 project file
+<scripting-lang>	muParser
+<windows>	2
+<table>
+4047
+<table creation_time="2010-01-06 08:58:40:598" caption_spec="%n%C{ - }%c" name="Tabulka1" columns="2" rows="30"><comment><![CDATA[]]></comment><column creation_time="2010-01-06 08:58:40:598" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-01-06 08:58:40:598" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-01-06 08:58:40:598" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">-4.5300000000000001e-01</row><row type="TypeDouble" index="1" invalid="no">-2.8899999999999998e-01</row><row type="TypeDouble" index="2" invalid="no">-1.8300000000000000e-01</row><row type="TypeDouble" index="3" invalid="no">-8.1000000000000003e-02</row><row type="TypeDouble" index="4" invalid="no">2.1999999999999999e-02</row><row type="TypeDouble" index="5" invalid="no">1.4599999999999999e-01</row><row type="TypeDouble" index="6" invalid="no">1.8300000000000000e-01</row><row type="TypeDouble" index="7" invalid="no">2.6400000000000001e-01</row><row type="TypeDouble" index="8" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="9" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="10" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="11" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="12" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="13" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="14" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="15" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="16" invalid="yes">0.0000000000000000e+00</row></column><column creation_time="2010-01-06 08:58:40:599" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-01-06 08:58:40:599" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-01-06 08:58:40:599" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">-1.7690000000000001e+01</row><row type="TypeDouble" index="1" invalid="no">-1.6590000000000000e+01</row><row type="TypeDouble" index="2" invalid="no">-1.6079999999999998e+01</row><row type="TypeDouble" index="3" invalid="no">-1.5609999999999999e+01</row><row type="TypeDouble" index="4" invalid="no">-1.5210000000000001e+01</row><row type="TypeDouble" index="5" invalid="no">-1.4650000000000000e+01</row><row type="TypeDouble" index="6" invalid="no">-1.4470000000000001e+01</row><row type="TypeDouble" index="7" invalid="no">-1.4199999999999999e+01</row><row type="TypeDouble" index="8" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="9" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="10" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="11" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="12" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="13" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="14" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="15" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="16" invalid="yes">0.0000000000000000e+00</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	97	17	572	404	active
+
+</table>
+<multiLayer>
+Nákres1	1	1	1.6.10 8:58
+geometry	678	41	508	428	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	433	299
+Alignement	0	0
+<graph>
+ggeometry	5	5	489	369
+PlotTitle	Inrush current,  I<sub>f</sub>= 1,22A	#000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0	#a0a0a4	2	0	#0000ff	0	0	#a0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	U<sub>a</sub>[V]	ln ( I<sub>a</sub> ) 			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Tabulka1_1	Tabulka1_2	1	0	0	0	1	7	1	0	0	0	0	0	1	2	0	0	29	1
+FunctionCurve	0,LineárníUmíst?ní1,x,-0.453,0.264	2			0	1	1	0	1	0	0	0	19	0	0	0	0	2	0	173735104	-1236950581	1
+<formula>
+B=-15.3308776589702
+A=4.73907603129955
+
+A*x+B
+</formula>
+scale	0	-18	-14	0	8	5	0	0
+scale	1	-18	-14	0	8	5	0	0
+scale	2	-0.5	0.3	0	8	5	0	0
+scale	3	-0.5	0.3	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+</graph>
+</multiLayer>
+<log>
+[1.6.10 9:08	Nákres: ''Nákres1'']
+Lineární regrese Umístění záznamu s údaji: Tabulka1_2, za použití funkce: A*x+B
+Obvyklé chyby Y: Neznámý
+Od x = -0,401 do x = 0,445
+B (y-úsek osy) = -15,7975703436228 +/- 0,0994771778061992
+A (stoupání) = 3,91395936826385 +/- 0,400490856591645
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0885463406310677
+R^2 = 0,931713769611253
+---------------------------------------------------------------------------------------
+[1.6.10 9:13	Nákres: ''Nákres1'']
+Lineární regrese Umístění záznamu s údaji: Tabulka1_2, za použití funkce: A*x+B
+Obvyklé chyby Y: Neznámý
+Od x = -0,453 do x = 0,264
+B (y-úsek osy) = -15,3308776589702 +/- 0,0459561241546382
+A (stoupání) = 4,73907603129955 +/- 0,192962488029872
+--------------------------------------------------------------------------------------
+Chi^2/doF = 0,0161841664128735
+R^2 = 0,990150573998525
+---------------------------------------------------------------------------------------
+</log>

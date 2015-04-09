@@ -1,0 +1,441 @@
+SciDAVis 0.2.4 project file
+<scripting-lang>	muParser
+<windows>	6
+<table>
+4464
+<table creation_time="1910-30-03 14:32:00:000" caption_spec="%n%C{ - }%c" name="Tabulka1" columns="2" rows="30"><comment><![CDATA[]]></comment><column creation_time="2010-30-03 14:32:04:316" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-30-03 14:32:04:316" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-30-03 14:32:04:317" caption_spec="%n%C{ - }%c" name="OutputFilter" format="f" digits="14" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><formula start_row="0" end_row="29">col(&quot;1&quot;)/1000</formula><row type="TypeDouble" index="0" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">1.9000000000000000e-03</row><row type="TypeDouble" index="2" invalid="no">3.5000000000000001e-03</row><row type="TypeDouble" index="3" invalid="no">5.5999999999999999e-03</row><row type="TypeDouble" index="4" invalid="no">7.6000000000000000e-03</row><row type="TypeDouble" index="5" invalid="no">9.4999999999999998e-03</row><row type="TypeDouble" index="6" invalid="no">1.3400000000000000e-02</row><row type="TypeDouble" index="7" invalid="no">1.6800000000000002e-02</row><row type="TypeDouble" index="8" invalid="no">2.2600000000000002e-02</row><row type="TypeDouble" index="9" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="10" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="11" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="12" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="13" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="14" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="15" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="16" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="17" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="18" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="19" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="20" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="21" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="22" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="23" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="24" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="25" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="26" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="27" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="28" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="29" invalid="no">0.0000000000000000e+00</row></column><column creation_time="2010-30-03 14:32:04:318" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-30-03 14:32:04:318" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-30-03 14:32:04:318" caption_spec="%n%C{ - }%c" name="OutputFilter" format="f" digits="14" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">7.7900000000000000e+03</row><row type="TypeDouble" index="1" invalid="no">6.9830000000000000e+03</row><row type="TypeDouble" index="2" invalid="no">6.0990000000000000e+03</row><row type="TypeDouble" index="3" invalid="no">5.4790000000000000e+03</row><row type="TypeDouble" index="4" invalid="no">5.0460000000000000e+03</row><row type="TypeDouble" index="5" invalid="no">4.3530000000000000e+03</row><row type="TypeDouble" index="6" invalid="no">3.6780000000000000e+03</row><row type="TypeDouble" index="7" invalid="no">3.2460000000000000e+03</row><row type="TypeDouble" index="8" invalid="no">2.2660000000000000e+03</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	553	95	572	404	minimized	
+
+</table>
+<table>
+4389
+<table creation_time="1910-30-03 18:45:00:000" caption_spec="%n%C{ - }%c" name="Tabulka2" columns="2" rows="30"><comment><![CDATA[]]></comment><column creation_time="2010-30-03 18:45:23:589" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-30-03 18:45:23:589" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-30-03 18:45:23:589" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><formula start_row="0" end_row="29">col(&quot;1&quot;)/1000
+</formula><row type="TypeDouble" index="0" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">5.0000000000000001e-03</row><row type="TypeDouble" index="2" invalid="no">1.0000000000000000e-02</row><row type="TypeDouble" index="3" invalid="no">1.4999999999999999e-02</row><row type="TypeDouble" index="4" invalid="no">2.0000000000000000e-02</row><row type="TypeDouble" index="5" invalid="no">2.5000000000000001e-02</row><row type="TypeDouble" index="6" invalid="no">2.9999999999999999e-02</row><row type="TypeDouble" index="7" invalid="no">3.5000000000000003e-02</row><row type="TypeDouble" index="8" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="9" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="10" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="11" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="12" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="13" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="14" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="15" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="16" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="17" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="18" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="19" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="20" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="21" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="22" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="23" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="24" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="25" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="26" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="27" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="28" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="29" invalid="no">0.0000000000000000e+00</row></column><column creation_time="2010-30-03 18:45:23:592" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-30-03 18:45:23:592" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-30-03 18:45:23:592" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">5.2740000000000000e+03</row><row type="TypeDouble" index="1" invalid="no">4.8920000000000000e+03</row><row type="TypeDouble" index="2" invalid="no">4.5700000000000000e+03</row><row type="TypeDouble" index="3" invalid="no">4.2370000000000000e+03</row><row type="TypeDouble" index="4" invalid="no">3.9600000000000000e+03</row><row type="TypeDouble" index="5" invalid="no">3.7370000000000000e+03</row><row type="TypeDouble" index="6" invalid="no">3.3770000000000000e+03</row><row type="TypeDouble" index="7" invalid="no">3.1800000000000000e+03</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	618	69	572	404	minimized	
+
+</table>
+<table>
+4241
+<table creation_time="1910-30-03 18:48:00:000" caption_spec="%n%C{ - }%c" name="Tabulka3" columns="2" rows="30"><comment><![CDATA[]]></comment><column creation_time="2010-30-03 18:48:23:829" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-30-03 18:48:23:829" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-30-03 18:48:23:830" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><formula start_row="0" end_row="29">col(&quot;1&quot;)/1000
+</formula><row type="TypeDouble" index="0" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">9.8000000000000014e-03</row><row type="TypeDouble" index="2" invalid="no">1.6000000000000000e-02</row><row type="TypeDouble" index="3" invalid="no">2.2100000000000002e-02</row><row type="TypeDouble" index="4" invalid="no">3.1750000000000000e-02</row><row type="TypeDouble" index="5" invalid="no">4.1350000000000005e-02</row><row type="TypeDouble" index="6" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="7" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="8" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="9" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="10" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="11" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="12" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="13" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="14" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="15" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="16" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="17" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="18" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="19" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="20" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="21" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="22" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="23" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="24" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="25" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="26" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="27" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="28" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="29" invalid="no">0.0000000000000000e+00</row></column><column creation_time="2010-30-03 18:48:23:832" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2010-30-03 18:48:23:832" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2010-30-03 18:48:23:833" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">5.0210000000000000e+03</row><row type="TypeDouble" index="1" invalid="no">4.1520000000000000e+03</row><row type="TypeDouble" index="2" invalid="no">3.7700000000000000e+03</row><row type="TypeDouble" index="3" invalid="no">3.4910000000000000e+03</row><row type="TypeDouble" index="4" invalid="no">3.1690000000000000e+03</row><row type="TypeDouble" index="5" invalid="no">2.9890000000000000e+03</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	89	34	572	404	
+
+</table>
+<multiLayer>
+Nákres1	1	1	30.3.10 14:32
+geometry	54	39	508	428	minimized	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	419	299
+Alignement	0	0
+<graph>
+ggeometry	5	5	489	369
+PlotTitle	Lead	#000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0	#a0a0a4	2	0	#0000ff	0	0	#a0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Thickness [m]	Energy [keV]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Tabulka1_1	Tabulka1_2	1	0	0	0	1	7	1	0	0	0	0	0	1	2	0	0	29	1
+FunctionCurve	0,NelineárníUmíst?ní1,x,0,0.0226	100			0	1	1	0	1	0	0	0	19	0	0	0	0	2	0	159905304	0	1
+<formula>
+a=7632.81795302527
+b=54.8600119293254
+
+a*exp(-b*x)
+
+
+
+</formula>
+scale	0	2000	8000	0	8	5	0	0
+scale	1	2000	8000	0	8	5	0	0
+scale	2	0	0.025	0	7	5	0	0
+scale	3	0	0.025	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	0.0162313432835821	7692.83276450512	Sans	10	50	0	0	0	#000000	1	0	#ffffff	0	\c{1}data	\c{2}a*exp(-b*x)</legend>
+</graph>
+</multiLayer>
+<multiLayer>
+Nákres2	1	1	30.3.10 18:46
+geometry	94	33	508	428	minimized	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	419	299
+Alignement	0	0
+<graph>
+ggeometry	5	5	489	369
+PlotTitle	Aluminium	#000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0	#a0a0a4	2	0	#0000ff	0	0	#a0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Thickness [m]	Energy [keV]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Tabulka2_1	Tabulka2_2	1	0	0	0	1	7	1	0	0	0	0	0	1	2	0	0	29	1
+FunctionCurve	0,NelineárníUmíst?ní1,x,0,0.035	100			0	1	1	0	1	0	0	0	19	0	0	0	0	2	0	159994488	0	1
+<formula>
+a=5271.54988395542
+b=14.3971502805757
+
+a*exp(-b*x)
+
+</formula>
+scale	0	3000	5500	0	10	5	0	0
+scale	1	3000	5500	0	8	5	0	0
+scale	2	0	0.04	0	8	5	0	0
+scale	3	0	0.04	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	0.0228571428571429	5346.41638225256	Sans	10	50	0	0	0	#000000	1	0	#ffffff	0	\c{1}data	\c{2}a*exp(-b*x)</legend>
+</graph>
+</multiLayer>
+<multiLayer>
+Nákres3	1	1	30.3.10 18:51
+geometry	686	-14	508	428	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	418	299
+Alignement	0	0
+<graph>
+ggeometry	5	5	489	369
+PlotTitle	plexiglass	#000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0	#a0a0a4	2	0	#0000ff	0	0	#a0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Thickness [m]	Energy [keV]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Tabulka3_1	Tabulka3_2	1	0	0	0	1	7	1	0	0	0	0	0	1	2	0	0	29	1
+FunctionCurve	0,NelineárníUmíst?ní1,x,0,0.04135	100			0	1	1	0	1	0	0	0	19	0	0	0	0	2	0	160132464	0	1
+<formula>
+a=4843.04519375736
+b=13.3217718887001
+
+a*exp(-b*x)
+
+
+</formula>
+scale	0	2500	5500	0	8	5	0	0
+scale	1	2500	5500	0	8	5	0	0
+scale	2	0	0.05	0	7	5	0	0
+scale	3	0	0.05	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	0.0307881773399015	5254.2662116041	Sans	10	50	0	0	0	#000000	1	0	#ffffff	0	\c{1}data	\c{2}a*exp(-b*x)</legend>
+</graph>
+</multiLayer>
+<log>
+[30.3.10 14:34	Nákres: ''Nákres1'']
+Exponenciální pokles Umístění záznamu s údaji: Tabulka1_2, za použití funkce: y0+A*exp(-x/t)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 0 do x = 0,0226
+A (rozkmit) = 6 688,33459953178 +/- 390,727372214996
+t (čas e-skládání) = 0,0139998805035927 +/- 8,86961846705664
+y0 (posun) = 1 058,48529371506 +/- 431,432246786547
+--------------------------------------------------------------------------------------
+Chi^2/doF = 18 200,0822762236
+R^2 = 0,995779350478317
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 5
+Stav = success
+---------------------------------------------------------------------------------------
+[30.3.10 14:36	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*exp(-b*x)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 0 do x = 0,0168
+a  = 7 645,9182637628 +/- 118,399990301033
+b  = 55,3450744513469 +/- 2,43688900070917
+--------------------------------------------------------------------------------------
+Chi^2/doF = 28 273,1147643471
+R^2 = 0,990309002971785
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 20
+Stav = success
+---------------------------------------------------------------------------------------
+[30.3.10 14:36	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*exp(-b*x)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 0 do x = 0,0226
+a  = 7 632,82832593559 +/- 106,69008736323
+b  = 54,8601626559378 +/- 1,98041232503963
+--------------------------------------------------------------------------------------
+Chi^2/doF = 24 860,9400720995
+R^2 = 0,99327379227724
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 2
+Stav = success
+---------------------------------------------------------------------------------------
+[30.3.10 14:49	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*exp(-b*x)*exp(-(0,026-x)*0,00762)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 0 do x = 0,0168
+a  = 1 +/- 0
+b  = 1 +/- 0
+--------------------------------------------------------------------------------------
+Chi^2/doF = 10 114 016,6666667
+R^2 = -2,46671763181827
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = invalid argument supplied by user
+---------------------------------------------------------------------------------------
+[30.3.10 14:49	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*exp(-b*x)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 0 do x = 0,0168
+a  = 7 645,9182637628 +/- 118,399990301033
+b  = 55,3450744513469 +/- 2,43688900070917
+--------------------------------------------------------------------------------------
+Chi^2/doF = 28 273,1147643471
+R^2 = 0,990309002971785
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 20
+Stav = success
+---------------------------------------------------------------------------------------
+[30.3.10 14:50	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*exp(-b*x)*exp(-(0.026 - x)*0.00762)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 0 do x = 0,0168
+a  = 7 647,44576564788 +/- 118,423960168634
+b  = 55,3528676352913 +/- 2,43690947700234
+--------------------------------------------------------------------------------------
+Chi^2/doF = 28 273,1147356827
+R^2 = 0,99030900298161
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 1
+Stav = success
+---------------------------------------------------------------------------------------
+[30.3.10 14:54	Nákres: ''Nákres1'']
+Nelineární Umístění záznamu s údaji: Tabulka1_2, za použití funkce: a*exp(-b*x)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 0 do x = 0,0226
+a  = 7 632,81795302527 +/- 106,686070305706
+b  = 54,8600119293254 +/- 1,98039481214928
+--------------------------------------------------------------------------------------
+Chi^2/doF = 24 860,9400517904
+R^2 = 0,993273792282734
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 19
+Stav = success
+---------------------------------------------------------------------------------------
+[30.3.10 18:47	Nákres: ''Nákres2'']
+Nelineární Umístění záznamu s údaji: Tabulka2_2, za použití funkce: a*exp(-b*x)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 0 do x = 35
+a  = 5 286,59928525352 +/- 145,172295865268
+b  = 0,0115898992334643 +/- 0,00149831105707477
+--------------------------------------------------------------------------------------
+Chi^2/doF = 43 556,4737442229
+R^2 = 0,912464427118366
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 30
+Stav = success
+---------------------------------------------------------------------------------------
+[30.3.10 18:50	Nákres: ''Nákres3'']
+Nelineární Umístění záznamu s údaji: Tabulka3_2, za použití funkce: a*exp(-b*x)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 0 do x = 41,35
+a  = 1,0008583096923 +/- 69,3581045223571
+b  = -0,174912632011639 +/- 1,68838721695669
+--------------------------------------------------------------------------------------
+Chi^2/doF = 19 845 736,3267934
+R^2 = -27,764048848215
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 1
+Stav = success
+---------------------------------------------------------------------------------------
+[30.3.10 18:51	Nákres: ''Nákres3'']
+Nelineární Umístění záznamu s údaji: Tabulka3_2, za použití funkce: a*exp(-b*x)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 0 do x = 0,03175
+a  = 4 922,81206979793 +/- 103,759566490404
+b  = 15,1414141324828 +/- 1,29313472790604
+--------------------------------------------------------------------------------------
+Chi^2/doF = 14 509,9630690977
+R^2 = 0,978625830782489
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 4
+Stav = success
+---------------------------------------------------------------------------------------
+[30.3.10 18:52	Nákres: ''Nákres3'']
+Nelineární Umístění záznamu s údaji: Tabulka3_2, za použití funkce: a*exp(-b*x)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 0 do x = 0,04135
+a  = 4 843,04519375736 +/- 136,089489907016
+b  = 13,3217718887001 +/- 1,39717197268764
+--------------------------------------------------------------------------------------
+Chi^2/doF = 28 613,241474015
+R^2 = 0,95852848884457
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 4
+Stav = success
+---------------------------------------------------------------------------------------
+[2.4.10 9:52	Nákres: ''Nákres2'']
+Nelineární Umístění záznamu s údaji: Tabulka2_2, za použití funkce: a*exp(-b*x)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 0 do x = 35
+a  = 5 286,59928525352 +/- 145,172295865268
+b  = 0,0115898992334643 +/- 0,00149831105707477
+--------------------------------------------------------------------------------------
+Chi^2/doF = 43 556,4737442229
+R^2 = 0,912464427118366
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 30
+Stav = success
+---------------------------------------------------------------------------------------
+[2.4.10 9:54	Nákres: ''Nákres2'']
+Nelineární Umístění záznamu s údaji: Tabulka2_2, za použití funkce: a*exp(-b*x)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 0 do x = 0,035
+a  = 6,44480179190221e-314 +/- 3 276,60603503594
+b  = 9,98918823738115e-307 +/- 31 330 349 417 319
+--------------------------------------------------------------------------------------
+Chi^2/doF = 25 766 751,1666667
+R^2 = -50,783515302862
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 0
+Stav = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[2.4.10 9:54	Nákres: ''Nákres2'']
+Nelineární Umístění záznamu s údaji: Tabulka2_2, za použití funkce: a*exp(-b*x)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 0 do x = 0,035
+a  = 5 286,59002670781 +/- 145,171289425264
+b  = 11,5898229367457 +/- 1,49830778699878
+--------------------------------------------------------------------------------------
+Chi^2/doF = 43 556,4737596818
+R^2 = 0,912464427087298
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 3
+Stav = success
+---------------------------------------------------------------------------------------
+[2.4.10 10:03	Nákres: ''Nákres2'']
+Nelineární Umístění záznamu s údaji: Tabulka2_2, za použití funkce: a*exp(-b*x)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 0 do x = 0,035
+a  = 5 243,53749295057 +/- 151,208035840447
+b  = 11,6240225198116 +/- 1,57403706134692
+--------------------------------------------------------------------------------------
+Chi^2/doF = 47 232,7655643595
+R^2 = 0,904066392884357
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 24
+Stav = success
+---------------------------------------------------------------------------------------
+[2.4.10 10:04	Nákres: ''Nákres2'']
+Nelineární Umístění záznamu s údaji: Tabulka2_2, za použití funkce: a*exp(-b*x)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 0 do x = 0,035
+a  = 5 253,74350500837 +/- 165,883152736146
+b  = 11,9345546754168 +/- 1,89554777342113
+--------------------------------------------------------------------------------------
+Chi^2/doF = 55 067,1666749001
+R^2 = 0,894998991932928
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 20
+Stav = success
+---------------------------------------------------------------------------------------
+[2.4.10 10:05	Nákres: ''Nákres2'']
+Nelineární Umístění záznamu s údaji: Tabulka2_2, za použití funkce: a*exp(-b*x)
+Obvyklé chyby Y: Neznámý
+Levenberg-Marquardt zařazený do stupnice Algoritmus s povolenou odchylkou = 0,0001
+Od x = 0 do x = 0,035
+a  = 5 271,54988395542 +/- 22,2811410299739
+b  = 14,3971502805757 +/- 0,238787464189971
+--------------------------------------------------------------------------------------
+Chi^2/doF = 992,943273450873
+R^2 = 0,998408283851502
+---------------------------------------------------------------------------------------
+Iterace (opakování) = 23
+Stav = success
+---------------------------------------------------------------------------------------
+</log>
