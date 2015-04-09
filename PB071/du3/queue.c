@@ -48,9 +48,22 @@ void queue_push (struct queue* container, struct instruction* item){
  */
 struct instruction* queue_pop (struct queue* container){
    my_assert(container && "NULL argument!");
-   if(!container->first)
+
+   if(!container->first){
       fprintf(stderr, "Instruction queue is empty\n");
-   return container->first;
+      return NULL;
+   }
+
+   struct instruction *ret = container->first;
+
+   if(container->first->next)
+      container->first = container->first->next;
+   else{
+      container->first = NULL;
+      container->last = NULL;
+   }
+
+   return ret;
 }
 
 /**
@@ -75,7 +88,7 @@ unsigned int queue_size (const struct queue* container){
       return 0;
 
    struct instruction* current = container->first;
-   unsigned int n = 0;
+   unsigned int n = 1;
    while(current->next){
       n++;
       current = current->next;
@@ -95,7 +108,7 @@ unsigned int queue_clear (struct queue* container){
       return 0;
 
    struct instruction* current = container->first;
-   unsigned int n = 0;
+   unsigned int n = 1;
    while(current->next){
       struct instruction* last = current;
       current = current->next;

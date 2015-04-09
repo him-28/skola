@@ -105,15 +105,7 @@ void inst_run(struct queue *my_queue, int batch_size){
             break;
       }
 
-      if(next->next){
-         my_queue->first = next->next;
-         free(next);
-      }
-      else {
-         my_queue->first = NULL;
-         free(next);
-         return;
-      }
+      free(next);
    }
 }
 
@@ -147,7 +139,7 @@ int main(int argc, char *argv[]){
    char *input_line;
 
    while((input_line = read_line())){
-      char cmd[100]; 
+      char cmd[100] = {0}; 
       int val;
       sscanf(input_line, "%s %i", cmd, &val);
       
