@@ -40,7 +40,6 @@ void print_help(){
    printf("-h\tprogram prints information abou usage and options, and exits\n");
    printf("-r <number>\tafter run commaind, program evaluates <number> of instruction\n");
    printf("-R\tafter run command, program evaluates all instructions in queue\n");
-   exit(0);
 }
 
 /**
@@ -56,18 +55,18 @@ void parse_args(int argc, char *argv[], int* batch_size){
    if(strstr(argv[1], "-h") == argv[1]){
       my_assert(argc == 2 && "Number of arguments too low");
       print_help();
-      exit(1);
+      exit(0);
    }
    else if(strstr(argv[1], "-r") == argv[1]){
       my_assert(argc == 3 && "Number of arguments too low");
       *batch_size = strtol(argv[2], NULL, 10);
-      my_assert(*batch_size >= 0 && "Incorrect argument value");
+      my_assert(*batch_size > 0 && "Incorrect argument value");
    }
    else if(strstr(argv[1], "-R") == argv[1]){
       my_assert(argc == 2 && "Number of arguments too low");
    }
    else
-      my_assert(0 && "Unknown input switch");   
+      exit(-1);
 }
 
 /**
