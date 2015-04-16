@@ -6,6 +6,7 @@
  */
 
 #include <math.h>
+#include <time.h>
 #include <GL/freeglut.h>
 
 #include "ObjLoader.h"
@@ -38,7 +39,7 @@ void resize(int width, int height)
    
 	glMatrixMode(GL_PROJECTION); //chceme pracovat s projekční maticí
 	glLoadIdentity(); //načteme jednotkovou matici
-	gluPerspective(60.0f, ((float)width) / height, 0.1f, 100.0f); //vynásobíme projekční matici tímto
+	gluPerspective(60.0f, ((float)width) / height, 1.0f, 1000.0f); //vynásobíme projekční matici tímto
 	//(úhel pohledu, poměr stran, vzdálenost přední a zadní pohledové roviny)
 	
 	glViewport(0, 0, width, height); //ve viewport začínají souřadice v levém horním rohu.
@@ -125,9 +126,6 @@ void mouse_moved(int x, int y){
    glutPostRedisplay();
 }
 
-float angle = 0.0;
-float y = 0.0;
-
 void render(void)
 {
 
@@ -139,17 +137,17 @@ void render(void)
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	gluLookAt(cam_x, cam_y, cam_z, cam_x + cos(angle_x), cam_y + sin(angle_x), cam_z + sin(angle_z), 0.0, 0.0, 1.0);//eye pos, center pos, normal vector
+	gluLookAt( 100 * cam_x, 100 * cam_y, 100 * cam_z, 100 * (cam_x + cos(angle_x)), 100 * (cam_y + sin(angle_x)), 100 * (cam_z + sin(angle_z)), 0.0, 0.0, 1.0);//eye pos, center pos, normal vector
 
-   float lightPos[] = { 0.0f, 0.0f, 20.0, 1.0f };
+   float lightPos[] = { 0.0f, 0.0f, 200.0, 1.0f };
    float lightDir[] = { 0.0f, 0.0f, 1.0f};
-   y += 0.01;
 
    float red_color[] = {1.0, 0.0, 0.0, 1.0};
    float green_color[] = {0.0, 1.0, 0.0, 1.0};
    float blue_color[] = {0.0, 0.0, 1.0, 1.0};
    float white_color[] = {1.0, 1.0, 1.0, 1.0};
    float black_color[] = {0.0, 0.0, 0.0, 1.0};
+   float brown_color[] = {0.66, 0.3, 0.0, 1.0};
 
 
    glLightfv(GL_LIGHT0, GL_DIFFUSE, white_color);
@@ -159,9 +157,8 @@ void render(void)
                 
 
 	//glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, white_color);
-   glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, red_color);
+   glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, brown_color);
    //glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, white_color);
-   glScalef(0.01, 0.01, 0.01);
 
    /* table 1 */
    glPushMatrix();
@@ -170,34 +167,85 @@ void render(void)
    glPopMatrix();
 
    /* clock */
+   glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, white_color);
    glPushMatrix();
-   glTranslatef(0.0, 100.0, 100.0);
-
-   glRotatef(90.0, 1.0, 0.0, 0.0);
+   glTranslatef(0.0, 100.0, 140.0);
+   glRotatef(90, 1.0, 0.0, 0.0);
    glCallList(objects[1]);
 
-   //glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, green_color);
+   /* clockhand */
+   glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, red_color);
+   //FIXME: clock hour is a little bit off
+   //glTranslatef(0.0, 0.0, 0.0);
+   glRotatef(time(NULL)%360*10, 0.0, 0.0, 1.0);
+
    glCallList(objects[2]);
-   glRotatef(90.0, 0.0, 1.0, 0.0);
-   glCallList(objects[3]);
    glPopMatrix();
 
-   /* vase */
+   /* vase 1 */
    glPushMatrix();
-   //glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, black_color);
-   glTranslatef(30.0, 0.0, 70.0);
+   glTranslatef(-150.0, -150.0, 0.0);
    glRotatef(90.0, 1.0, 0.0, 0.0);
    glCallList(objects[4]);
    glPopMatrix();
 
+   /* vase 2 */
    glPushMatrix();
-   glTranslatef(-30.0, 0.0, 77.0);
+   glTranslatef(-150.0, 150.0, 0.0);
    glRotatef(90.0, 1.0, 0.0, 0.0);
+   glCallList(objects[4]);
+   glPopMatrix();
+
+   /* vase 3 */
+   glPushMatrix();
+   glTranslatef(150.0, 150.0, 0.0);
+   glRotatef(90.0, 1.0, 0.0, 0.0);
+   glCallList(objects[4]);
+   glPopMatrix();
+
+   /* vase 4 */
+   glPushMatrix();
+   glTranslatef(150.0, -150.0, 0.0);
+   glRotatef(90.0, 1.0, 0.0, 0.0);
+   glCallList(objects[4]);
+   glPopMatrix();
+
+   /* teapot 1 */
+   glPushMatrix();
+   glTranslatef(-30.0, 20.0, 77.0);
+   glRotatef(90.0, 1.0, 0.0, 0.0);
+   glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, white_color); 
    glutSolidTeapot(10.0);
    glPopMatrix();
 
+   /* teapot 2 */
+   glPushMatrix();
+   glTranslatef(-30.0, -20.0, 77.0);
+   glRotatef(90.0, 1.0, 0.0, 0.0);
+   glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, white_color); 
+   glutSolidTeapot(10.0);
+   glPopMatrix();
+
+   /* teapot 3 */
+   glPushMatrix();
+   glTranslatef(30.0, -20.0, 77.0);
+   glRotatef(90.0, 1.0, 0.0, 0.0);
+   glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, white_color); 
+   glutSolidTeapot(10.0);
+   glPopMatrix();
+
+   /* teapot 4 */
+   glPushMatrix();
+   glTranslatef(30.0, 20.0, 77.0);
+   glRotatef(90.0, 1.0, 0.0, 0.0);
+   glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, white_color); 
+   glutSolidTeapot(10.0);
+   glPopMatrix();
+
+   /* floor */
    glPushMatrix();
    glRotatef(90.0, 1.0, 0.0, 0.0);
+   glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, brown_color); 
    glCallList(objects[5]);
    glPopMatrix();   
 
@@ -274,7 +322,7 @@ void load_scene(void){
    objects[2] = load_object("objects/clock-minutehand.obj");
    objects[3] = load_object("objects/clock-hourhand.obj");
    objects[4] = load_object("objects/vase.obj");
-   objects[5] = createFloor(50000.0, 500, 1);
+   objects[5] = createFloor(500.0, 500, 1);
 
 }
 
