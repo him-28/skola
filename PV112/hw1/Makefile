@@ -1,13 +1,16 @@
 .PHONY: all clean
 
-CFLAGS=-std=c99 -O2 -lm
-LINK_FLAGS=-lglut -lGL -lGLU
-CC=gcc
+CXXFLAGS=-O2
+LINK_FLAGS=-lglut -lGL -lGLU -lm
+CXX=g++
 
 all: hw1
 
-%:%.c
-	$(CC) -o $@ $< $(CFLAGS) $(LINK_FLAGS) 
+%.o:%.cpp
+	$(CXX) -c $< $(CXXFLAGS)
+
+hw1: hw1.o ObjLoader.o
+	$(CXX) -o $@ hw1.o ObjLoader.o $(LINK_FLAGS)
 
 clean:
-	rm hw1
+	rm hw1 *.o
