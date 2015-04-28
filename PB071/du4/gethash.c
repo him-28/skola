@@ -23,22 +23,22 @@
  * @param input file
  * @param length of the array
  */
-char* read_file(FILE* file, unsigned int *length){
+unsigned char* read_file(FILE* file, unsigned int *length){
    int c;
    unsigned int bufsize = 0;
-   char *data = NULL;
+   unsigned char *data = NULL;
    *length = 0;
 
    while((c = fgetc(file)) != EOF){
       if(*length + 2 > bufsize){
          bufsize += ALLOC_CHUNK;
-         data = realloc(data, bufsize * sizeof(char));
+         data = realloc(data, bufsize * sizeof(unsigned char));
       }
       data[*length] = c;
       (*length)++;
    }
 
-   data = realloc(data, *length * sizeof(char));
+   data = realloc(data, *length * sizeof(unsigned char));
 
    return data;  
 }
@@ -108,7 +108,7 @@ int main( int argc, char *argv[] )
    parse_args(argc, argv, &hash, &file);
 
    unsigned int length;
-   char *data = read_file(file, &length);
+   unsigned char *data = read_file(file, &length);
    
 
    printf("Length: %i bytes\n", length);

@@ -10,7 +10,7 @@
 /**
  * Calculates 8bit xor hash from array of chars with specified length
  */
-unsigned char xor_compute(char *data, unsigned int length);
+unsigned char xor_compute(unsigned char *data, unsigned int length);
  
 /**
  * Struct for holding current CRC-16 result. After finishing, value of
@@ -33,14 +33,14 @@ void crc16_update(crc16_context *context, unsigned char data);
 /**
  * Calculates crc16 hash from array of chars with specified length
  */
-unsigned short crc16_compute(char *data, unsigned int length);
+unsigned short crc16_compute(unsigned char *data, unsigned int length);
 
 /**
  * Calculates crc32 hash from array of chars with specified length
  *
  * Heavily based on code from http://www.hackersdelight.org/hdcodetxt/crc.c.txt
  */
-unsigned int crc32_compute(char* data, unsigned int length);
+unsigned int crc32_compute(unsigned char* data, unsigned int length);
 
 typedef unsigned int MD5_u32plus;
 
@@ -72,6 +72,6 @@ void MD5_Final(unsigned char *result, MD5_CTX *ctx);
 /**
  * Calculates MD5 hash from array of chars with specified length
  */
-void md5_compute(char *data, unsigned int length, unsigned char *result);
+void md5_compute(unsigned char *data, unsigned int length, unsigned char *result);
 
 #endif
