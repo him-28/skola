@@ -1,10 +1,15 @@
+/**
+ * @author  Pavel Ondračka <pavel.ondracka@gmail.com>
+ * @version 1.0
+ */
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
 #include "hash_helper.h"
 
-#define ALLOC_SIZE 50
+#define ALLOC_CHUNK 100
 
 #define MD5 1
 #define C16 2
@@ -12,6 +17,11 @@
 #define XOR 8
 #define HEX 16
 
+/**
+ * Reads input from file or stdin to string
+ *
+ * @param input file
+ */
 char* read_file(FILE* file){
    char c;
    char *str = NULL;
@@ -19,16 +29,25 @@ char* read_file(FILE* file){
 
    while((c = getc(file)) != EOF){
       if(length + 2 > bufsize){
-         bufsize += ALLOC_SIZE;
+         bufsize += ALLOC_CHUNK;
          str = realloc(str, bufsize * sizeof(char));
       }
       str[length++] = c;
       str[length] = 0;
    }
+   str = realloc(str, (length + 1) * sizeof(char));
 
    return str;  
 }
 
+/**
+ * Parse input arguments
+ *
+ * @param number of input arguments
+ * @param string array with input arguments
+ * @param bitfield with types of hash to be calculated
+ * @param file handle to input file
+ */
 void parse_args(int argc, char *argv[], unsigned char *hash, FILE **file){
    if(argc < 2){
       fprintf(stderr, "Error: at least one option needed\n");
@@ -72,6 +91,11 @@ void parse_args(int argc, char *argv[], unsigned char *hash, FILE **file){
    }
 }
 
+/**
+ * Calculates number of hashes from stdin or from files 
+ *
+ * Expected input ./gethash [-md5] [-c16] [-c32] [-xor] [-hex] [-f file]
+ */
 int main( int argc, char *argv[] )
 {
 
@@ -103,9 +127,9 @@ int main( int argc, char *argv[] )
    if(hash & C32){
       printf("CRC-32: ");
       if(hash & HEX)
-         printf("0x%08x\n", crc32b(data));
+         printf("0x%08x\n", crc32_compute(data));
       else
-         printf("%u\n", crc32b(data));
+         printf("%u\n", crc32_compute(data));
    }
 
    if(hash & MD5){

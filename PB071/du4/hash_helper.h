@@ -36,10 +36,11 @@ void crc16_update(crc16_context *context, unsigned char data);
 unsigned short crc16_compute(char *data);
 
 /**
- * Calculates crc32 hash from C string, inspired by Wikipedia
+ * Calculates crc32 hash from C string
+ *
+ * Heavily based on code from http://www.hackersdelight.org/hdcodetxt/crc.c.txt
  */
 unsigned int crc32_compute(char* data);
-unsigned int crc32b(char *message);
 
 typedef unsigned int MD5_u32plus;
 

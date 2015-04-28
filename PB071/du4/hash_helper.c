@@ -41,26 +41,7 @@ unsigned short crc16_compute(char *data){
    return ctx.crc;
 }
 
-unsigned int crc32_compute(char* data){
-
-   unsigned int remainderPolynomial = ~0, i = 0;
-   while(data[i] != 0){
-      for (int j = 0; j < 8; j++) {
-         remainderPolynomial = remainderPolynomial ^ ((data[i] & (128 >> j)) << 31);
-         if (remainderPolynomial & (1 << 31)) {
-            //remainderPolynomial  = (remainderPolynomial << 1) ^ 0xEDB88320;
-            remainderPolynomial  = (remainderPolynomial << 1) ^ 0x04C11DB7;
-         } else {
-            remainderPolynomial  = (remainderPolynomial << 1);
-         }
-      }
-      i++;
-   }
-
-   return ~remainderPolynomial;
-}
-
-unsigned int crc32b(char *data) {
+unsigned int crc32_compute(char *data) {
    int i = 0, j = 0;
    unsigned int byte, crc = ~0, mask;
 
