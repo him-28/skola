@@ -18,9 +18,10 @@
 #define HEX 16
 
 /**
- * Reads input from file or stdin to string
+ * Reads input from file or stdin to array of chars
  *
  * @param input file
+ * @param length of the array
  */
 char* read_file(FILE* file, unsigned int *length){
    int c;
