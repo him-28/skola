@@ -7,13 +7,11 @@
 #include <string.h>
 #include "hash_helper.h"
 
-unsigned char xor_compute(char* data){
-   unsigned int i = 0, result = 0;
+unsigned char xor_compute(char* data, unsigned int length){
+   unsigned int result = 0;
 
-   while(data[i] != 0){
+   for(unsigned int i = 0; i < length; i++)
       result = result ^ data[i];
-      i++;
-   }
 
    return result;
 }
@@ -28,31 +26,27 @@ void crc16_update(crc16_context *context, unsigned char data) {
     context->crc = (context->crc << 8) ^ ((unsigned short)(x << 12)) ^ ((unsigned short)(x <<5)) ^ ((unsigned short)x);
 }
 
-unsigned short crc16_compute(char *data){
+unsigned short crc16_compute(char *data, unsigned int length){
    crc16_context ctx;
    crc16_init(&ctx);
-   unsigned int i = 0;
    
-   while(data[i] != 0){
+   for(unsigned int i = 0; i < length; i++)
       crc16_update(&ctx, data[i]);
-      i++;
-   }
 
    return ctx.crc;
 }
 
-unsigned int crc32_compute(char *data) {
-   int i = 0, j = 0;
+unsigned int crc32_compute(char *data, unsigned int length) {
    unsigned int byte, crc = ~0, mask;
+   int j = 0;
 
-   while (data[i] != 0) {
+   for(unsigned int i = 0; i < length; i++) {
       byte = data[i];
       crc = crc ^ byte;
       for (j = 7; j >= 0; j--) {
          mask = -(crc & 1);
          crc = (crc >> 1) ^ (0xEDB88320 & mask);
       }
-      i++;
    }
    return ~crc;
 }
@@ -348,16 +342,12 @@ void MD5_Final(unsigned char *result, MD5_CTX *ctx)
    memset(ctx, 0, sizeof(*ctx));
 }
 
-void md5_compute(char *data, unsigned char *result){
+void md5_compute(char *data, unsigned int length, unsigned char *result){
    MD5_CTX ctx;
    MD5_Init(&ctx);
 
-   unsigned int i = 0;
-   
-   while(data[i] != 0){
+   for(unsigned int i = 0; i < length; i++)
       MD5_Update(&ctx, data + i, 1);
-      i++;
-   }
 
    MD5_Final(result, &ctx);
 }

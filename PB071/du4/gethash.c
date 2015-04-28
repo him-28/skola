@@ -22,22 +22,24 @@
  *
  * @param input file
  */
-char* read_file(FILE* file){
-   char c;
-   char *str = NULL;
-   int length = 0, bufsize = 0;
+char* read_file(FILE* file, unsigned int *length){
+   int c;
+   unsigned int bufsize = 0;
+   char *data = NULL;
+   *length = 0;
 
-   while((c = getc(file)) != EOF){
-      if(length + 2 > bufsize){
+   while((c = fgetc(file)) != EOF){
+      if(*length + 2 > bufsize){
          bufsize += ALLOC_CHUNK;
-         str = realloc(str, bufsize * sizeof(char));
+         data = realloc(data, bufsize * sizeof(char));
       }
-      str[length++] = c;
-      str[length] = 0;
+      data[*length] = c;
+      (*length)++;
    }
-   str = realloc(str, (length + 1) * sizeof(char));
 
-   return str;  
+   data = realloc(data, *length * sizeof(char));
+
+   return data;  
 }
 
 /**
@@ -104,37 +106,39 @@ int main( int argc, char *argv[] )
 
    parse_args(argc, argv, &hash, &file);
 
-   char *data = read_file(file);
+   unsigned int length;
+   char *data = read_file(file, &length);
+   
 
-   printf("Length: %lu bytes\n", strlen(data));
+   printf("Length: %i bytes\n", length);
 
    if(hash & XOR){
       printf("XOR: ");
       if(hash & HEX)
-         printf("0x%02x\n", xor_compute(data));
+         printf("0x%02x\n", xor_compute(data, length));
       else
-         printf("%u\n", xor_compute(data));
+         printf("%u\n", xor_compute(data, length));
    }
 
    if(hash & C16){
       printf("CRC-16: ");
       if(hash & HEX)
-         printf("0x%04x\n", crc16_compute(data));
+         printf("0x%04x\n", crc16_compute(data, length));
       else
-         printf("%u\n", crc16_compute(data));
+         printf("%u\n", crc16_compute(data, length));
    }
 
    if(hash & C32){
       printf("CRC-32: ");
       if(hash & HEX)
-         printf("0x%08x\n", crc32_compute(data));
+         printf("0x%08x\n", crc32_compute(data, length));
       else
-         printf("%u\n", crc32_compute(data));
+         printf("%u\n", crc32_compute(data, length));
    }
 
    if(hash & MD5){
       unsigned char result[16];
-      md5_compute(data, result);
+      md5_compute(data, length, result);
 
       printf("MD5: ");
       for (int i = 0; i < 16; i++){
