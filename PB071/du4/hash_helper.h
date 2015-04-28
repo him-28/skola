@@ -6,6 +6,11 @@
 
 #ifndef HASH_HELPER_H
 #define HASH_HELPER_H
+
+/**
+ * Calculates 8bit xor hash from C string
+ */
+unsigned char xor_compute(char *data);
  
 /**
  * Struct for holding current CRC-16 result. After finishing, value of
@@ -24,6 +29,17 @@ void crc16_init(crc16_context *context);
  * Updates crc16_context with one byte of data.
  */
 void crc16_update(crc16_context *context, unsigned char data);
+
+/**
+ * Calculates crc16 hash from C string
+ */
+unsigned short crc16_compute(char *data);
+
+/**
+ * Calculates crc32 hash from C string, inspired by Wikipedia
+ */
+unsigned int crc32_compute(char* data);
+unsigned int crc32b(char *message);
 
 typedef unsigned int MD5_u32plus;
 
@@ -52,4 +68,9 @@ void MD5_Update(MD5_CTX *ctx, const void *data, unsigned long size);
  */
 void MD5_Final(unsigned char *result, MD5_CTX *ctx);
  
+/**
+ * Calculates MD5 hash from C string
+ */
+void md5_compute(char *data, unsigned char *result);
+
 #endif
