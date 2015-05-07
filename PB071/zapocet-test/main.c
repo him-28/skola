@@ -15,7 +15,8 @@ int read_person(FILE *f, char** name, int *w){
    int dotpos = (int)(dd - str);
    //printf("Position of delimiter is %i\n", dotpos);
    *name = malloc(sizeof(char) * (dotpos + 1));
-   strncpy (*name, str, dotpos);
+   strncpy(*name, str, dotpos);
+   *((*name) + dotpos) = 0;
    sscanf(str+dotpos+1,"%i", w); 
    //printf("name: %s, weight: %i\n", name, *w);
    return 1;
@@ -39,7 +40,7 @@ int main(int argc, char *argv[]){
    FILE *f;
 
    if((f = fopen(argv[1], "r") ) == NULL){
-      printf("Error: Unable to open file %s", argv[1]);
+      printf("Error: Unable to open file %s\n", argv[1]);
       return 2;
    }
 
@@ -58,7 +59,8 @@ int main(int argc, char *argv[]){
 
    int sum = sum_weight(p, p + num - 1); 
 
-   printf("Name of first person: %s\nTotal weight: %i\n", p[0].name, sum);
+   printf("Name of first person: %s\n", p[0].name);
+   printf("Total weight: %i\n", sum);
  
    fclose(f);
    for(int i = 0; i < num; i++){
