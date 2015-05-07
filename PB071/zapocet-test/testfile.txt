@@ -1,0 +1,7 @@
+Adam:25
+Libor:98
+Mirek Dusin:115
+Veronika:45
+Marketa:65
+Igor:224
+Pavel:100
