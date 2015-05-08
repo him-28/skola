@@ -1,0 +1,453 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	9
+<table>
+Table1	30	2	11.6.11 17:50
+geometry	392	469	-1	-1	minimized	
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	3.70000000000000e-02	3.63000000000000e+00
+1	5.96000000000000e-01	3.56000000000000e+00
+2	1.01800000000000e+00	3.03000000000000e+00
+3	1.04300000000000e+00	1.86000000000000e+00
+4	1.15300000000000e+00	1.49000000000000e+00
+5	1.18900000000000e+00	2.78000000000000e+00
+6	1.31600000000000e+00	9.40000000000000e-01
+7	1.39500000000000e+00	6.60000000000000e-01
+8	1.40400000000000e+00	6.30000000000000e-01
+9	1.91700000000000e+00	7.10000000000000e-02
+10	2.43300000000000e+00	7.10000000000000e-02
+11	3.07000000000000e+00	7.10000000000000e-02
+12	4.85000000000000e+00	7.10000000000000e-02
+</data>
+</table>
+<table>
+Table2	30	2	11.6.11 17:59
+geometry	196	469	-1	-1	minimized	
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	3.90000000000000e-02	3.69000000000000e+00
+1	5.36000000000000e-01	3.61000000000000e+00
+2	8.36000000000000e-01	3.27000000000000e+00
+3	1.13800000000000e+00	2.85000000000000e+00
+4	1.00500000000000e+00	3.04000000000000e+00
+5	1.18600000000000e+00	1.40000000000000e+00
+6	1.28600000000000e+00	1.06000000000000e+00
+7	1.40100000000000e+00	6.70000000000000e-01
+8	1.46100000000000e+00	3.60000000000000e-01
+9	1.65300000000000e+00	7.10000000000000e-03
+10	2.02000000000000e+00	7.10000000000000e-03
+11	3.39300000000000e+00	7.10000000000000e-03
+</data>
+</table>
+<table>
+Table3	30	2	11.6.11 18:24
+geometry	784	469	445	220	minimized	
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	5.40000000000000e-02	-8.30000000000000e-01
+1	7.62000000000000e-01	-6.80000000000000e-01
+2	1.23300000000000e+00	-5.70000000000000e-01
+3	1.53400000000000e+00	-2.10000000000000e-01
+4	1.56600000000000e+00	-1.10000000000000e-01
+5	1.73000000000000e+00	2.00000000000000e-03
+6	2.09800000000000e+00	3.00000000000000e-03
+7	3.76000000000000e+00	3.00000000000000e-03
+</data>
+</table>
+<multiLayer>
+Graph1	1	1	11.6.11 17:56
+geometry	0	469	-1	-1	minimized	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	488	398
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	U<sub>vstupní</sub>	U<sub>výstupní</sub>			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Table1_1	Table1_2	1	0	#000000	0	1	7	2	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+curve	Table2_1	Table2_2	1	0	#ff0000	0	1	7	3	#ff0000	#ff0000	0	#000000	14	1	2	0	0	29	1
+scale	0	-0.5	4	0	8	5	0	0
+scale	1	-0.5	4	0	8	5	0	0
+scale	2	0	5	0	7	5	0	0
+scale	3	0	5	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	3145772	0	3145772
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>2.6595744680851</x>
+<y>3.134110787172</y>
+<right>1.32281553398058</right>
+<bottom>3.49568965517241</bottom>
+<attachTo>0</attachTo>
+<onTop>1</onTop>
+<Text>
+\l(1)R<sub>z</sub>=1000Ω
+\l(2)R<sub>z</sub>=4000Ω
+</Text>
+<Font>Sans	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+</multiLayer>
+<multiLayer>
+Graph2	1	1	11.6.11 18:24
+geometry	588	469	516	461	minimized	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	498	398
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	U<sub>vstupní</sub>[V]	I<sub>vstupní</sub>[mA]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Table3_1	Table3_2	2	1	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+scale	0	-1	0.2	0	8	5	0	0
+scale	1	-1	0.2	0	8	5	0	0
+scale	2	0	4	0	8	5	0	0
+scale	3	0	4	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	6	0	3145772
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>0.33103448275862</x>
+<y>0.10204081632653</y>
+<right>1.03073286052009</right>
+<bottom>0.0627565982404692</bottom>
+<attachTo>0</attachTo>
+<onTop>1</onTop>
+<Text>
+\l(1)%(1)
+</Text>
+<Font>Sans	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+</multiLayer>
+<table>
+Table4	30	2	11.6.11 18:52
+geometry	0	0	445	220	
+header	1[Y]	2[X]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	2.65000000000000e+00	8.04000000000000e+00
+1	2.53000000000000e+00	8.77000000000000e+00
+2	2.37000000000000e+00	9.84000000000000e+00
+3	2.14000000000000e+00	1.12600000000000e+01
+4	1.83000000000000e+00	1.32200000000000e+01
+5	1.66000000000000e+00	1.42900000000000e+01
+6	1.41000000000000e+00	1.58200000000000e+01
+7	1.13000000000000e+00	1.75400000000000e+01
+8	9.40000000000000e-01	1.87700000000000e+01
+9	8.60000000000000e-01	1.92500000000000e+01
+</data>
+</table>
+<multiLayer>
+Graph3	1	1	11.6.11 18:53
+geometry	445	1	506	461	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	488	398
+PlotTitle	Log0 na výstupu	#000000	4228
+<Antialiasing>0</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	I<sub>výst</sub>[mA]	U<sub>výst</sub>[V]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Table4_2	Table4_1	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+scale	0	0.5	3	0	8	5	0	0
+scale	1	0.5	3	0	8	5	0	0
+scale	2	6	20	0	8	5	0	0
+scale	3	6	20	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	6	0	3145772
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>15.719298245614</x>
+<y>2.7993311036789</y>
+<right>18.1052631578947</right>
+<bottom>2.56521739130435</bottom>
+<attachTo>0</attachTo>
+<onTop>1</onTop>
+<Text>
+\l(1)%(1)
+</Text>
+<Font>Sans	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+</multiLayer>
+<table>
+Table5	30	2	11.6.11 18:56
+geometry	0	220	445	220	
+header	1[Y]	2[X]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+1	3.56400000000000e+00	8.15000000000000e-02
+2	3.54400000000000e+00	9.00000000000000e-01
+3	3.37700000000000e+00	2.53000000000000e+00
+4	3.34400000000000e+00	3.10000000000000e+00
+5	3.27000000000000e+00	4.00000000000000e+00
+6	3.12000000000000e+00	5.60000000000000e+00
+7	2.95700000000000e+00	6.93000000000000e+00
+8	2.64000000000000e+00	8.94000000000000e+00
+9	2.54000000000000e+00	9.67000000000000e+00
+10	2.14000000000000e+00	1.21000000000000e+01
+11	1.97000000000000e+00	1.31600000000000e+01
+12	1.28000000000000e+00	1.72000000000000e+01
+13	1.00000000000000e+00	1.82000000000000e+01
+</data>
+</table>
+<multiLayer>
+Graph5	1	1	11.6.11 18:58
+geometry	688	34	506	461	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	488	398
+PlotTitle	Log1 na výstupu	#000000	4228
+<Antialiasing>0</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	I<sub>výst</sub>[mA]	U<sub>výst</sub>[V]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Table5_2	Table5_1	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+scale	0	0.5	4	0	8	5	0	0
+scale	1	0.5	4	0	8	5	0	0
+scale	2	-5	20	0	8	5	0	0
+scale	3	-5	20	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	6	0	3145772
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-2.4310776942356</x>
+<y>1.2023411371237</y>
+<right>1.82957393483709</right>
+<bottom>0.874581939799331</bottom>
+<attachTo>0</attachTo>
+<onTop>1</onTop>
+<Text>
+\l(1)%(1)
+</Text>
+<Font>Sans	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+</multiLayer>
+<open>1</open>
