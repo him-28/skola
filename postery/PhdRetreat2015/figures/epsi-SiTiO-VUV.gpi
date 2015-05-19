@@ -1,0 +1,25 @@
+set term pdfcairo enhanced notransparent truecolor dashed font "Arial" size 5.5in,2in lw 2
+load 'style.gpi'
+set style textbox opaque noborder
+
+set style data line
+set rmargin 1
+
+set ylabel 'Dielectric function, ε_i' offset -1
+set xlabel 'Photon energy, E [eV]'
+set format y '%.0f'
+set key at graph 0.75,0.95
+
+set label "Electronic excitations in UV" at graph  0.35,0.9 boxed
+
+plot [3:11]  \
+    'TiO2.nk' u (1240/$1):(2*$2*$3) t 'TiO_2 (Meopta)' ls 13,\
+    'SiTiO-N27BS.nk' u (1240/$1):(2*$2*$3) t 'TiO_2' ls 3,\
+    'SiTiO-N25BS.nk' u (1240/$1):(2*$2*$3) t 'Si_{0.40}Ti_{0.60}O_2' ls 6,\
+    'SiTiO-N23BS.nk' u (1240/$1):(2*$2*$3) t 'Si_{0.61}Ti_{0.39}O_2' ls 7,\
+    'SiTiO-N21BS.nk' u (1240/$1):(2*$2*$3) not 'Si_{0.74}Ti_{0.26}O_2' ls 4,\
+    'SiTiO-N19BS.nk' u (1240/$1):(2*$2*$3) not 'Si_{0.85}Ti_{0.15}O_2' ls 2,\
+    'SiTiO-N17BS.nk' u (1240/$1):(2*$2*$3) not 'Si_{0.86}Ti_{0.14}O_2' ls 5,\
+    'SiTiO-N15BS.nk' u (1240/$1):(2*$2*$3) not 'SiO_2' ls 1,\
+    'SiO2.nk' u (1240/$1):(2*$2*$3) not 'SiO_2 (Meopta)' ls 11
+

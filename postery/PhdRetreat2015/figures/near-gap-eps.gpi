@@ -1,0 +1,30 @@
+set term pdfcairo enhanced color font "Arial,10" size 6cm,3.5cm lw 2 dl 0.5
+
+set ylabel 'Dielectric function, ε_i'
+set xlabel 'Photon energy, E [eV]'
+set key top left
+set format y "10^{%L}"
+
+set style line 1 lt 1 lc rgb '#e00000'
+set style line 2 lt 2 lc rgb '#008000'
+set style line 3 lt 3 lc rgb '#0040c0'
+set style line 4 lt 4 lc rgb '#f0c010'
+set style line 5 lt 5 lc rgb '#a000b0'
+
+set style textbox opaque noborder
+
+set style line 10 lt 0 lc rgb '#a0a0a0' lw 1.5
+set grid ls 10
+
+set logscale y
+set rmargin 0.2
+set tmargin 0.22
+
+#set label at graph 0.35,0.9 "Anatase"
+
+plot [2.7:3.7][1e-6:]  \
+    "anatase-0.0.joint" u 1:(($2+$3+$4)/3) t 'x = 0.0' w l ls 1,\
+    "anatase-0.0625.joint" u 1:(($2+$3+$4)/3) t 'x = 0.0625' w l ls 2,\
+    "anatase-0.125.joint" u 1:(($2+$3+$4)/3) t 'x = 0.125' w l ls 3,\
+    "anatase-0.25.joint" u 1:(($2+$3+$4)/3) t 'x = 0.25' w l ls 4,\
+    "anatase-0.5.joint" u 1:(($2+$3+$4)/3) t 'x = 0.5' w l ls 5
