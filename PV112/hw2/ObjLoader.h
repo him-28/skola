@@ -30,7 +30,7 @@ class ObjLoader
 private:
 	vector<Vector3f> vertices;
 	vector<Vector3f> normals;
-	vector<Vector3f> texcords;
+	vector<Vector2f> texcords;
 	vector<Triangle> triangles;
 
 private:
@@ -43,7 +43,7 @@ public:
 
 	vector<Vector3f> & GetNormals();
 
-	vector<Vector3f> & GetTexcords();
+	vector<Vector2f> & GetTexcords();
 
 	vector<Triangle> & GetTriangles();
 

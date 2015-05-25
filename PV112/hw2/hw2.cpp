@@ -14,10 +14,17 @@
 
 #include "ObjLoader.h"
 
-#define SIZE_X 640
-#define SIZE_Y 480
+#define SIZE_X 1024
+#define SIZE_Y 768
 
 #define PI 3.14159265359
+
+#define LIGHT0a 1
+#define LIGHT0d 2
+#define LIGHT1 4
+#define LIGHT2 8
+
+unsigned char lights;
 
 typedef enum {Forward, Backward, Left, Right} directions;
 float cam_x = -5.0;
@@ -35,6 +42,14 @@ int window_height;
 
 int objects[20];
 int textures[20];
+
+float red_color[] = {1.0, 0.0, 0.0, 1.0};
+float green_color[] = {0.0, 1.0, 0.0, 1.0};
+float blue_color[] = {0.0, 0.0, 1.0, 1.0};
+float white_color[] = {1.0, 1.0, 1.0, 1.0};
+float gray_color[] = {0.15, 0.15, 0.15, 1.0};
+float black_color[] = {0.0, 0.0, 0.0, 0.0};
+float brown_color[] = {0.66, 0.3, 0.0, 1.0};
 
 void resize(int width, int height)
 {
@@ -98,6 +113,19 @@ void keyPressed(unsigned char key, int mouseX, int mouseY){
    case 'd' :
       move(Right);
       break;
+
+   case 'u' :
+      lights ^= LIGHT0a;
+      break;
+   case 'i' :
+      lights ^= LIGHT0d;
+      break;
+   case 'o' :
+      lights ^= LIGHT1;
+      break;
+   case 'p' :
+      lights ^= LIGHT2;
+      break;
    }
 
    // Flag indicating that current window needs to be redisplayed
@@ -157,6 +185,56 @@ int loadTexture(const char * filename)
    return texId;
 }
 
+void set_lights(){
+
+   float lightPos0[] = { 0.0f, 0.0f, 200.0, 1.0f };
+   float lightPos1[] = { 200.0f, 0.0f, 200.0, 1.0f };
+   float lightPos2[] = { -200.0f, 0.0f, 200.0, 1.0f };
+
+   float lightDir1[] = { -0.5f, -0.0f, -0.5f};
+   float lightDir2[] = { 0.5f, -0.0f, -0.5f};
+   float lightAtten[] = { 0.005f, 0.005f, 0.005f};
+
+   float cutoff = 15.0f;
+   float spot_exponent = 50.0f;
+
+   glLightModelfv(GL_LIGHT_MODEL_AMBIENT, black_color);
+   
+   if(lights & LIGHT0d)
+      glLightfv(GL_LIGHT0, GL_DIFFUSE, white_color);
+   else
+      glLightfv(GL_LIGHT0, GL_DIFFUSE, black_color);
+   if(lights & LIGHT0a)
+      glLightfv(GL_LIGHT0, GL_AMBIENT, gray_color);
+   else
+      glLightfv(GL_LIGHT0, GL_AMBIENT, black_color);
+   glLightfv(GL_LIGHT0, GL_SPECULAR, black_color);
+   glLightfv(GL_LIGHT0, GL_POSITION, lightPos0);
+   glLightfv(GL_LIGHT0, GL_LINEAR_ATTENUATION, lightAtten);
+
+
+   if(lights & LIGHT1)
+      glLightfv(GL_LIGHT1, GL_SPECULAR, red_color);
+   else
+      glLightfv(GL_LIGHT1, GL_SPECULAR, black_color);
+
+      glLightfv(GL_LIGHT1, GL_AMBIENT, black_color);
+   glLightfv(GL_LIGHT1, GL_POSITION, lightPos1);
+   glLightfv(GL_LIGHT1, GL_SPOT_DIRECTION, lightDir1);
+   glLightfv(GL_LIGHT1, GL_SPOT_CUTOFF, &cutoff);
+   glLightfv(GL_LIGHT1, GL_SPOT_EXPONENT, &spot_exponent);
+
+   if(lights & LIGHT2)
+      glLightfv(GL_LIGHT2, GL_SPECULAR, blue_color);
+   else
+      glLightfv(GL_LIGHT2, GL_SPECULAR, black_color);
+
+      glLightfv(GL_LIGHT2, GL_AMBIENT, black_color);
+   glLightfv(GL_LIGHT2, GL_POSITION, lightPos2);
+   glLightfv(GL_LIGHT2, GL_SPOT_DIRECTION, lightDir2);
+   glLightfv(GL_LIGHT2, GL_SPOT_CUTOFF, &cutoff);
+   glLightfv(GL_LIGHT2, GL_SPOT_EXPONENT, &spot_exponent);
+}
 
 void render(void)
 {
@@ -168,35 +246,34 @@ void render(void)
    glShadeModel(GL_SMOOTH);
 
    glMatrixMode(GL_MODELVIEW);
+   glEnable(GL_NORMALIZE);
    glLoadIdentity();
    gluLookAt( 100 * cam_x, 100 * cam_y, 100 * cam_z, 100 * (cam_x + cos(angle_x)), 100 * (cam_y + sin(angle_x)), 100 * (cam_z + sin(angle_z)), 0.0, 0.0, 1.0);//eye pos, center pos, normal vector
 
-   float lightPos[] = { 0.0f, 0.0f, 200.0, 1.0f };
-   float lightDir[] = { 0.0f, 0.0f, 1.0f};
+   set_lights();
 
-   float red_color[] = {1.0, 0.0, 0.0, 1.0};
-   float green_color[] = {0.0, 1.0, 0.0, 1.0};
-   float blue_color[] = {0.0, 0.0, 1.0, 1.0};
-   float white_color[] = {1.0, 1.0, 1.0, 1.0};
-   float black_color[] = {0.0, 0.0, 0.0, 1.0};
-   float brown_color[] = {0.66, 0.3, 0.0, 1.0};
+   float shininess = 0.0f;
 
+   glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, white_color);
+   glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, white_color);
+   glMaterialfv(GL_FRONT_AND_BACK, GL_SHININESS, &shininess);
 
-   glLightfv(GL_LIGHT0, GL_DIFFUSE, white_color);
-   //glLightfv(GL_LIGHT0, GL_SPECULAR, white_color);
-   glLightfv(GL_LIGHT0, GL_POSITION, lightPos);
-   //glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, lightDir);
+   glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, white_color);
 
-
-   //glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, white_color);
-   glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, brown_color);
-   //glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, white_color);
+   if(lights & LIGHT0d){
+      glPushMatrix();
+      glTranslatef(0.0f, 0.0f, 200.0f);
+      glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, white_color);
+      glutSolidSphere(10.0, 20, 20);
+      glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, black_color);
+      glPopMatrix();
+   }
 
    /* table 1 */
    glPushMatrix();
-   glRotatef(90.0, 1.0, 0.0, 0.0);
    glEnable(GL_TEXTURE_2D);
    glBindTexture(GL_TEXTURE_2D, textures[1]);
+   glRotatef(90.0, 1.0, 0.0, 0.0);
    glCallList(objects[0]);
    glBindTexture(GL_TEXTURE_2D, 0);
    glDisable(GL_TEXTURE_2D);
@@ -219,10 +296,15 @@ void render(void)
    glPopMatrix();
 
    /* vase 1 */
+   glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, white_color);
    glPushMatrix();
+   glEnable(GL_TEXTURE_2D);
+   glBindTexture(GL_TEXTURE_2D, textures[3]);
    glTranslatef(-150.0, -150.0, 0.0);
    glRotatef(90.0, 1.0, 0.0, 0.0);
    glCallList(objects[4]);
+   glBindTexture(GL_TEXTURE_2D, 0);
+   glDisable(GL_TEXTURE_2D);
    glPopMatrix();
 
    /* vase 2 */
@@ -308,7 +390,7 @@ int load_object(const char *path){
 
    vector<Triangle> tr = obj.GetTriangles();
    vector<Vector3f> v = obj.GetVertices();
-   vector<Vector3f> tx = obj.GetVertices();
+   vector<Vector2f> tx = obj.GetTexcords();
    vector<Vector3f> n = obj.GetNormals();
 
    glBegin(GL_TRIANGLES);
@@ -372,10 +454,12 @@ void load_scene(void){
    objects[2] = load_object("objects/clock-minutehand.obj");
    objects[3] = load_object("objects/clock-hourhand.obj");
    objects[4] = load_object("objects/vase.obj");
-   objects[5] = createFloor(500.0, 500, 1);
+   objects[5] = createFloor(500.0, 500, 10);
 
    textures[0] = loadTexture("texture/pavement.jpg");
    textures[1] = loadTexture("texture/wood.jpg");
+   textures[2] = loadTexture("texture/dice6.png");
+   textures[3] = loadTexture("texture/vase.jpg");
 
 }
 
@@ -388,7 +472,7 @@ int main(int argc, char** argv)
    // Init window
    glutInitWindowPosition((glutGet(GLUT_SCREEN_WIDTH) - SIZE_X) / 2, (glutGet(GLUT_SCREEN_HEIGHT) - SIZE_Y) / 2);
    glutInitWindowSize(SIZE_X, SIZE_Y);
-   glutCreateWindow("PV112 - cv2");
+   glutCreateWindow("PV112 - projekt 2 - Pavel Ondračka");
 
    // Register callbacks
    glutDisplayFunc(render);
@@ -405,7 +489,12 @@ int main(int argc, char** argv)
 
    // Enable lighting
    glEnable(GL_LIGHTING);
+
    glEnable(GL_LIGHT0);
+   glEnable(GL_LIGHT1);
+   glEnable(GL_LIGHT2);
+
+   lights = 15;
 
    // Configure DevIL
    ilEnable(IL_ORIGIN_SET);

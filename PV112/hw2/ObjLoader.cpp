@@ -10,7 +10,7 @@ vector<Vector3f> & ObjLoader::GetNormals()
 	return normals;
 }
 
-vector<Vector3f> & ObjLoader::GetTexcords()
+vector<Vector2f> & ObjLoader::GetTexcords()
 {
 	return texcords;
 }
@@ -42,8 +42,8 @@ bool ObjLoader::Load(const char * filename)
 		}
 		else if (prefix == "vt")
 		{
-			Vector3f vt;
-         file >> vt.x >> vt.y >> vt.z;
+			Vector2f vt;
+         file >> vt.x >> vt.y;
          texcords.push_back(vt);
 		}
 		else if (prefix == "vn")
