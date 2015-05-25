@@ -218,7 +218,7 @@ void set_lights(){
    else
       glLightfv(GL_LIGHT1, GL_SPECULAR, black_color);
 
-      glLightfv(GL_LIGHT1, GL_AMBIENT, black_color);
+   glLightfv(GL_LIGHT1, GL_AMBIENT, black_color);
    glLightfv(GL_LIGHT1, GL_POSITION, lightPos1);
    glLightfv(GL_LIGHT1, GL_SPOT_DIRECTION, lightDir1);
    glLightfv(GL_LIGHT1, GL_SPOT_CUTOFF, &cutoff);
@@ -279,6 +279,37 @@ void render(void)
    glDisable(GL_TEXTURE_2D);
    glPopMatrix();
 
+   /* lamp1 */
+   glPushMatrix();
+   glTranslatef(200.0, 0.0, 200.0);
+   glRotatef(90.0, 1.0, 0.0, 0.0);
+   glRotatef(180.0, 0.0, 180.0, 0.0);
+   glRotatef(45.0, 0.0, 0.0, 1.0);
+   if(lights & LIGHT1)
+      glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, red_color);
+   glCallList(objects[6]);
+   if(lights & LIGHT1)
+      glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, black_color);
+   glRotatef(-90.0, 1.0, 0.0, 0.0);
+   glTranslatef(0.0, 0.0, 5.0);
+   glutSolidCone(20.0, 20.0, 10, 10);
+   glPopMatrix();
+
+   /* lamp2 */
+   glPushMatrix();
+   glTranslatef(-200.0, 0.0, 200.0);
+   glRotatef(90.0, 1.0, 0.0, 0.0);
+   glRotatef(45.0, 0.0, 0.0, 1.0);
+   if(lights & LIGHT2)
+      glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, blue_color);
+   glCallList(objects[6]);
+   if(lights & LIGHT2)
+      glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, black_color);
+   glRotatef(-90.0, 1.0, 0.0, 0.0);
+   glTranslatef(0.0, 0.0, 5.0);
+   glutSolidCone(20.0, 20.0, 10, 10);
+   glPopMatrix();
+
    /* clock */
    glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, white_color);
    glPushMatrix();
@@ -295,16 +326,18 @@ void render(void)
    glCallList(objects[2]);
    glPopMatrix();
 
-   /* vase 1 */
+
    glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, white_color);
-   glPushMatrix();
+
+
    glEnable(GL_TEXTURE_2D);
    glBindTexture(GL_TEXTURE_2D, textures[3]);
+ 
+   /* vase 1 */
+   glPushMatrix();
    glTranslatef(-150.0, -150.0, 0.0);
    glRotatef(90.0, 1.0, 0.0, 0.0);
    glCallList(objects[4]);
-   glBindTexture(GL_TEXTURE_2D, 0);
-   glDisable(GL_TEXTURE_2D);
    glPopMatrix();
 
    /* vase 2 */
@@ -328,11 +361,14 @@ void render(void)
    glCallList(objects[4]);
    glPopMatrix();
 
+
    /* teapot 1 */
+   glBindTexture(GL_TEXTURE_2D, textures[2]);
+
    glPushMatrix();
    glTranslatef(-30.0, 20.0, 77.0);
    glRotatef(90.0, 1.0, 0.0, 0.0);
-   glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, white_color);
+
    glutSolidTeapot(10.0);
    glPopMatrix();
 
@@ -340,7 +376,6 @@ void render(void)
    glPushMatrix();
    glTranslatef(-30.0, -20.0, 77.0);
    glRotatef(90.0, 1.0, 0.0, 0.0);
-   glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, white_color);
    glutSolidTeapot(10.0);
    glPopMatrix();
 
@@ -348,7 +383,6 @@ void render(void)
    glPushMatrix();
    glTranslatef(30.0, -20.0, 77.0);
    glRotatef(90.0, 1.0, 0.0, 0.0);
-   glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, white_color);
    glutSolidTeapot(10.0);
    glPopMatrix();
 
@@ -356,12 +390,7 @@ void render(void)
    glPushMatrix();
    glTranslatef(30.0, 20.0, 77.0);
    glRotatef(90.0, 1.0, 0.0, 0.0);
-   glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, white_color);
-   glEnable(GL_TEXTURE_2D);
-   glBindTexture(GL_TEXTURE_2D, textures[1]);
-   glutSolidTeapot(10.0);
-   glBindTexture(GL_TEXTURE_2D, 0);
-   glDisable(GL_TEXTURE_2D);
+    glutSolidTeapot(10.0);
    glPopMatrix();
 
    /* floor */
@@ -369,7 +398,6 @@ void render(void)
    glRotatef(90.0, 1.0, 0.0, 0.0);
    glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, white_color);
 
-   glEnable(GL_TEXTURE_2D);
    glBindTexture(GL_TEXTURE_2D, textures[0]);
    glCallList(objects[5]);
    glBindTexture(GL_TEXTURE_2D, 0);
@@ -455,11 +483,12 @@ void load_scene(void){
    objects[3] = load_object("objects/clock-hourhand.obj");
    objects[4] = load_object("objects/vase.obj");
    objects[5] = createFloor(500.0, 500, 10);
+   objects[6] = load_object("objects/bulb.obj");
 
    textures[0] = loadTexture("texture/pavement.jpg");
    textures[1] = loadTexture("texture/wood.jpg");
-   textures[2] = loadTexture("texture/dice6.png");
-   textures[3] = loadTexture("texture/vase.jpg");
+   textures[2] = loadTexture("texture/blue_ceramic.jpg");
+   textures[3] = loadTexture("texture/brown_ceramic.jpg");
 
 }
 
