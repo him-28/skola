@@ -1,0 +1,25 @@
+set term pdfcairo enhanced color dashed font "Arial,10" size 6cm,3cm lw 1 dl 0.5
+
+
+
+set style line 1 lt 1 lw 1 lc rgb '#e00000' dashtype 1
+set style line 2 lt 2 lw 1 lc rgb '#008000' dashtype 2
+set style line 3 lt 3 lw 1 lc rgb '#0040c0' dashtype 3
+set style line 4 lt 4 lw 1 lc rgb '#f0c010' dashtype 4
+set style line 5 lt 5 lw 1 lc rgb '#a000b0' dashtype 5
+
+set tmargin 0.2
+set rmargin 0.5
+set lmargin 6
+
+set xrange [4:9.5]
+
+set ylabel 'Dielectric function, ε_i'
+set format y '%g'
+set format x '%g'
+set xlabel 'Photon energy, E [eV]'
+set key top left
+
+plot [][0:]  \
+    "amorphous.epsilon" u 1:3 t 'calculation' w l ls 1,\
+    "Nguyen-am-HfO2-eps2.txt" u 1:2 t 'exp' w l ls 2
