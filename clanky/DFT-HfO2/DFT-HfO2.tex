@@ -117,10 +117,15 @@ For (Y$_2$O$_3$)$_{15}$--(HfO$_2$)$_{85}$ the band gap is 5.8\,eV~\cite{Lim2002}
 TB-mBJ band gap for t-HfO$_2$ is 6.54\,eV, highest of all the hafnium polymorphs.
 This is in agreement with the GW$_0$ calculation, where the band gap value of 6.0\,eV is also higher than band gap of monoclinic and cubic form, albeit the difference is lower.
 
-While for crystalline hafnia polymorphs the optical band gap was determined directly from the calculations, for 
+While for crystalline hafnia polymorphs the optical band gap was determined directly from the calculations, for amorphous cells another approach was chosen.
+This was needed in order to discount the effect of Urbach tail, defect states and to facilitate better comparison with experimental data obtained by means of Tauc plot.
+Optical band gap in amorphous cells was thus obtained by fitting linear part of square root of the joint density of states and extrapolating to zero.
+
+FIXME: show both the optical gap from "tauc fit" and the electronic gap for amorphous cells, maybe show the JDOS fits?
 
 Calculated optical band gap for amorphous hafnia is 5.65\,eV, again in good agreement with experimental values ranging from 5.49\,eV to 5.72\,eV~\cite{Takeuchi2004, Nguyen2005}.
-FIXME: finish calculations and include correct bad gap, also maybe include electronic band gap here for comparison with calculations.
+
+FIXME: update gap and optical constants for both am1 and am2 structures when calculations finish.
 
 All calculated band gaps are significantly improved in comparison to PBE values of 4.08, 3.77, and 4.79\,eV for monoclinic, cubic and tetragonal HfO2 respectively.
  
@@ -144,16 +149,20 @@ am-HfO$_2$ & 5.53, 5.65 & & PBE0: 5.3~\cite{Broqvist2007}, 5.94~\cite{Chen2011} 
 
 \subsection{Optical properties}
 
-Calculated optical properties are shown in figures \ref{eps-cHfO2}, eps-tHfO2, eps-mHfO2, eps-amHfO2} 
-
+Calculated optical properties are shown in figures \ref{eps-cHfO2}, \ref{eps-tHfO2}, \ref{eps-mHfO2}, \ref{eps-amHfO2} 
 One independent component of the dielectric tensor was calculated for cubic, two for tetragonal and four for monoclinic hafnia.
-Three diagonal components were calculated for amorphous hafnia, however they were found to be almost identical, 
-The dielectric tensor is oriented such that the xx component is parallel to the $a$ axis, yy is in the plane defined by $a$ and $b$ axes, perpendicular to xx and zz is perpendicular to xx and yy components.
+Three diagonal components were calculated for amorphous hafnia, however they were found to be almost identical, thus confirming the cell amorphousness.
+The dielectric tensor is oriented such that the xx component is parallel to the $a$ axis, yy lies in the plane defined by $a$ and $b$ axes, perpendicular to xx, and zz is perpendicular to xx and yy components.
 
-FIXME: show the real part or only the imaginary? Maybe some discussion about electronic part of static dielectric constant.
+Experimental dielectric functions for m-HfO$_2$ by \citet{Edwards2003} and \citet{Nguyen2005} are included for comparison, its clearly visible, that calculated imaginary part of the dielectric function is underestimated in comparison to experiment.
+The other distinctive feature in the experimental data which we fail to reproduce is the peak at 6\,eV, however according to \cite{Takeuchi2004} it is caused by oxygen vacancies and hence its absence in calculations is expected.
+No experimental data are available for tetragonal hafnia.
+Similar problem appears when comparing calculated optical properties for cubic and amorphous HfO$_2$ to those of \citet{Lim2002} and \citet{Nguyen2005} respectively.
 
 To understand better the reason for shift of the absorption to higher energies in comparison to the experimental data, we have compared the calculated dielectric function for m-HfO$_2$ with hybrid based calculations using the Yukawa screened PBE0 functional (YS-PBE0) \cite{Tran2011} and we observed similar shift of the dielectric function maximum.
 Hence we believe that this discrepancy is not caused by incorrectly calculated band structure, but rather by the random phase approximation used during calculation of the dielectric function.
+
+FIXME: show the real part or only the imaginary? Maybe some discussion about electronic part of static dielectric constant.
 
 \begin{figure}
 \begin{center}

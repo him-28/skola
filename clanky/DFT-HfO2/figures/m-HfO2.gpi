@@ -22,9 +22,9 @@ set origin 0,0.57
 
 set label at graph 0.05,0.9 "a)"
 
-set xrange [4:10]
+set xrange [4:9.5]
 
-plot [][:9.8]  \
+plot [][:9.4]  \
     "monoclinic.epsilon" u 1:2 t 'calc ε_{1 xx}' w l ls 1,\
     "monoclinic.epsilon" u 1:4 t 'calc ε_{1 yy}' w l ls 3,\
     "monoclinic.epsilon" u 1:6 t 'calc ε_{1 zz}' w l ls 4,\
