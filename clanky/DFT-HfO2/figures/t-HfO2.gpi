@@ -3,7 +3,7 @@ set term pdfcairo enhanced color dashed font "Arial,10" size 6cm,6cm lw 1 dl 0.5
 set ylabel 'Dielectric function, ε_i'
 set format x ''
 set format y '%g'
-set key top right
+set key bottom left
 
 set style line 1 lt 1 lw 1 lc rgb '#e00000' dashtype 1
 set style line 2 lt 2 lw 1 lc rgb '#008000' dashtype 2
@@ -26,20 +26,18 @@ set label at graph 0.05,0.9 "a)"
 set xrange [4:9.5]
 
 plot [][0:]  \
-    "cubic.epsilon" u 1:2 t 'calculation' w l ls 1,\
-    "Liu-cHfO2-eps1.txt" u 1:2 t 'exp' w l ls 2
+    "tetragonal.epsilon" u 1:2 t 'calc ε_{1 xx}' w l ls 1,\
+    "tetragonal.epsilon" u 1:4 t 'calc ε_{1 zz}' w l ls 2
 
 unset label
 set label at graph 0.05,0.9 "b)"
 set format x '%g'
 set xlabel 'Photon energy, E [eV]'
 set origin 0,0.14
-set key bottom right
+set key bottom left
 
 plot [][:8.5]\
-    "cubic.epsilon" u 1:3 t 'calculation' w l ls 1,\
-    "Liu-cHfO2-eps2.txt" u 1:2 t 'exp' w l ls 2
+    "tetragonal.epsilon" u 1:3 t 'calc ε_{2 xx}' w l ls 1,\
+    "tetragonal.epsilon" u 1:5 t 'calc ε_{2 zz}' w l ls 2
 
 unset multiplot
-
-
