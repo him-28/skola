@@ -12,8 +12,11 @@ update_data:
 	scp $(HOST)cubic/holec-PBE/20000k_9Rk_mBJ/20000k_9Rk_mBJ.epsilon cubic.tmp
 	head -n 1000 cubic.tmp > cubic.epsilon
 	rm cubic.tmp
-	scp $(HOST)amorphous/am-HfO2-96at-fastcool/27k_9Rk_mBJ/64k_9Rk_mBJ_5Emax/64k_9Rk_mBJ_5Emax.epsilon amorphous.tmp
-	head -n 1000 amorphous.tmp > amorphous.epsilon
+	scp $(HOST)amorphous/am-HfO2-96at-fastcool/PBE_MSR1a/fine-relax/mBJ-relaxed2/mBJ-relaxed2.epsilon amorphous.tmp
+	head -n 1000 amorphous.tmp > amorphous-fast.epsilon
+	rm amorphous.tmp
+	scp $(HOST)amorphous/am-try2/relaxed-wip/final-fit/mBJ/mBJ.epsilon amorphous.tmp
+	head -n 1000 amorphous.tmp > amorphous-slow.epsilon
 	rm amorphous.tmp
 	scp $(HOST)monoclinic/holec-PBE/5000k_9Rk_mBJ/5000k_9Rk_mBJ.epsilon monoclinic.tmp
 	head -n 1000 monoclinic.tmp > monoclinic.epsilon
