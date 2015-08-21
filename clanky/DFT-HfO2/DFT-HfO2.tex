@@ -30,11 +30,13 @@
 ]
 
 \section{Introduction}
-HfO$_2$ is attracting a lot of attention as a high-$k$ material for electronic applications as well as optical applications such as antireflective coatings~\cite{Fadel1998, Khoshman2008}, heat-mirrors~\cite{Al-Kuhaili2004}, or laser mirrors~\cite{Meng2012}).
+HfO$_2$ is attracting a lot of attention as a high-$k$ material for electronic applications~\cite{Houssa2006, Robertson2006} as well as optical applications such as antireflective coatings~\cite{Fadel1998, Khoshman2008}, heat-mirrors~\cite{Al-Kuhaili2004}, or laser mirrors~\cite{Meng2012}).
 
-HfO$_2$ can exist in several polymorphs, depending on growth conditions. There are three low presure polymorphs of HfO$_2$, monoclinic (spacegroup), tetragonal (spacegroup) and cubic (spacegroup), shown in figure \ref{structs}.
+HfO$_2$ can exist in several polymorphs, depending on growth conditions.
+There are three low presure polymorphs of HfO$_2$, monoclinic (P 1 21/c 1, spacegroup: 14), tetragonal (P 42/n m c, spacegroup: 137) and cubic (F m -3 m, spacegroup: 225), shown in figure \ref{structs}.
+Monoclinic phase is stable at ambient conditions, transforms to tetragonal phase at $\sim$1700\,$^\circ$C and later to cubic phase at $\sim$2600\,$^\circ$C. %FIXME: some citation.
 
-\begin{figure}
+\begin{figure}[b]
    \begin{center}
    \includegraphics[width=0.3\linewidth]{figures/monoclinic.pdf}
    \includegraphics[width=0.3\linewidth]{figures/tetragonal.pdf}
@@ -65,68 +67,77 @@ In this work, we thoroughly test the applicability of TB-mBJ potential for monoc
 
 \section{Methodology}
 
-There is no associated exchange %functional ??? %%FIXME
-energy for TB-mBJ, hence its not suitable for structural optimization based on the total energy minimisation.
+There is no exchange energy functional for TB-mBJ~\cite{Tran2009}, hence its not suitable for structural optimization based on the total energy minimisation.
 The initial HfO$_2$ monoclinic, tetragonal and cubic cells were structurally optimized with respect to internal positions and lattice parameters.
 This was done using the the Vienna Ab initio Simulation Package~\cite{Kresse1996}, with projector augmented pseudopotentials \cite{Kresse1999} and using the generalised gradient approximation parametrized by Perdew, Burke and Ernzerhof (GGA-PBE) \cite{Perdew1996}.
 The number of $k$-points reflected the size of the modelled cell by keeping product (number of $k$-points)$\cdot$(number of atoms) constant and equal to approximatelly 2500.
 The plane wave energy cut-off of 500\,eV used for crystalline polymorphs was reduced to 300\,eV for the amorphous models.
-Consequenctly, a total energy accuracy of several meV/atom was achieved.
+Consequently, a total energy accuracy of several meV/atom was achieved.
 
 Amorphous unit cells were prepared by the simulated annealing procedure.
-96 atoms were randomly distributed inside a cubic simulation box with a side 10.1503\,\AA corresponding to mass density of 10.695\,g/cm$^3$.
+96 atoms were randomly distributed inside a cubic simulation box with a side 10.1503\,\AA{} corresponding to mass density of 10.695\,g/cm$^3$.
 An \textit{ab initio} molecular dynamics run at 5000\,K for 3\,ps with a time step of 3\,fs provided a thermally equilibrated distribution of the atoms inside the cell.
 In the next step, the cell temperature was decreased to 0\,K in 100 (fast) or 1000 (slow) steps, each corresponding to 3\,fs.
 Finally, the resulting models were relaxed with respect to atom positions and cell volume (i.e., mass density).
 
+Electronic and optical properties were calculated for the structurally relaxed models using Wien2k, a full potential all electron code~\cite{Blaha2001} employing the linearized augmented plane wave method.
+A dense k-grid of 17$\times$17$\times$16 for monoclinic, 24$\times$24$\times$16 for tetragonal, 27$\times$27$\times$27 for cubic, and 4$\times$4$\times$4 for amorphous was used in order to obtain converged optical properties.
+Atomic spheres radii were set to almost matching spheres corresponding to approximately (depending on polymorph) $\sim$1.7\,\AA{} for oxygen and $\sim$1.9\,\AA{} for hafnia.
+The $R_{mt} \cdot K_{max}$ matrix size parameter was set to 9, roughly equivalent to 410\,eV cut-off parameter in pseudopotential calculations.
 
-Electronic and optical properties were calculated for the structurally relaxed models using Wien2k, a full potential all electron code~\cite{Blaha2001} employing the linearized augmented plane wave method. The TB-mBJ was used for exchange and LDA for the correlation potential. For determination of dielectric functions we used the optic code~\cite{AmbroschDraxl2006}, a part of the Wien2k package, which utilizes Random Phase Approximation (RPA) neglecting local field effects.
-%% FIXME provide a few more technical details regarding k-points, RMT, k_max, l_max, and all what is important for setting up the calculation and controlling its accuracy. Also, mention specifically which mBJ potential you use (which parametrisation).
+The TB-mBJ with the original parametrisation by \citet{Tran2009} was used for exchange and LDA for the correlation potential. For determination of dielectric functions we used the optic code~\cite{AmbroschDraxl2006}, a part of the Wien2k package, which utilizes Random Phase Approximation (RPA) neglecting local field effects.
 
-A Gaussian broadening of 0.03\,eV was used for the dielectric function for better comparison with room temperature experimental data.
+A Lorentz broadening of 0.03\,eV was used for the dielectric function for better comparison with room temperature experimental data.
 
 \section{Results a discussion}
 
 \subsection{Structural properties}
 
+\begin{table*}
+\begin{center}
+\begin{tabular}{ccccccccc}
+
+ & & $a$\,[\AA] & $b$\,[\AA] & $c$\,[\AA] & $\gamma\,[^{\circ}]$ &
+$B$\,[GPa] & $E_f$\,[eV/atom] & $\Delta E$\,[eV/atom]\\
+m & GGA, present & 5.143 & 5.190 & 5.330 & 99.6 & 197 & -3.975 & 0.000
+\\%-10.2026 \\
+  & LDA, present & 5.035 & 5.123 & 5.198 & 99.6 & 194 & -4.318 & 0.000
+\\%-11.0841 \\
+  & exp., \citet{Adam1959} & 5.1156 & 5.1722 & 5.2948 & 99.23 & & & \\
+
+m2 & GGA, present & 5.661 & 5.662 & 5.999 & 117.8 & 183 & -3.972 &
+0.003\\ %-10.2005 \\
+   & LDA, present & 5.534 & 5.606 & 5.775 & 115.8 & 193 & -4.234 &
+0.084\\ %-10.9998 \\
+
+t & GGA, present & 3.591 & & 5.219 & 90 & 175 & -3.920 & 0.055\\ %-10.1483 \\
+  & LDA, present & 3.526 & & 5.073 & 90 & 220 & -4.280 & 0.038\\ %-11.0459 \\
+  & exp., \citet{Curtis1954} & 5.14 & & 5.25 & & & & \\
+
+c & GGA, present & 5.075 & & & 90.0 & 255 & -3.890 & 0.085 \\%-10.1176 \\
+  & LDA, present & 4.982 & & & 90.0 & 289 & -4.261 & 0.057 \\%-11.0274
+  & exp., \citet{Senft1983} & 5.110 & & & & & & \\
+
+\end{tabular}
+\caption{Overview of calculated structural properties}
+\label{structure}
+\end{center}
+\end{table*}
+
 The four structures considered in the present work (monoclinic, cubic, tetragonal, and amorphous) were fully optimised with respect to the unit cell shape and atom positions at several fixed volumes.
 In doing so, we used both GGA and LDA exchange-correlation potentials which typically overestimate and underestimate, respectively, lattice parameters with respect to experimental values.
 The thus obtained energy vs. volume data were fitted with Birch-Murnaghan equation of state \cite{Birch1947}.
-Resulting lattice parameters are listed in Table XX together with the selected experimental and \textit{ab initio} data from literature for comparison.
+Resulting lattice parameters are listed in Table \ref{structure} together with the selected experimental and \textit{ab initio} data from literature for comparison.
 The energy of formation was calculated as
 \begin{equation}
   E_f^\alpha=E_0(\ce{HfO2}^\alpha) - \frac13 (E_0(\ce{Hf}) + E_0(\ce{O2}))\ ,
 \end{equation}
 where $E_0(\ce{HfO2}^\alpha)$, $E_0(\ce{Hf})$, and $E_0(\ce{O2})$ are the \textit{ab initio} total energies (per atom) of \ce{HfO2} in the $\alpha$ structure (monoclinic, cubic, tetragonal, or amorphous), Hf in the hcp structure, and an oxygen molecule, respectively.
 
-%% FIXME add literature data for comparison
-%% FIXME data for energies are total energie, not Ef. David needs to calculate E0 for Hf and O for both GGA and LDA and then use the above equation to get Ef
 %% FIXME GGA: Hf: -9.8322 eV/at, O -4.42597 eV/at
 
-\begin{table*}
-\begin{center}
-\begin{tabular}{cccccccc}
-
- & & $a$\,[\AA] & $b$\,[\AA] & $c$\,[\AA] & $\gamma\,[^{\circ}]$ & $B$\,[GPa] & $E_f$\,[eV/atom] \\
-c & GGA, present & 5.075 & & & 90.0 & 255 & -10.1176 \\
-  & LDA, present & 4.982 & & & 90.0 & 289 & -11.0274 \\
-
-m & GGA, present & 5.143 & 5.190 & 5.330 & 99.6 & 197 & -10.2026 \\
-  & LDA, present & 5.035 & 5.123 & 5.198 & 99.6 & 194 & -11.0841 \\
-
-m2 & GGA, present & 5.661 & 5.662 & 5.999 & 117.8 & 183 & -10.2005 \\
-   & LDA, present & 5.534 & 5.606 & 5.775 & 115.8 & 193 & -10.9998 \\
-
-t & GGA, present & 3.591 & & 5.219 & 90 & 175 & -10.1483 \\
-  &  LDA, present & 3.526 & & 5.073 & 90 & 220 & -11.0459 \\
-
-\end{tabular}
-\end{center}
-\end{table*}
-
-%%  & &  $\rho\,[\mathrm{g/cm^3}]$ & $B$\,[GPa] & $E_f$\,[eV/atom] \\
-%%am & GGA, present & 9.922 & 92 & -10.0043
-%% FIXME add/replace with Wien2k optimisations?
+% &&  $\rho\,[\mathrm{g/cm^3}]$ & $B$\,[GPa] & $E_f$\,[eV/atom] \\
+% am & GGA, present & 9.922 & 92 & -3.776 & 0.199\\ %-10.0043
 
 The most stable structure is, in agreement with the equilibrium phase diagram, the monoclinic structure, followed by tetragonal (experimentally high temperature) and cubic structures.
 The least stable configuration yielding the highest energy of formation, is the amorphous structure.
@@ -137,17 +148,39 @@ The optimisation of the amorphous structure yielded estimates for the equilibriu
 This is about the same values as predicted for the tetragonal structures, while the monoclinic and cubic structures are predicted to be slightly less and more dense, respectively.
 
 An interesting phenomena is predicted for the monoclinic variant.
-As shown in Fig. XX, the energy vs. volume data exhibit a second minimum (quite a shallow one in the LDA case) for volumes larger than the equilibrium (structural parameters are denoted as m2 in Table XX).
+As shown in Fig.\ref{EV}, the energy vs. volume data exhibit a second minimum (quite a shallow one in the LDA case) for volumes larger than the equilibrium (structural parameters are denoted as m2 in Table \ref{structure}).
 Consequently, a structural transformation is predicted for isothermal volume expansion.
-The most distinct feature is a step-like change of the monoclinic angle gamma from $99.6\deg$ (GGA/LDA) to $117.8\deg$ (GGA) and $115.8\deg$ (LDA) (see insets in Fig.~XX).
+The most distinct feature is a step-like change of the monoclinic angle gamma from $99.6\deg$ (GGA/LDA) to $117.8\deg$ (GGA) and $115.8\deg$ (LDA) (see insets in Fig.~\ref{EV}).
 A similar structural transition has been recently reported for the monoclinic phase in NiTi shape memory alloys \cite{Holec2011-tg}.
 There, the structural complexity of this phase resulted in a hysteresis of the forwards and backwards pressure-induced phase transformation.
 We envision that a similar phenomena may appear also for the monoclinic \ce{HfO2}.
 
-Fig. XX: E-V data for the monoclinic structure (combine LDA and GGA, set a common minimum? or better two sub-graphs?)
-
+\begin{figure}
+\begin{center}
+	\includegraphics[width=\linewidth]{figures/m-EV.pdf}
+	\caption{E-V and $\gamma$ data for the monoclinic structure calculated with GGA-PBE and LDA. Lines are fits of the Birch-Murnaghan equation of state around the minima (only the highlighted points were fitted).}
+   \label{EV}
+\end{center}
+\end{figure}
 
 \subsection{Band gaps}
+
+\begin{table*}
+\begin{center}
+
+\begin{tabular}{c|ccccc}
+			& TB-mBJ & PBE & hybrid funkcionals & GW$_0$ & experiment \\
+\hline
+m-HfO$_2$ &	5.76 & 4.08 & PBE0: 6.75~\cite{Komsa2010}, HSE06: 5.98~\cite{Komsa2010} & 5.9~\cite{Gruning2010} & 5.68~\cite{Balog1977} \\
+c-HfO$_2$ &	5.88 & 3.77 & SX: 5.6~\cite{Clark2010}, HSE06: 5.38~\cite{Yang2014} & 5.5~\cite{Gruning2010} & 5.8$^A$~\cite{Lim2002}\\
+t-HfO$_2$ &	6.54 & 4.79 &  & 6.0~\cite{Gruning2010} & \\
+am-HfO$_2$ & 5.53, 5.65 & & PBE0: 5.3~\cite{Broqvist2007}, 5.94~\cite{Chen2011} &  & 5.49--5.72~\cite{Takeuchi2004}, 5.62~\cite{Nguyen2005}, 5.7~\cite{Perevalov2007}\\
+
+\end{tabular}
+\caption{Overview of calculated band gaps compared to experiment and other \textit{ab initio} calculations}
+\label{gaps}
+\end{center}
+\end{table*}
 
 Table \ref{gaps} shows overview of calculated band gaps for different HfO$_2$ forms.
 Those are compared to experiment and to band gaps calculated by other \textit{ab initio} methods.
@@ -176,23 +209,6 @@ Calculated optical band gap for amorphous hafnia is 5.65\,eV, again in good agre
 FIXME: update gap and optical constants for both am1 and am2 structures when calculations finish.
 
 All calculated band gaps are significantly improved in comparison to PBE values of 4.08, 3.77, and 4.79\,eV for monoclinic, cubic and tetragonal HfO2 respectively.
-
-\begin{table*}
-\begin{center}
-
-\begin{tabular}{c|ccccc}
-			& TB-mBJ & PBE & hybrid funkcionals & GW$_0$ & experiment \\
-\hline
-m-HfO$_2$ &	5.76 & 4.08 & PBE0: 6.75~\cite{Komsa2010}, HSE06: 5.98~\cite{Komsa2010} & 5.9~\cite{Gruning2010} & 5.68~\cite{Balog1977} \\
-c-HfO$_2$ &	5.88 & 3.77 & SX: 5.6~\cite{Clark2010}, HSE06: 5.38~\cite{Yang2014} & 5.5~\cite{Gruning2010} & 5.8$^A$~\cite{Lim2002}\\
-t-HfO$_2$ &	6.54 & 4.79 &  & 6.0~\cite{Gruning2010} & \\
-am-HfO$_2$ & 5.53, 5.65 & & PBE0: 5.3~\cite{Broqvist2007}, 5.94~\cite{Chen2011} &  & 5.49--5.72~\cite{Takeuchi2004}, 5.62~\cite{Nguyen2005}, 5.7~\cite{Perevalov2007}\\
-
-\end{tabular}
-\caption{Overview of calculated band gaps compared to experiment and other \textit{ab initio} calculations}
-\label{gaps}
-\end{center}
-\end{table*}
 
 \subsection{Optical properties}
 
