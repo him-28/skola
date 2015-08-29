@@ -7,6 +7,7 @@
 \usepackage{authblk}
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage{mhchem}
+\usepackage{multirow}
 
 \author[a,b,c]{Pavel Ondračka}
 \author[c]{David Holec}
@@ -51,7 +52,7 @@ Apart from the experimental works, there are numerous \textit{ab initio} studies
 However, majority of the HfO$_2$ \textit{ab initio} studies employ conventional approximations for the exchange-correlation (xc) potential, local density approximation (LDA) or generalised gradient approximation (GGA).
 One shortcoming, of those approximations is the well known underestimation for the band gap.
 
-%Since well calculated band gap and band structure is critical for correct prediction of optical properties.
+%Since well calculated band gap and band structure is critical for correct prediction of optical properties...
 
 On the other hand, hybrid functionals or other more sophisticated methods as GW, give band gaps in much better agreement with experiment, however are much more computationally expansive.
 A recently developed semi-local xc potential (modified Becke-Johnson, TB-mBJ) is an alternative that can provide highly accurate band gaps at the computational cost of LDA or GGA~\cite{Tran2009}.
@@ -74,7 +75,7 @@ The number of $k$-points reflected the size of the modelled cell by keeping prod
 The plane wave energy cut-off of 500\,eV used for crystalline polymorphs was reduced to 300\,eV for the amorphous models.
 Consequently, a total energy accuracy of several meV/atom was achieved.
 
-Amorphous unit cells were prepared by the simulated annealing procedure.
+Two amorphous unit cells were prepared by the simulated annealing procedure.
 96 atoms were randomly distributed inside a cubic simulation box with a side 10.1503\,\AA{} corresponding to mass density of 10.695\,g/cm$^3$.
 An \textit{ab initio} molecular dynamics run at 5000\,K for 3\,ps with a time step of 3\,fs provided a thermally equilibrated distribution of the atoms inside the cell.
 In the next step, the cell temperature was decreased to 0\,K in 100 (fast) or 1000 (slow) steps, each corresponding to 3\,fs.
@@ -118,6 +119,12 @@ c & GGA, present & 5.075 & & & 90.0 & 255 & -3.890 & 0.085 \\%-10.1176 \\
   & LDA, present & 4.982 & & & 90.0 & 289 & -4.261 & 0.057 \\%-11.0274
   & exp., \citet{Senft1983} & 5.110 & & & & & & \\
 
+%% FIXME GGA: Hf: -9.8322 eV/at, O -4.42597 eV/at
+
+ & &  $\rho\,[\mathrm{g/cm^3}]$ & & & & $B$\,[GPa] & $E_f$\,[eV/atom] & \\
+ am & GGA, slow cooling, present & \input{figures/V-fast.txt} & & & & FIXME & FIXME & \\ %-10.0043
+ am & GGA, fast cooling, present & \input{figures/V-slow.txt} & & & & FIXME & FIXME &\\ %-10.0043
+
 \end{tabular}
 \caption{Overview of calculated structural properties}
 \label{structure}
@@ -134,18 +141,13 @@ The energy of formation was calculated as
 \end{equation}
 where $E_0(\ce{HfO2}^\alpha)$, $E_0(\ce{Hf})$, and $E_0(\ce{O2})$ are the \textit{ab initio} total energies (per atom) of \ce{HfO2} in the $\alpha$ structure (monoclinic, cubic, tetragonal, or amorphous), Hf in the hcp structure, and an oxygen molecule, respectively.
 
-%% FIXME GGA: Hf: -9.8322 eV/at, O -4.42597 eV/at
-
-% &&  $\rho\,[\mathrm{g/cm^3}]$ & $B$\,[GPa] & $E_f$\,[eV/atom] \\
-% am & GGA, present & 9.922 & 92 & -3.776 & 0.199\\ %-10.0043
-
 The most stable structure is, in agreement with the equilibrium phase diagram, the monoclinic structure, followed by tetragonal (experimentally high temperature) and cubic structures.
 The least stable configuration yielding the highest energy of formation, is the amorphous structure.
-The optimised lattice parameters are in good agreement with the previously published data, the GGA values being generally closer to the experimental values.
+The optimised lattice parameters are in good agreement with the previously published data, the GGA values being generally closer to the experimental values, hence only the GGA optimised structures were subsequently used in the mBJ calculations.
 
-%% FIXME
-The optimisation of the amorphous structure yielded estimates for the equilibrium mass density: $\rho_{\mathrm{GGA}}=10.375\,\mathrm{g/cm^3}$, $\rho_{\mathrm{LDA}}=9.425\,\mathrm{g/cm^3}$. %%FIXME????
+The optimisation of the amorphous structure yielded estimates for the equilibrium mass density: $\rho_{\mathrm{slow}}=\input{figures/V-slow.txt}\,\mathrm{g/cm^3}$, $\rho_{\mathrm{fast}}=\input{figures/V-fast.txt}\,\mathrm{g/cm^3}$. %%
 This is about the same values as predicted for the tetragonal structures, while the monoclinic and cubic structures are predicted to be slightly less and more dense, respectively.
+%FIXME: check again
 
 An interesting phenomena is predicted for the monoclinic variant.
 As shown in Fig.\ref{EV}, the energy vs. volume data exhibit a second minimum (quite a shallow one in the LDA case) for volumes larger than the equilibrium (structural parameters are denoted as m2 in Table \ref{structure}).
@@ -174,7 +176,8 @@ We envision that a similar phenomena may appear also for the monoclinic \ce{HfO2
 m-HfO$_2$ &	5.76 & 4.08 & PBE0: 6.75~\cite{Komsa2010}, HSE06: 5.98~\cite{Komsa2010} & 5.9~\cite{Gruning2010} & 5.68~\cite{Balog1977} \\
 c-HfO$_2$ &	5.88 & 3.77 & SX: 5.6~\cite{Clark2010}, HSE06: 5.38~\cite{Yang2014} & 5.5~\cite{Gruning2010} & 5.8$^A$~\cite{Lim2002}\\
 t-HfO$_2$ &	6.54 & 4.79 &  & 6.0~\cite{Gruning2010} & \\
-am-HfO$_2$ & 5.53, 5.65 & & PBE0: 5.3~\cite{Broqvist2007}, 5.94~\cite{Chen2011} &  & 5.49--5.72~\cite{Takeuchi2004}, 5.62~\cite{Nguyen2005}, 5.7~\cite{Perevalov2007}\\
+am-HfO$_{2\mathrm{slow}}$ & 5.47 (5.45) & & \multirow{2}{*}{PBE0: 5.3~\cite{Broqvist2007}, 5.94~\cite{Chen2011}} &  & \multirow{2}{*}{5.49--5.72~\cite{Takeuchi2004}, 5.62~\cite{Nguyen2005}, 5.7~\cite{Perevalov2007}}\\
+am-HfO$_{2\mathrm{fast}}$ & 5.22 (4.78) & &  &  & \\
 
 \end{tabular}
 \caption{Overview of calculated band gaps compared to experiment and other \textit{ab initio} calculations}
@@ -197,22 +200,31 @@ For (Y$_2$O$_3$)$_{15}$--(HfO$_2$)$_{85}$ the band gap is 5.8\,eV~\cite{Lim2002}
 TB-mBJ band gap for t-HfO$_2$ is 6.54\,eV, highest of all the hafnium polymorphs.
 This is in agreement with the GW$_0$ calculation, where the band gap value of 6.0\,eV is also higher than band gap of monoclinic and cubic form, albeit the difference is lower.
 
-%% FIXME add relevant references; explain a bit what is Urbach tail and Tauc plot
 While for crystalline hafnia polymorphs the optical band gap was determined directly from the calculations, for amorphous cells another approach was chosen.
-This was needed in order to discount the effect of Urbach tail, defect states and to facilitate better comparison with experimental data obtained by means of Tauc plot.
-Optical band gap in amorphous cells was thus obtained by fitting linear part of square root of the joint density of states and extrapolating to zero.
+This was needed for consistency with experimental data, which is traditionally obtained by extrapolating the linear part of $\sqrt{\alpha E n}$ near absorption onset (e.g. so called Tauc plot), where $\alpha$ is the absorption coefficient, $E$ is energy and $n$ is refractive index.
+We have estimated the optical band gap in amorphous cells by an equivalent approach, by fitting linear part of square root of the joint density of states.
+Table \ref{gaps} contains two band gap values, first is the optical band gap value obtained by aforementioned approach and value in bracket is electronic band gap, e.g. the difference between last occupied and first empty state.
+It is visible that in case of slow cooling, the effect of defect states on band gap is negligible, while in fast cooled amorphous cell, the defect states play a major role.
 
-FIXME: show both the optical gap from "tauc fit" and the electronic gap for amorphous cells, maybe show the JDOS fits?
+\begin{figure}
+\begin{center}
+	\includegraphics[width=\linewidth]{figures/JDOS.pdf}
+	\caption{JDOS}
+   \label{JDOS}
+\end{center}
+\end{figure}
+
+FIXME: now it looks like maybe we should show only the slow cooling struct
 
 Calculated optical band gap for amorphous hafnia is 5.65\,eV, again in good agreement with experimental values ranging from 5.49\,eV to 5.72\,eV~\cite{Takeuchi2004, Nguyen2005, Perevalov2007}.
 
-FIXME: update gap and optical constants for both am1 and am2 structures when calculations finish.
+%FIXME: update gap and optical constants for both am1 and am2 structures when calculations finish.
 
-All calculated band gaps are significantly improved in comparison to PBE values of 4.08, 3.77, and 4.79\,eV for monoclinic, cubic and tetragonal HfO2 respectively.
+All calculated band gaps are significantly improved in comparison to PBE values of 4.08, 3.77, and 4.79\,eV for monoclinic, cubic and tetragonal \ce{HfO2} respectively.
 
 \subsection{Optical properties}
 
-Calculated optical properties are shown in figures \ref{eps-cHfO2}, \ref{eps-tHfO2}, \ref{eps-mHfO2}, \ref{eps-amHfO2}.
+Calculated real and imaginary parts of dielectric function, $\epsilon_\mathrm{r}$ and $\epsilon_\mathrm{i}$, are shown in figures \ref{eps-cHfO2}, \ref{eps-tHfO2}, \ref{eps-mHfO2}, and \ref{eps-amHfO2}.
 One independent component of the dielectric tensor was calculated for cubic, two for tetragonal and four for monoclinic hafnia.
 Three diagonal components were calculated for amorphous hafnia, however they were found to be almost identical, thus confirming the cell amorphousness.
 The dielectric tensor is oriented such that the xx component is parallel to the $a$ axis, yy lies in the plane defined by $a$ and $b$ axes, perpendicular to xx, and zz is perpendicular to xx and yy components.
@@ -226,7 +238,7 @@ Similar problem appears when comparing calculated optical properties for cubic a
 To understand better the reason for shift of the absorption to higher energies in comparison to the experimental data, we have compared the calculated dielectric function for m-HfO$_2$ with hybrid based calculations using the Yukawa screened PBE0 functional (YS-PBE0) \cite{Tran2011} and we observed similar shift of the dielectric function maximum.
 Hence we believe that this discrepancy is not caused by incorrectly calculated band structure, but rather by the random phase approximation used during calculation of the dielectric function.
 
-FIXME: show the real part or only the imaginary? Maybe some discussion about electronic part of static dielectric constant.
+%FIXME: show the real part or only the imaginary? Maybe some discussion about electronic part of static dielectric constant.
 
 \begin{figure}
 \begin{center}
@@ -263,8 +275,13 @@ FIXME: show the real part or only the imaginary? Maybe some discussion about ele
 
 \section{Conclusions}
 
-It was shown, that
-
+In this work, we have focused on optical properties of \ce{HfO2} calculated using the TB-mBJ exchange-correlation potential. First, we have generated a structural models of monoclinic, tetragonal, cubic and amorphous hafnia.
+All models were optimized with respect to the latice parameters and atomic positions using the standard LDA and GGA-PBE exchange-correlation potentials.
+Then band gaps and optical properties were calculated using TB-mBJ.
+And excelent agreement with experiment was obtained for calculated band gap values of all hafnia polymorphs, sometimes even better than much more expansive hybrid or GW approaches, at the fraction of the computational costs.
+However, calculated dielectric functions for all polymorhps shows a shift of the spectral weight to higher energies with respect to experiment data.
+This was attributed to approximations used during calculation of optical properties (e.g. random phase approximation and omission of local field effects) rather then deficiencies in the calculated band structure. 
+  
 \section*{Acknowledgments}
 This work was supported by the IT4Innovations Centre of Excellence project (CZ.1.05/1.1.00/02.0070), funded by the European Regional Development Fund and the national budget of the Czech Republic via the Research and Development for Innovations Operational Programme, as well as Czech Ministry of Education, Youth and Sports via the project Large Research, Development and Innovations Infrastructures (LM2011033).
 

@@ -1,6 +1,6 @@
-set term pdfcairo enhanced color dashed font "Arial,10" size 6cm,6cm lw 1 dl 0.5
+set term pdfcairo enhanced color dashed font "Arial,10" size 8cm,6cm lw 1 dl 0.5
 
-set ylabel 'Dielectric function, ε_i'
+set ylabel 'Dielectric function, ε_r'
 set format x ''
 set format y '%g'
 set key top right
@@ -33,6 +33,7 @@ unset label
 set label at graph 0.05,0.9 "b)"
 set format x '%g'
 set xlabel 'Photon energy, E [eV]'
+set ylabel 'Dielectric function, ε_i'
 set origin 0,0.14
 set key bottom right
 
