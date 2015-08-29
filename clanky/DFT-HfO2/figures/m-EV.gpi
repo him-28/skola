@@ -35,7 +35,7 @@ set size 0.37,0.6
 set origin 0.15,0.4
 set xrange [8.8:15.5]
 
-set label at graph 0.2,0.9 "GGA PBE"
+set label at graph 0.4,0.9 "GGA"
 
 fit [11.2:12.1] EBM(x) "V-E-gamma.txt" u 1:2 via E_0,B_0,V_0,B_0I
 f(x)=( (x<13 && x > 9)? 1 : (1/0) )
@@ -54,7 +54,7 @@ plot [][-10.23:-9.82]\
 
 unset label
 unset ylabel
-set label at graph 0.2,0.9 "LDA"
+set label at graph 0.4,0.9 "LDA"
 
 set origin 0.63,0.4
 set key bottom right

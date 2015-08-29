@@ -33,7 +33,7 @@
 ]
 
 \section{Introduction}
-Hafnium dioxide (hafnia, HfO$_2$) is attracting a lot of attention as a perspective high-$k$ material for electronic~\cite{Houssa2006, Robertson2006} as well as optical applications such as antireflective coatings~\cite{Fadel1998, Khoshman2008}, or heat~\cite{Al-Kuhaili2004} and laser mirrors~\cite{Meng2012}).
+Hafnium dioxide (hafnia, HfO$_2$) is attracting a lot of attention as a perspective high-$k$ material for electronic~\cite{Houssa2006, Robertson2006} as well as optical applications such as antireflective coatings~\cite{Fadel1998, Khoshman2008}, or heat~\cite{Al-Kuhaili2004} and laser mirrors~\cite{Meng2012}.
 % Depending on growth conditions, HfO$_2$ has been reported to exist in several polymorhps.
 According to an ambient pressure phase diagram, three crystalline polymorphs of \ce{HfO2} are stable (Fig.~\ref{structs}). Namely, a monoclinic structure ($P12_1/c1$, spacegroup: \#14) is stable up to $\sim$1700\,$^\circ$C, a tetragonal phase ($P4_2/nmc$, spacegroup: \#137) appears for temperatures between $\sim$1700\,$^\circ$C and $\sim$2220\,$^\circ$C, while for higher temperatures up to the melting point at $\sim2810\,^{\circ}$C, \ce{HfO2} transforms to a cubic structure ($Fm\bar3m$, spacegroup: \#225)~\cite{Villars2014-px}.
 
@@ -76,7 +76,7 @@ The plane wave cut-off energy of 500\,eV used for crystalline polymorphs was red
 Consequently, a total energy accuracy of several meV/atom was achieved.
 
 
-Two amorphous unit cells were prepared by the simulated annealing procedure.
+Two amorphous unit cells were prepared by the simulated annealing procedure~[citation needed?].
 96 atoms were randomly distributed inside a cubic simulation box with a side 10.1503\,\AA{} corresponding to mass density of 10.695\,g/cm$^3$.
 An \textit{ab initio} molecular dynamics run at 5000\,K for 3\,ps with a time step of 3\,fs provided a thermally equilibrated distribution of the atoms inside the cell.
 In the next step, the cell temperature was decreased to 0\,K in 100 (fast) or 1000 (slow) steps, each corresponding to 3\,fs.
@@ -90,7 +90,7 @@ The $R_{mt} \cdot K_{max}$ matrix size parameter was set to 9, roughly equivalen
 The TB-mBJ with the original parametrisation by \citet{Tran2009} was used for the exchange part, and LDA for the correlation part of the xc-potential. Dielectric functions we calculated using the optic code~\cite{AmbroschDraxl2006}, a part of the Wien2k package, which utilizes Random Phase Approximation (RPA) neglecting local field effects.
 A Lorentz broadening of 0.03\,eV was applied to the dielectric function for a better comparison with room temperature experimental data.
 
-\section{Results a discussion}
+\section{Results and discussion}
 
 \subsection{Structural properties}
 
@@ -98,38 +98,42 @@ A Lorentz broadening of 0.03\,eV was applied to the dielectric function for a be
 % FIXME ty tabulky by bylo dobre nejak zkraslit
 \begin{table*}
 \begin{center}
-\begin{tabular}{ccccccccc}
+\caption{Overview of calculated structural properties of monoclinic (m, m2), tetragonal (t), cubic (c) and amorphous (am) phases. $a$, $b$, $c$ are unit cell lattice parameters, $\gamma$ is the monoclinic angle, $B$ is bulk modulus, $E_f$ is the energy of formation and $\Delta E_f$ is the difference between $E_f$ for a given phase and the monoclinic (m) phase (the lowest energy configuration). $\rho$ is the mass density.}
+\label{structure}
+\begin{tabular}{cccccccccc}
 
- & & $a$\,[\AA] & $b$\,[\AA] & $c$\,[\AA] & $\gamma\,[^{\circ}]$ &
-$B$\,[GPa] & $E_f$\,[eV/atom] & $\Delta E$\,[eV/atom]\\
-m & GGA, present & 5.143 & 5.190 & 5.330 & 99.6 & 197 & -3.975 & 0.000
+ & & $a$\,[\AA] & $b$\,[\AA] & $c$\,[\AA] & $\gamma\,[^{\circ}]$ & $\rho\,[\mathrm{g/cm^3}]$ & $B$\,[GPa] & $E_f$\,[eV/atom] & $\Delta E$\,[eV/atom]\\
+\hline\hline
+
+m & GGA & 5.143 & 5.190 & 5.330 & 99.6 & 9.615 & 197 & -3.975 & 0.000
 \\%-10.2026 \\
-  & LDA, present & 5.035 & 5.123 & 5.198 & 99.6 & 194 & -4.318 & 0.000
+  & LDA & 5.035 & 5.123 & 5.198 & 99.6 & 10.203 & 194 & -4.318 & 0.000
 \\%-11.0841 \\
-  & exp., \citet{Adam1959} & 5.1156 & 5.1722 & 5.2948 & 99.23 & & & \\
+  & exp~\cite{Adam1959} & 5.1156 & 5.1722 & 5.2948 & 99.23 & 9.754 & & & \\
+\hline
 
-m2 & GGA, present & 5.661 & 5.662 & 5.999 & 117.8 & 183 & -3.972 &
+m2 & GGA & 5.661 & 5.662 & 5.999 & 117.8 & 7.930 & 183 & -3.972 &
 0.003\\ %-10.2005 \\
-   & LDA, present & 5.534 & 5.606 & 5.775 & 115.8 & 193 & -4.234 &
+   & LDA & 5.534 & 5.606 & 5.775 & 115.8 & 8.362 & 193 & -4.234 &
 0.084\\ %-10.9998 \\
+\hline
 
-t & GGA, present & 3.591 & & 5.219 & 90 & 175 & -3.920 & 0.055\\ %-10.1483 \\
-  & LDA, present & 3.526 & & 5.073 & 90 & 220 & -4.280 & 0.038\\ %-11.0459 \\
-  & exp., \citet{Curtis1954} & 5.14 & & 5.25 & & & & \\
+t & GGA & 3.591 & & 5.219 & 90 & 10.021 & 175 & -3.920 & 0.055\\ %-10.1483 \\
+  & LDA & 3.526 & & 5.073 & 90 & 10.693 & 220 & -4.280 & 0.038\\ %-11.0459 \\
+  & exp~\cite{Curtis1954} & 5.14 & & 5.25 & & 9.722 & & & \\
+\hline
 
-c & GGA, present & 5.075 & & & 90.0 & 255 & -3.890 & 0.085 \\%-10.1176 \\
-  & LDA, present & 4.982 & & & 90.0 & 289 & -4.261 & 0.057 \\%-11.0274
-  & exp., \citet{Senft1983} & 5.110 & & & & & & \\
+c & GGA & 5.075 & & & 90.0 & & 255 & -3.890 & 0.085 \\%-10.1176 \\
+  & LDA & 4.982 & & & 90.0 & & 289 & -4.261 & 0.057 \\%-11.0274
+  & exp~\cite{Senft1983} & 5.110 & & & & & & & \\
+\hline
 
 %% GGA: Hf: -9.8322 eV/at, O -4.42597 eV/at
 
- & &  $\rho\,[\mathrm{g/cm^3}]$ & & & & $B$\,[GPa] & $E_f$\,[eV/atom] & \\
- am & GGA, slow cooling, present & \input{figures/V-fast.txt} & & & & FIXME & FIXME & \\ %-10.0043
- am & GGA, fast cooling, present & \input{figures/V-slow.txt} & & & & FIXME & FIXME &\\ %-10.0043
+ am & GGA, slow cooling & & & & & \input{figures/V-slow.txt} & FIXME & FIXME & FIXME\\ %-10.0043
+ am & GGA, fast cooling & & & & & \input{figures/V-fast.txt} & FIXME & FIXME & FIYME\\ %-10.0043
 
 \end{tabular}
-\caption{Overview of calculated structural properties of monoclinic (m, m2), tetragonal (t), cubic (c) and amorphous (am) phases. $a$, $b$, $c$ are unit cell lattice parameters, $\gamma$ is the monoclinic angle, $B$ is bulk modulus, $E_f$ is the energy of formation and $\Delta E_f$ is the difference between $E_f$ for a given phase and the monoclinic (m) phase (the lowest energy configuration). $\rho$ is the mass density.}
-\label{structure}
 \end{center}
 \end{table*}
 
@@ -145,7 +149,7 @@ where $E_0(\ce{HfO2}^\alpha)$, $E_0(\ce{Hf})$, and $E_0(\ce{O2})$ are the \texti
 
 The most stable structure is, in agreement with the equilibrium phase diagram~\cite{Villars2014-px}, the monoclinic structure, followed by tetragonal (experimentally high temperature) and cubic structures.
 The least stable configuration yielding the highest energy of formation, is the amorphous structure.
-The optimised lattice parameters are in good agreement with the previously published data, the GGA values being generally closer to the experimental values, hence only the GGA optimised structures were subsequently used in the mBJ calculations.
+The optimised lattice parameters are in good agreement with the previously published data, the GGA values being generally closer to the experimental values, hence only the GGA optimised structures were subsequently used in the TB-mBJ calculations.
 % QUESTION: Why then TB-mBJ uses LDA and GGA for the exchange part????
 
 The optimisation of the amorphous structure yielded estimates for the equilibrium mass density: $\rho_{\mathrm{slow}}=\input{figures/V-slow.txt}\,\mathrm{g/cm^3}$, $\rho_{\mathrm{fast}}=\input{figures/V-fast.txt}\,\mathrm{g/cm^3}$. %%
@@ -155,7 +159,7 @@ These values are about the same as for the optimised tetragonal structure, while
 An interesting phenomenon is predicted for the monoclinic variant.
 As shown in Fig.\ref{EV}, the energy vs. volume data exhibit a second minimum (quite a shallow one in the LDA case) for volumes larger than the equilibrium (structural parameters are denoted as m2 in Table~\ref{structure}).
 Consequently, a structural transformation is predicted for large isothermal volume expansions.
-The most distinct feature is a step-like change of the monoclinic angle gamma from $99.6\deg$ (GGA/LDA) to $117.8\deg$ (GGA) and $115.8\deg$ (LDA) (see bottom panels in Fig.~\ref{EV}).
+The most distinct feature is a step-like change of the monoclinic angle $\gamma$ from $99.6\,^\circ$ (GGA/LDA) to $117.8\,^\circ$ (GGA) and $115.8\,^\circ$ (LDA) (see bottom panels in Fig.~\ref{EV}).
 A similar structural transition has been recently reported for the monoclinic phase in NiTi shape memory alloys \cite{Holec2011-tg}.
 There, the structural complexity of the monoclinic phase resulted in a hysteresis of the forwards and backwards pressure-induced phase transformation.
 We envision that a similar phenomena may appear also for the monoclinic \ce{HfO2}.
@@ -173,6 +177,9 @@ We envision that a similar phenomena may appear also for the monoclinic \ce{HfO2
 \begin{table*}
 \begin{center}
 
+\caption{Overview of calculated band gaps compared with experimental and other \textit{ab initio} calculations. Band gaps of amorphous structures were obtained using a Tauc plot approach, while the data in brackets are electronic gaps as appearing in, e.g., total density of states (for details see text).}
+\label{gaps}
+
 \begin{tabular}{c|cc|ccc}
 & \multicolumn{2}{c|}{present study} & \multicolumn{3}{c}{literature reports}\\
 			& TB-mBJ  & PBE & hybrid functionals & GW$_0$ & experiment \\
@@ -184,8 +191,6 @@ am-HfO$_{2,\mathrm{slow}}$ & 5.47 (5.45) & & \multirow{2}{*}{PBE0: 5.3~\cite{Bro
 am-HfO$_{2,\mathrm{fast}}$ & 5.22 (4.78) & &  &  & \\
 
 \end{tabular}
-\caption{Overview of calculated band gaps compared with experimental and other \textit{ab initio} calculations. Band gaps of amorphous structures were obtained using a Tauc plot approach, while the data in brackets are electronic gaps as appearing in, e.g., total density of states (for details see text).}
-\label{gaps}
 \end{center}
 \end{table*}
 
@@ -219,7 +224,7 @@ This may also explain the large spread of the reported experimental values.
 \begin{center}
 % FIXME: The y-axis shows JDOS, not \sqrt{JDOS} -- please clarify, also w.r.t. the text!
 	\includegraphics[width=\linewidth]{figures/JDOS.pdf}
-	\caption{Tauc-like plot of $\sqrt{JDOS(E)}$ used to estimate optical band gap of the two structural models for amorphous structures. The vertical solid lines denote the data range used for the fitting procedure.}
+	\caption{Tauc-like plot of $\sqrt{J(E)}$ used to estimate optical band gap of the two structural models for amorphous structures. The vertical solid lines denote the data range used for the fitting procedure.}
    \label{JDOS}
 \end{center}
 \end{figure}
