@@ -4,9 +4,6 @@ set key at graph 0.4,0.8 reverse Left
 
 set style line 1 lt 1 lw 1 lc rgb 'black' dashtype 1
 set style line 2 lt 2 lw 1 lc rgb 'red' dt (20,10)
-set style line 3 lt 3 lw 1 lc rgb '#0040c0' dashtype 3
-set style line 4 lt 4 lw 1 lc rgb '#f0c010' dashtype 4
-set style line 5 lt 5 lw 1 lc rgb '#a000b0' dashtype 5
 
 set multiplot
 

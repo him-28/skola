@@ -2,14 +2,10 @@ set term pdfcairo enhanced color dashed font "Arial,10" size 8cm,6cm lw 1 dl 0.5
 
 set ylabel 'Dielectric function, ε_r'
 set format x ''
-set format y '%g'
-set key top right
+set ytics 2
+set nokey
 
-set style line 1 lt 1 lw 1 lc rgb '#e00000' dashtype 1
-set style line 2 lt 2 lw 1 lc rgb '#008000' dashtype 2
-set style line 3 lt 3 lw 1 lc rgb '#0040c0' dashtype 3
-set style line 4 lt 4 lw 1 lc rgb '#f0c010' dashtype 4
-set style line 5 lt 5 lw 1 lc rgb '#a000b0' dashtype 5
+load "linestyles.gpi"
 
 set multiplot
 
@@ -21,25 +17,22 @@ set lmargin 6
 set size 1,0.43
 set origin 0,0.57
 
-set label at graph 0.05,0.9 "a)"
+set xrange [4:10.5]
 
-set xrange [4:9.5]
-
-plot [][0:]  \
-    "cubic.epsilon" u 1:2 t 'calculation' w l ls 1,\
-    "Liu-cHfO2-eps1.txt" u 1:2 t 'exp [Lim2002]' w l ls 2
+plot [][0:11]  \
+    "cubic.epsilon" u 1:2 t 'TB-mBJ' w l ls 1,\
+    "Liu-cHfO2-eps1.txt" u 1:2 t 'exp [Lim2002]' w l ls 5
 
 unset label
-set label at graph 0.05,0.9 "b)"
+set key top left Left reverse
 set format x '%g'
 set xlabel 'Photon energy, E [eV]'
 set ylabel 'Dielectric function, ε_i'
 set origin 0,0.14
-set key bottom right
 
 plot [][:8.5]\
-    "cubic.epsilon" u 1:3 t 'calculation' w l ls 1,\
-    "Liu-cHfO2-eps2.txt" u 1:2 t 'exp [Lim2002]' w l ls 2
+    "cubic.epsilon" u 1:3 t 'TB-mBJ' w l ls 1,\
+    "Liu-cHfO2-eps2.txt" u 1:2 t 'exp [Lim2002]' w l ls 5
 
 unset multiplot
 

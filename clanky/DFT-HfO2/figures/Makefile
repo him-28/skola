@@ -6,7 +6,7 @@ FIGURES = c-HfO2.pdf t-HfO2.pdf m-HfO2.pdf am-HfO2.pdf m-EV.pdf JDOS.pdf
 
 all: $(FIGURES)
 
-%.pdf: %.gpi
+%.pdf: %.gpi linestyles.gpi
 	gnuplot $< > $@
 
 update_data:

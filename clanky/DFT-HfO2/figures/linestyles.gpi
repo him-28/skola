@@ -1,0 +1,6 @@
+set style line 1 lw 1.2 lc rgb 'black' dashtype (1,0)
+set style line 2 lw 1.2 lc rgb '#008000' dashtype (20,10)
+set style line 3 lw 1.2 lc rgb 'blue' dashtype (10,5)
+set style line 4 lw 1.2 lc rgb '#f0c010' dashtype (20,5,5,5)
+set style line 5 lw 1.2 lc rgb 'red' dashtype (20,5,5,5,5,5)
+set style line 6 lw 1.2 lc rgb '#a000b0' dashtype (20,10,10,10)

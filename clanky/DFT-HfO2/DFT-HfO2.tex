@@ -51,18 +51,12 @@ In addition to experimental works, there are numerous modelling, and in particul
 Most of them employ conventional approximations for the exchange-correlation (xc) potential, local density approximation (LDA) or generalised gradient approximation (GGA).
 A well known shortcoming of LDA and GGA is an underestimation for the band gap~\cite{Tran2009,Koller2011-hd,Koller2012}.
 
-%Since well calculated band gap and band structure is critical for correct prediction of optical properties...
-
 In order to predict band gaps in much better agreement with experiments, hybrid xc-functionals or other more complex methods (e.g., Green's functions-based GW approach) have been developed, however these are much more computationally expansive in comparison with simple LDA and GGA.
 To overcome this difficulty, \citet{Tran2009} have proposed a semi-local xc potential (modified Becke-Johnson, TB-mBJ) that can provide highly accurate band gaps at the computational cost of LDA or GGA.
 
 Using the original TB-mBJ parametrisation, \citet{Koller2012} calculated the and gap of monoclinic HfO$_2$ to be 5.83\,eV , which is in good agreement with the experimental value of 5.68\,eV \cite{Balog1977}.
 It is however unclear, whether the predictive power of TB-mBJ for band gaps extends also to other forms of HfO$_2$.
 Additionally, since \ce{HfO2} is valued for its optical properties, it is also important to test whether the electronic structure calculated with TB-mBJ xc-potential and yielding improved band gap will guarantee reliable prediction of dielectric function.
-
-%This problem can be seen in case of TiO$_2$, where we have a very good agreement in calculated band gap for anatase, however the difference for calculated and experimental values for rutile is almost twice as big \cite{Sai2012}.
-
-%The huge impact of the improved description of the electronic structure on the predicted optical properties, such as refractive index, $n$, extinction coefficient, $\kappa$, or dielectric function $\epsilon$, when employing the mBJ potential was shown by \citet{Sai2012} for the case of rutile and anatase TiO$_2$.
 
 Therefore, in this work we critically assess the band gaps and optical properties of monoclinic, tetragonal, cubic and amorphous hafnia calculated with the TB-mBJ potential.
 
@@ -74,7 +68,6 @@ This is a consequence of a fact, that there is no exchange energy functional ass
 The number of $k$-points reflected the size of the modelled cell by keeping product (number of $k$-points)$\cdot$(number of atoms) constant and equal to approximately 2500.
 The plane wave cut-off energy of 500\,eV used for crystalline polymorphs was reduced to 300\,eV for the amorphous models.
 Consequently, a total energy accuracy of several meV/atom was achieved.
-
 
 Two amorphous unit cells were prepared by the simulated annealing procedure~[citation needed?].
 96 atoms were randomly distributed inside a cubic simulation box with a side 10.1503\,\AA{} corresponding to mass density of 10.695\,g/cm$^3$.
@@ -150,11 +143,11 @@ where $E_0(\ce{HfO2}^\alpha)$, $E_0(\ce{Hf})$, and $E_0(\ce{O2})$ are the \texti
 The most stable structure is, in agreement with the equilibrium phase diagram~\cite{Villars2014-px}, the monoclinic structure, followed by tetragonal (experimentally high temperature) and cubic structures.
 The least stable configuration yielding the highest energy of formation, is the amorphous structure.
 The optimised lattice parameters are in good agreement with the previously published data, the GGA values being generally closer to the experimental values, hence only the GGA optimised structures were subsequently used in the TB-mBJ calculations.
-% QUESTION: Why then TB-mBJ uses LDA and GGA for the exchange part????
-
+% QUESTION: Why then TB-mBJ uses LDA and not GGA for the exchange part?
+% PAVEL: Actually this is not clear from the original article, however since mBJ is basically empirical based on calibration done with LDA for exchange, I don't thing using it with GGA is a good idea.
+% I'll try to clarify this at the mailing list.
 The optimisation of the amorphous structure yielded estimates for the equilibrium mass density: $\rho_{\mathrm{slow}}=\input{figures/V-slow.txt}\,\mathrm{g/cm^3}$, $\rho_{\mathrm{fast}}=\input{figures/V-fast.txt}\,\mathrm{g/cm^3}$. %%
 These values are about the same as for the optimised tetragonal structure, while the monoclinic and cubic structures are predicted to be slightly less and more dense, respectively.
-% FIXME: Add here/in Table 1 actual values???? How much is ``slightly less/more''?
 
 An interesting phenomenon is predicted for the monoclinic variant.
 As shown in Fig.\ref{EV}, the energy vs. volume data exhibit a second minimum (quite a shallow one in the LDA case) for volumes larger than the equilibrium (structural parameters are denoted as m2 in Table~\ref{structure}).
@@ -210,29 +203,24 @@ Finally, all TB-mBJ calculated band gaps are significantly increased and improve
 
 While for the crystalline hafnia structures, the optical band gap was determined directly from the calculations, another approach was chosen for the amorphous cells.
 This was necessary in order to achieve a value consistent with experimental measurements, which is traditionally obtained by extrapolating the linear part of $\sqrt{\alpha E n}$ near absorption onset (i.e.so called Tauc plot), where $\alpha$ is the absorption coefficient, $E$ is energy and $n$ is refractive index. %% FIXME Add a reference here!!!
-The optical band gap of amorphous cells was estimated by an equivalent approach, i.e., fitting linear part of $\sqrt{J(E)}$ where $J(E)$ is the joint density of states. %% FIXME Should _joint_ dentsity of states be a variable of two energies J(E_1, E_2)???? Maybe some more detailed description will be benefitial here.
-%% FIXME Could you (or Yeti) provide more justification for this approach (incl. references)?
+The optical band gap of amorphous cells was estimated by an equivalent approach, i.e., fitting linear part of $\sqrt{J(E)}$ where $J(E)$ is the joint density of states.
+% FIXME Should _joint_ dentsity of states be a variable of two energies J(E_1, E_2)???? Maybe some more detailed description will be benefitial here.
+% FIXME Could you (or Yeti) provide more justification for this approach (incl. references)?
 
 The two band gap values given in Table~\ref{gaps} correspond to the optical band gap value obtained by aforementioned fitting approach while the value in brackets is the electronic band gap (i.e., the difference between the energy of highest occupied and the lowest unoccupied state).
-%FIXME: update gap and optical constants for both am1 and am2 structures when calculations finish.
+% FIXME: update gap and optical constants for both am1 and am2 structures when calculations finish.
 Calculated optical band gap for amorphous hafnia is 5.65\,eV, again in good agreement with experimental values ranging from 5.49\,eV to 5.72\,eV~\cite{Takeuchi2004, Nguyen2005, Perevalov2007}.
 It can be concluded that in case of slow cooling, the effect of defect states on band gap is negligible, in contrast to the fast cooled amorphous cell. We attribute it to the fact that more structural features (resulting in the defect electronic levels) corresponding to the high-temperature amorphous mixture were from ``frozen in'' during the fast cooling process.
-%% FIXME: does the below sentense make sense?
+% FIXME: does the below sentense make sense?
 This may also explain the large spread of the reported experimental values.
 
 \begin{figure}
 \begin{center}
-% FIXME: The y-axis shows JDOS, not \sqrt{JDOS} -- please clarify, also w.r.t. the text!
 	\includegraphics[width=\linewidth]{figures/JDOS.pdf}
 	\caption{Tauc-like plot of $\sqrt{J(E)}$ used to estimate optical band gap of the two structural models for amorphous structures. The vertical solid lines denote the data range used for the fitting procedure.}
    \label{JDOS}
 \end{center}
 \end{figure}
-
-% FIXME: 
-% Pavel: now it looks like maybe we should show only the slow cooling struct. 
-% David: I think that the comparison is quite interesting, and I prefer to keep it.
-
 
 \subsection{Optical properties}
 
@@ -313,6 +301,7 @@ This was attributed to approximations used during the calculation of the optical
   
 \section*{Acknowledgments}
 This work was supported by the IT4Innovations Centre of Excellence project (CZ.1.05/1.1.00/02.0070), funded by the European Regional Development Fund and the national budget of the Czech Republic via the Research and Development for Innovations Operational Programme, as well as Czech Ministry of Education, Youth and Sports via the project Large Research, Development and Innovations Infrastructures (LM2011033).
+% FIXME: acknowledgments for CEITEC and probably MOBILITY?
 
 \bibliographystyle{unsrtnat}
 \bibliography{bib-db}
