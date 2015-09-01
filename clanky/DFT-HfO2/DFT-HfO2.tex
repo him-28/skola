@@ -9,13 +9,13 @@
 \usepackage{mhchem}
 \usepackage{multirow}
 
-\author[a,b,c]{Pavel Ondračka}
+\author[a,b]{Pavel Ondračka}
 \author[c]{David Holec}
+\author[a,b]{David Nečas}
 \author[a,b]{Lenka Zajíčková}
 \affil[a]{Faculty of Science, Masaryk University, Kotlářská 2, 611 37 Brno, Czech Republic}
 \affil[b]{CEITEC - Central European Institute of Technology, Masaryk University, Kotlářská 2, 611 37 Brno, Czech Republic}
 \affil[c]{Department of Physical Metallurgy and Materials Testing, Montanuniversität Leoben, Franz-Josef-Straße 18, Leoben A-8700, Austria}
-% FIXME what about Yeti? I would add him as a co-author...
 
 % \title{Optical properties of monoclinic, cubic, tetragonal and amorphous HfO$_2$ with TB-mBJ}
 \title{Accurate prediction of band gaps and optical properties of HfO$_2$}
@@ -91,11 +91,12 @@ A Lorentz broadening of 0.03\,eV was applied to the dielectric function for a be
 % FIXME ty tabulky by bylo dobre nejak zkraslit
 \begin{table*}
 \begin{center}
-\caption{Overview of calculated structural properties of monoclinic (m, m2), tetragonal (t), cubic (c) and amorphous (am) phases. $a$, $b$, $c$ are unit cell lattice parameters, $\gamma$ is the monoclinic angle, $B$ is bulk modulus, $E_f$ is the energy of formation and $\Delta E_f$ is the difference between $E_f$ for a given phase and the monoclinic (m) phase (the lowest energy configuration). $\rho$ is the mass density.}
+\caption{Overview of calculated structural properties of monoclinic (m, m2), tetragonal (t), cubic (c) and amorphous (am) phases. $a$, $b$, $c$ are unit cell lattice parameters, $\beta$ is the monoclinic angle, $B$ is bulk modulus, $E_f$ is the energy of formation and $\Delta E_f$ is the difference between $E_f$ for a given phase and the monoclinic (m) phase (the lowest energy configuration). $\rho$ is the mass density.}
 \label{structure}
 \begin{tabular}{cccccccccc}
 
- & & $a$\,[\AA] & $b$\,[\AA] & $c$\,[\AA] & $\gamma\,[^{\circ}]$ & $\rho\,[\mathrm{g/cm^3}]$ & $B$\,[GPa] & $E_f$\,[eV/atom] & $\Delta E$\,[eV/atom]\\
+\hline
+ & & $a$\,[\AA] & $b$\,[\AA] & $c$\,[\AA] & $\beta\,[^{\circ}]$ & $\rho\,[\mathrm{g/cm^3}]$ & $B$\,[GPa] & $E_f$\,[eV/atom] & $\Delta E$\,[eV/atom]\\
 \hline\hline
 
 m & GGA & 5.143 & 5.190 & 5.330 & 99.6 & 9.615 & 197 & -3.975 & 0.000
@@ -116,15 +117,16 @@ t & GGA & 3.591 & & 5.219 & 90 & 10.021 & 175 & -3.920 & 0.055\\ %-10.1483 \\
   & exp~\cite{Curtis1954} & 5.14 & & 5.25 & & 9.722 & & & \\
 \hline
 
-c & GGA & 5.075 & & & 90.0 & & 255 & -3.890 & 0.085 \\%-10.1176 \\
-  & LDA & 4.982 & & & 90.0 & & 289 & -4.261 & 0.057 \\%-11.0274
-  & exp~\cite{Senft1983} & 5.110 & & & & & & & \\
+c & GGA & 5.075 & & & 90.0 & 10.318 & 255 & -3.890 & 0.085 \\%-10.1176 \\
+  & LDA & 4.982 & & & 90.0 & 10.908 & 289 & -4.261 & 0.057 \\%-11.0274
+  & exp~\cite{Senft1983} & 5.110 & 10.109 & & & & & & \\
 \hline
 
 %% GGA: Hf: -9.8322 eV/at, O -4.42597 eV/at
 
- am & GGA, slow cooling & & & & & \input{figures/V-slow.txt} & FIXME & FIXME & FIXME\\ %-10.0043
- am & GGA, fast cooling & & & & & \input{figures/V-fast.txt} & FIXME & FIXME & FIYME\\ %-10.0043
+am & GGA, slow cooling & & & & & \input{figures/rho-slow.txt} & FIXME & FIXME & FIXME\\ %-10.0043
+am & GGA, fast cooling & & & & & \input{figures/rho-fast.txt} & FIXME & FIXME & FIYME\\ %-10.0043
+\hline
 
 \end{tabular}
 \end{center}
@@ -146,13 +148,13 @@ The optimised lattice parameters are in good agreement with the previously publi
 % QUESTION: Why then TB-mBJ uses LDA and not GGA for the exchange part?
 % PAVEL: Actually this is not clear from the original article, however since mBJ is basically empirical based on calibration done with LDA for exchange, I don't thing using it with GGA is a good idea.
 % I'll try to clarify this at the mailing list.
-The optimisation of the amorphous structure yielded estimates for the equilibrium mass density: $\rho_{\mathrm{slow}}=\input{figures/V-slow.txt}\,\mathrm{g/cm^3}$, $\rho_{\mathrm{fast}}=\input{figures/V-fast.txt}\,\mathrm{g/cm^3}$. %%
-These values are about the same as for the optimised tetragonal structure, while the monoclinic and cubic structures are predicted to be slightly less and more dense, respectively.
+The optimisation of the amorphous structure yielded estimates for the equilibrium mass density: $\rho_{\mathrm{slow}}=\input{figures/rho-slow.txt}\,\mathrm{g/cm^3}$, $\rho_{\mathrm{fast}}=\input{figures/rho-fast.txt}\,\mathrm{g/cm^3}$.
+These values are slightly lower than for the optimised monoclinic structure (shown in table \ref{structure}), while the tetragonal and cubic structures are also predicted to be more dense.
 
 An interesting phenomenon is predicted for the monoclinic variant.
 As shown in Fig.\ref{EV}, the energy vs. volume data exhibit a second minimum (quite a shallow one in the LDA case) for volumes larger than the equilibrium (structural parameters are denoted as m2 in Table~\ref{structure}).
 Consequently, a structural transformation is predicted for large isothermal volume expansions.
-The most distinct feature is a step-like change of the monoclinic angle $\gamma$ from $99.6\,^\circ$ (GGA/LDA) to $117.8\,^\circ$ (GGA) and $115.8\,^\circ$ (LDA) (see bottom panels in Fig.~\ref{EV}).
+The most distinct feature is a step-like change of the monoclinic angle $\beta$ from $99.6\,^\circ$ (GGA/LDA) to $117.8\,^\circ$ (GGA) and $115.8\,^\circ$ (LDA) (see bottom panels in Fig.~\ref{EV}).
 A similar structural transition has been recently reported for the monoclinic phase in NiTi shape memory alloys \cite{Holec2011-tg}.
 There, the structural complexity of the monoclinic phase resulted in a hysteresis of the forwards and backwards pressure-induced phase transformation.
 We envision that a similar phenomena may appear also for the monoclinic \ce{HfO2}.
@@ -160,7 +162,7 @@ We envision that a similar phenomena may appear also for the monoclinic \ce{HfO2
 \begin{figure}
 \begin{center}
 	\includegraphics[width=\linewidth]{figures/m-EV.pdf}
-	\caption{Total energy vs. volume data for the monoclinic polymorph calculated with GGA-PBE and LDA. Solid and dashed lines are fits of the Birch-Murnaghan equation of state around the minima m and m2, respectively (only the highlighted points were fitted). The bottom panels show corresponding  monoclinic angle $\gamma$ as a function of the volume.}
+	\caption{Total energy vs. volume data for the monoclinic polymorph calculated with GGA-PBE and LDA. Solid and dashed lines are fits of the Birch-Murnaghan equation of state around the minima m and m2, respectively (only the highlighted points were fitted). The bottom panels show corresponding  monoclinic angle $\beta$ as a function of the volume.}
    \label{EV}
 \end{center}
 \end{figure}
@@ -174,14 +176,17 @@ We envision that a similar phenomena may appear also for the monoclinic \ce{HfO2
 \label{gaps}
 
 \begin{tabular}{c|cc|ccc}
+\hline
 & \multicolumn{2}{c|}{present study} & \multicolumn{3}{c}{literature reports}\\
 			& TB-mBJ  & PBE & hybrid functionals & GW$_0$ & experiment \\
+\hline
 \hline
 m-HfO$_2$ &	5.76 & 4.08 & PBE0: 6.75~\cite{Komsa2010}, HSE06: 5.98~\cite{Komsa2010} & 5.9~\cite{Gruning2010} & 5.68~\cite{Balog1977} \\
 c-HfO$_2$ &	5.88 & 3.77 & SX: 5.6~\cite{Clark2010}, HSE06: 5.38~\cite{Yang2014} & 5.5~\cite{Gruning2010} & 5.8$^A$~\cite{Lim2002}\\
 t-HfO$_2$ &	6.54 & 4.79 &  & 6.0~\cite{Gruning2010} & \\
 am-HfO$_{2,\mathrm{slow}}$ & 5.47 (5.45) & & \multirow{2}{*}{PBE0: 5.3~\cite{Broqvist2007}, 5.94~\cite{Chen2011}} &  & \multirow{2}{*}{5.49--5.72~\cite{Takeuchi2004}, 5.62~\cite{Nguyen2005}, 5.7~\cite{Perevalov2007}}\\
 am-HfO$_{2,\mathrm{fast}}$ & 5.22 (4.78) & &  &  & \\
+\hline
 
 \end{tabular}
 \end{center}

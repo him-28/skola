@@ -27,9 +27,9 @@ update_data:
 	rm tetragonal.tmp
 #  cat HfO2/amorphous/am-HfO2-96at-fastcool/PBE_MSR1a/fine-relax/mBJ-relaxed2/mBJ-relaxed2.scf* | grep \:VOL | tail -n1 | grep -o "[0-9]*\.[0-9]*"
 	VFAST = 7652.52
-	echo "(32*178.49+64*16)*1.602*6.7483/${VFAST}" | bc -l  | grep -o "[0-9]*\.[0-9]\{3\}" > V-fast.txt
+	echo "(32*178.49+64*16)*1.602*6.7483/${VFAST}" | bc -l  | grep -o "[0-9]*\.[0-9]\{3\}" > rho-fast.txt
 	VSLOW = 7833.76
-	echo "(32*178.49+64*16)*1.602*6.7483/${VSLOW}" | bc -l  | grep -o "[0-9]*\.[0-9]\{3\}" > V-slow.txt
+	echo "(32*178.49+64*16)*1.602*6.7483/${VSLOW}" | bc -l  | grep -o "[0-9]*\.[0-9]\{3\}" > rho-slow.txt
 
 clean:
 	rm -f *~ $(FIGURES)
