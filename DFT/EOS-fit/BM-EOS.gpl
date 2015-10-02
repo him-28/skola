@@ -5,6 +5,7 @@ set output "BM-EOS.pdf"
 
 set title "Birch-Murnaghan EOS"
 set ylabel "Total energy"
+set format y "%.3f"
 
 a = 1
 b = 1
