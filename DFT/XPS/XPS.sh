@@ -18,6 +18,8 @@ then
    exit
 fi
 
+edgenames=("" "1S" "2S" "2PP" "2P")
+
 CASE=$(basename $PWD)
 
 line=1
@@ -29,6 +31,7 @@ do
    then
        ((atoms++))
        structline=$((atoms * 6 + 1))
+       ((line[$atoms]=line))
        at_names[$atoms]=$(sed -n "${structline}p" $CASE.struct | cut -c -4 )
    elif sed -n "${line}p" $CASE.inc | grep -q " 0"
    then
@@ -83,5 +86,27 @@ do
          echo "edge $edge for atom $atom not present"
          continue
       fi
+
+      save_lapw -a -d $atom-$edge $atom-$edge
+      cd $atom-$edge
+      sed -i 's/ 0.0/-0.5/g' $atom-$edge.inm
+      incline=$((line[$atom]+edge))
+      awk -F "," -v n=$incline -i inplace '{if (NR==n){printf "%1i,%1i,%.1f\n", $1, $2, $3-0.5} else print}' $atom-$edge.inc
+
+      #run_lapw
+
+      #while ()
+      #   sleep 10
+
+      greppatern=$(printf "%-3s%0*d" "${edgenames[$edge]}" 3 $atom)
+      ecore=$(grep "$greppatern" $atom-$edge.scfc | grep -o "\-[0-9]*\.[0-9]*")
+      efermi==$(grep \:FER $atom-$edge.scf2 | grep -Eo "\-?[0-9]+\.[0-9]+")
+
+      energy=$((efermi - ecore))
+      echo $atom ${at_names[$atom]} $edge ${edge_names[$edge]} $energy >> ../XPS-shifts.txt
+
+      cd ..
+      rm -r $atom-$edge
    done
+
 done
