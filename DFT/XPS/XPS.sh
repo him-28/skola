@@ -21,6 +21,7 @@ fi
 edgenames=("" "1S" "2S" "2PP" "2P")
 
 CASE=$(basename $PWD)
+cd $PWD
 
 line=1
 atoms=0
@@ -87,26 +88,37 @@ do
          continue
       fi
 
-      save_lapw -a -d $atom-$edge $atom-$edge
-      cd $atom-$edge
-      sed -i 's/ 0.0/-0.5/g' $atom-$edge.inm
-      incline=$((line[$atom]+edge))
-      awk -F "," -v n=$incline -i inplace '{if (NR==n){printf "%1i,%1i,%.1f\n", $1, $2, $3-0.5} else print}' $atom-$edge.inc
+      (
+         save_lapw -a -d $atom-$edge $atom-$edge
+         cd $atom-$edge
+         sed -i 's/ 0.0/-0.5/g' $atom-$edge.inm
+         incline=$((line[$atom]+edge))
+         awk -F "," -v n=$incline '{if (NR==n){printf "%1i,%1i,%.1f\n", $1, $2, $3-0.5} else print}' $atom-$edge.inc > tmp.inc
+         mv tmp.inc $atom-$edge.inc
 
-      #run_lapw
+         task_id=$(qsub -A OPEN-5-30 -q qprod -l select=1:ncpus=24,walltime=06:00:00 ~/scripts/kpar_xnodes_mpi)
 
-      #while ()
-      #   sleep 10
+         while qstat -a -u ondracka | grep $task_id > /dev/null
+         do
+            sleep 10
+         done
 
-      greppatern=$(printf "%-3s%0*d" "${edgenames[$edge]}" 3 $atom)
-      ecore=$(grep "$greppatern" $atom-$edge.scfc | grep -o "\-[0-9]*\.[0-9]*")
-      efermi==$(grep \:FER $atom-$edge.scf2 | grep -Eo "\-?[0-9]+\.[0-9]+")
+         greppatern=$(printf "%-3s%0*d" "${edgenames[$edge]}" 3 $atom)
+         ecore=$(grep "$greppatern" $atom-$edge.scfc | grep -o "\-[0-9]*\.[0-9]*")
+         efermi=$(grep \:FER $atom-$edge.scf2 | grep -Eo "\-?[0-9]+\.[0-9]+")
 
-      energy=$((efermi - ecore))
-      echo $atom ${at_names[$atom]} $edge ${edge_names[$edge]} $energy >> ../XPS-shifts.txt
+         energy=$(echo "$efermi - $ecore" | bc)
+         echo $atom ${at_names[$atom]} $edge ${edge_names[$edge]} $ecore $efermi $energy >> ../XPS-shifts.txt
 
-      cd ..
-      rm -r $atom-$edge
+         cd ..
+         rm -r $atom-$edge
+      )&
+
+      # limit number of processes
+      while [ "$(jobs | wc -l)" -gt "10" ]
+      do
+         sleep 1
+      done
    done
 
 done
