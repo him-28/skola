@@ -88,6 +88,8 @@ do
          continue
       fi
 
+      PROC=0
+
       (
          save_lapw -a -d $atom-$edge $atom-$edge
          cd $atom-$edge
@@ -98,10 +100,12 @@ do
 
          task_id=$(qsub -A OPEN-5-30 -q qprod -l select=1:ncpus=24,walltime=06:00:00 ~/scripts/kpar_xnodes_mpi)
 
+	 PROC=$((PROC+1))
          while qstat -a -u ondracka | grep $task_id > /dev/null
          do
             sleep 10
          done
+	 PROC=$((PROC-1))
 
          greppatern=$(printf "%-3s%0*d" "${edgenames[$edge]}" 3 $atom)
          ecore=$(grep "$greppatern" $atom-$edge.scfc | grep -o "\-[0-9]*\.[0-9]*")
@@ -111,11 +115,10 @@ do
          echo $atom ${at_names[$atom]} $edge ${edge_names[$edge]} $ecore $efermi $energy >> ../XPS-shifts.txt
 
          cd ..
-         rm -r $atom-$edge
       )&
 
       # limit number of processes
-      while [ "$(jobs | wc -l)" -gt "10" ]
+      while [ "$PROC" -gt "10" ]
       do
          sleep 1
       done
