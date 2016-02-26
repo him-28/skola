@@ -1,0 +1,51 @@
+set term pdfcairo enhanced color dashed font "Arial,8" size 9cm,3cm lw 1 dl 0.5
+
+set ylabel 'Dielectric function, ε_i'
+set xlabel 'Photon energy, E [eV]'
+set key at graph 0.95,0.38
+set format y '%g'
+
+set style line 1 lt 1 lc rgb '#e00000'
+set style line 2 lt 2 lc rgb '#008000'
+set style line 3 lt 3 lc rgb '#0040c0'
+set style line 4 lt 4 lc rgb '#f0c010'
+set style line 5 lt 5 lc rgb '#a000b0'
+
+set style textbox opaque noborder
+
+set style line 10 lt 0 lc rgb '#a0a0a0' lw 1.5
+set grid ls 10
+
+set multiplot
+
+set lmargin 0.4
+set rmargin 1.5
+set tmargin 0.1
+
+set size 0.46,1
+set origin 0.05,0.0
+
+set xrange [2.5:8.9]
+
+
+plot [][:9.3]  \
+    "nk/0.0-PECVD-old.nk" u (1240/$1):(2*$2*$3) t 'PECVD x = 0' w l ls 3,\
+    "nk/0.0-ALD.nk" u (1240/$1):(2*$2*$3) t 'ALD x = 0' w l ls 4,\
+    "anatase-0.0.epsilon" u 1:(($2+$3+$4)/3) t 'anatase x = 0' w l ls 1,\
+    "rutile-0.0.epsilon" u 1:(($2+$3+$4)/3) t 'rutile x = 0' w l ls 2,\
+
+unset label
+unset ylabel
+set origin 0.54,0.0
+
+plot [][:5.9]\
+    "nk/0.38-PECVD-old.nk" u (1240/$1):(2*$2*$3) t 'PECVD x = 0.4' w l ls 3,\
+    "nk/0.5-ALD.nk" u (1240/$1):(2*$2*$3) t 'ALD x = 0.5' w l ls 4,\
+    "rutile-0.5.epsilon" u 1:(($2+$3+$4)/3) t 'rutile x = 0.5' w l ls 2,\
+    "anatase-0.5.epsilon" u 1:(($2+$3+$4)/3) t 'anatase x = 0.5' w l ls 1,\
+#    "rutile-0.25.epsilon" u 1:(($2+$3+$4)/3) t 'rutile x = 0.25' w l ls 4,\
+#    "rutile-0.5.epsilon" u 1:(($2+$3+$4)/3) t 'rutile x = 0.5' w l ls 5,\
+
+unset multiplot
+
+

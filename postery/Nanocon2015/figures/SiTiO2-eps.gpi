@@ -1,0 +1,53 @@
+set term pdfcairo enhanced color font "Arial,8" size 9cm,5cm lw 1 dl 0.5
+
+set style line 1 lc rgb '#0040c0'
+set style line 2 lc rgb '#008000'
+set style line 3 lc rgb '#f0c010'
+set style line 4 lc rgb '#a000b0'
+set style line 5 lc rgb '#e00000'
+set style textbox opaque noborder
+
+set style line 10 lt 0 lc rgb '#a0a0a0' lw 1.5
+set grid ls 10
+
+set ylabel 'Dielectric function, ε_i'
+set format x ''
+set format y '%g'
+set ytics 2
+set key at graph 0.95,0.95
+
+set multiplot
+
+set bmargin 0.2
+set tmargin 0.2
+set rmargin 1.5
+
+set size 1,0.44
+set origin 0,0.56
+
+set xrange [0:26]
+
+set label at graph 0.45,0.9 "Anatase" boxed
+
+plot [][]  \
+    "anatase-0.0.epsilon" u 1:(($2+$3+$4)/3) t 'x = 0.0' w l ls 1,\
+    "anatase-0.25.epsilon" u 1:(($2+$3+$4)/3) t 'x = 0.25' w l ls 2,\
+    "anatase-0.5.epsilon" u 1:(($2+$3+$4)/3) t 'x = 0.5' w l ls 3,\
+    "anatase-0.75.epsilon" u 1:(($2+$3+$4)/3) t 'x = 0.75' w l ls 4,\
+    "anatase-1.0.epsilon" u 1:(($2+$3+$4)/3) t 'x = 1.0' w l ls 5
+
+unset label
+set label at graph 0.45,0.9 "Rutile" boxed
+set format x '%g'
+set xlabel 'Photon energy, E [eV]'
+set origin 0,0.12
+
+plot [][:8.9]\
+    "rutile-0.0.epsilon" u 1:(($2+$3+$4)/3) t 'x = 0.0' w l ls 1,\
+    "rutile-0.25.epsilon" u 1:(($2+$3+$4)/3) t 'x = 0.25' w l ls 2,\
+    "rutile-0.5.epsilon" u 1:(($2+$3+$4)/3) t 'x = 0.5' w l ls 3,\
+    "rutile-0.75.epsilon" u 1:(($2+$3+$4)/3) t 'x = 0.75' w l ls 4,\
+    "rutile-1.0.epsilon" u 1:(($2+$3+$4)/3) t 'x = 1.0' w l ls 5
+
+unset multiplot
+

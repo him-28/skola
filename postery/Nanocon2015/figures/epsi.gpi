@@ -1,0 +1,46 @@
+set term pdfcairo enhanced notransparent truecolor dashed font "Arial,8" size 9cm,4.3cm lw 1
+set style textbox opaque noborder
+
+set style data line
+
+set ylabel 'Dielectric function, ε_i' offset -1
+set xlabel 'Photon energy, E [eV]'
+set format '%.0f'
+
+set label "Experiment" at graph 0.57,0.95 boxed
+
+set style line 1 lt 1 pt 65 ps 0.3 lw 1.4 lc rgb '#004cc8'
+set style line 2 dt (3,3) pt 65 ps 0.3 lw 1.4 lc rgb '#004cc8'
+set style line 3 lt 1 pt 65 ps 0.3 lw 1.4 lc rgb '#2d3997'
+set style line 4 lt 1 pt 65 ps 0.3 lw 1.4 lc rgb '#462f7b'
+set style line 5 lt 1 pt 65 ps 0.3 lw 1.4 lc rgb '#6b1f53'
+set style line 6 dt (3,3) pt 65 ps 0.3 lw 1.4 lc rgb '#970d23'
+set style line 7 lt 1 pt 65 ps 0.3 lw 1.4 lc rgb '#b00606'
+set style line 8 lt 1 pt 65 ps 0.3 lw 1.4 lc rgb '#9b1818'
+set style line 9 lt 1 pt 65 ps 0.3 lw 1.4 lc rgb '#7d2727'
+set style line 11 lt 1 pt 65 ps 0.3 lw 1.4 lc rgb '#393838'
+
+set style line 10 lt 0 lc rgb '#a0a0a0' lw 1.5
+set grid ls 10
+
+set key reverse Left samplen 1.5 spacing 1.1 maxrows 10 outside right center
+
+nU(nL)=sqrt(1.6*(nL**2-1)+1)
+neff(nL)=0.66*(nU(nL)**2 + nU(nL)*nL + nL**2)/(nU(nL)+nL)
+epseff(nL)=2*real(neff(nL))*imag(neff(nL))
+
+plot [3.2:9][:9.5] \
+    'nk/0.0-PECVD-old.nk' u (1240/$1):(2*$2*$3) t 'x = 0.00 PECVD' ls 1,\
+    'nk/0.0-ALD.nk' u (1240/$1):(2*$2*$3) t 'x = 0.00 ALD' ls 2,\
+    'nk/0.18-PECVD-new.nk' u (1240/$1):(2*$2*$3) t 'x = 0.18 PECVD' ls 3,\
+    'nk/0.28-PECVD-new.nk' u (1240/$1):(2*$2*$3) t 'x = 0.28 PECVD' ls 4,\
+    'nk/0.38-PECVD-old.nk' u (1240/$1):(2*$2*$3) t 'x = 0.40 PECVD' ls 5,\
+    'nk/0.5-ALD.nk' u (1240/$1):(2*$2*$3) t 'x = 0.50 ALD' ls 6,\
+    'nk/0.55-PECVD-old.nk' u (1240/$1):(2*$2*$3) t 'x = 0.61 PECVD' ls 7,\
+    'nk/0.74-PECVD-old.nk' u (1240/$1):(2*$2*$3) t 'x = 0.74 PECVD' ls 8,\
+    'nk/0.85-PECVD-old.nk' u (1240/$1):(2*$2*$3) t 'x = 0.85 PECVD' ls 9,\
+    'nk/1.0-PECVD-old.nk' u (1240/$1):(2*$2*$3) t 'x = 1.00 PECVD' ls 11,\
+
+
+
+
