@@ -88,39 +88,42 @@ do
          continue
       fi
 
-      PROC=0
+      touch .XPSlock-$atom-$edge
 
       (
-         save_lapw -a -d $atom-$edge $atom-$edge
+         save_lapw -a -d $atom-$edge $atom-$edge > /dev/null
          cd $atom-$edge
+
+         touch .lcore
          sed -i 's/ 0.0/-0.5/g' $atom-$edge.inm
          incline=$((line[$atom]+edge))
          awk -F "," -v n=$incline '{if (NR==n){printf "%1i,%1i,%.1f\n", $1, $2, $3-0.5} else print}' $atom-$edge.inc > tmp.inc
          mv tmp.inc $atom-$edge.inc
 
-         task_id=$(qsub -A OPEN-5-30 -q qprod -l select=1:ncpus=24,walltime=06:00:00 ~/scripts/kpar_xnodes_mpi)
+         task_id=$(qsub -A OPEN-6-17 -q qprod -l select=1:ncpus=24,walltime=30:00:00 ~/scripts/kpar_xnodes_mpi)
 
-	 PROC=$((PROC+1))
+	 #this could be probably done in a smarter way, with no need to spawn lots of subshells
          while qstat -a -u ondracka | grep $task_id > /dev/null
          do
-            sleep 10
+            sleep 120
          done
-	 PROC=$((PROC-1))
 
          greppatern=$(printf "%-3s%0*d" "${edgenames[$edge]}" 3 $atom)
          ecore=$(grep "$greppatern" $atom-$edge.scfc | grep -o "\-[0-9]*\.[0-9]*")
          efermi=$(grep \:FER $atom-$edge.scf2 | grep -Eo "\-?[0-9]+\.[0-9]+")
 
          energy=$(echo "$efermi - $ecore" | bc)
-         echo $atom ${at_names[$atom]} $edge ${edge_names[$edge]} $ecore $efermi $energy >> ../XPS-shifts.txt
+         echo $atom ${at_names[$atom]} $edge ${edgenames[$edge]} $ecore $efermi $energy >> ../XPS-shifts.txt
 
          cd ..
+
+	 rm .XPSlock-$atom-$edge
       )&
 
       # limit number of processes
-      while [ "$PROC" -gt "10" ]
+      while [ $(ls .XPSlock* | wc -l) -gt "80" ]
       do
-         sleep 1
+         sleep 60
       done
    done
 
