@@ -12,7 +12,7 @@ optika.pdf: optika.tex schema.pdf $(PROGRAMS)
 	inkscape --without-gui --export-pdf=$@ $<
 
 %: %.c
-	$(CC) -lm -lgsl -o $@ $<
+	$(CC) $(shell pkg-config --libs gsl) -o $@ $<
 
 clean:
 	rm -f *.log *.out *.aux *.pdf $(PROGRAMS)
