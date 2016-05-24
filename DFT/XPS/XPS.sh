@@ -1,8 +1,31 @@
 #!/bin/bash
 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+# Copyright (c) 2016 Pavel Ondračka.
+
+#TODO: add the delta-SCF method
+#TODO: check multiplicity and error if not one
+#TODO: add the print option
+
 function help {
-   echo "Usage: XPS-shifts [atoms]:[levels] [atoms:levels]"
+   echo "Script to calculate core electron shifts using Wien2k"
+   echo ""
+   echo "Usage: XPS.sh [atoms]:[levels] [atoms:levels]"
+   echo "atoms are selected by their number from struct file"
    echo "multiple atoms can be selected using ',' or '-' e.g. 1,2,5 or 5-10"
+   echo "the same syntax goes for core levels"
    echo ""
    echo "-h print this help and exit"
    echo "-p print list of atoms with core levels"
