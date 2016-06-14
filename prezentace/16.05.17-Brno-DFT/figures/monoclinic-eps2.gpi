@@ -1,0 +1,25 @@
+set term pdfcairo enhanced color dashed font "Arial,10" size 8cm,4cm lw 1 dl 0.5
+
+set format x '%g'
+set format y '%g'
+set ytics 2
+load "linestyles.gpi"
+
+set xrange [2.8:10.5]
+
+set tmargin 0.2
+set rmargin 0.2
+
+#set label at graph 0.05,0.88 'monoclinic'
+
+set key top left reverse Left
+
+set ylabel '{/Helvetica-Italic ε}_i'
+set xlabel 'Photon energy, E [eV]'
+
+plot [][:9]\
+    "monoclinic.epsilon" u 1:(($3+$5+$7)/3) t 'TB-mBJ RPA' w l ls 1,\
+    "Edwards-m-HfO2-eps2.txt" u 1:2 t 'exp [Edwards]' w l ls 5,\
+    "Nguyen-m-HfO2-eps2.txt" u 1:2 t 'exp [Nguyen]' w l ls 6 ,\
+    "monoclinic-BSE.epsilon" u 1:($2/3) t 'TB-mBJ BSE' w l ls 2,\
+    "monoclinic-BSE-semi.epsilon" u 1:($2/3) t 'TB-mBJ semi BSE' w l ls 3
