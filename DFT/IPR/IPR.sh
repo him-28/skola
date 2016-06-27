@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILTENE=$HOME/programs/skola/random-stuff/filtene/filtene
+FILTENE=$HOME/programs/skola/DFT/IPR/filtene
 
 METHOD="AIM"
 if [ "$1" == "-p" ]
@@ -19,27 +19,30 @@ then
    COMPLEX="c"
 fi
 
+K_NUM=$(( $(wc -l $CASE.klist | awk '{print $1}') - 2 ))
+
 rm -rf IPR
 mkdir IPR
 cp $CASE.klist IPR/IPR.klist
 cp $CASE.vsp IPR/IPR.vsp
 cp $CASE.kgen IPR/IPR.kgen
 cp $CASE.struct IPR/IPR.struct
-cp $CASE.in2$COMPLEX IPR/IPR.in2$COMPLEX
 # set number of electrons to 2 in CASE.in2
 awk 'NR != 2 {print $0} \
      NR ==2 {printf "%8.2f%8.2f%7.2f%5.2f%3i\n", $1, 2, $3, $4, $5}'\
      $CASE.in2$COMPLEX > IPR/IPR.in2$COMPLEX
+# for some reason TETRA doesn't work well for single k-point
+if (( K_NUM == 1 ))
+then
+   sed -i 's/TETRA    0.000/GAUSS    0.002/g' IPR/IPR.in2$COMPLEX
+fi
 
 if [ -n "$PARA" ]
 then
    rm -f .machine*
    echo "granularity:1" >> .machines
-   echo "lapw0:$(hostname):16" >> .machines
-   for i in {1..4}
-   do
-      echo "1:$(hostname):4" >> .machines
-   done
+   echo "lapw0:$(hostname):24" >> .machines
+   echo "1:$(hostname):24" >> .machines
 
    cp .machines IPR/.machines
 
@@ -47,7 +50,7 @@ then
    cp $CASE.in1$COMPLEX IPR/IPR.in1$COMPLEX
 fi
 #FIXME: read from .machines
-NPROC=4
+NPROC=1
 
 if [ "$METHOD" == "AIM" ]
 then
@@ -72,7 +75,7 @@ echo "we have $NATOMS atoms, $N_INDEP_ATOMS independent"
 NKPOINTS=$(($(wc -l < $CASE.klist) - 2))
 echo "kpoint number $NKPOINTS"
 
-if [ "$METHOD" == "AIM" ]
+if [ "$METHOD" == "AIMX" ]
 then
    # this run x aim in paralel over atoms
    for (( atom=1 ; atom<=$NATOMS ; atom++ ))
@@ -100,7 +103,7 @@ then
 fi
 
 # FIXME: get number of bands from input, for now iterate till filtvec returns error
-for band in {1..10000}
+for band in {1..10}
 do
    export SCRATCH=$PBS_O_WORKDIR
 
@@ -111,7 +114,12 @@ do
          #create case.inf
          K_NUM=$(( $(wc -l $CASE.klist_$proc | awk '{print $1}') - 1 ))
          # kpoint are actually numbered from 1 in CASE.vertor_x files
-         printf "2 1 -$K_NUM \n1 $band\n" > $CASE.inf$COMPLEX
+         if (( K_NUM == 1 ))
+         then
+            printf "1 1\n1 $band\n" > $CASE.inf$COMPLEX
+         else
+            printf "2 1 -$K_NUM \n1 $band\n" > $CASE.inf$COMPLEX
+	 fi
 
          # run filtvec on partial vector files
          cp $CASE.vector_$proc $CASE.vector
@@ -157,7 +165,12 @@ do
    then
       # mix the electron density for current band
       x mixer
-      grep "BAN" IPR.scf2 | sed "s/:BAN.....:...//" | tr '\n' ' '>> IPR.txt
+      if (( K_NUM == 1 ))
+      then
+         grep "           1 " IPR.energy_1 | tr '\n' ' ' >> IPR.txt
+      else
+         grep "BAN" IPR.scf2 | sed "s/:BAN.....:...//" | tr '\n' ' '>> IPR.txt
+      fi
       # integrate el. density on precomputed areas for all atoms
       for (( atom=1 ; atom<=$NATOMS ; atom++ ))
       do
@@ -193,7 +206,12 @@ then
    awk '{print $2, $3, $5/2/($5+$6), $6/4/($5+$6)}' IPR/IPR.txt | awk '{print $1, $2, 2*$3*$3+4*$4*$4}' > IPR/IPRfinal.txt
 elif [ "$METHOD" == "AIM" ]
 then
-   awk -v n="$NATOMS" '{sum=0; for (i=5; i<=4+n; i++) sum+= $i*$i/4; print $2, $3, sum}' IPR/IPR.txt > IPR/IPRfinal.txt
+   if (( K_NUM == 1 ))
+   then
+      awk -v n="$NATOMS" '{sum=0; for (i=3; i<=2+n; i++) sum+= $i*$i/4; print $3, sum}' IPR/IPR.txt > IPR/IPRfinal.txt
+   else
+      awk -v n="$NATOMS" '{sum=0; for (i=5; i<=4+n; i++) sum+= $i*$i/4; print $2, $3, sum}' IPR/IPR.txt > IPR/IPRfinal.txt
+   fi
 fi
 
 exit
