@@ -1,0 +1,418 @@
+\documentclass[noamsthm,8pt,t]{beamer}
+
+\mode<presentation>{\usetheme{CEITEC}}
+
+\usepackage[english]{babel}
+\usepackage[mathletters]{ucs}
+\usepackage[utf8x]{inputenc}
+%\usepackage{unimath}
+\usepackage{helvet}
+\RequirePackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{fleqn}
+\usepackage{graphics}
+\usepackage{fixltx2e}
+\usepackage{multicol}
+\makeatletter
+\def\@ptsize{100}
+\def\ie{i.\,e.\ \ignorespaces}
+\def\eg{e.\,g.\ \ignorespaces}
+\def\TiSiO{Ti\textsubscript{1--\itshape x}Si\textsubscript{\itshape x}O\textsubscript{2}}
+\def\TiO2{Ti\textsubscript{2}}
+\def\SiO2{Si\textsubscript{2}}
+\parindent=0pt
+
+\def\graphframe#1#2{%
+  \begin{frame}
+  \frametitle{#1}
+  \includegraphics[width=\hsize]{#2.pdf}
+  \end{frame}
+}
+
+\setbeamersize{text margin left=2.5em}
+\setbeamersize{text margin right=2.5em}
+
+\renewcommand\footnoterule{\rule{\linewidth}{0pt}}
+
+\title[Optical properties of \TiSiO{}]
+      {Composition induced changes in optical response of \TiSiO{} from first principles calculations}
+\author[Pavel Ondračka]
+       {Pavel Ondračka\inst{1,2} \and David Holec\inst{3} \and Stéphane Elisabeth\inst{4} \and Eva Kedroňová\inst{1,2} \and Marek Eliáš\inst{1,2} \and David Nečas\inst{1} \and Antoine Goullet\inst{4} \and Lenka Zajíčková\inst{1,2}}
+\institute[Masaryk University]
+          {{\inst{1} RG Plasma Technologies, Central European Institute of Technology, Masaryk University, Brno, Czech Republic\\
+         \inst{2} Department of Physical Electronics, Faculty of Science, Masaryk University, Brno, Czech Republic \\
+         \inst{3} Department of Physical Metallurgy and Materials Testing, Montanuniversität Leoben, Leoben, Austria\\
+         \inst{4} Institut des Matériaux Jean Rouxel (IMN), Université de Nantes, Nantes, France
+}}
+
+\date[] % (optional)
+{SPSSM-2016, Nantes, 2 July 2016}
+
+
+\begin{document}
+
+\frame[plain]{%
+\titlepage
+}
+
+\section*{Outline}
+
+\begin{frame}
+\frametitle{Outline}
+  \tableofcontents
+\vskip 0pt plus4fill
+\end{frame}
+
+\section{Motivation}
+
+\begin{frame}
+   \frametitle{Why mix SiO$_2$ and TiO$_2$}
+   \begin{columns}
+      \begin{column}{0.6\textwidth}
+         \vspace{1cm}
+         \begin{itemize}
+            \item Big difference between optical and electronic properties
+            \item Refractive index: TiO$_2$ $\sim$2.5, SiO$_2$ $\sim$1.5
+            \item Band gap: TiO$_2$ 3.0--3.5\,eV, SiO$_2$ $\sim$9\,eV
+            \item Static dielectric function TiO$_2$ $\sim$80, SiO$_2$ $\sim$3.9
+            \item Fine-tuning properties by composition change brings new possibilities in design of optical devices (filters, anti-reflective coatings, mirrors)
+         \end{itemize}
+      \end{column}
+      \begin{column}{0.4\textwidth}
+         \begin{center}
+            TiO$_2$
+            \includegraphics[width=\linewidth]{figures/SEM-Xsection-TiO2.png}
+            \vspace{0.3cm}
+            SiO$_2$
+            \includegraphics[width=\linewidth]{figures/SEM-Xsection-SiO2.png}
+         \end{center}
+      \end{column}
+   \end{columns}
+\end{frame}
+
+\section{Modelling}
+\begin{frame}
+   \frametitle{Construction of structural models}
+   \vspace{-0.3cm}
+   \begin{columns}
+      \begin{column}{0.8\textwidth}
+         \begin{itemize}
+            \item Density Functional Theory (Kohn, Hohenberg, Sham) to solve the Schrödinger equation
+            \item Vienna Ab initio Simulation Package (pseudopotential plane wave DFT code)
+            \item Standard PBE exchange-correlation functional
+            \item Structure sizes around 100 atoms
+         \end{itemize}
+      \end{column}
+      \begin{column}{0.2\textwidth}
+         \begin{center}
+            \includegraphics[width=0.9\linewidth]{figures/VASP.jpg}
+         \end{center}
+      \end{column}
+   \end{columns}
+
+   \pause
+
+   \begin{columns}
+      \begin{column}{0.5\textwidth}
+         \begin{itemize}
+            \item Solid solutions with Special Quairandom Structures (SQS) methods
+            \item Based on anatase, rutile and selected SiO$_2$ structures
+         \end{itemize}
+         \vspace{0.2cm}
+         \begin{center}
+             \includegraphics[width=0.6\linewidth]{figures/SQS.png}
+         \end{center}
+      \end{column}
+
+      \pause
+
+      \begin{column}{0.5\textwidth}
+         \begin{itemize}
+            \item Amorphous structures prepared by ab-initio simulated annealing
+            \item Annealed at 3000\,K for 3\,ps than cooled to 0K over 3\,ps and relaxed
+         \end{itemize}
+         \begin{center}
+            \includegraphics[width=0.5\linewidth]{figures/am-SA.png}
+         \end{center}
+      \end{column}
+   \end{columns}
+\end{frame}
+
+\begin{frame}
+   \frametitle{Structural stability}
+   \begin{columns}
+      \begin{column}{0.67\textwidth}
+            \only<1-2>{
+               \includegraphics[width=\linewidth]{figures/Ef-all.pdf}
+            }
+            \begin{center}
+            \only<3>{
+               \includegraphics[height=4cm]{figures/phase.png}
+            }
+            \end{center}
+      \end{column}
+      \begin{column}{0.33\textwidth}
+         \begin{center}
+            \includegraphics[width=\linewidth]{figures/coord.pdf}
+         \end{center}
+      \end{column}
+   \end{columns}
+   \only<1-2>{
+      \vspace{-0.5cm}
+   }
+   \only<3>{
+      \vspace{0.332cm}
+   }
+   \begin{itemize}
+      \item SiO$_2$ like structures are more preferable (4-coordinated tetrahedral position)
+      \item amorphous structures less stable (at 0K)
+      \item<2-> known problem with TiO$_2$ stable structure prediction for both LDA and GGA 
+      \item<2-> LDA+U/GGA+U helps\footnotemark, as well as hybrid or GW
+   \end{itemize}
+   \footnotetext[1]{Vu, N. H. et al., J. Phys. Condens. Matter 24, 405501 (2012).}
+   \only<3>{
+      \footnotetext[2]{\url{http://materials.springer.com/isp/phase-diagram/docs/c_0201188}}
+   }
+\end{frame}
+
+\section{Band gap problems}
+\begin{frame}
+   \frametitle{Band gap problem}
+   \framesubtitle{How to get a band gap cosistent with experiment}
+
+   \vspace{-0.3cm}
+   \begin{itemize}
+      \item Notorious DFT (LDA/GGA) problem in band gap underestimation.
+      \item Possible ways to fix include scissor operator, DFT+U, hybrid and many body perturbation theory based approaches
+      \item Some are not feasible for large cells
+      \item<2-> \emph{TB-mBJ exchange potential}$^1$ offers solution
+      \item<2-> Contains empirical parameters tuned for band gap value on large set of solids 
+      \item<3-> Was already tested for optical properties of pure TiO$_2$ and found in reasonable agreement\footnotemark
+      \item<3-> Improved TB-mBJ parametrisations\footnotemark offer even better experimental agreement
+      \item<3-> TB-mBJ and optical calculations done in Wien2k (all electron full-potential DFT code)
+   \end{itemize}
+
+   \only<2>{
+      \vspace{-1.8cm}
+      \begin{center}
+         \includegraphics[width=4.65cm]{figures/mBJ.pdf}
+      \end{center}
+   }
+   
+   \only<2->{
+      \footnotetext[1]{Tran, F. \& Blaha, P., Phys. Rev. Lett. 102, 226401 (2009).}
+   }
+   \only<3->{
+      \footnotetext[2]{Gong, S. \& Liu, B.-G., Chinese Phys. B 21, 057104 (2012).}
+      \footnotetext[3]{Koller, D., Tran, F. \& Blaha, P., Phys. Rev. B 85, 155109 (2012).}
+   }
+\end{frame}
+
+\begin{frame}
+   \frametitle{Band gap evolution}
+   \framesubtitle{What happens when we add silicon into titania}
+
+   \begin{columns}
+      \begin{column}{0.5\textwidth}
+         \begin{center}
+            \includegraphics[width=\linewidth]{figures/gap1.pdf}
+            \only<2->{
+               \includegraphics[width=0.8\linewidth]{figures/SiTiO2-dos.pdf}
+            }
+         \end{center}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+         \begin{itemize}
+            \item Band gap actually decreases when Si is added
+            \item This is observable for all structures
+            \item<2-> States appear below and above the valence band
+            \item<3> Si-induced oxygen states
+         \end{itemize}
+         \vspace{0.5cm}
+         \only<3>{
+            \includegraphics[width=0.5\linewidth]{figures/spaghettiOSi.pdf}
+            \includegraphics[width=0.47\linewidth]{figures/spaghettinotOSi.pdf}
+         }
+      \end{column}
+   \end{columns}
+\end{frame}
+
+\begin{frame}
+   \frametitle{Band gap evolution}
+   \framesubtitle{How to filter out the localized defect states}
+
+   \begin{columns}
+      \begin{column}{0.5\textwidth}
+         \begin{itemize}
+            \item Also in the amorphous structures are some highly localized states near the edge of valence and conduction band
+            \item<2> We estimated the band gap without defect states by and approach similar to Tauc plot
+         \end{itemize}
+
+         \includegraphics[width=\linewidth]{figures/IPR2.pdf}
+
+      \end{column}
+      \begin{column}{0.5\textwidth}
+         \only<2>{
+            \begin{center}
+               \includegraphics[width=\linewidth]{figures/gap-edge.pdf}
+            \end{center}
+         }
+      \end{column}
+   \end{columns}
+\end{frame}
+
+\section{Experimental setup}
+
+\begin{frame}
+   \frametitle{Deposition and optical characterisation}
+
+   \begin{columns}
+      \begin{column}{0.5\textwidth}
+         \begin{itemize}
+         \item \TiSiO{} samples deposited by PECVD and ALD
+         \item precursor gasses Titanium isopropoxide and Hexamethyldisiloxane
+         \item<2-> ICP PECVD reactor, $p = 3$\,mTorr, $P = 400$\,W
+      \end{itemize}
+      \only<1>{
+         \begin{center}
+            \includegraphics[width=0.6\linewidth]{figures/TTIP.pdf}
+            \vspace{0.4cm}
+            \includegraphics[width=0.6\linewidth]{figures/HMDSO.pdf}
+         \end{center}
+      }
+      \only<2->{
+         \begin{center}
+            \includegraphics[width=1.0\linewidth]{figures/PECVD-reactor.pdf}
+         \end{center}
+      }
+      \end{column}
+      \begin{column}{0.5\textwidth}
+         \only<3>{
+            \begin{itemize}
+               \item characterization done in spectral region up to 8.7eV
+               \item variable angle ellipsometry
+               \item Universal dispersion model used$^1$
+               \item roughness (Rayley-Rice theory) inhomogeneity included in the model
+               \item newAD2 fitting software
+            \end{itemize}
+         }
+         \end{column}
+   \end{columns}
+   \only<3>{
+      \footnotetext[1]{Franta, D., Nečas, D. \& Ohlídal, I., Appl. Opt. 54, 9108 (2015).}
+   }
+\end{frame}
+
+\section{Optical properties}
+
+\begin{frame}
+   \frametitle{Dielectric function}
+
+   \begin{columns}
+      \begin{column}{0.3\textwidth}
+         \begin{itemize}
+            \item Dielectric function calculated with Wien2k optic module 
+            \item calculation at the Random Phase Approximation level without local fields effects, e.g. no excitons!
+            \item Good match of intensity, slight shift of peaks maxima
+         \end{itemize}
+      \end{column}
+      \begin{column}{0.7\textwidth}
+         \begin{center}
+            \includegraphics[width=\linewidth]{figures/epsi.pdf}
+            \newline
+            \includegraphics[width=\linewidth]{figures/epsi-calc.pdf}
+         \end{center}
+      \end{column}
+   \end{columns}
+\end{frame}
+
+\begin{frame}
+   \frametitle{Band gap}
+   \framesubtitle{Comparison with experiment}
+
+   \begin{center}
+      \includegraphics[width=0.6\linewidth]{figures/gap2.pdf}
+   \end{center}
+
+   \begin{itemize}
+      \item Almost perfect agreement for the calculated band gap of am-\TiSiO{} with experimental optical band gap
+      \item<2> Probably even too good...
+      \item<2> Neglection of excitonic effects (downshift of transitions below the gap) might actually cancel out with small underestimation of the band gap by TB-mBJ
+   \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Refractive index}
+   \vspace{-0.3cm}
+   \begin{center}
+      \includegraphics[width=0.45\linewidth]{figures/SiTiO2-n.pdf}
+   \end{center}
+
+   \begin{itemize}
+      \item again perfect agreement with experimental refractive index for am-\TiSiO{}
+      \item<2> By comparison with XRD we confirm the film are indeed amorphous except for pure TiO$_2$ where we have an anatase phase.
+   \end{itemize}
+
+   \begin{center}
+      \only<2>{
+         \includegraphics[width=0.4\linewidth]{figures/XRD.png}
+      }
+   \end{center}
+
+\end{frame}
+
+
+\section{Conclusions}
+\begin{frame}
+   \frametitle{Conclusions and acknowledgment}
+   \begin{itemize}
+      \item We predicted the solid solutions as preferred, amorphous structures less stable
+      \item Experiment produces amorphous films due to non-equilibrium deposition process
+      \item We predicted the preference for separate phases in agreement with phase diagram 
+      \item<2-> TB-mBJ potential in combination with RPA for calculation of optical properties gives near perfect agreement with experiment
+      \item<2-> Band gap increases slightly up to $x = 0.5$ then goes up sharply to values of SiO$_2$
+      \item<2-> When doping Si into TiO$_2$, Si-induced oxygen defect states appear near edges of valence band
+   \end{itemize}
+
+   \only<3->{
+      \begin{center}
+         \emph{Acknowledgment}
+      \end{center}
+   
+      \begin{columns}
+         \begin{column}{0.3\textwidth}
+            Montanuniversität Leoben
+            \begin{itemize}
+               \item David Holec
+            \end{itemize}
+         \end{column}
+         \begin{column}{0.3\textwidth}
+            Masaryk University
+            \begin{itemize}
+               \item Eva Kedroňová
+               \item David Nečas
+               \item Marek Eliáš
+               \item Lenka Zajíčková
+            \end{itemize}
+         \end{column}
+         \begin{column}{0.3\textwidth}
+            Université de Nantes
+            \begin{itemize}
+               \item Stéphane Elisabeth
+               \item Antoine Goulet
+            \end{itemize}
+         \end{column}
+      \end{columns} 
+   }
+   \vspace{0.5cm}
+   \only<4>{
+      \begin{center}
+         \emph{Thank you for your attention.}
+      \end{center}
+   }
+
+\end{frame}
+
+
+
+\end{document}

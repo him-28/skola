@@ -1,0 +1,26 @@
+set term pdfcairo enhanced notransparent color font "Arial,10" size 6cm,5cm lw 1 dl 0.5
+
+set style line 1 lc rgb "#e00000" pt 5 ps 0.5
+set style line 2 lc rgb "#008000" pt 7 ps 0.5
+set style line 3 lc rgb "purple" pt 11 ps 0.5
+set style line 4 lc rgb '#0040c0' pt 9 ps 0.5
+set style textbox opaque noborder
+
+set style line 10 lt 0 lc rgb '#a0a0a0' lw 1.5
+set grid ls 10
+
+set xlabel 'Silicon fraction, x'
+set ylabel 'Refractive index, n'
+set key above samplen 1 Left reverse
+set pointsize 0.4
+set format y '%.1f'
+
+set rmargin 1.5
+
+set label at graph 0.1,0.1 "λ = 400 nm" boxed
+
+plot [-0.08:1.08][1.35:3.25]  \
+    "anatase-400nm.txt" u 1:(sqrt((sqrt((($2+$4+$6)/3)*(($2+$4+$6)/3)+(($3+$5+$7)/3)*(($3+$5+$7)/3))+(($2+$4+$6)/3))/2)) t 'Anatase calc.' ls 1,\
+    "rutile-400nm.txt" u 1:(sqrt((sqrt((($2+$4+$6)/3)*(($2+$4+$6)/3)+(($3+$5+$7)/3)*(($3+$5+$7)/3))+(($2+$4+$6)/3))/2)) t 'Rutile calc.' ls 2,\
+    "am-400nm.txt" u 1:(sqrt((sqrt((($2+$4+$6)/3)*(($2+$4+$6)/3)+(($3+$5+$7)/3)*(($3+$5+$7)/3))+(($2+$4+$6)/3))/2)) t 'Amorphous calc.' ls 3 ps 0.5,\
+	"n.txt" u 1:2 t 'PECVD exp.' ls 4

@@ -1,0 +1,46 @@
+set term pdfcairo enhanced color font "Arial,8" size 8cm,5cm lw 1
+
+
+set style line 1 lc rgb '#e00000' pi -1
+set style line 2 lc rgb '#008000' pi -1
+set style line 3 lc rgb '#0040c0' pi -1
+set style line 4 lc rgb '#f5ed13' pi -1
+set style line 5 lc rgb '#a000b0' pi -1
+set style line 6 lc rgb '#f08000' pi -1
+set style line 7 pt 6 lc rgb '#a2ff08' pi -1
+set style line 8 lc rgb 'magenta' pi -1
+set style line 9 lc rgb '#000000' pi -1
+set style textbox opaque noborder
+
+set pointsize 0.5
+set pointintervalbox 1.8
+
+set style line 10 lt 0 lc rgb '#a0a0a0' lw 1.5
+set grid ls 10
+
+set ylabel 'Energy of formation (eV/atom)'
+set xlabel 'x in Ti_{1-x}Si_xO_2'
+set key right bottom 
+
+set format x '%.1f'
+set format y '%.2f'
+
+set xtics 0.1
+set rmargin 0.3
+
+plot [-0.05:1.05]\
+	"Ef/Ef-anatase.dat" t 'Anatase' ls 1 with linespoints,\
+	"Ef/Ef-rutile.dat" t 'Rutile/Stishovite' ls 2 with linespoints,\
+	"Ef/Ef-quartz_alpha.dat" t 'α-quartz' ls 3 with linespoints,\
+	"Ef/Ef-quartz_beta.dat" t 'β-quartz' ls 4 with linespoints,\
+	"Ef/Ef-tridymite.dat" t 'β-tridymite' ls 5 with linespoints,\
+	"Ef/Ef-cristobalite.dat" t 'α-cristobalite' ls 7 with linespoints,\
+	"Ef/Ef-amorphous.dat" t 'amorphous' ls 9 with linespoints,\
+	"Ef/Ef-anatase.dat" t '' ls 1,\
+	"Ef/Ef-rutile.dat" t '' ls 2,\
+	"Ef/Ef-quartz_alpha.dat" t '' ls 3,\
+	"Ef/Ef-quartz_beta.dat" t '' ls 4,\
+	"Ef/Ef-tridymite.dat" t '' ls 5,\
+	"Ef/Ef-cristobalite.dat" t '' ls 7,\
+	"Ef/Ef-amorphous.dat" t '' ls 9,\
+
