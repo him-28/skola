@@ -1,0 +1,53 @@
+set term pdfcairo enhanced color dashed font "Arial,8" size 6cm,5cm lw 1 dl 0.5
+
+set style line 1 lt 1 lw 1 lc rgb 'red' dashtype 1
+set style line 2 lt 2 lw 1 lc rgb '#008000' dashtype 2
+set style line 3 lt 3 lw 1 lc rgb '#0040c0' dashtype 3
+set style line 4 lt 4 lw 1 lc rgb '#f0c010' dashtype 4
+set style line 5 lt 5 lw 1 lc rgb '#a000b0' dashtype 5
+
+set xrange [-6:5.8]
+
+set multiplot
+set size 1.0,0.21
+set ytics 0.1
+
+
+set format y '%g'
+set format x ''
+
+set rmargin 0.3
+set bmargin 0.1
+set tmargin 0.1
+set lmargin 8.0
+
+set key top left
+
+set origin 0.0,0.78
+set label at graph 0.1, 0.8 'x = 0.0'
+plot [][:0.32]\
+   "IPR-0.0.txt" u ($1*13.605-6.05):2:(0.005) with boxes t '' ls 1
+
+unset label
+set origin 0.0,0.56
+set label at graph 0.1, 0.8 'x = 0.19'
+plot [][:0.32]\
+   "IPR-0.1875.txt" u ($1*13.605-5.55):2:(0.01) with boxes t '' ls 1
+
+unset label
+set ylabel 'Inverse participation ratio' offset 0,2.0
+set label at graph 0.1, 0.8 'x = 0.34'
+set origin 0.0,0.34
+plot [][:0.32]\
+   "IPR-0.34375.txt" u ($1*13.605-4.85):2:(0.01) with boxes t '' ls 1
+
+unset ylabel
+unset label
+set xlabel 'Energy, E [eV]' offset 0,0.3
+set format x '%g'
+
+set label at graph 0.1, 0.8 'x = 0.5'
+
+set origin 0.0,0.12
+plot [][:0.32]\
+   "IPR-0.5.txt" u ($1*13.605-4.60):2:(0.01) with boxes t '' ls 1
