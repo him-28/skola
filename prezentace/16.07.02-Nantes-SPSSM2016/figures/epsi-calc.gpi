@@ -6,6 +6,7 @@ set style data line
 set ylabel 'Dielectric function, ε_i' offset -1
 set xlabel 'Photon energy, E [eV]'
 set format '%.0f'
+set rmargin 21.2
 
 set label "Amorphous calculations" at graph 0.47,0.93 boxed
 

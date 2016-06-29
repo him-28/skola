@@ -21,10 +21,7 @@ set style line 4 lc rgb '#0040c0' pt 9
 set pointintervalbox 1.6
 
 plot [-0.05:0.88][:4.09]  \
-   "gap.txt" u 1:3 t "Rutile calculation"  with linespoints ls 2,\
-   "gap.txt" u 1:2 t "Anatase calculation" with linespoints ls 1,\
    "gap-am.txt" u 1:2 t "Amorphous calculation" with linespoints ls 6,\
-   "gap-am.txt" u 1:3 t "Amorphous calculation + Tauc plot" with linespoints ls 7,\
    "gap-exp.txt" u 1:2 t "Experiment PECVD" ls 3,\
 	"gap-exp.txt" u 1:3 t "Experiment ALD" ls 4,\
 

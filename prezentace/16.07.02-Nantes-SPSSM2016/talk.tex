@@ -331,13 +331,17 @@
    \framesubtitle{Comparison with experiment}
 
    \begin{center}
-      \includegraphics[width=0.6\linewidth]{figures/gap2.pdf}
+      \only<1>{
+         \includegraphics[width=0.6\linewidth]{figures/gap2.pdf}
+      }
+      \only<2>{
+         \includegraphics[width=0.6\linewidth]{figures/gap3.pdf}
+      }
    \end{center}
 
    \begin{itemize}
-      \item Almost perfect agreement for the calculated band gap of am-\TiSiO{} with experimental optical band gap
-      \item<2> Probably even too good...
-      \item<2> Neglection of excitonic effects (downshift of transitions below the gap) might actually cancel out with small underestimation of the band gap by TB-mBJ
+      \item Experimental optical band gap increases slowly from value 3.26\,eV for pure TiO$_2$ and only after $x = 0.5$ goes up more sharply up $\sim$8.0\,eV for pure SiO$_2$
+      \item<2> Almost perfect agreement for the calculated band gap of am-\TiSiO{} with experimental optical band gap after filtering out the localized defect states
    \end{itemize}
 \end{frame}
 
@@ -400,6 +404,8 @@
             \begin{itemize}
                \item Stéphane Elisabeth
                \item Antoine Goulet
+               \item Mireille Richard
+               \item Agnes Granier
             \end{itemize}
          \end{column}
       \end{columns} 

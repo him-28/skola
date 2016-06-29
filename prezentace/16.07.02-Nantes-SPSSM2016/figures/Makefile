@@ -1,6 +1,6 @@
 .PHONY: all clean
 
-FIGURES = gap-edge.pdf HMDSO.pdf TTIP.pdf coord.pdf Ef-all.pdf mBJ.pdf gap1.pdf gap2.pdf SiTiO2-dos.pdf gap-edge.pdf SiTiO2-n.pdf XRD.pdf IPR.pdf epsi-calc.pdf
+FIGURES = gap-edge.pdf HMDSO.pdf TTIP.pdf coord.pdf Ef-all.pdf mBJ.pdf gap1.pdf gap2.pdf gap3.pdf SiTiO2-dos.pdf gap-edge.pdf SiTiO2-n.pdf XRD.pdf IPR.pdf epsi-calc.pdf
 LOC1 = ondracka@salomon.it4i.cz:scratch/
 
 all: $(FIGURES)
