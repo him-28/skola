@@ -99,7 +99,7 @@
          \begin{itemize}
             \item Density Functional Theory (Kohn, Hohenberg, Sham) to solve the Schrödinger equation
             \item Vienna Ab initio Simulation Package (pseudopotential plane wave DFT code)
-            \item Standard PBE exchange-correlation functional
+            \item Standard GGA PBE exchange-correlation functional
             \item Structure sizes around 100 atoms
          \end{itemize}
       \end{column}
@@ -114,26 +114,25 @@
 
    \begin{columns}
       \begin{column}{0.5\textwidth}
-         \begin{itemize}
-            \item Solid solutions with Special Quairandom Structures (SQS) methods
-            \item Based on anatase, rutile and selected SiO$_2$ structures
-         \end{itemize}
-         \vspace{0.2cm}
          \begin{center}
              \includegraphics[width=0.6\linewidth]{figures/SQS.png}
          \end{center}
+         \begin{itemize}
+            \item Crystalline solid solutions with Special Quasirandom Structures (SQS) methods
+            \item Based on anatase, rutile and selected SiO$_2$ structures
+         \end{itemize}
       \end{column}
 
       \pause
 
       \begin{column}{0.5\textwidth}
-         \begin{itemize}
-            \item Amorphous structures prepared by ab-initio simulated annealing
-            \item Annealed at 3000\,K for 3\,ps than cooled to 0K over 3\,ps and relaxed
-         \end{itemize}
          \begin{center}
             \includegraphics[width=0.5\linewidth]{figures/am-SA.png}
          \end{center}
+         \begin{itemize}
+            \item Amorphous structures prepared by ab-initio simulated annealing (SA)
+            \item Annealed at 3000\,K for 3\,ps than cooled to 0K over 3\,ps and relaxed
+         \end{itemize}
       \end{column}
    \end{columns}
 \end{frame}
@@ -141,33 +140,30 @@
 \begin{frame}
    \frametitle{Structural stability}
    \begin{columns}
-      \begin{column}{0.67\textwidth}
+      \begin{column}{0.55\textwidth}
+         \vspace{-0.5cm}
+         \begin{center}
+            \includegraphics[width=\linewidth]{figures/Ef-all.pdf}
+         \end{center}
+      \end{column}
+      \begin{column}{0.45\textwidth}
+         \begin{center}
             \only<1-2>{
-               \includegraphics[width=\linewidth]{figures/Ef-all.pdf}
+               \includegraphics[width=0.7\linewidth]{figures/coord.pdf}
             }
-            \begin{center}
             \only<3>{
                \includegraphics[height=4cm]{figures/phase.png}
             }
-            \end{center}
-      \end{column}
-      \begin{column}{0.33\textwidth}
-         \begin{center}
-            \includegraphics[width=\linewidth]{figures/coord.pdf}
          \end{center}
       \end{column}
    \end{columns}
-   \only<1-2>{
-      \vspace{-0.5cm}
-   }
-   \only<3>{
-      \vspace{0.332cm}
-   }
+
    \begin{itemize}
       \item SiO$_2$ like structures are more preferable (4-coordinated tetrahedral position)
       \item Amorphous structures less stable (at 0K)
       \item<2-> Known problem with TiO$_2$ stable structure prediction for both LDA and GGA 
       \item<2-> LDA+U/GGA+U helps\footnotemark, as well as hybrid or GW
+      \item<3> Preference for separate phases, in agreement with phase diagram\footnotemark
    \end{itemize}
    \footnotetext[1]{Vu, N. H. et al., J. Phys. Condens. Matter 24, 405501 (2012).}
    \only<3>{
@@ -180,15 +176,20 @@
    \frametitle{Band gap problem}
    \framesubtitle{How to get a band gap cosistent with experiment}
 
-   \vspace{-0.3cm}
+   \vspace{-0.2cm}
+   Notorious DFT (LDA/GGA) problem in band gap underestimation
    \begin{itemize}
-      \item Notorious DFT (LDA/GGA) problem in band gap underestimation.
       \item Possible ways to fix include scissor operator, DFT+U, hybrid and many body perturbation theory based approaches
-      \item Some are not feasible for large cells
-      \item<2-> \emph{TB-mBJ exchange potential}$^1$ offers solution
+      \item Hybrids and GW not feasible for large cells
+   \end{itemize}
+
+   \pause
+
+   \emph{TB-mBJ exchange potential}$^1$ in combination with LDA-correlation offers solution
+   \begin{itemize}
       \item<2-> Contains empirical parameters tuned for band gap value on large set of solids 
-      \item<3-> Was already tested for optical properties of pure TiO$_2$ and found in reasonable agreement\footnotemark
-      \item<3-> Improved TB-mBJ parametrisations\footnotemark offer even better experimental agreement
+      \item<3-> Was already tested for optical properties of pure TiO$_2$ and found in reasonable agreement$^2$
+      \item<3-> Improved TB-mBJ parametrisations$^3$ offer even better experimental agreement
       \item<3-> TB-mBJ and optical calculations done in Wien2k (all electron full-potential DFT code)
    \end{itemize}
 

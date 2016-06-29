@@ -1,4 +1,4 @@
-set term pdfcairo enhanced color font "Arial,8" size 8cm,5cm lw 1
+set term pdfcairo enhanced color font "Arial,8" size 6cm,5cm lw 1
 
 
 set style line 1 lc rgb '#e00000' pi -1
