@@ -24,7 +24,7 @@ set key top left
 
 f(x) = a*x + b
 
-blimit = 3.6
+blimit = 3.5
 tlimit = 4.5
 set arrow from blimit,0 to blimit,14 nohead
 set arrow from tlimit,0 to tlimit,14 nohead

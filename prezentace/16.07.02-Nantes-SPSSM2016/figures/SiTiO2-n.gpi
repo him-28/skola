@@ -1,4 +1,4 @@
-set term pdfcairo enhanced notransparent color font "Arial,10" size 7cm,6cm lw 1 dl 0.5
+set term pdfcairo enhanced notransparent color font "Arial,10" size 7cm,5cm lw 1 dl 0.5
 
 set style line 1 lc rgb "#e00000" pt 5 ps 0.5
 set style line 2 lc rgb "#008000" pt 7 ps 0.5
@@ -12,7 +12,7 @@ set grid ls 10
 
 set xlabel 'x in Ti_{1-x}Si_xO_2'
 set ylabel 'Refractive index, n'
-set key above samplen 1 Left reverse
+set key top right samplen 1 Left reverse
 set pointsize 0.4
 set format y '%.1f'
 

@@ -37,7 +37,7 @@
 \title[Optical properties of \TiSiO{}]
       {Composition induced changes in optical response of \TiSiO{} from first principles calculations}
 \author[Pavel Ondračka]
-       {Pavel Ondračka\inst{1,2} \and David Holec\inst{3} \and Stéphane Elisabeth\inst{4} \and Eva Kedroňová\inst{1,2} \and Marek Eliáš\inst{1,2} \and David Nečas\inst{1} \and Antoine Goullet\inst{4} \and Mireille Richard\inst{4} \and Agnes Granier\inst{4} \and Lenka Zajíčková\inst{1,2}}
+       {\underline{Pavel Ondračka}\inst{1,2} \and David Holec\inst{3} \and Stéphane Elisabeth\inst{4} \and Eva Kedroňová\inst{1,2} \and Marek Eliáš\inst{1,2} \and David Nečas\inst{1} \and Antoine Goullet\inst{4} \and Mireille Richard\inst{4} \and Agnes Granier\inst{4} \and Lenka Zajíčková\inst{1,2}}
 \institute[Masaryk University]
           {{\inst{1} RG Plasma Technologies, Central European Institute of Technology, Masaryk University, Brno, Czech Republic\\
          \inst{2} Department of Physical Electronics, Faculty of Science, Masaryk University, Brno, Czech Republic \\
@@ -345,24 +345,26 @@
 
 \begin{frame}
 \frametitle{Refractive index}
-   \vspace{-0.4cm}
-   \begin{center}
-      \includegraphics[width=0.5\linewidth]{figures/SiTiO2-n.pdf}
-   \end{center}
-   \vspace{-0.3cm}
-   \begin{itemize}
-      \item Again perfect agreement with experimental refractive index for a-\TiSiO{}
-      \item<2> By comparison with XRD we confirm the film are indeed amorphous except for pure TiO$_2$ where we have an anatase phase.
-   \end{itemize}
+   \begin{columns}
+      \begin{column}{0.7\textwidth}
+         \vspace{-0.4cm}
+         \begin{center}
+            \includegraphics[width=0.8\linewidth]{figures/SiTiO2-n.pdf}
 
-   \begin{center}
-      \only<2>{
-         \includegraphics[width=0.4\linewidth]{figures/XRD.png}
-      }
-   \end{center}
-
+            \only<2>{
+               \includegraphics[width=0.7\linewidth]{figures/XRD.png}
+            }
+         \end{center}
+      \end{column}
+      \begin{column}{0.3\textwidth}
+            \begin{itemize}
+               \item Refractive index decreases aproximatelly linearly in whole composition range
+               \item Perfect agreement with experimental refractive index for a-\TiSiO{} again
+               \item<2> By comparison with XRD we confirm the film are indeed amorphous except for pure TiO$_2$ where we have an anatase phase.
+            \end{itemize}
+      \end{column}
+   \end{columns}
 \end{frame}
-
 
 \section{Conclusions}
 \begin{frame}
