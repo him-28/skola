@@ -72,10 +72,10 @@
          \vspace{1cm}
          \begin{itemize}
             \item Big difference between optical and electronic properties
-            \item Refractive index: TiO$_2$ $\sim$2.5, SiO$_2$ $\sim$1.5
+            \item Refractive index: TiO$_2$ $>$2.5, SiO$_2$ $\sim$1.5
             \item Band gap: TiO$_2$ 3.0--3.5\,eV, SiO$_2$ $\sim$9\,eV
             \item Static dielectric function TiO$_2$ $\sim$80, SiO$_2$ $\sim$3.9
-            \item Fine-tuning properties by composition change brings new possibilities in design of optical devices (filters, anti-reflective coatings, mirrors)
+            \item Fine-tuning properties by composition change brings new possibilities in design of optical devices (filters, anti-reflective coatings, ...)
          \end{itemize}
       \end{column}
       \begin{column}{0.4\textwidth}
@@ -97,7 +97,7 @@
    \begin{columns}
       \begin{column}{0.8\textwidth}
          \begin{itemize}
-            \item Density Functional Theory (Kohn, Hohenberg, Sham) to solve the Schrödinger equation
+            \item Density Functional Theory (Kohn, Hohenberg, Sham)
             \item Vienna Ab initio Simulation Package (pseudopotential plane wave DFT code)
             \item Standard GGA PBE exchange-correlation functional
             \item Structure sizes around 100 atoms
@@ -224,7 +224,7 @@
       \end{column}
       \begin{column}{0.5\textwidth}
          \begin{itemize}
-            \item Band gap actually decreases when Si is added
+            \item Band gap (HOMO-LUMO like) actually decreases when Si is added
             \item This is observable for all structures
             \item<2-> States appear below and above the valence band
             \item<3> Si-induced oxygen states
@@ -244,7 +244,7 @@
 
    \begin{columns}
       \begin{column}{0.5\textwidth}
-         Localized states in the amorphous structures near the edge of valence and conduction band
+         Localized states observed also in the amorphous structures near the edge of valence and conduction band
          \begin{center}
             \includegraphics[width=\linewidth]{figures/IPR.pdf}
          \end{center}
@@ -262,12 +262,13 @@
 \section{Experimental setup}
 
 \begin{frame}
-   \frametitle{Deposition and optical characterisation}
+   \frametitle{Deposition and characterisation}
 
    \begin{columns}
       \begin{column}{0.5\textwidth}
+         Deposition
          \begin{itemize}
-         \item \TiSiO{} samples deposited by PECVD and ALD
+         \item \TiSiO{} thin films deposited by PECVD on c-Si
          \item Precursor gasses Titanium isopropoxide and Hexamethyldisiloxane
          \item<2-> ICP PECVD reactor, $p = 3$\,mTorr, $P = 400$\,W
       \end{itemize}
@@ -286,13 +287,15 @@
       \end{column}
       \begin{column}{0.5\textwidth}
          \only<3>{
+            Optical characterisation
             \begin{itemize}
                \item Characterization done in spectral region up to 8.7eV
                \item Variable angle ellipsometry
-               \item Universal dispersion model used$^1$
-               \item Roughness (Rayleigh-Rice theory) and inhomogeneity included in the model
-               \item NewAD2 fitting software
+               \item So-called Universal dispersion model was used$^1$
+               \item Roughness (Rayleigh-Rice theory) and inhomogeneity included in the structural model
+               \item NewAD fitting software
             \end{itemize}
+            Composition and stochiometry determined by XPS, crystallinity by XRD
          }
          \end{column}
    \end{columns}
@@ -339,7 +342,7 @@
 
    \begin{itemize}
       \item Experimental optical band gap increases slowly from value 3.26\,eV for pure TiO$_2$ and only after $x = 0.5$ goes up more sharply to $\sim$8.0\,eV for pure SiO$_2$
-      \item<2> Almost perfect agreement for the calculated band gap of a-\TiSiO{} with experimental optical band gap after filtering out the localized defect states
+      \item<2> Almost perfect agreement for the calculated band gap of a-\TiSiO{} with experimental optical band gap after filtering out the localized states near band edges
    \end{itemize}
 \end{frame}
 
@@ -358,7 +361,7 @@
       \end{column}
       \begin{column}{0.3\textwidth}
             \begin{itemize}
-               \item Refractive index decreases aproximatelly linearly in whole composition range
+               \item Refractive index decreases approximately linearly in whole composition range
                \item Perfect agreement with experimental refractive index for a-\TiSiO{} again
                \item<2> By comparison with XRD we confirm the film are indeed amorphous except for pure TiO$_2$ where we have an anatase phase.
             \end{itemize}
@@ -369,16 +372,15 @@
 \section{Conclusions}
 \begin{frame}
    \frametitle{Conclusions and acknowledgment}
+   Optical properties of \TiSiO{}
    \begin{itemize}
-      \item We predicted the solid solutions as preferred, amorphous structures less stable
-      \item Experiment produces amorphous films due to non-equilibrium deposition process
-      \item We predicted the preference for separate phases in agreement with phase diagram 
-      \item<2-> TB-mBJ potential in combination with RPA for calculation of optical properties gives near perfect agreement with experiment
-      \item<2-> Band gap increases slightly up to $x = 0.5$ then goes up sharply to values of SiO$_2$
-      \item<2-> When doping Si into TiO$_2$, Si-induced oxygen defect states appear near edges of valence band
+      \item TB-mBJ potential in combination with RPA for calculation of optical properties gives near perfect agreement with experiment
+      \item Band gap increases slightly up to $x = 0.5$ then goes up sharply to values of SiO$_2$
+      \item Refractive index changes linearly 
+      \item When doping Si into TiO$_2$, Si-induced localized oxygen states appear near edges of valence band, special treatment is needed to get band gap comparable with experiment
    \end{itemize}
 
-   \only<3->{
+   \only<2->{
       \begin{center}
          \emph{Acknowledgment}
       \end{center}
@@ -411,7 +413,7 @@
       \end{columns} 
    }
    \vspace{0.5cm}
-   \only<4>{
+   \only<3>{
       \begin{center}
          \emph{Thank you for your attention.}
       \end{center}

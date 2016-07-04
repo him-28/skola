@@ -8,7 +8,7 @@ set key top left reverse invert Left
 set pointsize 0.5
 set rmargin 1.5
 set tmargin 0.0
-set bmargin 3.5
+set bmargin 3.8
 set lmargin 10.0
 
 set style line 10 lt 0 lc rgb '#a0a0a0' lw 1.5
