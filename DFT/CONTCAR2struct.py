@@ -1,11 +1,21 @@
+#!/bin/python
+
+# FIXME: only ortogonal structures supported for now
+# FIXME: only Direct mode supported for now
+
 from sys import argv
 from math import *
+import argparse
 
 def atcharge(x):
     return {
         'O': 8.0,
         'Ti': 22.0,
     }[x]
+
+parser = argparse.ArgumentParser(description='Convert VASP CONTCAR files into Wien2k struct files')
+parser.add_argument("input_file", help='path to the CONTCAR file')
+args = parser.parse_args()
 
 n = 1
 scale = 0.0
@@ -18,7 +28,7 @@ cline = 0
 cords = []
 nat = 0
 
-with open(argv[1]) as f:
+with open(args.input_file) as f:
 	for line in f:
 		line = ' '.join(line.split())
 		if len(line) < 1:
@@ -29,11 +39,11 @@ with open(argv[1]) as f:
 			scale = float(line) * 1.889725989
 			#print("%.6f" % scale)
 		if n == 2:
-			a = line.split(" ")
+			a = [float(x)*scale for x in line.split(" ")]
 		if n == 3:
-			b = line.split(" ")
+			b = [float(x)*scale for x in line.split(" ")]
 		if n == 4:
-			c = line.split(" ")
+			c = [float(x)*scale for x in line.split(" ")]
 		if n == 5:
 			el = line.split(" ")
 		if n == 6: 
@@ -62,7 +72,7 @@ for i, val in enumerate(a):
 print("generated using script")
 print("P   LATTICE,NONEQUIV.ATOMS%4.i    1 P1      " % nat)
 print("MODE OF CALC=RELA unit=bohr")
-print("%10.6f%10.6f%10.6f 90.000000 90.000000 90.000000" % (scale, scale, scale))
+print("%10.6f%10.6f%10.6f 90.000000 90.000000 90.000000" % (a[0], b[1], c[2]))
 atindx = 0
 cumul = 0
 for i,at in enumerate(cords):
