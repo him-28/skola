@@ -117,7 +117,7 @@ do
          save_lapw -a -d $atom-$edge $atom-$edge > /dev/null
          cd $atom-$edge
 
-         touch .lcore
+         ls ../.lcore > /dev/null && touch .lcore
          sed -i 's/ 0.0/-0.5/g' $atom-$edge.inm
          incline=$((line[$atom]+edge))
          awk -F "," -v n=$incline '{if (NR==n){printf "%1i,%1i,%.1f\n", $1, $2, $3-0.5} else print}' $atom-$edge.inc > tmp.inc
