@@ -68,6 +68,8 @@ parser = argparse.ArgumentParser(description='Solve XPS data into subpeaks')
 group = parser.add_mutually_exclusive_group(required=True)
 group.add_argument('-aim', help='path to the outputaim Wien2k file',  dest='aim_file')
 group.add_argument('-geom', help='path to the xyz struct file', action='store_const', const=1)
+parser.add_argument('-b', help='broadening parameter in eV (default 0.4 eV)', nargs=1, default=0.4)
+parser.add_argument('-dE', help='energy step in eV (default 0.01 eV)', nargs=1, default=0.01)
 parser.add_argument("xyz_file")
 parser.add_argument("XPS_file")
 args = parser.parse_args()
@@ -79,12 +81,13 @@ print ("We have %i atoms" % natoms)
  
 rawdata = [ lines[x].split() for x in range (2, natoms + 2) ]
 data = [[rawdata[x][0], float(rawdata[x][1]), float(rawdata[x][2]), float(rawdata[x][3])] for x in range(0, natoms)]
-atomtypes = set(data[x][0] for x in range(0, natoms))
+atomtypes = list(set(data[x][0] for x in range(0, natoms)))
 nuatoms = len(atomtypes)
 
 print data[0]
 print atomtypes, nuatoms
 
+nele = [0, 2, 2, 2, 4, 2, 2, 4, 4]
 
 neighbors = []
 for i,atom1 in enumerate(data):
@@ -123,7 +126,7 @@ if args.aim_file:
 		for at in a:
 			n[1].append(data[at][0])
 	
-#print neighbors
+print neighbors
 
 # find all unique neighboir configuration for each atom	
 cnumtypes = []
@@ -136,18 +139,22 @@ for i,atomtype in enumerate(atomtypes):
 	cnumtypes[i][1] = set(cnumtypes[i][1])
 	cnumtypes[i].append([])
 	cnumtypes[i].append([])
-#print cnumtypes
+print cnumtypes
 
 # open XPS data
-lines = [float(line) for line in open(args.XPS_file)]			 
+bind_enes = [[] for a in atomtypes]
+for line in open(args.XPS_file):
+	line = line.split()
+	i = atomtypes.index(line[1])
+	energy = 13.605698066 * (float(line[5]) - float(line[4]))
+	level = int(line[2])
+        bind_enes[i].append([int(line[0]), level, -energy])
 	
-sigma = 0.4
+sigma = args.b
 s = sqrt(2 * pi)
-c = 1.0 / sigma / s / natoms
-
-min = min(lines) - 6 * sigma
-max = max(lines) + 6 * sigma
-step = 0.01
+c = 0.5 / sigma / s / natoms
+	
+step = args.dE
 
 out = []
 out.append(["energy"])
@@ -158,6 +165,9 @@ out[0].append("total")
 
 # iterate over list of unique atoms
 for nat,type in enumerate(cnumtypes):
+        print type[0]
+	minx = min([i[2] for i in bind_enes[nat]]) - 6 * sigma
+	maxx = max([i[2] for i in bind_enes[nat]]) + 6 * sigma
 	#open file for writing
 	fname = type[0] + "-XPS-peaks.txt"
 	f = open(fname, "w")
@@ -182,7 +192,7 @@ for nat,type in enumerate(cnumtypes):
 
 	# calculate one energy step at a time
 	a = 1
-	for x in [min + p * step for p in range(int(ceil((max - min) / step)))]:
+	for x in [minx + p * step for p in range(int(ceil((maxx - minx) / step)))]:
 		#print x,
 		out.append([x])
 		out2.append([x])
@@ -194,11 +204,9 @@ for nat,type in enumerate(cnumtypes):
 		# go over all atomic environments
 		for j,neighbor_type in enumerate(type[1]):
 			out[a].append(0.0)
-			# go over all calculated XPS positions
-			# FIXME: use the original XPS output and check also atom types	
-			for i,l in enumerate(lines):
-				if data[i][0] == type[0] and cmp(neighbor_type,neighbors[i][1]) == 0:
-					tmp = c * e ** ( -0.5 * ((x - l) / sigma) * ((x - l) / sigma))
+			for i,l in enumerate(bind_enes[nat]):
+				if cmp(neighbor_type,neighbors[l[0] - 1][1]) == 0:
+					tmp = c * e ** ( -0.5 * ((x - l[2]) / sigma) * ((x - l[2]) / sigma)) * nele[l[1]]
 					out[a][j + 1] += tmp
 					if network(neighbor_type,'Ti','Ti')+ network(neighbor_type,'Ti','Si') + network(neighbor_type,'Si','Si') > 1.0:
 						print neighbor_type, network(neighbor_type,'Ti','Ti'), network(neighbor_type,'Ti','Si'), 
@@ -225,15 +233,15 @@ for nat,type in enumerate(cnumtypes):
 	f2.write("------- All types -------\n\n")
 	for j,neighbor_type in enumerate(type[1]):
 		type[2].append([])
-		for i,l in enumerate(lines):
-			if data[i][0] == type[0] and cmp(neighbor_type,neighbors[i][1]) == 0:
-				type[2][j].append(float(l))
+		for i,l in enumerate(bind_enes[nat]):
+			if cmp(neighbor_type,neighbors[i][1]) == 0:
+				type[2][j].append(float(l[2]))
 				if neighbor_type.find("Si") == -1:
-					TiOTi.append(float(l))
+					TiOTi.append(float(l[2]))
 				elif neighbor_type.find("Ti") == -1:
-					SiOSi.append(float(l))
+					SiOSi.append(float(l[2]))
 				else:
-					SiOTi.append(float(l))
+					SiOTi.append(float(l[2]))
    
 		type[3].append([len(type[2][j]), mean(type[2][j]), pstdev(type[2][j])])
 		f2.write(neighbor_type + "\n")
