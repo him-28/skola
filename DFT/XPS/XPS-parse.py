@@ -6,6 +6,10 @@ import argparse
 import re
 import sys
 
+nele = [0, 2, 2, 2, 4, 2, 2, 4, 4]
+RydtoeV = 13.605698066
+BohrtoA = 0.529177249
+
 def fmaxg(a1, a2):
 	"doscstring"
 	if a1 == a2 == "O":
@@ -64,6 +68,74 @@ def network(atoms, a1, a2):
 	else:
 		return a.count(a1)*a.count(a2)/n
 
+def print_simplified_types(f2, TiOTi, SiOSi, SiOTi):
+	"""Output simplified division into groups for Oxygen atoms"""
+	f2.write("\n------- Simplified types -------\n\n")
+	f2.write("only Ti neighbors (Ti-O-Ti)\n")
+	f2.write("number of atoms in this configuration: " + str(len(TiOTi)) + "\n")
+	f2.write("average position: " + str(mean(TiOTi)) + "\n")
+	f2.write("position stdev: " + str(pstdev(TiOTi)) + "\n")
+	f2.write("list of positions: " + "\n")
+	f2.write("\n".join(str(x) for x in TiOTi) + "\n\n")
+
+	f2.write("only Si neighbors (Si-O-Si)\n")
+	f2.write("number of atoms in this configuration: " + str(len(SiOSi)) + "\n")
+	f2.write("average position: " + str(mean(SiOSi)) + "\n")
+	f2.write("position stdev: " + str(pstdev(SiOSi)) + "\n")
+	f2.write("list of positions: " + "\n")
+	f2.write("\n".join(str(x) for x in SiOSi) + "\n\n")
+
+	f2.write("Mixed neighbors (Si-O-Ti)\n")
+	f2.write("number of atoms in this configuration: " + str(len(SiOTi)) + "\n")
+	f2.write("average position: " + str(mean(SiOTi)) + "\n")
+	f2.write("position stdev: " + str(pstdev(SiOTi)) + "\n")
+	f2.write("list of positions: " + "\n")
+	f2.write("\n".join(str(x) for x in SiOTi) + "\n\n")
+
+	f2.write("\n------- Improved distribution into types -------\n\n")
+	f2.write("only Ti neighbors (Ti-O-Ti)\n")
+	f2.write("number of atoms in this configuration: " + str(sumTiTi * 96) + "\n")
+	f2.write("Mixed neighbors (Ti-O-Si)\n")
+	f2.write("number of atoms in this configuration: " + str(sumTiSi * 96) + "\n")
+	f2.write("only Si neighbors (Si-O-Si)\n")
+	f2.write("number of atoms in this configuration: " + str(sumSiSi * 96) + "\n")
+
+def read_struct_file(a):
+	"""Read position of atoms from input file"""
+
+	lines = [line for line in open(args.xyz_file)]
+
+	#check what file we have
+	if args.xyz_file.endswith(".xyz"):
+		natoms = int(lines[0])
+		print ("We have %i atoms" % natoms)
+
+		rawdata = [ lines[x].split() for x in range (2, natoms + 2) ]
+		data = [[rawdata[x][0], float(rawdata[x][1]), float(rawdata[x][2]), float(rawdata[x][3])] for x in range(0, natoms)]
+		csize = [float(line) for line in open("dims")]
+
+	elif args.xyz_file.endswith(".struct"):
+		data = []
+		natoms = 0
+		for i,l in enumerate(lines):
+			if i == 3:
+				t = l.split()
+				csize = [float(t[x]) * BohrtoA for x in range(3)]
+			if i % 6 == 4:
+				t = l.split()
+				if t[0] != "ATOM":
+					break
+				t = [float(t[x].split("=")[1]) * csize[x - 2] for x in range(2,5,1)]
+				data.append(["", t[0], t[1], t[2]])
+			if i % 6 == 0 and i > 1:
+				t = l.split()
+				data[natoms][0] = t[0]
+				natoms += 1
+
+	atomtypes = list(set(data[x][0] for x in range(0, natoms)))
+
+	return [data, csize, atomtypes]
+
 parser = argparse.ArgumentParser(description='Solve XPS data into subpeaks')
 group = parser.add_mutually_exclusive_group(required=True)
 group.add_argument('-aim', help='path to the outputaim Wien2k file',  dest='aim_file')
@@ -74,20 +146,13 @@ parser.add_argument("xyz_file")
 parser.add_argument("XPS_file")
 args = parser.parse_args()
 
-lines = [line for line in open(args.xyz_file)]
-
-natoms = int(lines[0])
-print ("We have %i atoms" % natoms)
- 
-rawdata = [ lines[x].split() for x in range (2, natoms + 2) ]
-data = [[rawdata[x][0], float(rawdata[x][1]), float(rawdata[x][2]), float(rawdata[x][3])] for x in range(0, natoms)]
-atomtypes = list(set(data[x][0] for x in range(0, natoms)))
-nuatoms = len(atomtypes)
+struct_info = read_struct_file(args)
+data = struct_info[0]
+csize = struct_info[1]
+atomtypes = struct_info[2]
 
 print data[0]
-print atomtypes, nuatoms
-
-nele = [0, 2, 2, 2, 4, 2, 2, 4, 4]
+print atomtypes
 
 neighbors = []
 for i,atom1 in enumerate(data):
@@ -97,8 +162,6 @@ for i,atom1 in enumerate(data):
 
 # calculate nearest neighbors manually
 if args.geom:
-	csize = [float(line) for line in open("dims")]
-
 	for i,atom1 in enumerate(data):
 		for atom2 in data:
 			if atom1 == atom2:
@@ -146,13 +209,13 @@ bind_enes = [[] for a in atomtypes]
 for line in open(args.XPS_file):
 	line = line.split()
 	i = atomtypes.index(line[1])
-	energy = 13.605698066 * (float(line[5]) - float(line[4]))
+	energy = RydtoeV * (float(line[5]) - float(line[4]))
 	level = int(line[2])
         bind_enes[i].append([int(line[0]), level, -energy])
 	
 sigma = args.b
 s = sqrt(2 * pi)
-c = 0.5 / sigma / s / natoms
+c = 0.5 / sigma / s / len(data)
 	
 step = args.dE
 
@@ -208,7 +271,7 @@ for nat,type in enumerate(cnumtypes):
 				if cmp(neighbor_type,neighbors[l[0] - 1][1]) == 0:
 					tmp = c * e ** ( -0.5 * ((x - l[2]) / sigma) * ((x - l[2]) / sigma)) * nele[l[1]]
 					out[a][j + 1] += tmp
-					if network(neighbor_type,'Ti','Ti')+ network(neighbor_type,'Ti','Si') + network(neighbor_type,'Si','Si') > 1.0:
+					if network(neighbor_type,'Ti','Ti') + network(neighbor_type,'Ti','Si') + network(neighbor_type,'Si','Si') > 1.0:
 						print neighbor_type, network(neighbor_type,'Ti','Ti'), network(neighbor_type,'Ti','Si'), 
 						sys.exit()
 					out2[a][1] += tmp * network(neighbor_type,'Ti','Ti')
@@ -233,8 +296,8 @@ for nat,type in enumerate(cnumtypes):
 	f2.write("------- All types -------\n\n")
 	for j,neighbor_type in enumerate(type[1]):
 		type[2].append([])
-		for i,l in enumerate(bind_enes[nat]):
-			if cmp(neighbor_type,neighbors[i][1]) == 0:
+		for l in bind_enes[nat]:
+			if cmp(neighbor_type,neighbors[l[0] - 1][1]) == 0:
 				type[2][j].append(float(l[2]))
 				if neighbor_type.find("Si") == -1:
 					TiOTi.append(float(l[2]))
@@ -251,33 +314,5 @@ for nat,type in enumerate(cnumtypes):
 		f2.write("list of positions: " + "\n")
 		f2.write("\n".join(str(x) for x in type[2][j]) + "\n\n")
 
-	f2.write("\n------- Simplified types -------\n\n")
-	f2.write("only Ti neighbors (Ti-O-Ti)\n")
-	f2.write("number of atoms in this configuration: " + str(len(TiOTi)) + "\n")
-	f2.write("average position: " + str(mean(TiOTi)) + "\n")
-	f2.write("position stdev: " + str(pstdev(TiOTi)) + "\n")
-	f2.write("list of positions: " + "\n")
-	f2.write("\n".join(str(x) for x in TiOTi) + "\n\n")
-
-	f2.write("only Si neighbors (Si-O-Si)\n")
-	f2.write("number of atoms in this configuration: " + str(len(SiOSi)) + "\n")
-	f2.write("average position: " + str(mean(SiOSi)) + "\n")
-	f2.write("position stdev: " + str(pstdev(SiOSi)) + "\n")
-	f2.write("list of positions: " + "\n")
-	f2.write("\n".join(str(x) for x in SiOSi) + "\n\n")
-
-	f2.write("Mixed neighbors (Si-O-Ti)\n")
-	f2.write("number of atoms in this configuration: " + str(len(SiOTi)) + "\n")
-	f2.write("average position: " + str(mean(SiOTi)) + "\n")
-	f2.write("position stdev: " + str(pstdev(SiOTi)) + "\n")
-	f2.write("list of positions: " + "\n")
-	f2.write("\n".join(str(x) for x in SiOTi) + "\n\n")
-
-	f2.write("\n------- Improved distribution into types -------\n\n")
-	f2.write("only Ti neighbors (Ti-O-Ti)\n")
-	f2.write("number of atoms in this configuration: " + str(sumTiTi * 96) + "\n")
-	f2.write("Mixed neighbors (Ti-O-Si)\n")
-	f2.write("number of atoms in this configuration: " + str(sumTiSi * 96) + "\n")
-	f2.write("only Si neighbors (Si-O-Si)\n")
-	f2.write("number of atoms in this configuration: " + str(sumSiSi * 96) + "\n")
-	
+	if type[0] == "O":
+		print_simplified_types(f2, TiOTi, SiOSi, SiOTi)
