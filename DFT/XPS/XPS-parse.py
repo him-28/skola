@@ -68,37 +68,69 @@ def network(atoms, a1, a2):
 	else:
 		return a.count(a1)*a.count(a2)/n
 
-def print_simplified_types(f2, TiOTi, SiOSi, SiOTi):
+def print_simplified_types(f, TiOTi, SiOSi, SiOTi):
 	"""Output simplified division into groups for Oxygen atoms"""
-	f2.write("\n------- Simplified types -------\n\n")
-	f2.write("only Ti neighbors (Ti-O-Ti)\n")
-	f2.write("number of atoms in this configuration: " + str(len(TiOTi)) + "\n")
-	f2.write("average position: " + str(mean(TiOTi)) + "\n")
-	f2.write("position stdev: " + str(pstdev(TiOTi)) + "\n")
-	f2.write("list of positions: " + "\n")
-	f2.write("\n".join(str(x) for x in TiOTi) + "\n\n")
+	f.write("\n------- Simplified types -------\n\n")
+	f.write("only Ti neighbors (Ti-O-Ti)\n")
+	f.write("number of atoms in this configuration: " + str(len(TiOTi)) + "\n")
+	f.write("average position: " + str(mean(TiOTi)) + "\n")
+	f.write("position stdev: " + str(pstdev(TiOTi)) + "\n")
+	f.write("list of positions: " + "\n")
+	f.write("\n".join(str(x) for x in TiOTi) + "\n\n")
 
-	f2.write("only Si neighbors (Si-O-Si)\n")
-	f2.write("number of atoms in this configuration: " + str(len(SiOSi)) + "\n")
-	f2.write("average position: " + str(mean(SiOSi)) + "\n")
-	f2.write("position stdev: " + str(pstdev(SiOSi)) + "\n")
-	f2.write("list of positions: " + "\n")
-	f2.write("\n".join(str(x) for x in SiOSi) + "\n\n")
+	f.write("only Si neighbors (Si-O-Si)\n")
+	f.write("number of atoms in this configuration: " + str(len(SiOSi)) + "\n")
+	f.write("average position: " + str(mean(SiOSi)) + "\n")
+	f.write("position stdev: " + str(pstdev(SiOSi)) + "\n")
+	f.write("list of positions: " + "\n")
+	f.write("\n".join(str(x) for x in SiOSi) + "\n\n")
 
-	f2.write("Mixed neighbors (Si-O-Ti)\n")
-	f2.write("number of atoms in this configuration: " + str(len(SiOTi)) + "\n")
-	f2.write("average position: " + str(mean(SiOTi)) + "\n")
-	f2.write("position stdev: " + str(pstdev(SiOTi)) + "\n")
-	f2.write("list of positions: " + "\n")
-	f2.write("\n".join(str(x) for x in SiOTi) + "\n\n")
+	f.write("Mixed neighbors (Si-O-Ti)\n")
+	f.write("number of atoms in this configuration: " + str(len(SiOTi)) + "\n")
+	f.write("average position: " + str(mean(SiOTi)) + "\n")
+	f.write("position stdev: " + str(pstdev(SiOTi)) + "\n")
+	f.write("list of positions: " + "\n")
+	f.write("\n".join(str(x) for x in SiOTi) + "\n\n")
 
-	f2.write("\n------- Improved distribution into types -------\n\n")
-	f2.write("only Ti neighbors (Ti-O-Ti)\n")
-	f2.write("number of atoms in this configuration: " + str(sumTiTi * 96) + "\n")
-	f2.write("Mixed neighbors (Ti-O-Si)\n")
-	f2.write("number of atoms in this configuration: " + str(sumTiSi * 96) + "\n")
-	f2.write("only Si neighbors (Si-O-Si)\n")
-	f2.write("number of atoms in this configuration: " + str(sumSiSi * 96) + "\n")
+	f.write("\n------- Improved distribution into types -------\n\n")
+	f.write("only Ti neighbors (Ti-O-Ti)\n")
+	f.write("number of atoms in this configuration: " + str(sumTiTi * 96) + "\n")
+	f.write("Mixed neighbors (Ti-O-Si)\n")
+	f.write("number of atoms in this configuration: " + str(sumTiSi * 96) + "\n")
+	f.write("only Si neighbors (Si-O-Si)\n")
+	f.write("number of atoms in this configuration: " + str(sumSiSi * 96) + "\n")
+
+def print_stats(type):
+	"""Prints statistics about atomic environments and average peak positions"""
+	f = open(type + "-stats.txt", "w")
+	f.write("------- All types -------\n\n")
+
+	TiOTi = []
+	SiOSi = []
+	SiOTi = []
+
+	for j,neighbor_type in enumerate(type[1]):
+		type[2].append([])
+		for l in bind_enes[nat]:
+			if cmp(neighbor_type,neighbors[l[0] - 1][1]) == 0:
+				type[2][j].append(float(l[2]))
+				if neighbor_type.find("Si") == -1:
+					TiOTi.append(float(l[2]))
+				elif neighbor_type.find("Ti") == -1:
+					SiOSi.append(float(l[2]))
+				else:
+					SiOTi.append(float(l[2]))
+   
+		type[3].append([len(type[2][j]), mean(type[2][j]), pstdev(type[2][j])])
+		f2.write(neighbor_type + "\n")
+		f2.write("number of atoms in this configuration: " + str(type[3][j][0]) + "\n")
+		f2.write("average position: " + str(type[3][j][1]) + "\n")
+		f2.write("position stdev: " + str(type[3][j][2]) + "\n")
+		f2.write("list of positions: " + "\n")
+		f2.write("\n".join(str(x) for x in type[2][j]) + "\n\n")
+
+	if type == "O":
+		print_simplified_types(f, TiOTi, SiOSi, SiOTi)
 
 def read_struct_file(a):
 	"""Read position of atoms from input file"""
@@ -142,6 +174,7 @@ group.add_argument('-aim', help='path to the outputaim Wien2k file',  dest='aim_
 group.add_argument('-geom', help='path to the xyz struct file', action='store_const', const=1)
 parser.add_argument('-b', help='broadening parameter in eV (default 0.4 eV)', nargs=1, default=0.4)
 parser.add_argument('-dE', help='energy step in eV (default 0.01 eV)', nargs=1, default=0.01)
+parser.add_argument('-s', help='output statistics about atomic environment into additional files')
 parser.add_argument("xyz_file")
 parser.add_argument("XPS_file")
 args = parser.parse_args()
@@ -228,13 +261,11 @@ out[0].append("total")
 
 # iterate over list of unique atoms
 for nat,type in enumerate(cnumtypes):
-        print type[0]
 	minx = min([i[2] for i in bind_enes[nat]]) - 6 * sigma
 	maxx = max([i[2] for i in bind_enes[nat]]) + 6 * sigma
 	#open file for writing
 	fname = type[0] + "-XPS-peaks.txt"
 	f = open(fname, "w")
-	f2 = open(type[0] + "-stats.txt", "w")
 	f3 = open(type[0] + "-XPS-peaks-imp.txt", "w")
 	
 	#make header
@@ -290,29 +321,6 @@ for nat,type in enumerate(cnumtypes):
 		
 		a += 1
 
-	TiOTi = []
-	SiOSi = []
-	SiOTi = []
-	f2.write("------- All types -------\n\n")
-	for j,neighbor_type in enumerate(type[1]):
-		type[2].append([])
-		for l in bind_enes[nat]:
-			if cmp(neighbor_type,neighbors[l[0] - 1][1]) == 0:
-				type[2][j].append(float(l[2]))
-				if neighbor_type.find("Si") == -1:
-					TiOTi.append(float(l[2]))
-				elif neighbor_type.find("Ti") == -1:
-					SiOSi.append(float(l[2]))
-				else:
-					SiOTi.append(float(l[2]))
-   
-		type[3].append([len(type[2][j]), mean(type[2][j]), pstdev(type[2][j])])
-		f2.write(neighbor_type + "\n")
-		f2.write("number of atoms in this configuration: " + str(type[3][j][0]) + "\n")
-		f2.write("average position: " + str(type[3][j][1]) + "\n")
-		f2.write("position stdev: " + str(type[3][j][2]) + "\n")
-		f2.write("list of positions: " + "\n")
-		f2.write("\n".join(str(x) for x in type[2][j]) + "\n\n")
+	if args.s:
+		print_stats(type[0])
 
-	if type[0] == "O":
-		print_simplified_types(f2, TiOTi, SiOSi, SiOTi)
