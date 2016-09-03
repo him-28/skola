@@ -184,8 +184,8 @@ data = struct_info[0]
 csize = struct_info[1]
 atomtypes = struct_info[2]
 
-print data[0]
-print atomtypes
+#print data[0]
+#print atomtypes
 
 neighbors = []
 for i,atom1 in enumerate(data):
@@ -222,7 +222,7 @@ if args.aim_file:
 		for at in a:
 			n[1].append(data[at][0])
 	
-print neighbors
+#print neighbors
 
 # find all unique neighboir configuration for each atom	
 cnumtypes = []
@@ -235,7 +235,7 @@ for i,atomtype in enumerate(atomtypes):
 	cnumtypes[i][1] = set(cnumtypes[i][1])
 	cnumtypes[i].append([])
 	cnumtypes[i].append([])
-print cnumtypes
+#print cnumtypes
 
 # open XPS data
 bind_enes = [[] for a in atomtypes]
@@ -248,7 +248,6 @@ for line in open(args.XPS_file):
 	
 sigma = args.b
 s = sqrt(2 * pi)
-c = 0.5 / sigma / s / len(data)
 	
 step = args.dE
 
@@ -261,6 +260,11 @@ out[0].append("total")
 
 # iterate over list of unique atoms
 for nat,type in enumerate(cnumtypes):
+        c = 0.5 / sigma / s / len(data)
+        if type[0] == "Ti":
+            c *= 0.74
+        if type[0] == "Si":
+            c *= 0.139
 	minx = min([i[2] for i in bind_enes[nat]]) - 6 * sigma
 	maxx = max([i[2] for i in bind_enes[nat]]) + 6 * sigma
 	#open file for writing
@@ -279,7 +283,7 @@ for nat,type in enumerate(cnumtypes):
 	#make header for combined peaks
 	out2 = []
 	out2.append("\n")
-	f3.write("energy Ti-O-Ti Ti-O-Si Si-O-Si total\n")
+	f3.write("#energy Ti-O-Ti Ti-O-Si Si-O-Si total\n")
 	sumTiTi = 0.0
 	sumTiSi = 0.0
 	sumSiSi = 0.0
