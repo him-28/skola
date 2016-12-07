@@ -1,0 +1,26 @@
+set term pdfcairo enhanced notransparent color font "Arial,12" size 8cm,3.6cm
+
+set style line 1 lc rgb '#000000'
+set style line 10 lt 0 lc rgb '#a0a0a0'
+set grid ls 10
+
+set xrange [-7:9]
+set yrange [0:2.8]
+set key invert
+
+set tmargin 0.2
+set bmargin 3.0
+set rmargin 1.5
+set lmargin 6.0
+
+set xlabel "Energy (eV)" offset 0,0.3
+set ylabel "DOS (states/eV/atom)" offset 2,0
+
+set object circle at screen 0.16,0.32 size scr 0.05 fc rgb "red"
+set object circle at screen 0.50,0.32 size scr 0.05 fc rgb "red"
+
+plot "anatase-0.0.dos" u 1:($2/6) t 'anatase' with filledcurves x1 ls 10 ,\
+     "anatase-0.0278.dos" u ($1+0.25):($2/108) w l t 'Si-doped 3x3x1 anatase supercell' ls 1
+
+
+

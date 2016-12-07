@@ -1,0 +1,26 @@
+set term pdfcairo enhanced notransparent color font "Arial,12" size 8cm,6.5cm lw 1 dl 0.5
+
+load 'pointstyle.gpi'
+
+set xlabel '{/:Italic x} in Ti_{/:Italic x}Si_{1-{/:Italic x}}O_2'
+set ylabel 'Refractive index, {/:Italic n}'
+set key above samplen 0.3 Left reverse width -5.0
+set pointsize 0.6
+set format y '%.1f'
+
+set rmargin 0.2
+set bmargin 3.2
+
+n(erx, eix, ery, eiy, erz, eiz) = sqrt((sqrt(((erx+ery+erz)/3)**2+((eix+eiy+eiz)/3)**2)+((erx+ery+erz)/3))/2)
+
+set label at graph 0.1,0.9 "{/:Italic λ} = 632.8 nm" boxed
+
+plot [-0.08:1.08][1.25:2.7]  \
+   "data/n-rutile.txt" u (1-$1):(n($2, $3, $4, $5, $6, $7)) t 'Rutile calc.' ls 1,\
+   "data/n-anatase.txt" u (1-$1):(n($2, $3, $4, $5, $6, $7)) t 'Anatase calc.' ls 2,\
+   "data/n-am.txt" u (1-$1):(n($2, $3, $4, $5, $6, $7)) t 'Amorphous calc.' ls 3,\
+   "data/n-alpha-quartz.txt" u (1-$1):(n($2, $3, $4, $5, $6, $7)) t 'α-quartz calc.' ls 5,\
+   "data/n-beta-quartz.txt" u (1-$1):(n($2, $3, $4, $5, $6, $7)) t 'β-quartz calc.' ls 6,\
+   "data/n-beta-tridymite.txt" u (1-$1):(n($2, $3, $4, $5, $6, $7)) t 'β-tridymite calc.' ls 7,\
+   "data/n-alpha-cristobalite.txt" u (1-$1):(n($2, $3, $4, $5, $6, $7)) t 'α-cristobalite calc.' ls 8,\
+   "data/n-exp.txt" u (1-$1):2 t 'PECVD exp.' ls 4

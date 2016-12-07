@@ -1,0 +1,26 @@
+set term pdfcairo enhanced color font "Arial,12" size 7cm,4.7cm lw 1
+
+set xlabel '{/:Italics x} in Ti_{/:Italics x}Si_{1-{/:Italics x}}O_2'
+set ylabel 'Average coordination number'
+set format x '%g'
+set format y '%.1f'
+set key top left reverse invert Left
+set pointsize 0.6
+set rmargin 0.3
+set tmargin 0.0
+set bmargin 3.2
+set lmargin 7.0
+
+set style line 10 lt 0 lc rgb '#a0a0a0' lw 1.5
+set grid ls 10
+
+set style line 1 lc rgb "#e00000" lt 1 pt 5 pi -1
+set style line 2 lc rgb "#008000" lt 1 pt 7 pi -1
+set style line 3 lc rgb "#f0c010" lt 1 pt 11 pi -1
+set style line 4 lc rgb '#0040c0' pt 9
+set pointintervalbox 1.6
+
+plot [-0.05:1.05][:6.75]  \
+    "coord.txt" u (1-$1):2:3 t "Ti"  with yerrorbars ls 2,\
+    "coord.txt" u (1-$1):4:5 t "Si" with yerrorbars ls 1,\
+   "coord.txt" u (1-$1):6:7 t "O" with yerrorbars ls 6,\

@@ -1,0 +1,63 @@
+set term pdfcairo enhanced size 13.3cm,8cm font "Liberation Sans, 12" lw 1.5
+set output "O1s-fit-delta.pdf"
+
+sq(x,delta) = 0.5*(sqrt(1 + 4*x*(1 - x)*(exp(delta) - 1)) - 1)
+fA(x,delta) = x*(1 - (1 - x)/(1 + sq(x, delta)))
+fB(x,delta) = (1 - x)*(1 - x/(1 + sq(x, delta)))
+fAB(x,delta) = 2/(1 + sq(x, delta))*x*(1 - x)
+fsplit(x,y) = (y == 0 ? fAB(x,delta) : (y == 2 ? fA(x,delta) : fB(x,delta)))
+delta = 1.0
+
+set fit quiet
+fit fsplit(x,y) 'data/O1s-split.dat' u 1:-1:2 via delta
+print sprintf('δ = %.3f ± %.3f', delta, delta_err)
+print sprintf('res = %.3g', FIT_STDFIT)
+
+set size ratio -1
+set samples 1201
+set key rmargin Left reverse samplen 2.5
+
+cA = '#000000'
+cB = '#2030f0'
+cAB = '#d00000'
+cAx = '#a0000000'
+cBx = '#a02030f0'
+cABx = '#a0d00000'
+bO = '-{/:Bold O}-'
+set style line 1 dt 1 pt 5 ps 1.0 lc rgb cAB
+set style line 2 dt 1 pt 5 ps 1.0 lc rgb cA
+set style line 3 dt 1 pt 5 ps 1.0 lc rgb cB
+set style line 11 dt 1 lw 1.2 lc rgb cAB
+set style line 12 dt 1 lw 1.2 lc rgb cA
+set style line 13 dt 1 lw 1.2 lc rgb cB
+set style line 21 dt (15,12) lw 0.8 lc rgb cABx
+set style line 22 dt (15,12) lw 0.8 lc rgb cAx
+set style line 23 dt (15,12) lw 0.8 lc rgb cBx
+set style line 31 dt (4,5) lw 0.8 lc rgb cABx
+set style line 32 dt (4,5) lw 0.8 lc rgb cAx
+set style line 33 dt (4,5) lw 0.8 lc rgb cBx
+set style line 99 lw 0 ps 0 lc rgb 'white'
+
+set xlabel 'Atomic fraction {/:Italic x} of Si'
+set ylabel 'Normalised peak intensity'
+
+plot \
+    0/0 ls 99 t 'Experimental data', \
+    'data/O1s.dat' u (1-$1):2 w p ls 1 t 'Si'.bO.'Ti', \
+    'data/O1s.dat' u (1-$1):3 w p ls 2 t 'Si'.bO.'Si', \
+    'data/O1s.dat' u (1-$1):4 w p ls 3 t 'Ti'.bO.'Ti', \
+    0/0 ls 99 t ' ', \
+    0/0 ls 99 t 'Solid solution {/:Italic δ} = 0', \
+    fAB(1-x,0) ls 21 t 'κ_{AB}({/:Italic x})', \
+    fB(1-x,0) ls 22 t 'κ_{B}({/:Italic x})', \
+    fA(1-x,0) ls 23 t 'κ_{A}({/:Italic x})', \
+    0/0 ls 99 t ' ', \
+    0/0 ls 99 t 'Separated phases {/:Italic δ} → ∞', \
+    fB(1-x,20) ls 32 t 'κ_{B}({/:Italic x})', \
+    fA(1-x,20) ls 33 t 'κ_{A}({/:Italic x})', \
+    0/0 ls 99 t ' ', \
+    0/0 ls 99 t 'Fit {/:Italic δ} = '.sprintf('%.02f', delta), \
+    0/0 ls 99 t 'Fit res = '.sprintf('%.3g', FIT_WSSR), \
+    fAB(1-x,delta) ls 11 t 'κ_{AB}({/:Italic x})', \
+    fB(1-x,delta) ls 12 t 'κ_{B}({/:Italic x})', \
+    fA(1-x,delta) ls 13 t 'κ_{A}({/:Italic x})'

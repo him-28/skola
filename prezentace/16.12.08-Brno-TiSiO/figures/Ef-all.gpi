@@ -1,0 +1,34 @@
+set term pdfcairo enhanced color font "Arial,12" size 8cm,7cm lw 1
+
+load 'pointstyle.gpi'
+
+set pointsize 0.6
+set pointintervalbox 1.8
+
+set ylabel 'Energy of formation, {/:Italics E}_f (eV/atom)'
+set xlabel '{/:Italics x} in Ti_{/:Italics x}Si_{1-{/:Italics x}}O_2'
+set key above Left reverse samplen 4 maxrows 2 width -5
+
+set format x '%.1f'
+set format y '%.2f'
+
+set xtics 0.1
+set rmargin 0.3
+set bmargin 3.3
+
+plot [-0.05:1.05]\
+	"data/Ef/Ef-rutile.dat" u (1-$1):2 t 'Rutile' ls 1 with linespoints,\
+	"data/Ef/Ef-anatase.dat" u (1-$1):2 t 'Anatase' ls 2 with linespoints,\
+	"data/Ef/Ef-amorphous.dat" u (1-$1):2 t 'Amorphous' ls 3 with linespoints,\
+	"data/Ef/Ef-quartz_alpha.dat" u (1-$1):2 t 'α-quartz' ls 5 with linespoints,\
+	"data/Ef/Ef-quartz_beta.dat" u (1-$1):2 t 'β-quartz' ls 6 with linespoints,\
+	"data/Ef/Ef-tridymite.dat" u (1-$1):2 t 'β-tridymite' ls 7 with linespoints,\
+	"data/Ef/Ef-cristobalite.dat" u (1-$1):2 t 'α-cristobalite' ls 8 with linespoints,\
+	"data/Ef/Ef-quartz_alpha.dat" u (1-$1):2 t '' ls 5,\
+	"data/Ef/Ef-quartz_beta.dat" u (1-$1):2 t '' ls 6,\
+	"data/Ef/Ef-tridymite.dat" u (1-$1):2 t '' ls 7,\
+	"data/Ef/Ef-cristobalite.dat" u (1-$1):2 t '' ls 8,\
+	"data/Ef/Ef-amorphous.dat" u (1-$1):2 t '' ls 3,\
+	"data/Ef/Ef-anatase.dat" u (1-$1):2 t '' ls 2,\
+	"data/Ef/Ef-rutile.dat" u (1-$1):2 t '' ls 1,\
+

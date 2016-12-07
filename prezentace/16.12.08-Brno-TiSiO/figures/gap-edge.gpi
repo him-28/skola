@@ -1,0 +1,68 @@
+set term pdfcairo enhanced color dashed font "Arial,8" size 6cm,6cm lw 1 dl 0.5
+
+set style line 1 lt 1 lw 1 lc rgb '#e00000' dashtype 1
+set style line 2 lt 2 lw 1 lc rgb '#008000' dashtype 2
+set style line 3 lt 3 lw 1 lc rgb '#0040c0' dashtype 3
+set style line 4 lt 4 lw 1 lc rgb '#f0c010' dashtype 4
+set style line 5 lt 5 lw 1 lc rgb '#a000b0' dashtype 5
+
+set xrange [2.8:5.8]
+
+set multiplot
+set size 1.0,0.28
+
+set ylabel '√JDOS [eV^{-1}]'
+set format y '%g'
+set format x ''
+set ytics 5
+
+set rmargin 0.3
+set bmargin 0.3
+set tmargin 0.3
+
+set key top left
+
+f(x) = a*x + b
+
+blimit = 3.5
+tlimit = 4.5
+set arrow from blimit,0 to blimit,14 nohead
+set arrow from tlimit,0 to tlimit,14 nohead
+fit [blimit:tlimit] f(x) "data/am-0.0.joint" u 1:(sqrt($2)) via a,b
+
+set origin 0.0,0.72
+set label at graph 0.6, 0.2 sprintf("{/Helvetica-Italic E}_g = %3.2f eV", -b/a)
+plot [][0:20]\
+   "data/am-0.0.joint" u 1:(sqrt($2)) w l t 'am-TiO_2',\
+   f(x) t 'linear fit'
+   
+unset label
+unset arrow
+
+blimit = 3.7
+tlimit = 4.6
+set arrow from blimit,0 to blimit,12 nohead
+set arrow from tlimit,0 to tlimit,12 nohead
+fit [blimit:tlimit] f(x) "data/am-0.34375.joint" u 1:(sqrt($2)) via a,b
+set label at graph 0.6, 0.2 sprintf("{/Helvetica-Italic E}_g = %3.2f eV", -b/a)
+set origin 0.0,0.44
+plot [][0:16]\
+   "data/am-0.34375.joint" u 1:(sqrt($2)) w l  t 'Ti_{0.66}Si_{0.34}O_2',\
+   f(x) t 'linear fit'
+
+unset label
+unset arrow
+set xlabel 'Energy, E [eV]'
+set format x '%g'
+
+blimit = 3.7
+tlimit = 4.5
+set arrow from blimit,0 to blimit,12 nohead
+set arrow from tlimit,0 to tlimit,12 nohead
+fit [blimit:tlimit] f(x) "data/am-0.5.joint" u 1:(sqrt($2)) via a,b
+set label at graph 0.6, 0.2 sprintf("{/Helvetica-Italic E}_g = %3.2f eV", -b/a)
+
+set origin 0.0,0.16
+plot [][0:17]\
+   "data/am-0.5.joint" u 1:(sqrt($2)) w l t 'Ti_{0.5}Si_{0.5}O_2',\
+   f(x) t 'linear fit'
