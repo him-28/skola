@@ -10,7 +10,7 @@ set pointsize 0.8
 set rmargin 0.2
 set lmargin 7.0
 
-plot [0.62:1.05][:3.8]  \
+plot [0.62:1.02][:3.8]  \
    "data/gap/am.txt" u (1-$1):2 t "Amorphous calc." ls 3,\
    "data/gap/rutile.txt" u (1-$1):2 t "Rutile calc." ls 1,\
    "data/gap/anatase.txt" u (1-$1):2 t "Anatase calc." ls 2,\

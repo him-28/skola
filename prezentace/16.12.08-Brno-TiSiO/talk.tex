@@ -99,7 +99,7 @@
    \end{columns}
 \end{frame}
 
-\subsection{Modelling}
+\subsection{Modelling introduction}
 \begin{frame}
    \frametitle{Construction of structural models}
    \vspace{-0.3cm}
@@ -171,7 +171,7 @@
       \item SiO$_2$ like structures are more preferable (4-coordinated tetrahedral position)
       \item Amorphous structures less stable (at 0K)
       \item<2-> Known problem with TiO$_2$ stable structure prediction for both LDA and GGA 
-      \item<2-> LDA+U/GGA+U helps\footnotemark, as well as hybrid or GW
+      \item<2-> LDA+U/GGA+U helps\footnotemark, as well as some hybrids
       \item<3> Preference for separate phases, in agreement with phase diagram\footnotemark
    \end{itemize}
    \footnotetext[1]{Vu, N. H. et al., J. Phys. Condens. Matter 24, 405501 (2012).}
@@ -377,12 +377,13 @@
 \end{frame}
 
 \subsection{Phase separation problem}
+
 \begin{frame}
    \frametitle{Phase separation problem}
    \vspace{-0.3cm}
    \begin{itemize}
       \item Phase separation into TiO$_2$/SiO$_2$ domains observed with samples deposited under energetic bombardment
-      \item We hope to quantify this by fitting the O1s peak into Ti--O--Ti, Ti--O--Si and Si--O--Si parts and also the Ti/Si 2p peaks into TiO2/SiO2 and mixed peaks
+      \item We hope to quantify this by fitting the O 1s peak into Ti--O--Ti, Ti--O--Si and Si--O--Si parts and also the Ti/Si 2p peaks into TiO$_2$/SiO$_2$ and Ti--O--Si mixed peaks
       \item Fixed peak shapes for TiO$_2$ and SiO$_2$ subpeaks obtained from pure materials
       \item Fitting is ambiguous without some constraints due to the broad nature of the individual peaks
       \item Fixed shifts and ratios between the TiO$_2$/SiO$_2$ parts of the O1s and Ti2p/Si2p peaks
@@ -402,16 +403,18 @@
       \includegraphics[width=0.8\linewidth]{figures/O1s-fit-delta.pdf}
    \end{center}
    \begin{itemize}
-      \item The preliminary results seems promissing, more work needed to generalize the formula for 3D
-      \item BUT! Are the constraints reasonable?! 
+      \item The preliminary results seems promissing, more work is needed to generalize the formula for 3D
+      \item !!!! Are the constraints reasonable? !!!!
    \end{itemize}
 \end{frame}
+
+\subsection{XPS spectra modelling}
 
 \begin{frame}
    \frametitle{XPS spectra modelling}
    \vspace{-0.3cm}
    \begin{itemize}
-      \item Slater's transition state approach: $$E_\mathrm{b} \approx = -\frac{ \partial E_\mathrm{tot}(N − 0.5)} { \partial n_i} = −\epsilon_i(N − 0.5)$$
+      \item Slater's transition state approach: $$E_\mathrm{b} \approx -\frac{ \partial E_\mathrm{tot}(N − 0.5)} { \partial n_i} = −\epsilon_i(N − 0.5)$$
       \item Use this to calculate $E_\mathrm{b}$ for O 1s and Ti/Si 2p core states in the amorphous structure (with PBE).
       \item Replace the discrete energies with gausians to get spectra
    \end{itemize}
@@ -425,25 +428,32 @@
    \vspace{-0.3cm}
    \begin{itemize}
       \item Direct fitting of the calculated spectra was a failure
-      \item But we have all the info about environment so we cen check the constraints directly
-      \item Need to get information about bonding, Baders Atoms in Molecules theory doesn't give correnct results so we stick with simple coordination number geometrical approach.
+      \item However we have all the information about environment so we can check the constraints directly
+      \item Bonding information needed -- Baders Atoms in Molecules theory does not give correct results so we stick with simple coordination number geometrical approach.
+      \item Correct weighting of atoms is needed
    \end{itemize}
    \begin{center}
-      \includegraphics[width=0.8\linewidth]{figures/XPS.pdf}
+      \only<1>{
+         \includegraphics[width=0.46\linewidth]{figures/XPSdeconv.pdf}
+         \includegraphics[width=0.4\linewidth]{figures/XPSfit.pdf}
+      }
+      \only<2>{
+         \includegraphics[width=0.8\linewidth]{figures/peak-stats-imp.pdf}
+      }
    \end{center}
 \end{frame}
+
 
 \section{Conclusions}
 \begin{frame}
    \frametitle{Conclusions and acknowledgment}
-   \begin{block}{{\it Ab initio} modeling techniques}
-      \begin{itemize}
-         \item {\it Ab initio} calculations are very helpful tool when theoretical insight is needed 
-         \item Can be used to explain observed features and trends in known materials
-         \item Can be used to predict behavior and properties of new materials, saving time and money for experiments
-         \item Just tiny example of what {\it ab initio} techniques can do today
-      \end{itemize}
-   \end{block}
+   Optical properties of \TiSiO{}
+   \begin{itemize}
+      \item TB-mBJ potential in combination with RPA for calculation of optical properties gives near perfect agreement with experiment
+      \item Band gap goes down sharply from SiO$_2$ up to $x = 0.5$ then decreases slowly to values of TiO$_2$, special treatment is needed to get band gap comparable with experiment due to defect states
+      \item Refractive index changes almost linearly 
+   \end{itemize}
+   On the XPS side we were able to develop approach to determine TiO$_2$/SiO$_2$ phase separation and validate it with DFT calculations
 
    \only<2->{
       \begin{center}
@@ -458,12 +468,11 @@
             \end{itemize}
          \end{column}
          \begin{column}{0.3\textwidth}
-            Masaryk University
+            MU / CEITEC
             \begin{itemize}
-               \item David Nečas
-               \item Daniel Franta
-               \item Marek Eliáš
                \item Eva Kedroňová
+               \item David Nečas
+               \item Marek Eliáš
                \item Lenka Zajíčková
             \end{itemize}
          \end{column}
