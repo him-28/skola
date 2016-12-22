@@ -1,0 +1,19 @@
+set term pdfcairo enhanced color font "Arial,8" size 9cm,4cm lw 1 dl 0.5
+
+set style line 1 lc rgb '#0040c0'
+set style line 2 lc rgb '#008000'
+set style line 3 lc rgb 'red'
+set style textbox opaque noborder
+
+set style line 10 lt 0 lc rgb '#a0a0a0' lw 1.5
+set grid ls 10
+
+set ylabel 'Intensity (a.u.)'
+set xlabel '2ϑ'
+set key at graph 0.95,0.95
+
+plot [20:80][:155]  \
+    "N23BSa.txt" u ($1+0.2):($2+45) w l ls 3 t 'Ti_{0.45}Si_{0.55}O_2',\
+    "N25BSa.txt" u ($1-0.5):($2+20) w l ls 2 t 'Ti_{0.61}Si_{0.39}O_2',\
+    "N27BSa.txt" w l ls 1 t 'TiO_2',\
+

@@ -1,0 +1,45 @@
+set term pdfcairo enhanced color dashed font "Arial,8" size 9cm,4cm lw 1
+
+set style line 1 lc rgb '#0040c0'
+set style line 4 lc rgb '#000000' lt 2
+set style textbox opaque noborder
+
+set style line 10 lt 0 lc rgb '#a0a0a0' lw 1.5
+set grid ls 10
+
+set ylabel 'Intensity (a.u.)'
+set xlabel '2ϑ'
+set key at graph 0.95,0.95
+
+set label at 26.304,100 rotate "Anatase (1 0 1)"
+set arrow from 25.304,0 to 25.304,180 nohead ls 4
+
+#set label at 35.949,100 rotate "Anatase (1 0 3)"
+#set arrow from 36.949,0 to 36.949,180 nohead  ls 4
+
+set label at 36.793,100 rotate "Anatase (0 0 4)"
+set arrow from 37.793,0 to 37.793,180 nohead ls 4
+
+set label at 39.566,100 rotate "Anatase (1 1 2)"
+set arrow from 38.566,0 to 38.566,180 nohead ls 4
+
+set label at 49.036,100 rotate "Anatase (2 0 0)"
+set arrow from 48.036,0 to 48.036,180 nohead ls 4
+
+set label at 56.061,100 rotate "Anatase (2 1 1)"
+set arrow from 55.061,0 to 55.061,180 nohead ls 4
+
+set label at 63.68,100 rotate "Anatase (2 0 4)"
+set arrow from 62.68,0 to 62.68,180 nohead ls 4
+
+set label at 71.287,100 rotate "Anatase (2 2 0)"
+set arrow from 70.287,0 to 70.287,180 nohead ls 4
+
+set label at 76.046,100 rotate "Anatase (2 1 5)"
+set arrow from 75.046,0 to 75.046,180 nohead ls 4
+
+set label at 51,100 rotate "c-Si substrate"
+
+plot [20:80][:180]  \
+    "N27BSa.txt" w l ls 1 t ''
+
