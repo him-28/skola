@@ -1,0 +1,18 @@
+set term pdfcairo enhanced color dashed font "Arial,10" size 8cm,6cm lw 1 dl 0.5
+
+set style line 1 lt 1 lw 1 lc rgb '#e00000' dashtype 1
+set style line 2 lt 2 lw 1 lc rgb '#008000' dashtype 2
+set style line 3 lt 3 lw 1 lc rgb '#0040c0' dashtype 3
+set style line 4 lt 4 lw 1 lc rgb '#f0c010' dashtype 4
+set style line 5 lt 5 lw 1 lc rgb '#a000b0' dashtype 5
+
+set title "Stress dependence of band gap"
+
+set ylabel 'PBE band gap, (eV)'
+set format y '%g'
+set format x '%g'
+set xlabel 'Volume (A^3/atom)'
+set key top left
+
+plot [][]\
+     "V-gap.txt" u ($1*(0.529177249)**3/12):2 t "monoclinic HfO2" w linespoints ls 2
