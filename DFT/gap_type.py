@@ -14,6 +14,7 @@ def parse_ene(f, d):
    mincond = d[3]
    kmincond = d[4]
    kmincondpos = d[5]
+   s = 0
 
    for line in f:
       if len(line) == 88:
@@ -21,16 +22,19 @@ def parse_ene(f, d):
          kx = float(line[:19])
          ky = float(line[20:38])
          kz = float(line[39:57])
-      if len(line) == 37:
-         bindex = int(line[:12])
+         s = 1
+         continue
+      if s == 1:
+         l = line.split()
+         bindex = int(l[0])
          if bindex == nvalbands:
-            ene = float(line[13:])
+            ene = float(l[1])
             if ene > maxval:
                maxval = ene
                kmaxval = k
                kmaxvalpos = [kx, ky, kz]
          if bindex == nvalbands + 1:
-            ene = float(line[13:])
+            ene = float(l[1])
             if ene < mincond:
                mincond = ene
                kmincond = k
